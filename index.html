@@ -78,18 +78,52 @@
       --c-muted: #99cccc;
     }
 
-    [data-theme="red-alert"] {
-      --c-primary: #dd2222;
-      /* Red Alert Crimson */
-      --c-secondary: #ff7722;
-      /* Tactical Amber */
-      --c-tertiary: #8899aa;
-      /* Titanium Grey */
-      --c-accent: #ffcc44;
-      /* Warning Yellow */
-      --c-alert: #ff1111;
-      --c-ok: #55aaee;
-      --c-muted: #ff9966;
+    /* ==========================================================================
+       GLOBAL RED ALERT MODE OVERLAY (Applies on top of ANY theme & shape profile)
+       ========================================================================== */
+    body[data-alert="red"] {
+      --c-primary: #dd2222 !important;     /* Klaxon Crimson */
+      --c-secondary: #ff7722 !important;   /* Tactical Amber */
+      --c-tertiary: #8899aa !important;    /* Titanium Alert Grey */
+      --c-accent: #ffcc44 !important;      /* Warning Yellow */
+      --c-alert: #ff1111 !important;       /* Bright Flash Red */
+      --c-ok: #f4f1ea !important;          /* High-Contrast White Strobe */
+      --c-muted: #ff8866 !important;
+      --text-dim: #ff9966 !important;
+    }
+
+    /* Era-specific Red Alert nuances */
+    body[data-shape="tmp-era"][data-alert="red"] {
+      --c-primary: #e61919 !important;
+      --c-secondary: #d9d9d9 !important;   /* TMP Red Alert flashing white/silver */
+      --c-tertiary: #7a8a99 !important;
+      --c-accent: #ff9900 !important;
+    }
+
+    body[data-shape="picard-v2"][data-alert="red"] {
+      --bg: #090304 !important;
+      --c-primary: #ff1e1e !important;
+      --c-secondary: #4a5060 !important;   /* Darkened gunmetal under red klaxon */
+      --c-tertiary: #8a1c1c !important;
+      --c-accent: #ff5533 !important;
+    }
+
+    @keyframes lcars-red-alert-pulse {
+      0%, 100% { filter: brightness(1); }
+      50% { filter: brightness(1.28); }
+    }
+
+    body[data-alert="red"] .frame-elbow-top,
+    body[data-alert="red"] .frame-elbow-bot,
+    body[data-alert="red"] .junction-elbow,
+    body[data-alert="red"] #red-alert-footer-btn {
+      animation: lcars-red-alert-pulse 1.8s infinite ease-in-out;
+    }
+
+    body[data-alert="red"] #red-alert-footer-btn {
+      background: var(--text-main) !important;
+      color: #cc0000 !important;
+      box-shadow: 0 0 10px rgba(255, 30, 30, 0.7);
     }
 
     [data-theme="tmp-era"] {
@@ -487,6 +521,8 @@
       --ld-cutout-display: none;
       --tmp-ticks-display: none;
       --pic-ticks-display: none;
+      --voy-node-display: none;
+      --nem-bevel-display: none;
     }
 
     /* LOWER DECKS GEOMETRY: Squared ACCESS top block, thicker bars, spoon cutouts */
@@ -504,6 +540,8 @@
       --ld-cutout-display: block;
       --tmp-ticks-display: none;
       --pic-ticks-display: none;
+      --voy-node-display: none;
+      --nem-bevel-display: none;
     }
 
     /* TMP / EXCELSIOR ERA GEOMETRY: Boxed angular corners, technical telemetry ticks */
@@ -523,6 +561,175 @@
       --ld-cutout-display: none;
       --tmp-ticks-display: block;
       --pic-ticks-display: none;
+      --voy-node-display: none;
+      --nem-bevel-display: none;
+    }
+
+    /* =========================================================================
+       VOYAGER (INTREPID-CLASS) SHAPE PROFILE
+       Features: Compact Tighter Elbows, Bi-Neural Gel Pack Sensor Nodes in the
+       divider rules, double-stepped rail buttons, and asymmetric pill caps.
+       ========================================================================= */
+    [data-shape="voyager"] {
+      --elbow-r: 44px;
+      --tl-elbow-r: 36px;
+      --elbow-r-inner: 20px;
+      --bracket-w: 12px;
+      --bracket-r: 18px;
+      --j-arm-h: 7px;
+      --j-curve-r: 26px;
+      --j-inner-r: 12px;
+      --j-stub-ext: 22px;
+      --j-top-h: 32px;
+      --j-bot-h: 38px;
+      --j-cap-radius: 0 999px 999px 0;
+      --ld-cutout-display: none;
+      --tmp-ticks-display: none;
+      --pic-ticks-display: none;
+      --voy-node-display: block;
+      --nem-bevel-display: none;
+    }
+
+    /* Voyager Bi-Neural Sensor Node inside the horizontal divider rules */
+    .voy-node {
+      display: var(--voy-node-display);
+      position: absolute;
+      left: 28%;
+      top: 0;
+      bottom: 0;
+      width: 54px;
+      background: linear-gradient(90deg,
+        #000 0 4px,
+        var(--c-accent) 4px 18px,
+        #000 18px 22px,
+        var(--c-secondary) 22px 50px,
+        #000 50px 54px);
+      pointer-events: none;
+    }
+
+    /* Intrepid-style stepped rail buttons with right-side telemetry pip */
+    [data-shape="voyager"] .lcars-rail-btn {
+      border-radius: 10px 0 0 10px;
+      background:
+        linear-gradient(90deg,
+          var(--c-secondary) 0 calc(100% - 10px),
+          #000 calc(100% - 10px) calc(100% - 6px),
+          var(--c-accent) calc(100% - 6px));
+      padding-right: 16px;
+    }
+    [data-shape="voyager"] .lcars-rail-btn:nth-child(even) {
+      background:
+        linear-gradient(90deg,
+          var(--c-primary) 0 calc(100% - 10px),
+          #000 calc(100% - 10px) calc(100% - 6px),
+          var(--c-tertiary) calc(100% - 6px));
+    }
+    [data-shape="voyager"] .lcars-rail-btn.active {
+      background:
+        linear-gradient(90deg,
+          var(--text-main) 0 calc(100% - 16px),
+          #000 calc(100% - 16px) calc(100% - 12px),
+          var(--c-accent) calc(100% - 12px));
+      padding-right: 24px;
+    }
+
+    /* Voyager tapered panel header & dual-ring bottom bracket */
+    [data-shape="voyager"] .lcars-panel-header {
+      border-radius: 18px 999px 999px 0;
+    }
+    [data-shape="voyager"] .lcars-panel::after {
+      border-bottom-width: 8px;
+      box-shadow: inset 0 -3px 0 #000, inset 0 -5px 0 var(--c-secondary);
+    }
+
+    /* =========================================================================
+       NEMESIS (SOVEREIGN-CLASS / 2379) SHAPE PROFILE
+       Features: 45-degree Chamfered Tactical Bevels (clip-path) instead of round
+       pills, angled divider notches, and sharp late-TNG film tactical styling.
+       ========================================================================= */
+    [data-shape="nemesis"] {
+      --elbow-r: 22px;
+      --tl-elbow-r: 16px;
+      --elbow-r-inner: 8px;
+      --bracket-w: 14px;
+      --bracket-r: 10px;
+      --j-arm-h: 9px;
+      --j-curve-r: 16px;
+      --j-inner-r: 8px;
+      --j-stub-ext: 20px;
+      --j-top-h: 34px;
+      --j-bot-h: 40px;
+      --j-cap-radius: 0;
+      --ld-cutout-display: none;
+      --tmp-ticks-display: none;
+      --pic-ticks-display: none;
+      --voy-node-display: none;
+      --nem-bevel-display: block;
+    }
+
+    /* Sovereign-class angled tactical notches in the divider bar */
+    .nem-bevel {
+      display: var(--nem-bevel-display);
+      position: absolute;
+      right: 12%;
+      top: 0;
+      bottom: 0;
+      width: 64px;
+      background: repeating-linear-gradient(
+        -60deg,
+        transparent 0 10px,
+        #000 10px 15px,
+        var(--c-accent) 15px 22px,
+        #000 22px 26px
+      );
+      pointer-events: none;
+    }
+
+    /* Replace round half-pills with 45-degree Sovereign tactical chamfers */
+    [data-shape="nemesis"] .lcars-cap-l,
+    [data-shape="nemesis"] .stat-seg.end.minus,
+    [data-shape="nemesis"] .hdr-stat .lbl,
+    [data-shape="nemesis"] .hdr-read .cap,
+    [data-shape="nemesis"] .roll-card-title,
+    [data-shape="nemesis"] .tn-pill,
+    [data-shape="nemesis"] .editable-tag,
+    [data-shape="nemesis"] .id-field label,
+    [data-shape="nemesis"] .dice-bar .dice-btn:first-child,
+    [data-shape="nemesis"] .lcars-opt-btn .opt-code,
+    [data-shape="nemesis"] .lcars-shape-chip:first-child {
+      border-radius: 0 !important;
+      clip-path: polygon(10px 0, 100% 0, 100% 100%, 0 100%, 0 10px);
+    }
+
+    [data-shape="nemesis"] .lcars-cap-r,
+    [data-shape="nemesis"] .stat-seg.end.plus,
+    [data-shape="nemesis"] .hdr-stat .tail,
+    [data-shape="nemesis"] .hdr-read,
+    [data-shape="nemesis"] .roll-card-controls .pill-btn,
+    [data-shape="nemesis"] .tn-badge-group > :last-child,
+    [data-shape="nemesis"] .focus-chip,
+    [data-shape="nemesis"] .dice-bar .dice-btn:last-child,
+    [data-shape="nemesis"] .lcars-footer-bar .seg.end,
+    [data-shape="nemesis"] .lcars-opt-btn .opt-pip,
+    [data-shape="nemesis"] .lcars-shape-chip:last-child,
+    [data-shape="nemesis"] .header-endcap,
+    [data-shape="nemesis"] .lcars-header-divider .d-seg-cap {
+      border-radius: 0 !important;
+      clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%);
+    }
+
+    [data-shape="nemesis"] .pill-btn {
+      border-radius: 0 !important;
+      clip-path: polygon(8px 0, calc(100% - 8px) 0, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 0 calc(100% - 8px), 0 8px);
+    }
+
+    [data-shape="nemesis"] .lcars-panel-header {
+      border-radius: 8px 0 0 0 !important;
+      clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 0 100%);
+    }
+
+    [data-shape="nemesis"] .lcars-rail-btn {
+      clip-path: polygon(10px 0, 100% 0, 100% 100%, 0 100%, 0 10px);
     }
 
     /* =========================================================================
@@ -550,6 +757,8 @@
       --ld-cutout-display: none;
       --tmp-ticks-display: none;
       --pic-ticks-display: block;
+      --voy-node-display: none;
+      --nem-bevel-display: none;
     }
 
     /* Smoked glass depth & inner parallel hairline on panel brackets */
@@ -3113,6 +3322,8 @@
           <span class="ld-cutout"></span>
           <span class="tmp-ticks"></span>
           <span class="pic-ticks"></span>
+          <span class="voy-node"></span>
+          <span class="nem-bevel"></span>
         </span>
         <span class="d-seg d-seg-cap"></span>
       </div>
@@ -3123,6 +3334,8 @@
           <span class="ld-cutout"></span>
           <span class="tmp-ticks"></span>
           <span class="pic-ticks"></span>
+          <span class="voy-node"></span>
+          <span class="nem-bevel"></span>
         </span>
         <span class="d-seg d-seg-cap"></span>
       </div>
@@ -3191,11 +3404,14 @@
       <div class="lcars-footer-bar">
         <span class="seg w3"></span>
         <span class="seg c2"></span>
-        <span class="seg c4"></span>
+        <button type="button" class="seg c4" id="red-alert-footer-btn" onclick="toggleRedAlert()" data-tip="Toggle Red Alert condition across the current LCARS theme." style="border:none; cursor:pointer; font-family:inherit; font-size:0.68rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:#000; display:flex; align-items:center; justify-content:center; flex:0 0 96px;">RED ALERT</button>
         <button type="button" class="seg c1 end" id="fullscreen-btn" onclick="toggleFullScreen()" data-tip="Enter or exit fullscreen mode." aria-label="Enter fullscreen mode">FULL</button>
       </div>
     </footer>
   </div>
+
+  <!-- PeerJS for zero-setup room code sync -->
+  <script src="https://unpkg.com/peerjs@1.5.4/dist/peerjs.min.js"></script>
 
   <!-- STA_DICTIONARY_START -->
   <script src="sta-dictionary.js"></script>
@@ -3239,6 +3455,128 @@
       syncActiveDictionary(charState);
       saveLocalState();
     }
+
+    /* ============================================================================
+       REAL-TIME TABLE SYNC (PEERJS ROOM CODE SYSTEM)
+       ============================================================================ */
+    let tablePeer = null;
+    let tableConnection = null;
+    let tableConnections = []; // If hosting, track all connected players
+    let isTableHost = false;
+    let tableSyncRoomId = "";
+
+    function initTablePeer(role, roomId) {
+      if (tablePeer) {
+        try { tablePeer.destroy(); } catch(e){}
+      }
+
+      const cleanRoomId = roomId.trim().toUpperCase();
+      isTableHost = (role === "host");
+      tableSyncRoomId = cleanRoomId;
+
+      // Use a distinct prefix so it doesn't collide with other PeerJS apps
+      const peerId = isTableHost ? `STA-LCARS-${cleanRoomId}` : undefined;
+      
+      tablePeer = new Peer(peerId, { debug: 1 });
+
+      tablePeer.on("open", (id) => {
+        updateTableSyncStatus(isTableHost ? `Hosting room: ${cleanRoomId}` : `Connected to room lobby. Connecting to host...`);
+        if (!isTableHost) {
+          connectToTableHost(cleanRoomId);
+        }
+      });
+
+      if (isTableHost) {
+        tablePeer.on("connection", (conn) => {
+          tableConnections.push(conn);
+          setupConnectionListeners(conn, true);
+          updateTableSyncStatus(`Hosting room: ${cleanRoomId} (${tableConnections.length} connected client(s))`);
+          // Send current state immediately to the new player
+          conn.send({ type: "STATE_SYNC", payload: getTableSyncPayload() });
+        });
+      }
+
+      tablePeer.on("error", (err) => {
+        updateTableSyncStatus(`Sync Error: ${err.type}`);
+      });
+    }
+
+    function connectToTableHost(roomId) {
+      const hostPeerId = `STA-LCARS-${roomId}`;
+      tableConnection = tablePeer.connect(hostPeerId);
+      setupConnectionListeners(tableConnection, false);
+    }
+
+    function setupConnectionListeners(conn, asHost) {
+      conn.on("open", () => {
+        updateTableSyncStatus(`Connected to Room: ${tableSyncRoomId}`);
+        if (!asHost) {
+          // Request initial sync if needed
+        }
+      });
+
+      conn.on("data", (data) => {
+        if (!data || !data.type) return;
+
+        if (data.type === "STATE_SYNC") {
+          applyTableSyncPayload(data.payload);
+        } else if (data.type === "UPDATE_REQUEST" && isTableHost) {
+          // Host receives an update from a client, merges it, and broadcasts to everyone
+          applyTableSyncPayload(data.payload, false);
+          broadcastTableState();
+        }
+      });
+
+      conn.on("close", () => {
+        updateTableSyncStatus("Connection closed.");
+      });
+    }
+
+    function getTableSyncPayload() {
+      return {
+        pools: { momentum: state.pools.momentum, threat: state.pools.threat },
+        starship: state.starship,
+        sceneTraits: state.sceneTraits,
+        extendedTasks: state.extendedTasks
+      };
+    }
+
+    function applyTableSyncPayload(payload, reRender = true) {
+      if (!payload) return;
+      if (payload.pools) {
+        if (payload.pools.momentum !== undefined) state.pools.momentum = payload.pools.momentum;
+        if (payload.pools.threat !== undefined) state.pools.threat = payload.pools.threat;
+      }
+      if (payload.starship) state.starship = payload.starship;
+      if (payload.sceneTraits) state.sceneTraits = payload.sceneTraits;
+      if (payload.extendedTasks) state.extendedTasks = payload.extendedTasks;
+
+      saveLocalState();
+      if (reRender) renderAll();
+    }
+
+    function broadcastTableState() {
+      const packet = { type: "STATE_SYNC", payload: getTableSyncPayload() };
+      if (isTableHost) {
+        tableConnections.forEach(conn => {
+          if (conn && conn.open) conn.send(packet);
+        });
+      } else if (tableConnection && tableConnection.open) {
+        tableConnection.send({ type: "UPDATE_REQUEST", payload: getTableSyncPayload() });
+      }
+    }
+
+    function updateTableSyncStatus(msg) {
+      const el = document.getElementById("table-sync-status");
+      if (el) el.textContent = msg;
+    }
+
+    // Call this wrapper whenever Momentum, Threat, Ship Stats, Traits, or Extended Tasks change
+    function triggerTableSync() {
+      saveLocalState();
+      broadcastTableState();
+    }
+
     /* ============================================================================
        1. PRE-LOADED CHARACTER URL & DEFAULT CAMPAIGN STATE
        ============================================================================ */
@@ -3250,26 +3588,27 @@
     const HDR_DEPT_ORDER = ["command", "security", "conn", "science", "engineering", "medicine"];
     const SHIP_SYS_KEYS = ["comms", "computers", "engines", "sensors", "structure", "weapons"];
     const SHAPE_PROFILES = [
-      { id: "tng", label: "24c Standard (TNG)" },
-      { id: "lower-decks", label: "Cerritos PADD (LD)" },
+      { id: "tng", label: "24c Galaxy (TNG)" },
+      { id: "voyager", label: "24c Intrepid (VOY)" },
+      { id: "nemesis", label: "24c Sovereign (NEM)" },
+      { id: "lower-decks", label: "24c Cerritos (LD)" },
       { id: "tmp-era", label: "23c Excelsior (TMP)" },
       { id: "picard-v2", label: "25c Stargazer (PIC)" }
     ];
     const BUILTIN_THEME_CATALOG = [
       { id: "classic-tng", code: "01-TNG", name: "Classic 1701-D", shape: "tng" },
-      { id: "nemesis-blue", code: "02-NEM", name: "Nemesis Blue", shape: "tng" },
-      { id: "lower-decks", code: "03-LDS", name: "Lower Decks", shape: "lower-decks" },
-      { id: "voyager", code: "04-VOY", name: "Voyager", shape: "tng" },
-      { id: "red-alert", code: "05-ALT", name: "Red Alert", shape: "tng" },
-      { id: "tmp-era", code: "06-TMP", name: "TMP / Excelsior", shape: "tmp-era" },
-      { id: "picard-v2", code: "07-PIC", name: "Picard 25c (Grey/Red)", shape: "picard-v2" }
+      { id: "voyager", code: "02-VOY", name: "Voyager (Intrepid)", shape: "voyager" },
+      { id: "nemesis-blue", code: "03-NEM", name: "Nemesis (Sovereign)", shape: "nemesis" },
+      { id: "lower-decks", code: "04-LDS", name: "Lower Decks", shape: "lower-decks" },
+      { id: "tmp-era", code: "05-TMP", name: "TMP / Excelsior", shape: "tmp-era" },
+      { id: "picard-v2", code: "06-PIC", name: "Picard 25c (Grey/Red)", shape: "picard-v2" }
     ];
     const BUILTIN_THEMES = BUILTIN_THEME_CATALOG.map((theme) => theme.id);
     const THEME_COLOR_FIELDS = ["c-primary", "c-secondary", "c-tertiary", "c-accent", "c-ok", "c-alert", "c-muted"];
     const DEFAULT_CUSTOM_THEMES = [
-      { id: "custom-1", code: "08-CS1", name: "Custom Theme 1", shape: "tng", colors: { "c-primary": "#ff9900", "c-secondary": "#cc99cc", "c-tertiary": "#9999ff", "c-accent": "#ff9966", "c-ok": "#99cc99", "c-alert": "#dd6666", "c-muted": "#ffcc99" } },
-      { id: "custom-2", code: "09-CS2", name: "Custom Theme 2", shape: "lower-decks", colors: { "c-primary": "#66ccff", "c-secondary": "#6699cc", "c-tertiary": "#aa88cc", "c-accent": "#99cccc", "c-ok": "#88ccaa", "c-alert": "#dd6666", "c-muted": "#99ccff" } },
-      { id: "custom-3", code: "10-CS3", name: "Custom Theme 3", shape: "tmp-era", colors: { "c-primary": "#ee7799", "c-secondary": "#cc88bb", "c-tertiary": "#9966cc", "c-accent": "#ffbb66", "c-ok": "#88ccaa", "c-alert": "#ee5555", "c-muted": "#ddaadd" } }
+      { id: "custom-1", code: "07-CS1", name: "Custom Theme 1", shape: "tng", colors: { "c-primary": "#ff9900", "c-secondary": "#cc99cc", "c-tertiary": "#9999ff", "c-accent": "#ff9966", "c-ok": "#99cc99", "c-alert": "#dd6666", "c-muted": "#ffcc99" } },
+      { id: "custom-2", code: "08-CS2", name: "Custom Theme 2", shape: "lower-decks", colors: { "c-primary": "#66ccff", "c-secondary": "#6699cc", "c-tertiary": "#aa88cc", "c-accent": "#99cccc", "c-ok": "#88ccaa", "c-alert": "#dd6666", "c-muted": "#99ccff" } },
+      { id: "custom-3", code: "09-CS3", name: "Custom Theme 3", shape: "tmp-era", colors: { "c-primary": "#ee7799", "c-secondary": "#cc88bb", "c-tertiary": "#9966cc", "c-accent": "#ffbb66", "c-ok": "#88ccaa", "c-alert": "#ee5555", "c-muted": "#ddaadd" } }
     ];
     const WEAPON_QUALITY_REFERENCE = [
       { name: "Accurate", description: "A precise weapon that improves the attacker's chance of success." },
@@ -3288,6 +3627,7 @@
     function defaultSettings() {
       return {
         activeTheme: "classic-tng",
+        redAlert: false,
         showHeaderFocuses: false,
         customThemes: JSON.parse(JSON.stringify(DEFAULT_CUSTOM_THEMES)),
         referenceCatalog: "talents",
@@ -4544,9 +4884,32 @@
       }).join("");
 
       return `
-    <div class="settings-grid">
+    <section class="lcars-panel">
+        <div class="lcars-panel-header"><span class="lcars-panel-title">Table Sync &middot; Room Code</span></div>
+        <p style="color:var(--text-dim); margin:0 0 10px; font-size:0.85rem;">Enter a shared room code (e.g. <code>ARTEMIS-1</code>) to sync Momentum, Threat, Ship Stats, and Extended Tasks live with your party.</p>
+        <div style="display:flex; gap:8px; margin-bottom:8px;">
+          <input class="lcars-input" id="table-room-input" placeholder="Room Code (e.g. ARTEMIS-1)" style="text-transform:uppercase;" />
+        </div>
+        <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:10px;">
+          <button class="pill-btn" type="button" onclick="const code=document.getElementById('table-room-input').value; if(code) initTablePeer('host', code);">Host Room</button>
+          <button class="pill-btn secondary" type="button" onclick="const code=document.getElementById('table-room-input').value; if(code) initTablePeer('join', code);">Join Room</button>
+        </div>
+        <div id="table-sync-status" class="reference-meta" style="color:var(--c-ok);">Status: Offline (Independent play)</div>
+      </section>
+      <div class="settings-grid">
       <section class="lcars-panel">
         <div class="lcars-panel-header"><span class="lcars-panel-title">LCARS Display Theme &amp; Custom Palettes</span></div>
+        <div style="display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap; margin-bottom:14px; padding-bottom:10px; border-bottom:2px solid var(--c-tertiary);">
+          <div>
+            <strong style="color:var(--c-alert); font-size:1.05rem;"> Tactical Condition: Red Alert</strong>
+            <div style="color:var(--text-dim); font-size:0.82rem;">Overrides the current LCARS palette into Red Alert klaxon crimson while preserving your active era's frame geometry.</div>
+          </div>
+          <button type="button" class="pill-btn ${state.settings.redAlert ? 'alert' : 'ghost'}"
+                  style="border:2px solid var(--c-alert); min-width:140px;"
+                  onclick="toggleRedAlert()">
+            ${state.settings.redAlert ? 'STAND DOWN ALERT' : 'ENGAGE RED ALERT'}
+          </button>
+        </div>
         <div class="stat-col-label">Active Console Theme</div>
         <div class="lcars-theme-bank">${allThemeButtonsHtml}</div>
         <div class="stat-col-label dept" style="margin-top:14px;">Custom Theme Slots (Shape + Palette)</div>
@@ -5197,6 +5560,11 @@
       if (!state.settings.referenceCatalog) state.settings.referenceCatalog = "talents";
       if (typeof state.settings.referenceSearch !== "string") state.settings.referenceSearch = "";
       if (typeof state.settings.showHeaderFocuses !== "boolean") state.settings.showHeaderFocuses = false;
+      if (typeof state.settings.redAlert !== "boolean") state.settings.redAlert = false;
+      if (state.settings.activeTheme === "red-alert") {
+        state.settings.activeTheme = "classic-tng";
+        state.settings.redAlert = true;
+      }
       if (state.character && typeof state.character.portrait !== "string") state.character.portrait = "";
     }
 
@@ -5211,7 +5579,8 @@
       if (!readout) return;
       const builtIn = BUILTIN_THEME_CATALOG.find((theme) => theme.id === state.settings.activeTheme);
       const custom = customThemeById(state.settings.activeTheme);
-      readout.textContent = ((builtIn && builtIn.name) || (custom && custom.name) || "LCARS").toUpperCase();
+      const baseName = ((builtIn && builtIn.name) || (custom && custom.name) || "LCARS").toUpperCase();
+      readout.textContent = state.settings.redAlert ? `${baseName} • RED ALERT` : baseName;
     }
 
     function applyTheme(themeName) {
@@ -5231,12 +5600,25 @@
         Object.entries(customTheme.colors).forEach(([field, color]) => document.body.style.setProperty(`--${field}`, color));
       }
       state.settings.activeTheme = resolvedThemeName;
+      if (state.settings.redAlert) {
+        document.body.setAttribute("data-alert", "red");
+      } else {
+        document.body.removeAttribute("data-alert");
+      }
       syncThemeControls();
     }
 
     function setTheme(themeName) {
       applyTheme(themeName);
       saveLocalState();
+    }
+
+    function toggleRedAlert(forceState) {
+      ensureAppSettings();
+      state.settings.redAlert = typeof forceState === "boolean" ? forceState : !state.settings.redAlert;
+      applyTheme(state.settings.activeTheme);
+      saveLocalState();
+      if (state.activeScene === "options") renderScene();
     }
 
     function updateCustomThemeName(themeId, name) {
