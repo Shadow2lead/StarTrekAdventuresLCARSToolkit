@@ -102,6 +102,20 @@
       --c-muted: #9db4c0;       /* Anodized Steel */
     }
 
+    [data-theme="picard-v2"] {
+      --bg: #050608;            /* Deep 25c OLED Obsidian */
+      --panel-bg: #0a0c10;      /* Smoked glass panel backing */
+      --c-primary: #e7442a;     /* Picard Orange-Red (Primary / Active) */
+      --c-secondary: #6d748c;   /* Gunmetal Slate Grey */
+      --c-tertiary: #52596e;    /* Medium-Dark Structural Grey */
+      --c-accent: #ff6753;      /* Light Orange-Red / Coral Highlight */
+      --c-alert: #cc2233;       /* Tactical Crimson */
+      --c-ok: #9ea5ba;          /* Cool Silver-Grey (Status OK) */
+      --c-muted: #ff977b;       /* Pale Orange-Red */
+      --text-main: #d2d5df;     /* Cool Ice-Grey Text */
+      --text-dim: #9ea5ba;
+    }
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -472,6 +486,7 @@
       --j-cap-radius: 0 999px 999px 0;
       --ld-cutout-display: none;
       --tmp-ticks-display: none;
+      --pic-ticks-display: none;
     }
 
     /* LOWER DECKS GEOMETRY: Squared ACCESS top block, thicker bars, spoon cutouts */
@@ -488,6 +503,7 @@
       --j-cap-radius: 0 999px 999px 0;
       --ld-cutout-display: block;
       --tmp-ticks-display: none;
+      --pic-ticks-display: none;
     }
 
     /* TMP / EXCELSIOR ERA GEOMETRY: Boxed angular corners, technical telemetry ticks */
@@ -506,6 +522,241 @@
       --j-cap-radius: 2px;
       --ld-cutout-display: none;
       --tmp-ticks-display: block;
+      --pic-ticks-display: none;
+    }
+
+    /* =========================================================================
+       PICARD V2 (25TH CENTURY) SHAPE PROFILE
+       Features: Double-track inner elbow pin-stripes, hollow/outlined gunmetal 
+       controls, micro-grid workspace, and barcode telemetry end-ticks.
+       ========================================================================= */
+    :root {
+      --pic-ticks-display: none;
+    }
+
+    [data-shape="picard-v2"] {
+      --elbow-r: 36px;
+      --tl-elbow-r: 28px;
+      --elbow-r-inner: 14px;
+      --bracket-w: 10px;
+      --bracket-r: 6px;
+      --j-arm-h: 5px;           /* Ultra-thin 25c horizontal divider bars */
+      --j-curve-r: 22px;
+      --j-inner-r: 10px;
+      --j-stub-ext: 24px;
+      --j-top-h: 28px;
+      --j-bot-h: 34px;
+      --j-cap-radius: 0;        /* Crisp micro-ticks at bar ends */
+      --ld-cutout-display: none;
+      --tmp-ticks-display: none;
+      --pic-ticks-display: block;
+    }
+
+    /* Smoked glass depth & inner parallel hairline on panel brackets */
+    [data-shape="picard-v2"] .lcars-panel {
+      background: linear-gradient(180deg, rgba(82, 89, 110, 0.06) 0%, rgba(0, 0, 0, 0) 100%);
+      box-shadow: inset 1px 0 0 rgba(210, 213, 223, 0.15);
+    }
+
+    /* Inner parallel hairline along the vertical bracket leg */
+    [data-shape="picard-v2"] .lcars-panel::before {
+      box-shadow: 3px 0 0 #000, 5px 0 0 var(--c-tertiary);
+    }
+
+    /* Double-track inner pin-stripe on left junction elbows */
+    [data-shape="picard-v2"] .junction-elbow.top::after {
+      box-shadow: -2px 2px 0 #000, -4px 4px 0 var(--c-primary);
+    }
+    [data-shape="picard-v2"] .junction-elbow.bottom::after {
+      box-shadow: -2px -2px 0 #000, -4px -4px 0 var(--c-primary);
+    }
+
+    /* Picard S2/S3 Stargazer Header & Title Blocks */
+    [data-shape="picard-v2"] .lcars-panel-header,
+    [data-shape="picard-v2"] .lcars-panel-header:has(> .header-endcap) {
+      min-height: 38px;
+      border-radius: 4px 4px 4px 0 !important;
+      background: linear-gradient(90deg,
+        var(--tone) 0 calc(100% - 76px),
+        #000 calc(100% - 76px) calc(100% - 72px),
+        var(--c-primary) calc(100% - 72px) calc(100% - 64px),
+        #000 calc(100% - 64px) calc(100% - 60px),
+        var(--tone-2) calc(100% - 60px));
+    }
+
+    [data-shape="picard-v2"] .lcars-panel-header:has(> .header-endcap) {
+      background: var(--tone);
+    }
+
+    [data-shape="picard-v2"] .header-endcap {
+      border-radius: 0 4px 4px 0 !important;
+    }
+
+    [data-shape="picard-v2"] .lcars-panel-header::after {
+      display: none !important;
+    }
+
+    /* Left rail buttons: Gunmetal with orange-red accent rail indicator */
+    [data-shape="picard-v2"] .lcars-rail-btn,
+    [data-shape="picard-v2"] .lcars-rail-btn:nth-child(odd) {
+      background:
+        linear-gradient(90deg,
+          var(--c-primary) 0 6px,
+          #000 6px 10px,
+          var(--c-tertiary) 10px 100%);
+      color: var(--text-main);
+      border-radius: 0 4px 4px 0;
+    }
+
+    [data-shape="picard-v2"] .lcars-rail-btn:nth-child(even) {
+      background:
+        linear-gradient(90deg,
+          var(--c-accent) 0 6px,
+          #000 6px 10px,
+          var(--c-secondary) 10px 100%);
+      color: #000;
+    }
+
+    [data-shape="picard-v2"] .lcars-rail-btn.active {
+      background:
+        linear-gradient(90deg,
+          var(--text-main) 0 6px,
+          #000 6px 10px,
+          var(--c-primary) 10px calc(100% - 16px),
+          #000 calc(100% - 16px) calc(100% - 12px),
+          var(--text-main) calc(100% - 12px));
+      color: #000;
+    }
+
+    /* 25c Stepped micro-radii & pill overrides — replaces chunky 24c round caps */
+    [data-shape="picard-v2"] .lcars-cap-l,
+    [data-shape="picard-v2"] .stat-seg.end.minus,
+    [data-shape="picard-v2"] .hdr-stat .lbl,
+    [data-shape="picard-v2"] .hdr-read .cap,
+    [data-shape="picard-v2"] .roll-card-title,
+    [data-shape="picard-v2"] .tn-pill,
+    [data-shape="picard-v2"] .editable-tag,
+    [data-shape="picard-v2"] .id-field label,
+    [data-shape="picard-v2"] .dice-bar .dice-btn:first-child,
+    [data-shape="picard-v2"] .lcars-opt-btn,
+    [data-shape="picard-v2"] .lcars-opt-btn .opt-code,
+    [data-shape="picard-v2"] .lcars-shape-chip:first-child,
+    [data-shape="picard-v2"] .hdr-focus-ribbon .hdr-focus-lbl,
+    [data-shape="picard-v2"] .ref-table th:first-child,
+    [data-shape="picard-v2"] .ref-table td:first-child {
+      border-radius: 4px 0 0 4px !important;
+    }
+
+    [data-shape="picard-v2"] .lcars-cap-r,
+    [data-shape="picard-v2"] .stat-seg.end.plus,
+    [data-shape="picard-v2"] .hdr-stat .tail,
+    [data-shape="picard-v2"] .hdr-read,
+    [data-shape="picard-v2"] .roll-card-controls .pill-btn,
+    [data-shape="picard-v2"] .roll-card-header .del-x,
+    [data-shape="picard-v2"] .tn-badge-group > :last-child,
+    [data-shape="picard-v2"] .focus-chip,
+    [data-shape="picard-v2"] .id-field input,
+    [data-shape="picard-v2"] .dice-bar .dice-btn:last-child,
+    [data-shape="picard-v2"] .lcars-footer-bar .seg.end,
+    [data-shape="picard-v2"] .lcars-opt-btn .opt-pip,
+    [data-shape="picard-v2"] .lcars-shape-chip:last-child,
+    [data-shape="picard-v2"] .lcars-subrail-tab {
+      border-radius: 0 4px 4px 0 !important;
+    }
+
+    [data-shape="picard-v2"] .pill-btn,
+    [data-shape="picard-v2"] .portrait-card,
+    [data-shape="picard-v2"] .lcars-tip {
+      border-radius: 4px !important;
+    }
+
+    [data-shape="picard-v2"] .crit-pill,
+    [data-shape="picard-v2"] .ship-pill,
+    [data-shape="picard-v2"] .lcars-stub-row .stub {
+      border-radius: 0 !important;
+    }
+
+    [data-shape="picard-v2"] .hdr-stat .lbl {
+      letter-spacing: 0.10em;
+    }
+    [data-shape="picard-v2"] .lcars-panel-title {
+      letter-spacing: 0.12em;
+    }
+
+    /* Outlined / hollow gunmetal control pills (unselected state) */
+    [data-shape="picard-v2"] .stat-pill:not(.selected) {
+      background: #090b10;
+      box-shadow: inset 0 0 0 1px var(--c-secondary);
+      border-radius: 4px;
+    }
+    [data-shape="picard-v2"] .stat-pill:not(.selected) .stat-seg.label {
+      background: #131722;
+      color: var(--text-main);
+      border-right: 2px solid var(--c-primary);
+      border-radius: 4px 0 0 4px !important;
+    }
+    [data-shape="picard-v2"] .stat-pill:not(.selected) .stat-seg.cap {
+      background: var(--c-secondary);
+      border-radius: 0 4px 4px 0 !important;
+    }
+
+    /* Selected stat pill lights up solid orange-red */
+    [data-shape="picard-v2"] .stat-pill.selected {
+      border-radius: 4px;
+    }
+    [data-shape="picard-v2"] .stat-pill.selected .stat-seg.label {
+      background: var(--c-primary);
+      color: #000;
+      border-radius: 4px 0 0 4px !important;
+    }
+    [data-shape="picard-v2"] .stat-pill.selected .stat-seg.cap {
+      background: var(--c-primary);
+      border-radius: 0 4px 4px 0 !important;
+    }
+    [data-shape="picard-v2"] .stat-pill.selected .stat-seg.value {
+      color: var(--c-primary);
+    }
+
+    /* Technical roll card title */
+    [data-shape="picard-v2"] .roll-card-title {
+      background: #1c202b;
+      box-shadow: inset 0 0 0 1px var(--c-secondary);
+      border-left: 3px solid var(--c-primary);
+      color: var(--text-main);
+      border-radius: 4px 0 0 4px !important;
+    }
+
+    /* Workspace subtle 25c micro-grid background */
+    [data-shape="picard-v2"] .main-workspace {
+      background-image: linear-gradient(rgba(109, 116, 140, 0.03) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(109, 116, 140, 0.03) 1px, transparent 1px);
+      background-size: 32px 32px;
+    }
+
+    /* Barcode telemetry end-ticks */
+    .pic-ticks {
+      display: var(--pic-ticks-display);
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 24px;
+      background: repeating-linear-gradient(
+        90deg,
+        var(--c-primary) 0 2px,
+        #000 2px 5px,
+        var(--c-accent) 5px 6px,
+        #000 6px 10px
+      );
+      pointer-events: none;
+    }
+
+    [data-shape="picard-v2"] .code,
+    [data-shape="picard-v2"] .j-code,
+    [data-shape="picard-v2"] #stardate-corner,
+    [data-shape="picard-v2"] .lcars-header-data {
+      font-family: 'JetBrains Mono', monospace;
+      letter-spacing: 0.06em;
     }
 
     /* Left junction block — sits in the rail column */
@@ -2861,6 +3112,7 @@
         <span class="d-seg d-seg-main">
           <span class="ld-cutout"></span>
           <span class="tmp-ticks"></span>
+          <span class="pic-ticks"></span>
         </span>
         <span class="d-seg d-seg-cap"></span>
       </div>
@@ -2870,6 +3122,7 @@
         <span class="d-seg d-seg-main">
           <span class="ld-cutout"></span>
           <span class="tmp-ticks"></span>
+          <span class="pic-ticks"></span>
         </span>
         <span class="d-seg d-seg-cap"></span>
       </div>
@@ -2999,7 +3252,8 @@
     const SHAPE_PROFILES = [
       { id: "tng", label: "24c Standard (TNG)" },
       { id: "lower-decks", label: "Cerritos PADD (LD)" },
-      { id: "tmp-era", label: "23c Excelsior (TMP)" }
+      { id: "tmp-era", label: "23c Excelsior (TMP)" },
+      { id: "picard-v2", label: "25c Stargazer (PIC)" }
     ];
     const BUILTIN_THEME_CATALOG = [
       { id: "classic-tng", code: "01-TNG", name: "Classic 1701-D", shape: "tng" },
@@ -3007,14 +3261,15 @@
       { id: "lower-decks", code: "03-LDS", name: "Lower Decks", shape: "lower-decks" },
       { id: "voyager", code: "04-VOY", name: "Voyager", shape: "tng" },
       { id: "red-alert", code: "05-ALT", name: "Red Alert", shape: "tng" },
-      { id: "tmp-era", code: "06-TMP", name: "TMP / Excelsior", shape: "tmp-era" }
+      { id: "tmp-era", code: "06-TMP", name: "TMP / Excelsior", shape: "tmp-era" },
+      { id: "picard-v2", code: "07-PIC", name: "Picard 25c (Grey/Red)", shape: "picard-v2" }
     ];
     const BUILTIN_THEMES = BUILTIN_THEME_CATALOG.map((theme) => theme.id);
     const THEME_COLOR_FIELDS = ["c-primary", "c-secondary", "c-tertiary", "c-accent", "c-ok", "c-alert", "c-muted"];
     const DEFAULT_CUSTOM_THEMES = [
-      { id: "custom-1", code: "07-CS1", name: "Custom Theme 1", shape: "tng", colors: { "c-primary": "#ff9900", "c-secondary": "#cc99cc", "c-tertiary": "#9999ff", "c-accent": "#ff9966", "c-ok": "#99cc99", "c-alert": "#dd6666", "c-muted": "#ffcc99" } },
-      { id: "custom-2", code: "08-CS2", name: "Custom Theme 2", shape: "lower-decks", colors: { "c-primary": "#66ccff", "c-secondary": "#6699cc", "c-tertiary": "#aa88cc", "c-accent": "#99cccc", "c-ok": "#88ccaa", "c-alert": "#dd6666", "c-muted": "#99ccff" } },
-      { id: "custom-3", code: "09-CS3", name: "Custom Theme 3", shape: "tmp-era", colors: { "c-primary": "#ee7799", "c-secondary": "#cc88bb", "c-tertiary": "#9966cc", "c-accent": "#ffbb66", "c-ok": "#88ccaa", "c-alert": "#ee5555", "c-muted": "#ddaadd" } }
+      { id: "custom-1", code: "08-CS1", name: "Custom Theme 1", shape: "tng", colors: { "c-primary": "#ff9900", "c-secondary": "#cc99cc", "c-tertiary": "#9999ff", "c-accent": "#ff9966", "c-ok": "#99cc99", "c-alert": "#dd6666", "c-muted": "#ffcc99" } },
+      { id: "custom-2", code: "09-CS2", name: "Custom Theme 2", shape: "lower-decks", colors: { "c-primary": "#66ccff", "c-secondary": "#6699cc", "c-tertiary": "#aa88cc", "c-accent": "#99cccc", "c-ok": "#88ccaa", "c-alert": "#dd6666", "c-muted": "#99ccff" } },
+      { id: "custom-3", code: "10-CS3", name: "Custom Theme 3", shape: "tmp-era", colors: { "c-primary": "#ee7799", "c-secondary": "#cc88bb", "c-tertiary": "#9966cc", "c-accent": "#ffbb66", "c-ok": "#88ccaa", "c-alert": "#ee5555", "c-muted": "#ddaadd" } }
     ];
     const WEAPON_QUALITY_REFERENCE = [
       { name: "Accurate", description: "A precise weapon that improves the attacker's chance of success." },
