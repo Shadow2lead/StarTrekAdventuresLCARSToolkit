@@ -2157,17 +2157,19 @@
     .lcars-tip {
       position: fixed;
       z-index: 10000;
-      max-width: 280px;
-      padding: 8px 12px;
+      max-width: clamp(280px, 85vw, 420px);
+      padding: 10px 14px;
       background: var(--c-primary);
       color: #000;
       font-size: 0.82rem;
       font-weight: 600;
       letter-spacing: 0.04em;
-      line-height: 1.25;
+      line-height: 1.35;
       border-radius: 0 14px 14px 14px;
       pointer-events: none;
-      box-shadow: none;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.65);
+      white-space: pre-line;
+      word-break: break-word;
     }
 
     .lcars-tip[hidden] {
@@ -2661,18 +2663,34 @@
       background: var(--c-alert);
     }
 
-    /* Starship readout strip (Scale / Resistance / Shields / Power) */
+    /* Starship 2e readout strip (Scale / Resistance / Shields / Reserve Power / Crew Support) */
     .ship-readouts {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 6px 12px;
-      margin-bottom: 16px;
+      margin-bottom: 12px;
     }
 
-    @container workspace (min-width: 860px) {
+    @container workspace (min-width: 980px) {
       .ship-readouts {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-template-columns: 0.75fr 0.75fr 1.15fr 1.25fr 1.1fr;
       }
+    }
+
+    .hangar-card {
+      background: #000;
+      border-left: 10px solid var(--c-tertiary);
+      padding: 8px 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 6px;
+    }
+
+    .hangar-card.active {
+      border-left-color: var(--c-primary);
+      background: rgba(255, 153, 0, 0.06);
     }
 
     /* ==========================================================================
@@ -3415,6 +3433,7 @@
 
   <!-- STA_DICTIONARY_START -->
   <script src="sta-dictionary.js"></script>
+  <script src="sta-ships.js"></script>
   <!-- STA_DICTIONARY_END -->
 
   <script>
@@ -3536,6 +3555,7 @@
       return {
         pools: { momentum: state.pools.momentum, threat: state.pools.threat },
         starship: state.starship,
+        fleetHangar: state.fleetHangar,
         sceneTraits: state.sceneTraits,
         extendedTasks: state.extendedTasks
       };
@@ -3547,7 +3567,11 @@
         if (payload.pools.momentum !== undefined) state.pools.momentum = payload.pools.momentum;
         if (payload.pools.threat !== undefined) state.pools.threat = payload.pools.threat;
       }
-      if (payload.starship) state.starship = payload.starship;
+      if (payload.starship) {
+        state.starship = payload.starship;
+        ensureStarship2e();
+      }
+      if (Array.isArray(payload.fleetHangar)) state.fleetHangar = payload.fleetHangar;
       if (payload.sceneTraits) state.sceneTraits = payload.sceneTraits;
       if (payload.extendedTasks) state.extendedTasks = payload.extendedTasks;
 
@@ -3611,17 +3635,22 @@
       { id: "custom-3", code: "09-CS3", name: "Custom Theme 3", shape: "tmp-era", colors: { "c-primary": "#ee7799", "c-secondary": "#cc88bb", "c-tertiary": "#9966cc", "c-accent": "#ffbb66", "c-ok": "#88ccaa", "c-alert": "#ee5555", "c-muted": "#ddaadd" } }
     ];
     const WEAPON_QUALITY_REFERENCE = [
-      { name: "Accurate", description: "A precise weapon that improves the attacker's chance of success." },
-      { name: "Area", description: "An attack that affects an entire zone or a broad area." },
-      { name: "Charge", description: "An energy weapon effect that can be built up before firing." },
-      { name: "Debilitating", description: "An effect that impairs the target after a successful attack." },
-      { name: "Hidden X", description: "The weapon or its attack is harder to detect; X indicates its rating." },
-      { name: "Intense", description: "A damaging effect that makes successful Effect results more harmful." },
-      { name: "Knockdown", description: "The attack can leave a target prone." },
-      { name: "Non-lethal", description: "Designed to subdue a target rather than cause a lasting injury." },
-      { name: "Piercing X", description: "Ignores a number of points of Resistance equal to X." },
-      { name: "Vicious X", description: "Adds extra damage for each Effect rolled, equal to X." },
-      { name: "Versatile X", description: "Offers additional adaptable weapon effects, rated by X." }
+      { name: "Accurate", description: "If you perform the Aim minor action before attacking, you may re-roll up to two d20s in your dice pool rather than only one." },
+      { name: "Area", description: "When you hit, you may hit additional targets in the same zone by spending 1 Momentum per target (Repeatable). May Succeed at Cost." },
+      { name: "Calibration", description: "Starship weapon quality. The attacker may re-roll a d20 on the attack roll, or spend Momentum to optimize the targeting solution." },
+      { name: "Charge", description: "If you take the Prepare minor action before attacking, you may add Area (severity -1), Intense, or Piercing to the attack." },
+      { name: "Cumbersome", description: "You cannot attack with this weapon unless you take the Prepare minor action on the same turn." },
+      { name: "Dampening", description: "Starship weapon quality. The attack drains the target ship's Reserve Power, disabling power routing and causing disruption." },
+      { name: "Debilitating", description: "The Difficulty of tasks to treat or heal injuries caused by this weapon is increased by 1." },
+      { name: "Grenade", description: "Can attack a target at up to Medium range. The character carries enough charges/grenades for three separate attacks." },
+      { name: "Hidden X", description: "Can be concealed with a minor action. Detecting it requires an Insight or Reason + Security task with Difficulty X." },
+      { name: "High-Yield", description: "Starship weapon quality. Heavy ordnance that inflicts critical breaches and devastating catastrophic damage upon hull impact." },
+      { name: "Inaccurate", description: "The weapon is clumsy and imprecise; you do not benefit from the Aim minor action when attacking with it." },
+      { name: "Intense", description: "Spend 1 Momentum to increase attack severity (rather than 2) (Repeatable). In ship combat, increases the cost to avoid breaches." },
+      { name: "Non-lethal", description: "Inflicts Stun injuries designed to subdue or incapacitate a target without causing lasting physical trauma." },
+      { name: "Piercing", description: "In personal combat, ignores the target's Protection rating. In starship combat, bypasses target Starship Resistance rating." },
+      { name: "Spread", description: "Starship weapon quality. Reduces the difficulty of targeting secondary craft or distinct subsystems in the same zone." },
+      { name: "Versatile X", description: "Adaptable weapon systems offering flexible tactical modes or extra damage options rated by X." }
     ];
 
     function defaultSettings() {
@@ -3671,31 +3700,42 @@
           { name: "Testing a Theory", desc: "When attempting an Engineering or Science task, you may roll Reason instead of the normal Attribute." }
         ],
         weapons: [
-          { name: "Phaser Type-2", damage: "3 + Security (Stun/Kill)", qualities: "Charge, Hidden 1" },
-          { name: "Unarmed Strike", damage: "1 + Security (Knockdown)", qualities: "Non-lethal" }
+          { name: "Phaser Type-2", damage: "Severity 4 (Stun or Deadly)", qualities: "Charge" },
+          { name: "Unarmed Strike", damage: "Severity 2 (Stun)", qualities: "None" }
         ],
         equipment: ["Starfleet Uniform", "Communicator", "Tricorder", "Engineering Kit"],
         injuriesAndScars: "None (Click to jot down temporary injuries, radiation, or Scars)"
       },
 
+      fleetHangar: structuredClone(window.STA_FLEET_HANGAR || []),
+
       starship: {
+        id: "uss-artemis-ncc-71822",
         name: "USS Artemis",
         registry: "NCC-71822",
-        spaceframe: "Excelsior-Class",
+        spaceframe: "Excelsior Class",
+        missionProfile: "Multirole Explorer",
+        serviceRecord: "Dependable Workhorse",
         scale: 5,
-        shieldsCurrent: 11,
-        shieldsMax: 11,
-        powerCurrent: 10,
-        powerMax: 10,
         resistance: 5,
+        shieldsCurrent: 14,
+        shieldsMax: 14,
+        reservePower: true,
+        reservePowerSystem: "",
         crewSupportCurrent: 5,
         crewSupportMax: 5,
         systems: { comms: 9, computers: 9, engines: 10, sensors: 9, structure: 10, weapons: 9 },
         departments: { command: 3, conn: 2, security: 2, engineering: 3, science: 2, medicine: 2 },
         breaches: { comms: 0, computers: 0, engines: 0, sensors: 0, structure: 0, weapons: 0 },
+        traits: ["Federation Starship", "Excelsior Class"],
+        talents: [
+          { name: "Improved Impulse Drive", desc: "When the flight controller succeeds at the Impulse, Attack Pattern, Evasive Action, or Ramming Speed actions, they may spend 2 Momentum to increase the Difficulty of attacks against the ship by 1 until the start of their next turn." },
+          { name: "Secondary Reactors", desc: "Additional fusion and impulse reactors allow the ship to generate far greater quantities of energy." }
+        ],
         weapons: [
-          { name: "Phaser Arrays", damage: "Scale + Security (Banks)", qualities: "Versatile 2, Medium Range" },
-          { name: "Photon Torpedoes", damage: "3 + Security (Salvo)", qualities: "High Yield, Long Range" }
+          { name: "Phaser Banks", damage: "8 (Scale 5 + 1 + Wpn Bonus 2)", qualities: "Medium Range, Versatile 2" },
+          { name: "Photon Torpedoes", damage: "5 (Base 3 + Wpn Bonus 2)", qualities: "Long Range, High-Yield" },
+          { name: "Tractor Beam", damage: "Strength 4", qualities: "Close Range, Opposed (Diff = Strength to escape)" }
         ]
       },
 
@@ -3828,7 +3868,10 @@
     }
 
     function dictionaryEntries(catalogName) {
-      const catalog = staDict()[catalogName] || {};
+      let catalog = staDict()[catalogName] || {};
+      if (catalogName === "weapon_qualities" && Object.keys(catalog).length === 0) {
+        catalog = WEAPON_QUALITY_REFERENCE.reduce((acc, cur) => { acc[cur.name] = cur; return acc; }, {});
+      }
       const seen = new Set();
       return Object.entries(catalog).map(([key, entry]) => {
         const name = (entry && entry.name) || key;
@@ -3895,6 +3938,294 @@
       });
     }
 
+    function findDictionaryItemFuzzy(catalogName, query) {
+      if (!query || !query.trim()) return null;
+      const q = normalizeDictionaryText(query);
+      const cat = staDict()[catalogName] || {};
+      const entries = Object.values(cat);
+      // 1. Exact name match
+      let match = entries.find(e => normalizeDictionaryText(e.name) === q);
+      if (match) return match;
+      // 2. Exact key match
+      if (cat[query]) return cat[query];
+      // 3. Name starts with query or query starts with name
+      match = entries.find(e => {
+        const n = normalizeDictionaryText(e.name);
+        return n && (n.startsWith(q) || q.startsWith(n));
+      });
+      if (match) return match;
+      // 4. Includes
+      match = entries.find(e => {
+        const n = normalizeDictionaryText(e.name);
+        return n && (n.includes(q) || q.includes(n));
+      });
+      return match || null;
+    }
+
+    function findQualityFuzzy(qStr) {
+      if (!qStr || !qStr.trim()) return null;
+      const cat = staDict().weapon_qualities || {};
+      const entries = Object.values(cat);
+      const cleaned = qStr.replace(/\(.*?\)/g, "").replace(/\s*\d+$/, "").trim();
+      const qNorm = normalizeDictionaryText(cleaned);
+      if (!qNorm) return null;
+
+      let match = entries.find(e => {
+        const n = normalizeDictionaryText(e.name);
+        const base = normalizeDictionaryText((e.name || "").replace(/\s*x$/i, ""));
+        return n === qNorm || base === qNorm;
+      });
+      if (match) return match;
+
+      match = entries.find(e => {
+        const n = normalizeDictionaryText(e.name);
+        const base = normalizeDictionaryText((e.name || "").replace(/\s*x$/i, ""));
+        return (n && (n.startsWith(qNorm) || qNorm.startsWith(n))) ||
+               (base && (base.startsWith(qNorm) || qNorm.startsWith(base)));
+      });
+      if (match) return match;
+
+      return entries.find(e => {
+        const n = normalizeDictionaryText(e.name);
+        return n && (n.includes(qNorm) || qNorm.includes(n));
+      }) || null;
+    }
+
+    function getPersonalWeaponTooltip(name) {
+      if (!name) return "";
+      let w = findDictionaryItemFuzzy("personal_weapons", name);
+      if (!w) {
+        const eq = findDictionaryItemFuzzy("equipment", name);
+        if (eq) return getEquipmentTooltip(name);
+        return "";
+      }
+      const lines = [w.name || name];
+      const desc = w.description || "";
+      const flavor = desc.split(" Type:")[0].split(" Cost:")[0].trim();
+      if (flavor) lines.push(flavor);
+      const wtype = w.type || w.category || "Ranged";
+      lines.push(`Type: ${wtype}.`);
+      if (w.injury) {
+        lines.push(`Injury: ${w.injury.replace(", ", " or ")}.`);
+      }
+      if (w.severity != null) {
+        lines.push(`Severity: ${w.severity}.`);
+      }
+      if (w.size) {
+        lines.push(`Size: ${w.size}.`);
+      }
+      const quals = Array.isArray(w.qualities)
+        ? (w.qualities.join(", ") || "None")
+        : (w.qualities || "None");
+      lines.push(`Qualities: ${quals}.`);
+      if (w.cost) {
+        lines.push(`Cost: ${w.cost}.`);
+      }
+      lines.push(`STA 2e Core Rulebook: ${w.page_reference || "p. 243"}`);
+      return lines.join("\n");
+    }
+
+    function getStarshipWeaponTooltip(name) {
+      if (!name) return "";
+      const sw = findDictionaryItemFuzzy("starship_weapons", name);
+      if (!sw) return "";
+      const lines = [sw.name || name];
+      const desc = sw.description || "";
+      const flavor = desc.split(" Range:")[0].split(" Damage:")[0].split(" Qualities:")[0].trim();
+      if (flavor) lines.push(flavor);
+      if (sw.category) lines.push(`Category: ${sw.category}.`);
+      if (sw.range) lines.push(`Range: ${sw.range}.`);
+      if (sw.damage_base) lines.push(`Base Damage: ${sw.damage_base}.`);
+      else if (sw.damage != null) lines.push(`Base Damage: ${sw.damage}.`);
+      const quals = Array.isArray(sw.qualities)
+        ? (sw.qualities.join(", ") || "None")
+        : (sw.qualities || "None");
+      if (quals && quals !== "None") lines.push(`Qualities: ${quals}.`);
+      lines.push(`STA 2e Core Rulebook: ${sw.page_reference || "p. 228"}`);
+      return lines.join("\n");
+    }
+
+    function getEquipmentTooltip(name) {
+      if (!name) return "";
+      const eq = findDictionaryItemFuzzy("equipment", name);
+      if (!eq) return "";
+      const lines = [eq.name || name];
+      if (eq.description) {
+        const desc = eq.description.split(" Cost:")[0].trim();
+        if (desc) lines.push(desc);
+      }
+      if (eq.category) lines.push(`Category: ${eq.category}.`);
+      if (eq.protection != null) lines.push(`Protection: ${eq.protection}.`);
+      if (eq.cost) lines.push(`Cost: ${eq.cost}.`);
+      lines.push(`STA 2e Core Rulebook: ${eq.page_reference || "p. 244-247"}`);
+      return lines.join("\n");
+    }
+
+    function getWeaponQualitiesTooltip(qualitiesStr) {
+      if (!qualitiesStr) return "";
+      const parts = String(qualitiesStr).split(/[,;]/).map(p => p.trim()).filter(Boolean);
+      const cards = [];
+      const seen = new Set();
+      for (const p of parts) {
+        const entry = findQualityFuzzy(p);
+        if (entry && !seen.has(entry.name)) {
+          seen.add(entry.name);
+          const header = entry.page_reference ? `${entry.name} (${entry.page_reference})` : entry.name;
+          cards.push(`${header}:\n${entry.description}`);
+        }
+      }
+      return cards.join("\n\n");
+    }
+
+    function autoMatchStarshipWeapon(index, weaponName) {
+      ensureStarship2e();
+      if (!Number.isInteger(index) || !state.starship.weapons || !state.starship.weapons[index]) return;
+      state.starship.weapons[index].name = weaponName || "";
+      const match = findDictionaryItemFuzzy("starship_weapons", weaponName);
+      if (match) {
+        state.starship.weapons[index].name = match.name;
+        const scale = Number(state.starship.scale) || 4;
+        const wpnSys = Number(state.starship.systems && state.starship.systems.weapons) || 9;
+        const wpnBonus = shipWeaponsBonus2e(wpnSys);
+        const nameLower = match.name.toLowerCase();
+
+        let damageStr = "";
+        let qualStr = "";
+
+        if (nameLower.includes("tractor")) {
+          const strength = Math.max(1, scale - 1);
+          damageStr = `Strength ${strength}`;
+          qualStr = "Close Range, Opposed (Diff = Strength to escape)";
+        } else if (nameLower.includes("torpedo") || match.category === "Torpedo") {
+          const base = parseInt(match.damage || 3, 10);
+          const total = base + wpnBonus;
+          damageStr = `${total} (Base ${base} + Wpn Bonus ${wpnBonus})`;
+          const parts = [];
+          if (match.range) parts.push(`${match.range} Range`);
+          if (Array.isArray(match.qualities)) parts.push(...match.qualities);
+          qualStr = parts.join(", ") || "Long Range";
+        } else if (nameLower.includes("cannon")) {
+          const base = scale + 2;
+          const total = base + wpnBonus;
+          damageStr = `${total} (Scale ${scale} + 2 + Wpn Bonus ${wpnBonus})`;
+          const parts = ["Close Range"];
+          if (Array.isArray(match.qualities)) parts.push(...match.qualities);
+          qualStr = parts.join(", ");
+        } else if (nameLower.includes("array")) {
+          const base = scale;
+          const total = base + wpnBonus;
+          damageStr = `${total} (Scale ${scale} + Wpn Bonus ${wpnBonus})`;
+          const parts = ["Medium Range"];
+          if (Array.isArray(match.qualities)) parts.push(...match.qualities);
+          qualStr = parts.join(", ");
+        } else {
+          // Banks or generic energy beam
+          const base = scale + 1;
+          const total = base + wpnBonus;
+          damageStr = `${total} (Scale ${scale} + 1 + Wpn Bonus ${wpnBonus})`;
+          const parts = ["Medium Range"];
+          if (Array.isArray(match.qualities)) parts.push(...match.qualities);
+          qualStr = parts.join(", ");
+        }
+
+        state.starship.weapons[index].damage = damageStr;
+        state.starship.weapons[index].qualities = qualStr;
+
+        const dmgEl = document.getElementById(`ship-weapon-damage-${index}`);
+        if (dmgEl) dmgEl.textContent = damageStr;
+        const qualEl = document.getElementById(`ship-weapon-qualities-${index}`);
+        if (qualEl) {
+          qualEl.textContent = qualStr;
+          const qTip = getWeaponQualitiesTooltip(qualStr);
+          if (qTip) qualEl.setAttribute("data-tip", qTip);
+          else qualEl.removeAttribute("data-tip");
+        }
+        const nameEl = document.getElementById(`ship-weapon-name-${index}`);
+        if (nameEl) {
+          nameEl.textContent = match.name;
+          const wTip = getStarshipWeaponTooltip(match.name);
+          if (wTip) nameEl.setAttribute("data-tip", wTip);
+          else nameEl.removeAttribute("data-tip");
+        }
+      } else {
+        const nameEl = document.getElementById(`ship-weapon-name-${index}`);
+        if (nameEl) nameEl.removeAttribute("data-tip");
+      }
+      saveLocalState();
+    }
+
+    function autoMatchGroundItem(index, itemName) {
+      if (!Number.isInteger(index) || !state.character || !state.character.weapons || !state.character.weapons[index]) return;
+      state.character.weapons[index].name = itemName || "";
+      let match = findDictionaryItemFuzzy("personal_weapons", itemName);
+      if (match) {
+        state.character.weapons[index].name = match.name;
+        const sev = match.severity != null ? match.severity : 2;
+        const injury = match.injury || "Stun";
+        const damageStr = `Severity ${sev} (${injury})`;
+        const qualStr = Array.isArray(match.qualities)
+          ? (match.qualities.join(", ") || "None")
+          : (match.qualities || "None");
+
+        state.character.weapons[index].damage = damageStr;
+        state.character.weapons[index].qualities = qualStr;
+
+        const dmgEl = document.getElementById(`ground-weapon-damage-${index}`);
+        if (dmgEl) dmgEl.textContent = damageStr;
+        const qualEl = document.getElementById(`ground-weapon-qualities-${index}`);
+        if (qualEl) {
+          qualEl.textContent = qualStr;
+          const qTip = getWeaponQualitiesTooltip(qualStr);
+          if (qTip) qualEl.setAttribute("data-tip", qTip);
+          else qualEl.removeAttribute("data-tip");
+        }
+        const nameEl = document.getElementById(`ground-weapon-name-${index}`);
+        if (nameEl) {
+          nameEl.textContent = match.name;
+          const wTip = getPersonalWeaponTooltip(match.name);
+          if (wTip) nameEl.setAttribute("data-tip", wTip);
+          else nameEl.removeAttribute("data-tip");
+        }
+      } else {
+        const eqMatch = findDictionaryItemFuzzy("equipment", itemName);
+        if (eqMatch) {
+          state.character.weapons[index].name = eqMatch.name;
+          let damageStr = "";
+          let qualStr = "";
+          if (eqMatch.protection != null) {
+            damageStr = `Protection ${eqMatch.protection}`;
+            qualStr = `Armor (Cost: ${eqMatch.cost || "Standard Issue"})`;
+          } else {
+            damageStr = `${eqMatch.category || "Gear"} Tool`;
+            qualStr = `Cost: ${eqMatch.cost || "Standard Issue"}`;
+          }
+          state.character.weapons[index].damage = damageStr;
+          state.character.weapons[index].qualities = qualStr;
+
+          const dmgEl = document.getElementById(`ground-weapon-damage-${index}`);
+          if (dmgEl) dmgEl.textContent = damageStr;
+          const qualEl = document.getElementById(`ground-weapon-qualities-${index}`);
+          if (qualEl) {
+            qualEl.textContent = qualStr;
+            const qTip = getWeaponQualitiesTooltip(qualStr);
+            if (qTip) qualEl.setAttribute("data-tip", qTip);
+            else qualEl.removeAttribute("data-tip");
+          }
+          const nameEl = document.getElementById(`ground-weapon-name-${index}`);
+          if (nameEl) {
+            nameEl.textContent = eqMatch.name;
+            const eqTip = getEquipmentTooltip(eqMatch.name);
+            if (eqTip) nameEl.setAttribute("data-tip", eqTip);
+            else nameEl.removeAttribute("data-tip");
+          }
+        } else {
+          const nameEl = document.getElementById(`ground-weapon-name-${index}`);
+          if (nameEl) nameEl.removeAttribute("data-tip");
+        }
+      }
+      saveLocalState();
+    }
+
     function applyDictionaryEntry(field, entry) {
       const catalogName = field.dataset.dictionary;
       const index = Number(field.dataset.dictionaryIndex);
@@ -3905,8 +4236,28 @@
         state.character.talents[index].desc = entry.description;
       } else if (catalogName === "equipment" && Number.isInteger(index)) {
         state.character.equipment[index] = entry.name;
-      } else if (catalogName === "personal_weapons" && Number.isInteger(index) && state.character.weapons[index]) {
-        state.character.weapons[index].name = entry.name;
+        const eqTip = getEquipmentTooltip(entry.name);
+        if (eqTip) field.setAttribute("data-tip", eqTip);
+        else field.removeAttribute("data-tip");
+      } else if (catalogName === "personal_weapons" && Number.isInteger(index) && state.character.weapons && state.character.weapons[index]) {
+        autoMatchGroundItem(index, entry.name);
+      } else if (catalogName === "starship_weapons" && Number.isInteger(index) && state.starship && state.starship.weapons && state.starship.weapons[index]) {
+        autoMatchStarshipWeapon(index, entry.name);
+      } else if (catalogName === "weapon_qualities") {
+        if (field.id && field.id.startsWith("ground-weapon-qualities-")) {
+          const i = parseInt(field.id.replace("ground-weapon-qualities-", ""), 10);
+          if (state.character.weapons && state.character.weapons[i]) {
+            state.character.weapons[i].qualities = entry.name;
+          }
+        } else if (field.id && field.id.startsWith("ship-weapon-qualities-")) {
+          const i = parseInt(field.id.replace("ship-weapon-qualities-", ""), 10);
+          if (state.starship.weapons && state.starship.weapons[i]) {
+            state.starship.weapons[i].qualities = entry.name;
+          }
+        }
+        const qTip = getWeaponQualitiesTooltip(entry.name);
+        if (qTip) field.setAttribute("data-tip", qTip);
+        else field.removeAttribute("data-tip");
       } else if (field.dataset.dictionaryStateField) {
         state.character[field.dataset.dictionaryStateField] = entry.name;
       }
@@ -4220,42 +4571,127 @@
       };
     }
 
+    // STA 2e Core Rulebook p. 226: Damage Bonus from Weapons System Rating
+    function shipWeaponsBonus2e(weaponsRating) {
+      const w = Number(weaponsRating) || 0;
+      if (w >= 13) return 4;
+      if (w >= 11) return 3;
+      if (w >= 9) return 2;
+      if (w >= 7) return 1;
+      return 0;
+    }
+
+    function ensureStarship2e(ship = state.starship) {
+      if (!ship) return;
+      if (typeof ship.reservePower !== "boolean") ship.reservePower = true;
+      if (typeof ship.reservePowerSystem !== "string") ship.reservePowerSystem = "";
+      if (typeof ship.missionProfile !== "string") ship.missionProfile = "";
+      if (typeof ship.serviceRecord !== "string") ship.serviceRecord = "";
+      if (!Array.isArray(ship.traits)) ship.traits = ["Federation Starship"];
+      if (!Array.isArray(ship.talents)) ship.talents = [];
+      if (!Array.isArray(ship.weapons)) ship.weapons = [];
+      if (ship.crewSupportCurrent === undefined) ship.crewSupportCurrent = ship.scale || 4;
+      if (ship.crewSupportMax === undefined) ship.crewSupportMax = ship.scale || 4;
+      delete ship.powerCurrent;
+      delete ship.powerMax;
+
+      // Ensure Fleet Hangar is initialized and merges any new ships from sta-ships.js
+      if (!Array.isArray(state.fleetHangar)) state.fleetHangar = [];
+      (window.STA_FLEET_HANGAR || []).forEach(preset => {
+        if (!state.fleetHangar.some(h => h.id === preset.id)) {
+          state.fleetHangar.push(structuredClone(preset));
+        }
+      });
+    }
+
+    function decodeStarshipFromBcHolmes(raw) {
+      const hydrated = hydrateDecoded(raw);
+      const ship = {
+        id: "ship-" + Date.now(),
+        name: raw.name || "Unnamed Vessel",
+        registry: raw.registry || "",
+        spaceframe: "",
+        missionProfile: "",
+        serviceRecord: "",
+        scale: Number((raw.simpleStats && raw.simpleStats.scale) || raw.scale) || 4,
+        resistance: 4,
+        shieldsCurrent: 10,
+        shieldsMax: 10,
+        reservePower: true,
+        reservePowerSystem: "",
+        crewSupportCurrent: 4,
+        crewSupportMax: 4,
+        systems: { comms: 7, computers: 7, engines: 7, sensors: 7, structure: 7, weapons: 7 },
+        departments: { command: 2, conn: 2, security: 2, engineering: 2, science: 2, medicine: 2 },
+        breaches: { comms: 0, computers: 0, engines: 0, sensors: 0, structure: 0, weapons: 0 },
+        traits: [],
+        talents: hydrated.talents.map(t => ({ name: t.name, desc: t.desc })),
+        weapons: []
+      };
+
+      const sfKey = (raw.simpleStats && raw.simpleStats.className) || raw.className || (typeof raw.spaceframe === "string" ? raw.spaceframe : raw.spaceframe?.name);
+      if (sfKey) {
+        const sf = lookupEntry("spaceframes", sfKey);
+        ship.spaceframe = sf ? sf.name : sfKey;
+      }
+      if (raw.missionProfile) {
+        const mpKey = typeof raw.missionProfile === "string" ? raw.missionProfile : (raw.missionProfile.name || raw.missionProfile.id || raw.missionProfile.type);
+        const mp = mpKey ? lookupEntry("mission_profiles", mpKey) : null;
+        ship.missionProfile = mp ? mp.name : (mpKey || "");
+      }
+      if (raw.serviceRecord) {
+        ship.serviceRecord = typeof raw.serviceRecord === "string" ? raw.serviceRecord : (raw.serviceRecord.name || raw.serviceRecord.type || "");
+      }
+
+      const sysSrc = (raw.simpleStats && raw.simpleStats.systems) || raw.systems;
+      applyNamedOrArrayStats(ship.systems, sysSrc, SHIP_SYS_KEYS);
+
+      const deptSrc = (raw.simpleStats && raw.simpleStats.departments) || raw.departments;
+      applyNamedOrArrayStats(ship.departments, deptSrc, BC_DEPT_ARRAY_ORDER);
+
+      // STA 2e Derived Ship Ratings (Core Rulebook p. 185)
+      const struct = Number(ship.systems.structure) || 7;
+      const sec = Number(ship.departments.security) || 2;
+      const cmd = Number(ship.departments.command) || 2;
+      const structRes = struct >= 13 ? 4 : struct >= 11 ? 3 : struct >= 9 ? 2 : struct >= 7 ? 1 : 0;
+      const hasTalent = (n) => ship.talents.some(t => t.name.toLowerCase().includes(n.toLowerCase()));
+
+      ship.resistance = Math.floor(ship.scale / 2) + structRes + (hasTalent("Ablative Armor") ? 2 : 0) + (hasTalent("Improved Hull Integrity") ? 1 : 0);
+      ship.shieldsMax = struct + sec + ship.scale + (hasTalent("Advanced Shields") ? 5 : 0);
+      ship.shieldsCurrent = ship.shieldsMax;
+      ship.crewSupportMax = ship.scale + ( cmd >= 5 ? 2 : cmd >= 3 ? 1 : 0 );
+      ship.crewSupportCurrent = ship.crewSupportMax;
+
+      ship.traits = ["Federation Starship", ship.spaceframe, ...(Array.isArray(raw.traits) ? raw.traits : [])].filter(Boolean);
+
+      const wpnBonus = shipWeaponsBonus2e(ship.systems.weapons);
+      if (Array.isArray(raw.weapons) && raw.weapons.length) {
+        ship.weapons = raw.weapons.map(w => ({
+          name: typeof w === "string" ? w : (w.name || w.type || "Ship Weapon"),
+          damage: w.damage ? String(w.damage) : `${ship.scale + wpnBonus} (Scale ${ship.scale} + Wpn +${wpnBonus})`,
+          qualities: w.qualities || w.effects || "Medium Range"
+        }));
+      } else {
+        ship.weapons = [
+          { name: "Energy Weapons (Banks/Arrays)", damage: `${ship.scale + wpnBonus} (Scale ${ship.scale} + Wpn Bonus ${wpnBonus})`, qualities: "Medium Range, Versatile 2" },
+          { name: "Photon Torpedoes", damage: `${3 + wpnBonus} (Base 3 + Wpn Bonus ${wpnBonus})`, qualities: "Long Range, High Yield" },
+          { name: "Tractor Beam", damage: `Strength ${Math.max(1, ship.scale - 1)}`, qualities: "Close Range" }
+        ];
+      }
+
+      ship.id = `${ship.name}-${ship.registry || Date.now()}`.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+      return ship;
+    }
+
     function applyDecodedStaPayload(raw) {
       if (!raw || typeof raw !== "object") return;
 
       // Detect if Starship
       if (raw.stereotype === "starship" || (raw.systems && !raw.species && raw.stereotype !== "mainCharacter" && raw.stereotype !== "supportingCharacter" && raw.stereotype !== "npc")) {
         state.rawDecodedShipJson = raw;
-        if (raw.name) state.starship.name = raw.name;
-        if (raw.registry) state.starship.registry = raw.registry;
-        if (raw.className) {
-          const sf = lookupEntry("spaceframes", raw.className);
-          state.starship.spaceframe = sf ? sf.name : raw.className;
-        } else if (raw.spaceframe) {
-          const key = typeof raw.spaceframe === "string" ? raw.spaceframe : raw.spaceframe.name;
-          const sf = key ? lookupEntry("spaceframes", key) : null;
-          if (sf) state.starship.spaceframe = sf.name;
-          else if (key) state.starship.spaceframe = key;
-        }
-        if (raw.simpleStats && raw.simpleStats.className) {
-          const sf = lookupEntry("spaceframes", raw.simpleStats.className);
-          state.starship.spaceframe = sf ? sf.name : raw.simpleStats.className;
-        }
-        if (raw.scale) state.starship.scale = Number(raw.scale) || 4;
-        if (raw.simpleStats && raw.simpleStats.scale) state.starship.scale = Number(raw.simpleStats.scale) || state.starship.scale;
-
-        const sysSrc = (raw.simpleStats && raw.simpleStats.systems) || raw.systems;
-        applyNamedOrArrayStats(state.starship.systems, sysSrc, SHIP_SYS_KEYS);
-
-        const deptSrc = (raw.simpleStats && raw.simpleStats.departments) || raw.departments;
-        applyNamedOrArrayStats(state.starship.departments, deptSrc, BC_DEPT_ARRAY_ORDER);
-
-        if (raw.missionProfile) {
-          const mpKey = typeof raw.missionProfile === "string" ? raw.missionProfile : (raw.missionProfile.name || raw.missionProfile.id);
-          const mp = mpKey ? lookupEntry("mission_profiles", mpKey) : null;
-          if (mp) state.starship.spaceframe = state.starship.spaceframe; // keep frame; profile is separate label if needed
-        }
-
+        const newShip = decodeStarshipFromBcHolmes(raw);
+        state.starship = newShip;
+        saveShipToHangar(newShip, false);
         state.character.shipName = `${state.starship.name}${state.starship.registry ? " (" + state.starship.registry + ")" : ""}`;
         saveLocalState();
         renderAll();
@@ -4333,11 +4769,16 @@
         state.character.weapons = raw.npc.weapons.map((w) => {
           const key = typeof w === "string" ? w : (w && w.type);
           const entry = key ? lookupEntry("personal_weapons", key) : null;
-          return {
-            name: entry ? entry.name : (key || "Weapon"),
-            damage: "",
-            qualities: ""
-          };
+          let name = entry ? entry.name : (key || "Weapon");
+          let damage = "";
+          let qualities = "";
+          if (entry) {
+            const sev = entry.severity != null ? entry.severity : 2;
+            const injury = entry.injury || "Stun";
+            damage = `Severity ${sev} (${injury})`;
+            qualities = Array.isArray(entry.qualities) ? (entry.qualities.join(", ") || "None") : (entry.qualities || "None");
+          }
+          return { name, damage, qualities };
         });
       }
 
@@ -4707,18 +5148,22 @@
         ["talents", "Talents"], ["species", "Species"], ["equipment", "Equipment"],
         ["personal_weapons", "Personal Weapons"], ["weapon_qualities", "Weapon Qualities"],
         ["environments", "Environments"], ["upbringings", "Upbringings"], ["careers", "Careers"],
-        ["ranks", "Ranks"], ["roles", "Roles"], ["spaceframes", "Spaceframes"],
-        ["mission_profiles", "Mission Profiles"]
+        ["career_events", "Career Events"], ["ranks", "Ranks"], ["roles", "Roles"],
+        ["spaceframes", "Spaceframes"], ["mission_profiles", "Mission Profiles"],
+        ["service_records", "Service Records"], ["starship_weapons", "Starship Weapons"],
+        ["rules_reference", "Rules Reference"]
       ];
     }
 
     function referenceEntries(catalogName) {
-      if (catalogName === "weapon_qualities") return WEAPON_QUALITY_REFERENCE;
       const catalog = staDict()[catalogName] || {};
+      if (catalogName === "weapon_qualities" && Object.keys(catalog).length === 0) {
+        return WEAPON_QUALITY_REFERENCE;
+      }
       return Object.entries(catalog).map(([key, entry]) => ({
         name: (entry && entry.name) || key,
         description: (entry && (entry.description || entry.trait_description)) || "No description is available for this entry.",
-        meta: (entry && (entry.category || entry.trait)) || "",
+        meta: (entry && (entry.category || entry.trait || entry.scope || entry.type || entry.special_rule || "")) || "",
         pageReference: (entry && entry.page_reference) || "Not in this rulebook"
       })).sort((a, b) => a.name.localeCompare(b.name));
     }
@@ -4800,14 +5245,10 @@
     function promptNewReferenceEntry() {
       ensureAppSettings();
       const cat = state.settings.referenceCatalog || "talents";
-      if (cat === "weapon_qualities") {
-        alert("Switch to a dictionary category (like Talents, Equipment, or Spaceframes) to add a custom entry.");
-        return;
-      }
       const name = prompt(`New ${cat} entry name:`);
       if (!name || !name.trim()) return;
       const desc = prompt(`Description for "${name.trim()}":`) || "";
-      const category = prompt(`Category / Tag (optional, e.g., Department:Science or Custom):`, "Custom") || "Custom";
+      const category = prompt(`Category / Tag (optional, e.g., Department:Science, Starship, or Custom):`, "Custom") || "Custom";
 
       saveCustomDictionaryEntry(state, cat, name.trim(), {
         name: name.trim(),
@@ -4982,14 +5423,17 @@
               <tr><th>Weapon / Tool</th><th>Damage / Rating</th><th>Qualities &amp; Notes</th><th></th></tr>
             </thead>
             <tbody>
-              ${state.character.weapons.map((w, i) => `
+              ${state.character.weapons.map((w, i) => {
+                const nameTip = getPersonalWeaponTooltip(w.name);
+                const qualTip = getWeaponQualitiesTooltip(w.qualities);
+                return `
                 <tr>
-                  <td contenteditable="true" data-dictionary="personal_weapons" data-dictionary-index="${i}" onblur="state.character.weapons[${i}].name=this.innerText;saveLocalState()">${w.name}</td>
-                  <td contenteditable="true" onblur="state.character.weapons[${i}].damage=this.innerText;saveLocalState()">${w.damage}</td>
-                  <td contenteditable="true" onblur="state.character.weapons[${i}].qualities=this.innerText;saveLocalState()">${w.qualities}</td>
-                  <td><button class="del-x" onclick="state.character.weapons.splice(${i},1);saveLocalState();renderScene()">×</button></td>
+                  <td contenteditable="true" id="ground-weapon-name-${i}" data-dictionary="personal_weapons" data-dictionary-index="${i}" ${nameTip ? `data-tip="${escapeHtml(nameTip)}"` : ""} onblur="autoMatchGroundItem(${i}, this.innerText.trim())">${escapeHtml(w.name)}</td>
+                  <td contenteditable="true" id="ground-weapon-damage-${i}" onblur="state.character.weapons[${i}].damage=this.innerText.trim();saveLocalState()">${escapeHtml(w.damage)}</td>
+                  <td contenteditable="true" id="ground-weapon-qualities-${i}" data-dictionary="weapon_qualities" ${qualTip ? `data-tip="${escapeHtml(qualTip)}"` : ""} onblur="state.character.weapons[${i}].qualities=this.innerText.trim();const qTip=getWeaponQualitiesTooltip(this.innerText.trim());if(qTip)this.setAttribute('data-tip',qTip);else this.removeAttribute('data-tip');saveLocalState()">${escapeHtml(w.qualities)}</td>
+                  <td><button class="del-x" onclick="state.character.weapons.splice(${i},1);saveLocalState();renderScene()">&times;</button></td>
                 </tr>
-              `).join("")}
+              `;}).join("")}
             </tbody>
           </table>
           <div style="margin-top:10px; font-size:0.9rem;">
@@ -5027,23 +5471,40 @@
       // SCENE 2: SPACE COMBAT & BRIDGE STATIONS
       // --------------------------------------------------------------------------
       if (state.activeScene === "space") {
+        ensureStarship2e();
         const filteredCards = state.sceneCards.space
           .map((c, idx) => ({ card: c, idx }))
           .filter(item => state.activeBridgeStation === "all" || item.card.station === state.activeBridgeStation);
+        const wpnBonus = shipWeaponsBonus2e(state.starship.systems.weapons);
 
         container.innerHTML = `
       <div class="lcars-panel">
         <div class="lcars-panel-header">
-          <span class="lcars-panel-title">Starship &middot; <span contenteditable="true" onblur="state.starship.name=this.innerText;saveLocalState()">${state.starship.name}</span> <span contenteditable="true" onblur="state.starship.registry=this.innerText;saveLocalState()">${state.starship.registry}</span></span>
+          <span class="lcars-panel-title">Starship &middot; <span contenteditable="true" onblur="state.starship.name=this.innerText.trim();saveShipToHangar(state.starship,false);saveLocalState()">${escapeHtml(state.starship.name)}</span> <span contenteditable="true" onblur="state.starship.registry=this.innerText.trim();saveShipToHangar(state.starship,false);saveLocalState()">${escapeHtml(state.starship.registry)}</span></span>
+        </div>
+
+        <div class="identity-grid" style="margin-bottom:12px;">
+          <div class="id-field" style="grid-column:auto; min-height:44px;" data-tip="Spaceframe class.">
+            <label>Frame</label>
+            <div class="val" style="font-size:1.05rem; color:var(--text-main);" contenteditable="true" data-dictionary="spaceframes" onblur="state.starship.spaceframe=this.innerText.trim();saveLocalState()">${escapeHtml(state.starship.spaceframe || "Excelsior Class")}</div>
+          </div>
+          <div class="id-field" data-tip="Starship Mission Profile.">
+            <label>Profile</label>
+            <div class="val" contenteditable="true" data-dictionary="mission_profiles" onblur="state.starship.missionProfile=this.innerText.trim();saveLocalState()">${escapeHtml(state.starship.missionProfile || "Multirole Explorer")}</div>
+          </div>
+          <div class="id-field" data-tip="Service Record.">
+            <label>Record</label>
+            <div class="val" contenteditable="true" data-dictionary="service_records" onblur="state.starship.serviceRecord=this.innerText.trim();saveLocalState()">${escapeHtml(state.starship.serviceRecord || "Standard Commission")}</div>
+          </div>
         </div>
 
         <div class="ship-readouts">
           <div class="lcars-stub-row t3" data-tip="Ship Scale.">
             <span class="stub"></span>
-            <input type="number" class="num" value="${state.starship.scale}" onchange="state.starship.scale=Number(this.value)||0;saveLocalState()" />
+            <input type="number" class="num" value="${state.starship.scale}" onchange="state.starship.scale=Number(this.value)||0;saveLocalState();renderScene()" />
             <span class="lbl">Scale</span>
           </div>
-          <div class="lcars-stub-row t2" data-tip="Resistance.">
+          <div class="lcars-stub-row t2" data-tip="2e Ship Resistance.">
             <span class="stub"></span>
             <input type="number" class="num" value="${state.starship.resistance}" onchange="state.starship.resistance=Number(this.value)||0;saveLocalState()" />
             <span class="lbl">Resist</span>
@@ -5055,23 +5516,38 @@
             </span>
             <span class="lbl">Shields</span>
           </div>
-          <div class="lcars-stub-row t4" data-tip="Power / reserve.">
+          <div class="lcars-stub-row ${state.starship.reservePower ? 't4' : 'alert'}" data-tip="STA 2e Reserve Power (click button to toggle Charged / Expended, or pick system routed to).">
             <span class="stub"></span>
-            <input type="number" class="num" value="${state.starship.powerCurrent}" onchange="state.starship.powerCurrent=Number(this.value)||0;saveLocalState()" />
-            <span class="lbl">Power</span>
+            <button type="button" class="pill-btn ${state.starship.reservePower ? 'ok' : 'alert'}" style="border-radius:0; flex:1; min-height:0; height:100%; font-size:0.86rem;"
+                    onclick="state.starship.reservePower=!state.starship.reservePower;saveLocalState();renderScene()">
+              ${state.starship.reservePower ? "ONLINE" : "SPENT"}
+            </button>
+            <select class="lcars-select" style="width:94px; min-height:0; height:100%; font-size:0.72rem; padding:0 20px 0 6px;"
+                    onchange="state.starship.reservePowerSystem=this.value;saveLocalState()" data-tip="System receiving Rerouted Reserve Power">
+              <option value="" ${!state.starship.reservePowerSystem ? "selected" : ""}>UNROUTED</option>
+              ${SHIP_SYS_KEYS.map(sys => `<option value="${sys}" ${state.starship.reservePowerSystem === sys ? "selected" : ""}>&rarr; ${sys.toUpperCase()}</option>`).join("")}
+            </select>
+            <span class="lbl">Res Pwr</span>
+          </div>
+          <div class="lcars-stub-row t5" data-tip="Crew Support current / max.">
+            <span class="stub"></span>
+            <span class="num">
+              <input type="number" value="${state.starship.crewSupportCurrent}" onchange="state.starship.crewSupportCurrent=Number(this.value)||0;saveLocalState()" />/<input type="number" value="${state.starship.crewSupportMax}" onchange="state.starship.crewSupportMax=Number(this.value)||0;saveLocalState()" />
+            </span>
+            <span class="lbl">Crew Sup</span>
           </div>
         </div>
 
-        <!-- Ship Systems & Breaches + Ship Departments (3x2 grids, attribute-button style) -->
+        <!-- Ship Systems & Breaches + Ship Departments -->
         <div class="ship-stats-matrix">
           <div>
             <div class="stat-col-label" style="color:var(--c-tertiary);" data-tip="&plusmn; adjusts system rating. Cap digit = breaches: tap +1, hold (or right-click) &minus;1.">Systems &middot; Breaches</div>
             <div class="stat-grid" id="ship-systems-grid">
               ${SHIP_SYS_KEYS.map(s => {
-          const rating = state.starship.systems[s];
-          const breaches = Number(state.starship.breaches[s]) || 0;
-          const breached = breaches > 0 ? "breached" : "";
-          return `
+                const rating = state.starship.systems[s];
+                const breaches = Number(state.starship.breaches[s]) || 0;
+                const breached = breaches > 0 ? "breached" : "";
+                return `
                 <div class="stat-pill ${breached}"
                      data-tip="${s}: rating ${rating}, breaches ${breaches}. Breach cap: tap +1, hold &minus;1.">
                   <button type="button" class="stat-seg end minus" onclick="stepShipSystem('${s}',-1)">-</button>
@@ -5083,7 +5559,7 @@
                         oncontextmenu="event.preventDefault();event.stopPropagation();if(window.lcarsLastPointer!=='touch')stepShipBreach('${s}',-1)">${breaches}</span>
                   <button type="button" class="stat-seg end plus" onclick="stepShipSystem('${s}',1)">+</button>
                 </div>`;
-        }).join("")}
+              }).join("")}
             </div>
           </div>
 
@@ -5101,6 +5577,65 @@
                 </div>
               `).join("")}
             </div>
+          </div>
+        </div>
+
+        <!-- 2e Starship Weapons, Traits, & Talents -->
+        <div class="scene-layout" style="margin-top:16px;">
+          <div>
+            <div class="lcars-panel-header" style="margin-left:0; border-radius:999px;">
+              <span class="lcars-panel-title">Starship Weapons (2e Wpn Bonus: +${wpnBonus})</span>
+              <button type="button" class="header-endcap" onclick="addShipWeapon()">Add</button>
+            </div>
+            <table class="ref-table">
+              <thead>
+                <tr><th>Weapon System</th><th>Damage (2e)</th><th>Range &amp; Qualities</th><th></th></tr>
+              </thead>
+              <tbody>
+                ${state.starship.weapons.map((w, i) => {
+                  const nameTip = getStarshipWeaponTooltip(w.name);
+                  const qualTip = getWeaponQualitiesTooltip(w.qualities);
+                  return `
+                  <tr>
+                    <td contenteditable="true" id="ship-weapon-name-${i}" data-dictionary="starship_weapons" data-dictionary-index="${i}" ${nameTip ? `data-tip="${escapeHtml(nameTip)}"` : ""} onblur="autoMatchStarshipWeapon(${i}, this.innerText.trim())">${escapeHtml(w.name)}</td>
+                    <td contenteditable="true" id="ship-weapon-damage-${i}" onblur="state.starship.weapons[${i}].damage=this.innerText.trim();saveLocalState()">${escapeHtml(w.damage)}</td>
+                    <td contenteditable="true" id="ship-weapon-qualities-${i}" data-dictionary="weapon_qualities" ${qualTip ? `data-tip="${escapeHtml(qualTip)}"` : ""} onblur="state.starship.weapons[${i}].qualities=this.innerText.trim();const qTip=getWeaponQualitiesTooltip(this.innerText.trim());if(qTip)this.setAttribute('data-tip',qTip);else this.removeAttribute('data-tip');saveLocalState()">${escapeHtml(w.qualities)}</td>
+                    <td><button class="del-x" onclick="state.starship.weapons.splice(${i},1);saveLocalState();renderScene()">&times;</button></td>
+                  </tr>
+                `;}).join("")}
+              </tbody>
+            </table>
+
+            <div class="lcars-panel-header" style="margin-top:12px; margin-left:0; border-radius:999px;">
+              <span class="lcars-panel-title">Starship Traits</span>
+              <button type="button" class="header-endcap" onclick="addShipTrait()">Add</button>
+            </div>
+            <div class="tag-list">
+              ${state.starship.traits.map((tr, i) => `
+                <span class="editable-tag">
+                  <span contenteditable="true" onblur="state.starship.traits[${i}]=this.innerText.trim();saveLocalState()">${escapeHtml(tr)}</span>
+                  <button class="del-x" onclick="state.starship.traits.splice(${i},1);saveLocalState();renderScene()">×</button>
+                </span>
+              `).join("")}
+            </div>
+          </div>
+
+          <div>
+            <div class="lcars-panel-header" style="margin-left:0; border-radius:999px;">
+              <span class="lcars-panel-title">Starship Talents &amp; Special Rules</span>
+              <button type="button" class="header-endcap" onclick="addShipTalent()">Add</button>
+            </div>
+            ${state.starship.talents.map((t, i) => `
+              <div style="background:#000; padding:8px 4px; margin-bottom:8px; border-bottom:3px solid var(--c-tertiary);">
+                <div style="display:flex; justify-content:space-between; align-items:center;">
+                  <strong contenteditable="true" data-dictionary="talents" data-dictionary-description="ship-talent-desc-${i}" style="color:var(--c-tertiary); font-size:1rem;"
+                          onblur="state.starship.talents[${i}].name=this.innerText.trim();saveLocalState()">${escapeHtml(t.name)}</strong>
+                  <button class="del-x" onclick="state.starship.talents.splice(${i},1);saveLocalState();renderScene()">×</button>
+                </div>
+                <div contenteditable="true" id="ship-talent-desc-${i}" style="font-size:0.86rem; color:var(--text-main);"
+                     onblur="state.starship.talents[${i}].desc=this.innerText.trim();saveLocalState()">${escapeHtml(t.desc)}</div>
+              </div>
+            `).join("")}
           </div>
         </div>
       </div>
@@ -5127,16 +5662,15 @@
         <div>
           <div class="lcars-panel">
             <div class="lcars-panel-header">
-              <span class="lcars-panel-title">Quick Reference</span>
+              <span class="lcars-panel-title">2e Starship Quick Reference</span>
             </div>
             <table class="ref-table">
-              <thead><tr><th>Station</th><th>Key Actions &amp; Momentum Spends</th></tr></thead>
+              <thead><tr><th>Station</th><th>STA 2e Actions &amp; Reserve Power</th></tr></thead>
               <tbody>
-                <tr><td><strong>Conn / Helm</strong></td><td><strong>Maneuver</strong> (Diff 1) • <strong>Impulse/Thrusters</strong> (Minor) • <strong>Attack Pattern / Evasive Action</strong> (Diff 2) • <strong>Warp</strong></td></tr>
-                <tr><td><strong>Tactical</strong></td><td><strong>Fire Weapon</strong> (Diff 2) • <strong>Aim/Target Lock</strong> (Minor) • <strong>Modulate Shields</strong> (Diff 2) • <strong>Tractor Beam</strong></td></tr>
-                <tr><td><strong>Ops / Eng</strong></td><td><strong>Damage Control</strong> (Diff 2 to patch breach) • <strong>Regenerate Shields / Reroute Power</strong></td></tr>
-                <tr><td><strong>Science</strong></td><td><strong>Sensor Sweep</strong> (Diff 1) • <strong>Scan for Weakness</strong> (Diff 2, creates advantage or pierces Resistance)</td></tr>
-                <tr><td><strong>Momentum</strong></td><td><strong>Target Subsystem (2 Mom):</strong> Pick breached system • <strong>Pierce Resistance / Bonus Damage (1–2 Mom)</strong></td></tr>
+                <tr><td><strong>Conn / Helm</strong></td><td><strong>Maneuver</strong> (Diff 1) • <strong>Impulse</strong> (Minor, 1 zone) • <strong>Attack Pattern / Evasive Action</strong> (Diff 2) • <strong>Warp</strong> (Spends Reserve Power)</td></tr>
+                <tr><td><strong>Tactical</strong></td><td><strong>Fire Weapon</strong> (Diff 2; Torpedo Salvo adds +1 Threat) • <strong>Aim</strong> (Minor) • <strong>Modulate Shields</strong> (Minor, +2 Resist if Reserve Power available) • <strong>Tractor Beam</strong> (Diff 2)</td></tr>
+                <tr><td><strong>Ops / Eng</strong></td><td><strong>Damage Control</strong> (Diff 2 to patch Breach) • <strong>Regenerate Shields</strong> (Diff 2; spends Reserve Power to restore Shields = Eng rating +2) • <strong>Reroute Power</strong> (Route Reserve Power to a system)</td></tr>
+                <tr><td><strong>Science</strong></td><td><strong>Sensor Sweep</strong> (Diff 1) • <strong>Scan for Weakness</strong> (Diff 2, creates trait or pierces Resistance)</td></tr>
               </tbody>
             </table>
           </div>
@@ -5144,6 +5678,7 @@
         </div>
       </div>
     `;
+        bindDictionaryAutocomplete(container);
         return;
       }
 
@@ -5342,12 +5877,14 @@
             <button type="button" class="header-endcap" onclick="addEquipment()" data-tip="Add a piece of equipment.">Add</button>
           </div>
           <div class="tag-list">
-            ${state.character.equipment.map((e, i) => `
+            ${state.character.equipment.map((e, i) => {
+              const eqTip = getEquipmentTooltip(e);
+              return `
               <span class="editable-tag">
-                <span contenteditable="true" data-dictionary="equipment" data-dictionary-index="${i}" onblur="state.character.equipment[${i}]=this.innerText;saveLocalState()">${e}</span>
+                <span contenteditable="true" data-dictionary="equipment" data-dictionary-index="${i}" ${eqTip ? `data-tip="${escapeHtml(eqTip)}"` : ""} onblur="state.character.equipment[${i}]=this.innerText.trim();const eqTip=getEquipmentTooltip(this.innerText.trim());if(eqTip)this.setAttribute('data-tip',eqTip);else this.removeAttribute('data-tip');saveLocalState()">${escapeHtml(e)}</span>
                 <button class="del-x" onclick="state.character.equipment.splice(${i},1);saveLocalState();renderScene()">×</button>
               </span>
-            `).join("")}
+            `;}).join("")}
           </div>
         </div>
 
@@ -5490,46 +6027,93 @@
       // SCENE 9: STA.BCHOLMES.ORG URL SYNC & SAVE HUB
       // --------------------------------------------------------------------------
       if (state.activeScene === "import") {
+        ensureStarship2e();
+        const hangarHtml = (state.fleetHangar || []).map((ship, idx) => {
+          const isCurrent = (ship.id && ship.id === state.starship.id) || (ship.name === state.starship.name && ship.registry === state.starship.registry);
+          return `
+            <div class="hangar-card ${isCurrent ? 'active' : ''}">
+              <div>
+                <strong style="color:var(--c-primary); font-size:1.02rem;">${escapeHtml(ship.name)} ${ship.registry ? `(${escapeHtml(ship.registry)})` : ""}</strong>
+                <div style="font-size:0.76rem; color:var(--text-dim);">Scale ${ship.scale || 4} ${escapeHtml(ship.spaceframe || "")} &middot; Shields ${ship.shieldsMax || 10} &middot; Resist ${ship.resistance || 4}</div>
+              </div>
+              <div style="display:flex; gap:6px; flex-wrap:wrap;">
+                <button type="button" class="pill-btn ${isCurrent ? 'ok' : 'secondary'}" style="padding:4px 10px; font-size:0.76rem;"
+                        onclick="loadShipFromHangar(${idx}, false)">${isCurrent ? 'Active' : 'Board (Local)'}</button>
+                <button type="button" class="pill-btn accent" style="padding:4px 10px; font-size:0.76rem;"
+                        onclick="loadShipFromHangar(${idx}, true)" data-tip="Switch to this ship and push it to everyone in the Room Code.">Sync to Room</button>
+                <button type="button" class="del-x" onclick="removeShipFromHangar(${idx})" title="Remove from Hangar">&times;</button>
+              </div>
+            </div>
+          `;
+        }).join("") || `<div class="reference-meta">No ships in Fleet Hangar yet.</div>`;
+
         container.innerHTML = `
       <div class="scene-layout">
+        <!-- LEFT PANEL: PERSONNEL (CHARACTER ONLY) -->
         <div class="lcars-panel">
           <div class="lcars-panel-header">
-            <span class="lcars-panel-title">Personnel URL</span>
+            <span class="lcars-panel-title">07A &middot; Personnel File (Character Only)</span>
           </div>
+          <p style="font-size:0.82rem; color:var(--text-dim); margin-bottom:6px;">
+            Load or export your personal character sheet without overwriting the party's active starship.
+          </p>
+          <label style="font-size:0.75rem; color:var(--c-secondary);">STA.BCHOLMES.ORG CHARACTER URL:</label>
+          <input class="lcars-input" id="import-url-input" value="${escapeHtml(state.sourceCharUrl)}" style="margin:4px 0 10px 0;" />
 
-          <input class="lcars-input" id="import-url-input" value="${state.sourceCharUrl}" style="margin:6px 0 10px 0;" />
-
-          <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:16px;">
-            <button class="pill-btn" onclick="handleUrlImport()">Decode &amp; Load URL</button>
-            <button class="pill-btn secondary" onclick="handleExportUpdatedUrl()">Generate Updated sta.bcholmes.org URL</button>
-            <button class="pill-btn ghost" onclick="resetToDefaults()">Reset Local Storage</button>
+          <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:14px;">
+            <button class="pill-btn" onclick="handleUrlImport()">Decode Character URL</button>
+            <button class="pill-btn secondary" onclick="handleExportUpdatedUrl()">Generate Updated Character URL</button>
           </div>
 
           <div id="export-url-box" style="display:none; margin-bottom:14px;">
-            <label style="font-size:0.8rem; color:var(--c-ok);">UPDATED SHAREABLE STA.BCHOLMES.ORG URL:</label>
+            <label style="font-size:0.8rem; color:var(--c-ok);">UPDATED SHAREABLE CHARACTER URL:</label>
             <input class="lcars-input" id="exported-url-output" readonly onclick="this.select()" style="margin-top:4px;" />
           </div>
 
           <div class="lcars-panel-header" style="margin-top:14px;">
-            <span class="lcars-panel-title">Campaign Backup &middot; JSON</span>
+            <span class="lcars-panel-title">Character &amp; Campaign .JSON</span>
           </div>
           <div style="display:flex; gap:8px; flex-wrap:wrap;">
-            <button class="pill-btn accent" onclick="downloadCampaignJson()">Download Looseleaf .JSON</button>
+            <button class="pill-btn accent" onclick="downloadCharacterOnlyJson()">Download Character .JSON</button>
             <label class="pill-btn tertiary" style="cursor:pointer;">
-              Load Looseleaf / Foundry .JSON File
-              <input type="file" accept=".json" style="display:none;" onchange="uploadJsonFile(event)" />
+              Load Character .JSON (Keeps Ship)
+              <input type="file" accept=".json" style="display:none;" onchange="uploadCharacterOnlyJson(event)" />
             </label>
+            <button class="pill-btn ghost" onclick="downloadCampaignJson()">Full Backup .JSON</button>
+            <button class="pill-btn alert" onclick="resetToDefaults()">Reset Storage</button>
           </div>
         </div>
 
+        <!-- RIGHT PANEL: ACTIVE VESSEL & GM FLEET HANGAR -->
         <div class="lcars-panel">
           <div class="lcars-panel-header">
-            <span class="lcars-panel-title">Raw Payload</span>
+            <button type="button" class="pill-btn ghost" onclick="exportFleetHangarJsFile()" data-tip="Download sta-ships.js containing all ships in your Fleet Hangar.">Export sta-ships.js</button>
+            <span class="lcars-panel-title">07B &middot; Fleet Hangar &amp; Ship Sync</span>
+            <button type="button" class="header-endcap" onclick="saveShipToHangar(state.starship, true)" data-tip="Save edits made to the current ship into the Fleet Hangar &amp; sync.">Save Ship</button>
           </div>
-          <p style="font-size:0.82rem; color:var(--text-dim); margin-bottom:6px;">
-            Exact JSON decompressed from your <code>?s=</code> URL (useful for inspecting internal enum IDs):
+
+          <div class="stat-col-label">Select Active Vessel (${state.fleetHangar.length} in Hangar)</div>
+          <div style="max-height:260px; overflow-y:auto; margin-bottom:14px;">
+            ${hangarHtml}
+          </div>
+
+          <div class="stat-col-label dept">GM Starship Importer (BC Holmes URL or Ship .JSON)</div>
+          <p style="font-size:0.8rem; color:var(--text-dim); margin-bottom:6px;">
+            Paste a <code>sta.bcholmes.org</code> Starship URL below to decode it into 2e, add it to the Fleet Hangar, and optionally broadcast it to everyone in your Room Code:
           </p>
-          <textarea class="lcars-textarea" rows="14" readonly>${JSON.stringify(state.rawDecodedCharJson || { status: "Decoding..." }, null, 2)}</textarea>
+          <input class="lcars-input" id="import-ship-url-input" value="${escapeHtml(state.sourceShipUrl || '')}" placeholder="https://sta.bcholmes.org/view?s=..." style="margin-bottom:8px;" />
+          <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:12px;">
+            <button type="button" class="pill-btn" onclick="handleGmShipUrlImport(true)">GM Import &amp; Broadcast to Room</button>
+            <button type="button" class="pill-btn secondary" onclick="handleGmShipUrlImport(false)">Import Locally Only</button>
+          </div>
+
+          <div style="display:flex; gap:8px; flex-wrap:wrap;">
+            <button type="button" class="pill-btn accent" onclick="downloadStarshipOnlyJson()">Download Active Ship .JSON</button>
+            <label class="pill-btn tertiary" style="cursor:pointer;">
+              Load Ship .JSON into Hangar
+              <input type="file" accept=".json" style="display:none;" onchange="uploadStarshipOnlyJson(event)" />
+            </label>
+          </div>
         </div>
       </div>
     `;
@@ -5566,6 +6150,7 @@
         state.settings.redAlert = true;
       }
       if (state.character && typeof state.character.portrait !== "string") state.character.portrait = "";
+      ensureStarship2e();
     }
 
     function customThemeById(themeId) {
@@ -5890,9 +6475,184 @@
     }
 
     function addWeapon() {
-      state.character.weapons.push({ name: "Custom Weapon", damage: "3 + Security", qualities: "Range, Qualities" });
+      state.character.weapons.push({ name: "Custom Weapon", damage: "Severity 3 (Stun)", qualities: "None" });
       saveLocalState();
       renderScene();
+    }
+
+    function addShipWeapon() {
+      ensureStarship2e();
+      const wpnBonus = shipWeaponsBonus2e(state.starship.systems.weapons);
+      state.starship.weapons.push({
+        name: "Phaser Arrays",
+        damage: `${state.starship.scale + wpnBonus} (Scale ${state.starship.scale} + Wpn Bonus ${wpnBonus})`,
+        qualities: "Medium Range, Area or Spread, Versatile 2"
+      });
+      saveLocalState();
+      renderScene();
+    }
+
+    function addShipTrait() {
+      ensureStarship2e();
+      state.starship.traits.push("New Ship Trait");
+      saveLocalState();
+      renderScene();
+    }
+
+    function addShipTalent() {
+      ensureStarship2e();
+      state.starship.talents.push({ name: "New Ship Talent", desc: "Click to enter starship talent rules." });
+      saveLocalState();
+      renderScene();
+    }
+
+    function saveShipToHangar(shipObj, broadcast = false) {
+      ensureStarship2e(shipObj);
+      if (!shipObj.id) {
+        shipObj.id = `${shipObj.name}-${shipObj.registry || Date.now()}`.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+      }
+      const existingIdx = state.fleetHangar.findIndex(s => s.id === shipObj.id || (s.name === shipObj.name && s.registry === shipObj.registry));
+      const copy = structuredClone(shipObj);
+      if (existingIdx >= 0) {
+        state.fleetHangar[existingIdx] = copy;
+      } else {
+        state.fleetHangar.push(copy);
+      }
+      if (broadcast) triggerTableSync();
+      else saveLocalState();
+      if (state.activeScene === "import") renderScene();
+    }
+
+    function loadShipFromHangar(idx, broadcast = false) {
+      const target = state.fleetHangar[idx];
+      if (!target) return;
+      state.starship = structuredClone(target);
+      ensureStarship2e();
+      state.character.shipName = `${state.starship.name}${state.starship.registry ? " (" + state.starship.registry + ")" : ""}`;
+      if (broadcast) triggerTableSync();
+      else saveLocalState();
+      renderAll();
+    }
+
+    function removeShipFromHangar(idx) {
+      state.fleetHangar.splice(idx, 1);
+      saveLocalState();
+      renderScene();
+    }
+
+    async function handleGmShipUrlImport(broadcast = true) {
+      const input = document.getElementById("import-ship-url-input")?.value;
+      if (!input || !input.trim()) {
+        alert("Paste a sta.bcholmes.org Starship URL first.");
+        return;
+      }
+      try {
+        const decoded = await decodeStaUrlString(input);
+        state.sourceShipUrl = input.trim();
+        state.rawDecodedShipJson = decoded;
+        const newShip = decodeStarshipFromBcHolmes(decoded);
+        state.starship = newShip;
+        saveShipToHangar(newShip, broadcast);
+        state.character.shipName = `${state.starship.name}${state.starship.registry ? " (" + state.starship.registry + ")" : ""}`;
+        renderAll();
+      } catch (err) {
+        alert("Could not decode Starship URL: " + err.message);
+      }
+    }
+
+    function downloadCharacterOnlyJson() {
+      const charBundle = {
+        type: "lcars-character",
+        character: state.character,
+        pools: {
+          determination: state.pools.determination,
+          stressCurrent: state.pools.stressCurrent,
+          stressMax: state.pools.stressMax
+        },
+        logs: state.logs,
+        logDraft: state.logDraft,
+        scratchpad: state.scratchpad,
+        sceneCards: state.sceneCards,
+        settings: state.settings,
+        customDictionary: state.customDictionary
+      };
+      const blob = new Blob([JSON.stringify(charBundle, null, 2)], { type: "application/json" });
+      const a = document.createElement("a");
+      a.href = URL.createObjectURL(blob);
+      a.download = `${(state.character.name || "Officer").replace(/\s+/g, "_")}_Character.json`;
+      a.click();
+    }
+
+    function uploadCharacterOnlyJson(event) {
+      const file = event.target.files && event.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        try {
+          const data = JSON.parse(e.target.result);
+          if (data.character) {
+            state.character = data.character;
+            if (data.pools) {
+              state.pools.determination = data.pools.determination ?? state.pools.determination;
+              state.pools.stressCurrent = data.pools.stressCurrent ?? state.pools.stressCurrent;
+              state.pools.stressMax = data.pools.stressMax ?? state.pools.stressMax;
+            }
+            if (Array.isArray(data.logs)) state.logs = data.logs;
+            if (data.logDraft) state.logDraft = data.logDraft;
+            if (typeof data.scratchpad === "string") state.scratchpad = data.scratchpad;
+            if (data.sceneCards) state.sceneCards = data.sceneCards;
+            if (data.settings) state.settings = data.settings;
+            if (data.customDictionary) state.customDictionary = data.customDictionary;
+            ensureAppSettings();
+            syncActiveDictionary(state);
+            applyTheme(state.settings.activeTheme);
+            saveLocalState();
+            renderAll();
+          } else {
+            applyDecodedStaPayload(data);
+          }
+        } catch (err) {
+          alert("Invalid Character JSON: " + err.message);
+        }
+      };
+      reader.readAsText(file);
+    }
+
+    function downloadStarshipOnlyJson() {
+      ensureStarship2e();
+      const blob = new Blob([JSON.stringify(state.starship, null, 2)], { type: "application/json" });
+      const a = document.createElement("a");
+      a.href = URL.createObjectURL(blob);
+      a.download = `${(state.starship.name || "Starship").replace(/\s+/g, "_")}_Ship2e.json`;
+      a.click();
+    }
+
+    function uploadStarshipOnlyJson(event) {
+      const file = event.target.files && event.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        try {
+          const data = JSON.parse(e.target.result);
+          const ship = data.systems ? data : (data.starship || decodeStarshipFromBcHolmes(data));
+          state.starship = ship;
+          saveShipToHangar(ship, true);
+          renderAll();
+        } catch (err) {
+          alert("Invalid Ship JSON: " + err.message);
+        }
+      };
+      reader.readAsText(file);
+    }
+
+    function exportFleetHangarJsFile() {
+      ensureStarship2e();
+      const jsContent = `window.STA_FLEET_HANGAR = ${JSON.stringify(state.fleetHangar, null, 2)};\n`;
+      const blob = new Blob([jsContent], { type: "application/javascript" });
+      const a = document.createElement("a");
+      a.href = URL.createObjectURL(blob);
+      a.download = "sta-ships.js";
+      a.click();
     }
 
     function addExtendedTask() {

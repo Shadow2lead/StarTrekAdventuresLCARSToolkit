@@ -1,6394 +1,4410 @@
 window.STA_DICTIONARY = {
-    "talents": {
-        "Advisor": {
-            "description": "Whenever you assist another character using your Command, the assisted character may re-roll one d20. REQUIREMENT: Command 2+",
-            "category": "Department:Command",
-            "page_reference": "p. 156"
-        },
-        "Defuse the Tension": {
-            "description": "Whenever you attempt a Task to persuade someone not to resort to violence, you may add a bonus d20 to your dice pool.",
-            "category": "Department:Command",
-            "page_reference": "p. 157"
-        },
-        "Follow My Lead": {
-            "description": "Once per scene, when you succeed at a Task during combat or another perilous situation, you may spend one Determination. If you do, choose a single ally. The next Task that ally attempts counts as having assistance from you, using your Presence + Command.",
-            "category": "Department:Command",
-            "page_reference": "p. 157"
-        },
-        "Supervisor": {
-            "description": "The ship’s Crew Support increases by one. This increase is cumulative if multiple Main Characters in the group select it.",
-            "category": "Department:Command",
-            "page_reference": "p. 157"
-        },
-        "Bargain": {
-            "description": "When negotiating an offer with someone during Social Conflict, you may re-roll a d20 on your next Persuade Task to convince that person. If the Social Conflict involves an Extended Task, you gain the Progression 1 benefit when you roll your Challenge Dice.",
-            "category": "Department:Command",
-            "page_reference": "p. 156"
-        },
-        "Call Out Targets": {
-            "description": "Upon assisting a character making an attack (using either the Assist Task, the Direct Task, or some other means), the helped character generates one point of bonus Momentum if they succeed; bonus Momentum cannot be saved to the group pool.",
-            "category": "Department:Command",
-            "page_reference": "p. 157"
-        },
-        "Call to Action": {
-            "description": "In a Conflict, a character may use the Prepare Minor Action to grant one ally a Minor Action of their choice (performed immediately) if they can communicate with that ally.",
-            "category": "Department:Command",
-            "page_reference": "p. 157"
-        },
-        "Cold Reading": {
-            "description": "Succeeding at a Task during Social Conflict generates one bonus Momentum which must be used for the Obtain Information Momentum Spend to gain knowledge about an individual on the other side of the interaction. If the Social Conflict involves an Extended Task, the character gains the Scrutinize 1 benefit when rolling Challenge Dice.",
-            "category": "Department:Command",
-            "page_reference": "p. 157"
-        },
-        "Coordinated Efforts": {
-            "description": "During an Extended Task, an assisted character may gain either the Scrutinize 2 or Progression 1 benefits when they roll their Challenge Dice.",
-            "category": "Department:Command",
-            "page_reference": "p. 157"
-        },
-        "Decisive Leadership": {
-            "description": "In a Conflict, whenever the character performs the Assist Task and would then pay two Momentum to keep the initiative, the cost to keep the initiative is reduced to 0.",
-            "category": "Department:Command",
-            "page_reference": "p. 157"
-        },
-        "Fleet Commander": {
-            "description": "Commanding a vessel during a fleet action reduces the Difficulty of a Task to grant a bonus to your vessel or group by 1, to a minimum of 1. Aboard a vessel during a fleet action, the character may treat the vessel as having a Command Department of 4+, regardless of the actual value.",
-            "category": "Department:Security",
-            "page_reference": "Not in this rulebook"
-        },
-        "Multi-Discipline": {
-            "description": "The character may select one additional Role, but not Commanding Officer or Admiral.",
-            "category": "Department:Command",
-            "page_reference": "p. 157"
-        },
-        "Plan of Action": {
-            "description": "When an ally succeeds at a Task that was made possible or had reduced Difficulty because of an Advantage created by the character, if that Advantage represented a plan or strategy, they generate two bonus Momentum. Bonus Momentum cannot be saved into the group pool.",
-            "category": "Department:Command",
-            "page_reference": "p. 157"
-        },
-        "Time Management": {
-            "description": "During any Challenge, Extended Task or other activity under time pressure, the character may attempt a Control + Command Task with a Difficulty 3. If this Task succeeds, reduce the total number of intervals the Players have taken by 1; for every 2 Momentum spent (Repeatable) reduce by a further 1. The character has managed to minimize lost time. If the Task fails, add one additional interval as the character’s efforts actually waste time.",
-            "category": "Department:Command",
-            "page_reference": "Not in this rulebook"
-        },
-        "Advanced Team Dynamics": {
-            "description": "The people working for you are the best, and you expect the best from them. The first time each adventure that you introduce a supporting character, that supporting character may take one additional option to improve the supporting character (from the list on page 134 of the core rulebook, or page 126 of The Klingon Empire core rulebook).",
-            "category": "Department:Command",
-            "page_reference": "p. 156"
-        },
-        "Bolster": {
-            "description": "You are skilled in keeping your allies up and active even under the most difficult circumstances. When you succeed at any task using your Command discipline during an action scene, you may spend Momentum to recover Stress suffered by your allies: each Momentum spent (Repeatable) recovers Stress equal to your Command rating from a single ally. This cannot help an injured character.",
-            "category": "Department:Command",
-            "page_reference": "p. 156"
-        },
-        "Precautions": {
-            "description": "You prepare for the worst, just in case. Once per scene, when an ally suffers an injury or the ship suffers a breach, you may prevent that injury or breach; describe what precaution you took to allow that ally to avoid being injured or to prevent that breach occurring.",
-            "category": "Department:Command",
-            "page_reference": "p. 157"
-        },
-        "Teacher": {
-            "description": "Beyond only being a leader, you concern yourself with the development and growth of your crew, taking pride in their accomplishments. When you create an advantage for an ally that represents your guidance or advice, that ally may re-roll one d20 on a single task they attempt which benefits from that advantage.",
-            "category": "Department:Command",
-            "page_reference": "p. 157"
-        },
-        "Fly-By": {
-            "description": "Whenever you use the Swift Task Momentum Spend, you do not increase the Difficulty of the second Task if one of the Tasks you attempt is to pilot a vessel or vehicle.",
-            "category": "Department:Conn",
-            "page_reference": "p. 158"
-        },
-        "Precise Evasion": {
-            "description": "Whenever you succeed at the Evasive Action Task, you may spend two Momentum. If you do, the ship does not suffer the increased Difficulty for attacks normally caused by Evasive Action.",
-            "category": "Department:Security",
-            "page_reference": "p. 158"
-        },
-        "Push the Limits": {
-            "description": "When you attempt a Conn Task that has increased in Difficulty due to environmental conditions or damage to the engines, reduce the Difficulty by 1, to a minimum of 1.",
-            "category": "Department:Conn",
-            "page_reference": "p. 158"
-        },
-        "Starship Expert": {
-            "description": "Whenever you succeed at a Conn Task to identify a type of starship, or to try and understand an unknown form of Starship, you gain one bonus Momentum, which may only be used on the Obtain Information Momentum Spend, or to pay part of the cost of the Create Advantage Momentum Spend (where the Advantage must represent some form of known or observed weakness in the ship being studied).",
-            "category": "Department:Conn",
-            "page_reference": "p. 159"
-        },
-        "Attack Run": {
-            "description": "A success in the Attack Pattern Task lets a character spend two Momentum. Enemy Attacks against the character’s ship do not reduce in Difficulty due to the Attack Pattern Task.",
-            "category": "Department:Conn",
-            "page_reference": "p. 158"
-        },
-        "Covering Advance": {
-            "description": "A success at any Helm Task means two Momentum can be spent to block a single enemy vessel within Medium range, plus one additional enemy vessel for each additional Momentum spent beyond that (Repeatable). When a blocked vessel makes its next attack, before the beginning of the character’s next Turn, the Difficulty of any Attack that does not target your vessel has a base Difficulty equal to the character ship’s Scale, instead of normal Difficulty.",
-            "category": "Department:Conn",
-            "page_reference": "p. 158"
-        },
-        "Efficient Evasion": {
-            "description": "Attempting an Evasive Action Task for the second or subsequent time in a row during a scene reduces the Power Requirement for Evasive Action to 0.",
-            "category": "Department:Conn",
-            "page_reference": "p. 158"
-        },
-        "Flight Controller": {
-            "description": "",
-            "category": "Department:Conn",
-            "page_reference": "Not in this rulebook"
-        },
-        "Glancing Impact": {
-            "description": "Succeeding at the Evasive Action Task increases the Resistance of the ship being piloted by +2. This bonus lasts until the start of the character’s next Turn.",
-            "category": "Department:Conn",
-            "page_reference": "p. 158"
-        },
-        "Inertia": {
-            "description": "When the character succeeds at a Maneuver Task, 1 Momentum may be spent to move one additional zone so long as the previous Turn included an Impulse or Warp Task.",
-            "category": "Department:Conn",
-            "page_reference": "p. 158"
-        },
-        "Multi-Tasking": {
-            "description": "Attempting the Override Task while at a bridge station including Helm and/or Navigator positions utilizes the character’s Conn Discipline instead of the Discipline normally required for the Task.",
-            "category": "Department:Conn",
-            "page_reference": "p. 158"
-        },
-        "Pathfinder": {
-            "description": "The Kzinti may reduce the Difficulty of tasks to navigate unknown regions of space with a ship it is piloting by 1. If they do, the complication range of the roll is increased by 1.",
-            "category": "Species:Kzinti",
-            "page_reference": "p. 158"
-        },
-        "Precision Maneuvering": {
-            "description": "Reduces the Difficulty of the Task by 1, to a minimum of 0, when attempting a Task that requires precise maneuvering, or where there is a collision risk.",
-            "category": "Department:Conn",
-            "page_reference": "p. 158"
-        },
-        "Spacewalk": {
-            "description": "Whenever the Difficulty of a Task is increased thanks to low- or zero-gravity, ignore the increase. A Task that is normally possible but isn’t because of low- or zero-gravity, may be attempted at +1 Difficulty to the Task.",
-            "category": "Department:Conn",
-            "page_reference": "p. 159"
-        },
-        "Strafing Run": {
-            "description": "When a character succeeds at the Attack Pattern Task and spends Momentum to keep the initiative, the cost to keep the initiative is 0.",
-            "category": "Department:Conn",
-            "page_reference": "p. 159"
-        },
-        "Thread the Needle": {
-            "description": "You’re used to operating small, nimble ships, where their agility and small profile make them a much harder target, if you know how to fly them. When you perform an Impulse, Warp, or Evasive Action task when piloting a starship, enemy attacks from ships with a greater Scale than yours increase in Difficulty by 1. If attacked by a ship with a Scale that is double or more the Scale of your ship, then you increase the Difficulty by 2 instead.",
-            "category": "Department:Conn",
-            "page_reference": "p. 159"
-        },
-        "Zero-G Combat": {
-            "description": "You have received special training to fight effectively in micro-gravity and zero-gravity environments, a process that famously involves a significant amount of nausea as participants acclimatize to the conditions. In combat, when you make an attack while in a zero-gravity or micro-gravity environment, you may use the higher of your Conn or Security disciplines for the task, and you ignore any Difficulty increases caused by the lack of gravity. In addition, enemies who lack similar training increase the Difficulty of attacks against you by 1.",
-            "category": "Department:Conn",
-            "page_reference": "p. 159"
-        },
-        "Hands-On Pilot": {
-            "description": "Your piloting style delves deeply into the technical aspects of a ship’s propulsion systems, and you spend much of your time in Engineering, fine-tuning power flows, subspace field geometries, and inertial stabilizers to ensure that the ship flies exactly the way you want it to. When you perform one of the Impulse, Warp, Evasive Action, or Attack Pattern tasks, the ship may treat its assistance die as if it had rolled a 1. However, when anyone else pilots the ship, they increase their complication range by 1, as your adjustments don’t suit everyone.",
-            "category": "Department:Conn",
-            "page_reference": "p. 158"
-        },
-        "Close Protection": {
-            "description": "When you make a successful Attack, you may spend one Momentum to protect a single ally within Close range. The next Attack against that ally before the start of your next turn increases in Difficulty by 1.",
-            "category": "Department:Security",
-            "page_reference": "p. 161"
-        },
-        "Interrogation": {
-            "description": "When you succeed at a Task to coerce someone to reveal information in a social conflict, you will gain one bonus Momentum, which may only be spent on the Obtain Information Momentum Spend.",
-            "category": "Department:Security",
-            "page_reference": "p. 162"
-        },
-        "Mean Right Hook": {
-            "description": "Your Unarmed Strike Attack has the Vicious 1 Damage Effect.",
-            "category": "Department:Security",
-            "page_reference": "p. 162"
-        },
-        "Pack Tactics": {
-            "description": "Whenever you assist another character during combat, the character you assisted gains one bonus Momentum if they succeed.",
-            "category": "Department:Security",
-            "page_reference": "p. 162"
-        },
-        "Quick to Action": {
-            "description": "During the first round of any combat, you and your allies may ignore the normal cost to Retain the Initiative.",
-            "category": "Department:Security",
-            "page_reference": "p. 162"
-        },
-        "Combat Medic": {
-            "description": "The character’s abilities in field medicine and battle triage are exceptional and their presence inspires allies to continue any fight. Whenever the character attempts the First Aid Task, they may spend one Momentum to cause the recipient to regain points of Stress equal to the number of the character’s Medicine Discipline. A character may only regain Stress in this way once per scene.",
-            "category": "Department:Security",
-            "page_reference": "p. 164"
-        },
-        "Criminal Minds": {
-            "description": "By imagining they are a suspect, and thinking in the same way, the character gains insight into a criminal’s thought processes or actions. Whenever a character succeeds at a Task to interpret information about a suspect using Reason, a character generates 1 bonus Momentum which may only be used for the Obtain Information Momentum Spend.",
-            "category": "Department:Security",
-            "page_reference": "Not in this rulebook"
-        },
-        "Crisis Management": {
-            "description": "Small squad tactics can mean the difference between life and death in a dangerous, hostile situation, and the character excels at coordinating action in battle. The character may make use of the Direct Task (Star Trek Adventures core rulebook p. 173). If they already have access to the Direct Task, they may do so twice per scene instead of once.",
-            "category": "Department:Security",
-            "page_reference": "p. 161"
-        },
-        "Deadeye Marksman": {
-            "description": "The character has spent time at the target range every day, working on their aim. When the character takes the Aim Minor Action, they reduce the Difficulty of their next Attack by 1, in addition to the normal effects of the Aim Minor Action.",
-            "category": "Department:Security",
-            "page_reference": "Not in this rulebook"
-        },
-        "Fire at Will": {
-            "description": "The character is capable of tracking multiple targets and making attacks against them with great effect. Whenever the character makes a ranged weapon attack, and then uses the Swift Task Momentum spend to make a second ranged attack, they ignore the normal Difficulty increase from Swift Task.",
-            "category": "Department:Security",
-            "page_reference": "p. 161"
-        },
-        "Full Spread - Maximum Yield!": {
-            "description": "The character is skilled in setting up torpedo attacks. In addition to the normal benefits of a Salvo, the attack also gains the benefit of the Devastating Attack Momentum Spend as though 2 Momentum had been spent. The Devastating Attack Momentum Spend may not be selected again for this attack.",
-            "category": "Department:Security",
-            "page_reference": "Not in this rulebook"
-        },
-        "Hunker Down": {
-            "description": "Making good use of the surroundings for protection is one of the hallmarks of a skilled soldier. Whenever the character rolls Cover Dice,  they may add +1 Resistance to the total for each Effect rolled.",
-            "category": "Department:Security",
-            "page_reference": "Not in this rulebook"
-        },
-        "Lead Investigator": {
-            "description": "The character has a mind intrigued by mystery and investigation, and is often called upon to review and coordinate response to lawbreaking. The character generates two bonus Momentum after a successful Task to investigate a crime.",
-            "category": "Department:Security",
-            "page_reference": "p. 162"
-        },
-        "Martial Artist": {
-            "description": "There are countless forms and styles of hand-to-hand combat, and the character has mastered several of them. The character’s Unarmed Strike attacks gain the Intense Damage Effect. If the character also has the Mean Right Hook Talent, then both Damage Effect apply when Effects are rolled.",
-            "category": "Department:Security",
-            "page_reference": "p. 162"
-        },
-        "Precision Targeting": {
-            "description": "Having extensive knowledge of ship systems and operations, the character can easily target specific systems when attacking an enemy vessel. When the character makes an attack that targets a specific System they may  reroll 1d20 in their dice pool, and the attack gains the Piercing 1 damage effect.",
-            "category": "Department:Security",
-            "page_reference": "p. 162"
-        },
-        "Ambush Tactics": {
-            "description": "You’ve familiarized yourself with techniques that make ambushes and surprise attacks especially effective. When you succeed at an attack against an enemy who is unaware of your presence, or who is suffering from a trait or complication which represents a weakness or vulnerability, add 2[D] to the amount of Stress the attack inflicts. This applies to both personal combat and ship combat.",
-            "category": "Department:Security",
-            "page_reference": "p. 161"
-        },
-        "Applied Force": {
-            "description": "Kzinti are predators who instinctually know how to apply their size and strength in a fight. When making a melee attack, a character with this talent can use Fitness instead of Daring. In addition, add 1[D] to the Stress rating of unarmed attacks or 2[D] if the character’s Fitness is 11 or higher.",
-            "category": "Species:Kzinti",
-            "page_reference": "p. 161"
-        },
-        "Defensive Training": {
-            "description": "You’re especially good at avoiding harm. Select either melee attacks or ranged attacks when you acquire this talent. Attacks against you of the chosen type increase in Difficulty by 1.",
-            "category": "Department:Security",
-            "page_reference": "p. 161"
-        },
-        "Precision Salvo": {
-            "description": "You’ve spent countless hours running combat simulations and fine-tuning targeting subroutines, and you can now place a torpedo salvo exactly where it will have the most decisive effect. When you make a torpedo attack, you may spend 1 Momentum (Immediate) to add the Piercing 1 weapon effect.",
-            "category": "Department:Security",
-            "page_reference": "Not in this rulebook"
-        },
-        "Shield Breaker": {
-            "description": "You’ve developed firing solutions designed to overwhelm a target vessel’s shields without harming the ship beneath, ideally as a prelude to boarding or extracting a target using transporters. When you make an attack with a starship’s energy weapons, you may spend 1 Momentum (Immediate) to target shields. If you do so, then increase the Stress rating of the energy weapon used by 2[D]. This attack cannot inflict any breaches to the target. If used on a ship with 0 shields, then it adds 1 Difficulty to the next Regenerate Shields task the target attempts.",
-            "category": "Department:Security",
-            "page_reference": "Not in this rulebook"
-        },
-        "A Little More Power": {
-            "description": "Whenever you succeed at an Engineering Task aboard your own ship, you may spend one Momentum to regain one spent Power.",
-            "category": "Department:Engineering",
-            "page_reference": "Not in this rulebook"
-        },
-        "I Know My Ship": {
-            "description": "Whenever you attempt a Task to determine the source of a technical problem with your ship, add one bonus d20.",
-            "category": "Department:Engineering",
-            "page_reference": "p. 159"
-        },
-        "In the Nick of Time": {
-            "description": "Whenever you succeed at an Engineering or Science Task as part of an Extended Task, you score 1 additional Work for every Effect rolled.",
-            "category": "Department:Science",
-            "page_reference": "p. 159"
-        },
-        "Intense Scrutiny": {
-            "description": "Whenever you succeed at a Task using Reason or Control as part of an Extended Task, you may ignore up to two Resistance for every Effect rolled.",
-            "category": "Department:Science",
-            "page_reference": "p. 163"
-        },
-        "Jury-Rig": {
-            "description": "Whenever you attempt an Engineering Task to perform repairs, you may reduce the Difficulty by two, to a minimum of 0. If you do this, however, then the repairs are only temporary and will last only a single scene, plus one additional scene per Momentum spent (Repeatable) before they fail again. Jury-rigged repairs can only be applied once, and the Difficulty to repair a device that has been Jury-rigged increases by 1.",
-            "category": "Department:Engineering",
-            "page_reference": "p. 159"
-        },
-        "Experimental Device": {
-            "description": "You have designed and constructed a new piece of equipment that is either a brand new invention or is heavily modified from its original to the point of being barely recognizable. In either case, the device performs a function that you determine when you select this Talent. When used appropriately, it automatically provides you an Advantage. However, its experimental nature means there are lingering design bugs that sometimes plagues its function. Increase the Complication Range of any Task by 2 when using this device. This Talent may be selected multiple times with a different device for each selection.",
-            "category": "Department:Engineering",
-            "page_reference": "Not in this rulebook"
-        },
-        "Exploit Engineering Flaw": {
-            "description": "Following an ally’s successful Scan for Weakness Task,  you may highlight an identified engineering flaw in the opponent’s ship. In addition to the bonus granted by the Scan for Weakness Task, you may assist anyone making an Attack against the target ship, which does not count against the normal limit for providing assistance. If the Attack is successful, it generates 1 bonus Momentum. You must be able to communicate with the ally making the Attack to offer this assistance.",
-            "category": "Department:Engineering",
-            "page_reference": "Not in this rulebook"
-        },
-        "Maintenance Specialist": {
-            "description": "You are an expert in conducting and directing normal, day-to-day, maintenance and repairs on Starfleet equipment. Whenever they are required to perform maintenance, reduce the Difficulty by 1, to a minimum of 1, and halve the time required to complete the Task.",
-            "category": "Department:Engineering",
-            "page_reference": "p. 160"
-        },
-        "Meticulous": {
-            "description": "You are patient, methodical, and check for errors before considering Tasks complete. Whenever they use Engineering to complete a Task, you may negate one Complication generated from the roll. However, during timed Tasks or Challenges, you take 1 more interval to complete the Task.",
-            "category": "Department:Engineering",
-            "page_reference": "p. 160"
-        },
-        "Miracle Worker": {
-            "description": "You have a reputation of doing the impossible: repairs or modifications well in advance of expectations; getting offline systems up and running when most needed and so on. Whenever you use Engineering on an Extended Task, if you achieve a Breakthrough and roll at least one Effect on a Challenge Die, you achieve a second Breakthrough.",
-            "category": "Department:Engineering",
-            "page_reference": "p. 160"
-        },
-        "Procedural Compliance": {
-            "description": "You are well versed in established Starfleet engineering practices and guidelines. By spending 2 Momentum to Create an Advantage (obtaining the proper technical manuals and documentation prior to attempting a Task to work on a ship’s system), you may reroll 1d20 during the next Engineering Task.",
-            "category": "Department:Engineering",
-            "page_reference": "p. 160"
-        },
-        "Past the Redline": {
-            "description": "Engineers understand that safety tolerances and operating margins are always designed into the acceptable performance range of equipment. While not recommended the equipment is usually capable of higher performance, if the consequences are risky. This Talent provides bonus Momentum for using a ship’s System until the end of the scene. Select the System you wish to enhance, and the number of bonus Momentum to be provided. Attempt a Daring + Engineering Task with a Difficulty equal to the bonus Momentum selected. If the you succeed, subsequent Tasks using that System automatically generate that amount of bonus Momentum. However, to represent the risks involved, the Task also increases its Complication Range by the same number as the Bonus Momentum provided. If a Complication is rolled, the System no longer provides bonus Momentum and the System suffers a number of Breaches equal to half the ship’s Scale.",
-            "category": "Department:Engineering",
-            "page_reference": "p. 160"
-        },
-        "Repair Team Leader": {
-            "description": "You are trained to direct and lead damage repair parties during emergencies, giving them guidance and expert knowledge of the ships systems. If you succeed at the Damage Control Task you may spend 3 Momentum (Repeatable) to also repair one Breach.",
-            "category": "Department:Engineering",
-            "page_reference": "p. 161"
-        },
-        "Right Tool for the Right Job": {
-            "description": "Engineers are trained to identify and use appropriate tools whenever they are working on the delicate components that make up complex ship systems. Whenever you acquire an engineering tool with an Opportunity Cost, the tool grants an Advantage if it did not do so originally, or increases the Advantage it provides by one step.",
-            "category": "Department:Engineering",
-            "page_reference": "p. 161"
-        },
-        "Rocks Into Replicators": {
-            "description": "Starfleet engineers are famed for being able to build or create nearly anything needed from the most basic of available components. Once per session, you may destroy any single piece of equipment to create any other piece of equipment of an equal or lower Opportunity Cost. This new piece of equipment has a Complication range increase of 2, with the Complication being a malfunction that renders it useless. You should provide a reasonable explanation as to how a repurposed or cannibalized device could function and the Gamemaster has final say if there is any question about the “reasonableness” of the new device.",
-            "category": "Department:Engineering",
-            "page_reference": "Not in this rulebook"
-        },
-        "Saboteur": {
-            "description": "You’re skilled in taking things apart – violently if necessary. When you make an attack against a structure, machine, or stationary vehicle while in personal combat (i.e., you aren’t using a ship’s weapons to make the attack), you may use your Engineering instead of your Security to resolve the attack task and the Stress inflicted.",
-            "category": "Department:Engineering",
-            "page_reference": "p. 161"
-        },
-        "Percussive Maintenance": {
-            "description": "You have an extensive repertoire of quick fixes, crude bypasses, and other improvised techniques for using and repairing devices during a crisis. They all do the job, but it’s messy work. When you attempt a Control + Engineering task, you may add 2 to Threat to use your Daring instead of your Control. If you do this, and the task succeeds, you may reduce the time taken by 1 interval without spending Momentum.",
-            "category": "Department:Engineering",
-            "page_reference": "p. 160"
-        },
-        "I’m Giving It All She’s Got!": {
-            "description": "You can keep a ship running on a fraction of its normal power levels, and always seem to be able to squeeze just a little more power out of the reserves or non-essential systems. Whenever someone attempts a task with a Power requirement aboard your ship while you are aboard, roll 1[D]; on an effect, reduce that Power requirement by 1, to a minimum of 0. In addition, when you succeed at the Power Management task, you restore Power equal to your Engineering score, rather than only 1; you may increase this amount by spending Momentum as normal.",
-            "category": "Department:Engineering",
-            "page_reference": "p. 159"
-        },
-        "Transporter Chief": {
-            "description": "You’re well-versed in the operation of transporter systems and can often get them to function in extreme circumstances or to achieve outcomes that few others could manage. Such efforts are never without risk, given the delicacy of the technology. When you attempt a task to use, repair, or modify a transporter, you may add 2 to Threat to reduce the Difficulty of the task by 2, to a minimum of 0.",
-            "category": "Department:Engineering",
-            "page_reference": "p. 161"
-        },
-        "Computer Expertise": {
-            "description": "Whenever you attempt a Task that involves the programming or study of a computer system, you may add a bonus d20 to your pool.",
-            "category": "Department:Science",
-            "page_reference": "p. 162"
-        },
-        "Testing a Theory": {
-            "description": "When you attempt a Task using Engineering or Science, you may roll one additional d20, so long as you succeeded at a previous Task covering the same scientific or technological field earlier in the same adventure.",
-            "category": "Department:Science",
-            "page_reference": "p. 163"
-        },
-        "Baffling Briefing": {
-            "description": "When the character engages in a Social Conflict using deception, the character may use Science in place of Command so long as their technical knowledge is used to mislead their opponent. ",
-            "category": "Department:Science",
-            "page_reference": "p. 162"
-        },
-        "Dedicated Focus X": {
-            "description": "Choose a Focus your character has. When attempting a Task where that Focus applies, each d20 that generates 2 successes also generates 1 bonus Momentum. This Talent only applies to d20s in the character’s dice pool, and does not apply to d20s added due to equipment, starship assistance, or character assistance.",
-            "category": "Department:Science",
-            "page_reference": "p. 163"
-        },
-        "Expedition Expert": {
-            "description": "Prior to participating in an away team mission, the character may prepare by conducting a research Task. If they succeed, Momentum may be spent to allow the character to substitute their Science Discipline in place of any other, during any Task to navigate or transverse difficult terrain during the mission. Each point of Momentum spent from the research Task in this way allows for one such substitution.",
-            "category": "Department:Science",
-            "page_reference": "p. 163"
-        },
-        "Lab Rat": {
-            "description": "The character prefers to spend most of their free time engaged in various side projects and experiments. Because of this, they are extremely familiar with the equipment and capabilities of the labs on board their ship. When attempting an Extended Task while using a laboratory, the character gains the Progression 1 Effect.",
-            "category": "Department:Science",
-            "page_reference": "p. 163"
-        },
-        "Mental Repository": {
-            "description": "Using extensive mental conditioning, the character has access to memories with unprecedented clarity and accuracy. So long as the character takes time to focus their mind prior to attempting a Task – which takes 2 Intervals during a Timed Challenge – they reduce the Difficulty of the Task by 1 to a minimum of 1. In addition, if they succeed they gain a bonus Momentum which may only be spent on the Obtain Information Momentum spend.",
-            "category": "Department:Science",
-            "page_reference": "p. 163"
-        },
-        "Rapid Analysis": {
-            "description": "Tasks attempted as part of a Timed Challenge using the Science Discipline takes the character 1 Time Interval instead of 2. The amount of time taken for any Task may not be reduced to less than 1 Interval.",
-            "category": "Department:Science",
-            "page_reference": "p. 163"
-        },
-        "Student of War": {
-            "description": "The character has conducted extensive research into numerous kinds of conflict and has devoted their academic career to the study of war. While this knowledge may be purely theoretical, such information, when placed into the hands of more capable combatants, can be truly devastating. When the character provides assistance to a Combat Task, they may reroll their die.",
-            "category": "Department:Science",
-            "page_reference": "p. 163"
-        },
-        "Temporal Mechanic": {
-            "description": "Long study into the facets of temporal mechanics has given the character an intuitive understanding of the space-time continuum and the various phenomena that can distort it. Once per scene, when confronted with an anomaly that affects the flow of time and space, the character rolls 1[D] when attempting a Task relating to the phenomenon. The character generates bonus Momentum equal to the result, in addition to any Momentum generated from the Task result. If an Effect is rolled, the Gamemaster gains 1 Threat instead.",
-            "category": "Department:Science",
-            "page_reference": "Not in this rulebook"
-        },
-        "Theory Into Practice": {
-            "description": "When you attempt a Task using Engineering or Science where you gain the additional d20 from the Testing a  Theory Talent, reduce the Difficulty of the Task by 1, to a minimum of 0.",
-            "category": "Department:Science",
-            "page_reference": "p. 164"
-        },
-        "Unconventional Thinking": {
-            "description": "During any Challenge or Extended Task that uses the Scientific Method to adapt technology in which the character is participating, if the hypothesis being pursued is considered “Outside the Box” – the Difficulty of the Tasks are reduced by 1. It should be noted that Players are not aware of the fact they are pursuing an “Outside the Box” hypothesis under normal circumstances – it is up to the Gamemaster to ensure they receive the proper Difficulty reduction.",
-            "category": "Department:Science",
-            "page_reference": "Not in this rulebook"
-        },
-        "Walking Encyclopedia": {
-            "description": "Once per session, when you attempt a Task, you may spend 2 Momentum (Immediate) in order to gain an additional Focus for the remainder of the session, due to your breadth of knowledge. However, any Task using that Focus increases in Complication range by 1, as you are not a true expert on that subject.",
-            "category": "Department:Science",
-            "page_reference": "p. 164"
-        },
-        "Applied Research": {
-            "description": "You’re a practical scientist, always looking to see how your knowledge can be put into practice. Once per scene, when you attempt a task which relates to information you received earlier that scene from an Obtain Information question, you may roll an additional d20.",
-            "category": "Department:Science",
-            "page_reference": "p. 162"
-        },
-        "Did the Reading": {
-            "description": "You absorb information quickly and know how to put it to good use. When you attempt a task, you may spend 1 Momentum (Immediate) to use Science on that task instead of the discipline you would normally use. In addition, you count as having an applicable focus for that task. Each time after the first in a single scene that you use this ability, the Momentum cost increases by 1: this is cumulative.",
-            "category": "Department:Science",
-            "page_reference": "p. 163"
-        },
-        "Learn from Failure": {
-            "description": "A true scientist learns as much from failure as from success. When you fail at a Science task, you may add 3 to Threat to create an advantage that represents knowledge or insights gained from the failure. The cost of this is reduced by 1 for each success you scored on the failed task.",
-            "category": "Department:Science",
-            "page_reference": "p. 163"
-        },
-        "Rapid Hypothesis": {
-            "description": "You are quick to devise a working theory about an unknown phenomenon’s nature, origin, or effect. Once per scene, when you ask two or more questions using Obtain Information, you may immediately create an advantage that represents your theoretical understanding of the subject of those questions.",
-            "category": "Department:Science",
-            "page_reference": "p. 163"
-        },
-        "Doctor’s Orders": {
-            "description": "When you attempt a Task to coordinate others, or to coerce someone into taking or refraining from a specific course of action, you may use your Medicine Discipline instead of Command.",
-            "category": "Department:Medicine",
-            "page_reference": "p. 164"
-        },
-        "Field Medicine": {
-            "description": "When attempting a Medicine Task, you may ignore any increase in Difficulty for working without the proper tools or equipment.",
-            "category": "Department:Medicine",
-            "page_reference": "p. 165"
-        },
-        "First Response": {
-            "description": "Whenever you attempt the First Aid Task during combat, you gain a bonus d20. Further, you may always Succeed at a Cost, with each Complication you suffer adding +1 to the Difficulty of healing the patient’s Injury subsequently.",
-            "category": "Department:Medicine",
-            "page_reference": "p. 165"
-        },
-        "Quick Study": {
-            "description": "When attempting a Task that will involve an unfamiliar medical procedure, or which is to treat an unfamiliar species, ignore any Difficulty increase stemming from your unfamiliarity.",
-            "category": "Department:Medicine",
-            "page_reference": "p. 165"
-        },
-        "Triage": {
-            "description": "When you attempt a Task to identify specific injuries or illnesses, or to determine the severity of a patient’s condition, you may spend one Momentum (Repeatable) to diagnose one additional patient.",
-            "category": "Department:Medicine",
-            "page_reference": "p. 165"
-        },
-        "Bedside Manner": {
-            "description": "When the character succeeds at a Medicine Task to heal another’s Injury, the character may immediately remove a personal Complication from the patient, even if that Complication was unrelated to the treated Injury. In addition, whenever this character attempts a Reputation Check, they are considered to have one additional positive influence.",
-            "category": "Department:Medicine",
-            "page_reference": "p. 164"
-        },
-        "Chief of Staff": {
-            "description": "When using the Medicine Discipline to provide  assistance to another character attempting a Medicine Task, all characters providing assistance may reroll one d20 in their dice pool.",
-            "category": "Department:Medicine",
-            "page_reference": "p. 164"
-        },
-        "Cyberneticist": {
-            "description": "Whenever the character attempts a Task to work on, install, or remove a cybernetic device from a patient, they add a d20 to their dice pool. ",
-            "category": "Department:Medicine",
-            "page_reference": "p. 164"
-        },
-        "Fellowship Specialty": {
-            "description": "Select a Focus. When you succeed at a Medicine Task where that Focus applies, the cost of the Create Advantage Momentum spend is reduced by 1, to a minimum of 1.",
-            "category": "Department:Medicine",
-            "page_reference": "p. 165"
-        },
-        "Field Medic": {
-            "description": "Through experience and training, the stress of battle fades when there’s a patient in need. When attempting a Medicine Task while in the midst of combat, you may ignore the first Complication that would increase the Difficulty of this Task.",
-            "category": "Department:Medicine",
-            "page_reference": "Not in this rulebook"
-        },
-        "Healing Hands": {
-            "description": "When attempting the Control + Medicine Task to heal  Injury-related Complications, reduce the Difficulty by 1, to a minimum of 1.",
-            "category": "Department:Medicine",
-            "page_reference": "Not in this rulebook"
-        },
-        "Heart, Body and Mind": {
-            "description": "Whenever you Assist a character with the Recover Combat Task, you gain 1 bonus Momentum that can only be spent on the active character to recover Stress.",
-            "category": "Department:Medicine",
-            "page_reference": "Not in this rulebook"
-        },
-        "I’m a Doctor, Not a...": {
-            "description": "When this Talent is purchased, select a Discipline with a score of 1. Once per scene, before attempting a Task using the selected Discipline, a point of Determination may be spent to substitute the character’s Medicine Score in place of that Discipline. This does not have to be linked to a Value.",
-            "category": "Department:Medicine",
-            "page_reference": "Not in this rulebook"
-        },
-        "Insightful Guidance": {
-            "description": "Whenever you Assist a character, who is in a Social Conflict, using your knowledge of psychology or emotional states, that character is considered to have an Advantage in addition to the normal benefits provided by your Assist. ",
-            "category": "Department:Medicine",
-            "page_reference": "p. 165"
-        },
-        "Practice Makes Perfect": {
-            "description": "Once per scene, after the character has succeeded on a Medicine Task relating to the treatment of a patient, reduce the Difficulty of the next Medicine Task relating to that patient by 1.",
-            "category": "Department:Medicine",
-            "page_reference": "p. 165"
-        },
-        "Psychoanalyst": {
-            "description": "When you use the Medicine Discipline during a Social Conflict you may increase the Complication range of your Task by a number of steps. For each step you may ask a single question as if you’d spent Momentum on Obtain Information. Any Complications generated from this Task results in the individual you are interacting with becoming offended or upset with being “analyzed.”",
-            "category": "Department:Medicine",
-            "page_reference": "p. 165"
-        },
-        "Surgery Savant": {
-            "description": "When attempting a Medicine Task during an Extended Task relating to surgery, the character gains the Triumphant Effect.",
-            "category": "Department:Medicine",
-            "page_reference": "p. 165"
-        },
-        "Cutting-Edge Medicine": {
-            "description": "You keep up to date with the latest medical publications and the latest advances in medical science, to ensure that there are no diseases you’re unprepared to face, and no treatments or medicines you’re unfamiliar with. Whenever you make a Medicine task with a Difficulty of 3 or higher, you may spend up to 3 Momentum (Immediate) to reduce the Difficulty by the number of Momentum spent, to a minimum Difficulty of 1. However, as these latest advances are often experimental, the complication range of the task increases by 1 for each Momentum spent.",
-            "category": "Department:Medicine",
-            "page_reference": "p. 164"
-        },
-        "Diagnostic Expertise": {
-            "description": "You focus on diagnosing the nature of an illness, injury, psychological problem, or other condition, because once the cause has been determined, finding the solution gets easier. When you succeed at a Medicine task to identify and diagnose the nature of a medical problem, you gain 1 bonus Momentum for every additional d20 you bought by spending Momentum, which may only be used to Obtain Information or Create Advantage.",
-            "category": "Department:Medicine",
-            "page_reference": "p. 164"
-        },
-        "Don’t You Die on Me!": {
-            "description": "The line between life and death is a thin one, and you’re good enough to keep a patient alive when lesser doctors would have pronounced them dead. When a character is killed, you may spend 1 Determination to make one attempt to revive them. If they were killed instantly by suffering two injuries, then this may only be attempted within that scene. If the character suffered a lethal injury and died because they didn’t receive medical treatment in time, this may be attempted before the end of the subsequent scene. This requires a Daring + Medicine task, with a Difficulty of 3. If successful, the character is brought back from the brink of death, though the injury / injuries that nearly killed them still require healing. Failure means that your efforts were unsuccessful and the character dies.",
-            "category": "Department:Medicine",
-            "page_reference": "p. 164"
-        },
-        "Stimulant Shot": {
-            "description": "You’ve got a few tricks and treatments that can get an injured patient back on their feet for a while. They are rough on the body, but they can be essential during a crisis. When you perform the First Aid task on an injured ally, you may get them back into the fighting right away without spending Momentum. In addition, the ally recovers Stress equal to twice your Medicine rating.",
-            "category": "Department:Medicine",
-            "page_reference": "p. 165"
-        },
-        "Proud and Honorable": {
-            "description": "Your personal integrity is unimpeachable, and you will not willingly break a promise made. Whenever you attempt a Task to resist being coerced into breaking a promise, betraying your allies, or otherwise acting dishonorably, you reduce the Difficulty by 1.",
-            "category": "Species:Andorian",
-            "page_reference": "p. 151"
-        },
-        "The Ushaan": {
-            "description": "You are experienced in the tradition of honor-dueling known as the Ushaan, having spilt much blood upon the ice. When you make a melee Attack, or are targeted by a melee Attack, and buy one or more d20s by adding to Threat, you may re-roll the dice pool for the Task. Further, you own an Ushaan-tor, a razor-sharp ice-miner’s tool used in these duels.",
-            "category": "Species:Andorian",
-            "page_reference": "p. 151"
-        },
-        "Orb Experience": {
-            "description": "You have received a vision from the Bajoran Prophets, through one of the Orbs. This rare experience, though confusing at first, has shaped your life and outlook. You have one additional Value, reflecting the insights you received from the experience. The first time this Value is Challenged, roll 1[D]; if an Effect is rolled, then some foretold element of the Orb Experience has come to pass, and the Value is not crossed out as it would normally be.",
-            "category": "Species:Bajoran",
-            "page_reference": "p. 151"
-        },
-        "Strong Pagh": {
-            "description": "You believe profoundly in the Prophets, and rely heavily upon that faith to see you through hardship. Whenever you attempt a Task to resist being coerced or threatened, you reduce the Difficulty of that Task by 1.",
-            "category": "Species:Bajoran",
-            "page_reference": "p. 151"
-        },
-        "Empath": {
-            "description": "You can sense the emotions of most living beings nearby, and can communicate telepathically with other empaths and telepaths, as well as those with whom you are extremely familiar. You cannot choose not to sense the emotions of those nearby, except for those who are resistant to telepathy. It may require effort and a Task to pick out the emotions of a specific individual in a crowd, or to block out the emotions of those nearby. Increase the Difficulty of this Task if the situation is stressful, if there are a lot of beings present, if the target has resistance to telepathy, and other relevant factors.",
-            "category": "Species:Betazoid",
-            "page_reference": "Not in this rulebook"
-        },
-        "Empathy2e": {
-            "description": "",
-            "category": "Esoteric",
-            "page_reference": "Not in this rulebook"
-        },
-        "Telepath": {
-            "description": "You can sense the surface thoughts and emotions of most living beings nearby, and can communicate telepathically with other empaths and telepaths, as well as those with whom you are extremely familiar. Surface thoughts are whatever a creature is thinking about at that precise moment. The character cannot choose not to sense the emotions or read the surface thoughts of those nearby, except for those who are resistant to telepathy. It will require effort and a Task to pick out the emotions or thoughts of a specific individual in a crowd, to search a creature’s mind for specific thoughts or memories, or to block out the minds of those nearby. Unwilling targets may resist with an Opposed Task.",
-            "category": "Species:Betazoid",
-            "page_reference": "Not in this rulebook"
-        },
-        "Telepathy2e": {
-            "description": "",
-            "category": "Esoteric",
-            "page_reference": "Not in this rulebook"
-        },
-        "Cultural Flexibility": {
-            "description": "Your people are friendly, patient, and inquisitive, and you exemplify these traits. You are at ease when meeting new cultures, and adapt to unfamiliar social structures easily. When you attempt a Task to learn about an unfamiliar culture, or to act in an appropriate manner when interacting with members of such a culture, you reduce the Difficulty by 1.",
-            "category": "Species:Denobulan",
-            "page_reference": "p. 152"
-        },
-        "Parent Figure": {
-            "description": "You have a large family, with many children, nieces, and nephews, and you’ve learned how to coordinate even the most unruly and fractious of groups when necessary. When attempting or assisting a Task, and two or more other characters are involved in the Task, the first Complication generated on the Task — either by the character attempting the Task, or one of the assistants — may be ignored.",
-            "category": "Species:Denobulan",
-            "page_reference": "p. 152"
-        },
-        "Resolute": {
-            "description": "You are indomitable, and unwilling to succumb to adversity. You increase your maximum Stress by 3.",
-            "category": "Species:Human",
-            "page_reference": "p. 152"
-        },
-        "Spirit of Discovery": {
-            "description": "You have the drive, spirit, and courage to voyage into the unknown. You may spend one Determination to add three points to the group Momentum pool. The normal conditions for spending Determination still apply.",
-            "category": "Species:Human",
-            "page_reference": "p. 152"
-        },
-        "Incisive Scrutiny": {
-            "description": "You have a knack for finding weak spots in arguments, theories, and machines alike to glean information from them, learning about things by how they respond to pressure against vulnerable points. When you succeed at a Task using Control or Insight, you gain one bonus Momentum, which may only be used for the Obtain Information Momentum Spend.",
-            "category": "Species:Tellarite",
-            "page_reference": "p. 154"
-        },
-        "Sturdy": {
-            "description": "You have a blend of physical resilience and mental fortitude such that you’re difficult to subdue. You reduce the cost to resist being knocked prone by the Knockdown damage effect by one, to a minimum of 0, and gain +1 Resistance against all non-lethal attacks.",
-            "category": "Species:Tellarite",
-            "page_reference": "Not in this rulebook"
-        },
-        "Former Initiate": {
-            "description": "You joined the Initiate Program, hoping to be chosen by the Symbiosis Commission to become Joined. As there are far more Initiates than there are Symbionts, you were one of the many who failed, but the quality of even a failed initiate is enough for Starfleet to recruit you. When you attempt a Task using Control or Reason, and spend Determination to buy a bonus d20 for that Task, you may re-roll your dice pool. Former Initiate cannot be taken if the character has the Joined Talent — they are mutually exclusive.",
-            "category": "Species:Trill",
-            "page_reference": "p. 154"
-        },
-        "Joined": {
-            "description": "You have a symbiont, with lifetimes of memories to draw upon. Once per mission, you may declare that a former host had expertise in a relevant skill or field of study; you gain a single Focus for the remainder of the scene, as you draw upon those memories. Additionally, you gain a Trait with the name of the Symbiont; this reflects potential advantages of the Joining, the ability to perform rites and rituals to awaken past hosts’ memories, and the vulnerabilities inherent in the connection. Former Initiate cannot be taken if the character has the Joined Talent — they are mutually exclusive.",
-            "category": "Species:Trill",
-            "page_reference": "p. 154"
-        },
-        "Kolinahr": {
-            "description": "You have undergone the ritual journey to purge all emotion. You reduce the Difficulty of all Tasks to resist coercion, mental intrusion, pain, and other mental attacks by two.",
-            "category": "Species:Vulcan",
-            "page_reference": "p. 154"
-        },
-        "Mind-Meld": {
-            "description": "You have undergone training in telepathic techniques that allow the melding of minds through physical contact. This will always require a Task with a Difficulty of at least 1, which can be opposed by an unwilling participant. If successful, you link minds with the participant, sharing thoughts and memories; Momentum may be spent to gain more information, or perform deeper telepathic exchanges. This link goes both ways, and it is a tiring and potentially hazardous process for you. Complications can result in pain, disorientation, or lingering emotional or behavioral difficulties.",
-            "category": "Species:Vulcan",
-            "page_reference": "p. 154"
-        },
-        "Nerve Pinch": {
-            "description": "You have learned numerous techniques for the stimulation and control of nerve impulses — collectively called neuropressure. Some applications of neuropressure can be used to swiftly and non-lethally incapacitate assailants. The nerve pinch counts as a melee weapon with 1[D], Size 1H, and the Intense and Non-lethal qualities. You may use Science or Medicine instead of Security when attempting a nerve pinch Attack, and may increase damage by your Science or Medicine Discipline instead of Security.",
-            "category": "Species:Vulcan",
-            "page_reference": "p. 151"
-        },
-        "Above the Clouds": {
-            "description": "While engaged in Social conflict in a lavish environment (or one of excess), you reduce the Difficulty of any Persuade Tasks by 1 to a minimum of 1.",
-            "category": "Species:Ardanan",
-            "page_reference": "Not in this rulebook"
-        },
-        "Zenite in the Soul": {
-            "description": "Your ancestry is steeped in toil in the mines on Ardana’s surface and, you roll one additional d20 whenever using Engineering or Science in relation to geology, mining or  mine equipment.",
-            "category": "Species:Ardanan",
-            "page_reference": "Not in this rulebook"
-        },
-        "Meticulous Analysis": {
-            "description": "When you encounter unidentified phenomena through sensors, you may immediately make a Swift Task, without the need to spend Momentum or an increase in Difficulty. This Task may only be used to attempt to analyze the preliminary data you have received using Reason + Science and a relevant Focus.",
-            "category": "Species:Benzite",
-            "page_reference": "Not in this rulebook"
-        },
-        "All Fingers and Thumbs": {
-            "description": "When you succeed at a Task using a computer console (including a bridge station), you gain one bonus Momentum. This bonus Momentum cannot be saved into the group pool.",
-            "category": "Species:Benzite",
-            "page_reference": "Not in this rulebook"
-        },
-        "Warm Welcome": {
-            "description": "A cheerful, outgoing personality is the perfect thing to put diplomatic guests at ease. Whenever assisting another character, the Zahl may use the active character’s Presence Attribute instead of their own. Further, both the Zahl and the character being assisted may ignore any increases in Complication Range for the Task.",
-            "category": "Species:Zahl",
-            "page_reference": "Not in this rulebook"
-        },
-        "Born Near a Warp Core": {
-            "description": "Bolian traditions say that a child born near an active Warp Core has an improved, more positive, disposition. Optimism and an upbeat attitude certainly lends credence to this tradition, allowing the Bolian to weather misfortune. When they suffer a Complication from a Task, roll 1[D]; if the result is an Effect, the Complication is ignored. Once a Complication has been ignored in this way, the Bolian may not ignore another Complication for the remainder of the scene.",
-            "category": "Species:Bolian",
-            "page_reference": "Not in this rulebook"
-        },
-        "Deltan Pheromones": {
-            "description": "The character excretes a natural aphrodisiac pheromone. Whenever they attempt a Task using Presence to influence an attracted creature, they gain one bonus d20. However, they also increase their Complication Range  by 2, as the effect can be distracting or lead to unwanted consequences. This talent can be switched off, losing both the bonus and the drawback, by applying chemical suppressants.",
-            "category": "Species:Deltan",
-            "page_reference": "Not in this rulebook"
-        },
-        "Visual Spectrum": {
-            "description": "An Efrosian can see beyond what others think of as the visual spectrum, from some infra-red to ultra-violet light. Any Tasks in which detecting those parts of the spectrum is useful reduce in Difficulty by 1. Circumstances, such as low light levels, do not affect the Difficulty of Tasks, as long as those Tasks do not relate to perceiving minutiae of a subject.",
-            "category": "Species:Efrosian",
-            "page_reference": "Not in this rulebook"
-        },
-        "Oral Scholar": {
-            "description": "Efrosians are taught and learn through oral practices or ‘by rote’.  Any Obtain Information Momentum spends that relate to their own knowledge using Reason or Insight may ask one additional question, for free, in addition to those bought with Momentum.",
-            "category": "Species:Efrosian",
-            "page_reference": "Not in this rulebook"
-        },
-        "To Battle!": {
-            "description": "Whenever a Klingon buys additional dice for a melee attack using Threat, for each Threat added to the pool, you gain 1 bonus Momentum that can only be spent on Bonus Damage, increasing the damage of the attack by 1 per Momentum spent.",
-            "category": "Species:Klingon",
-            "page_reference": "Not in this rulebook"
-        },
-        "Brak’lul": {
-            "description": "Various physiological redundancies mean that wounds that would kill other humanoid species don’t affect Klingons as badly. The character gains +2 Resistance against all Non-lethal attacks. In addition, whenever the Klingon is target of a First Aid Task, reduce the Difficulty of that Task by 1, to a minimum of 1.",
-            "category": "Species:Klingon",
-            "page_reference": "Not in this rulebook"
-        },
-        "R’uustai": {
-            "description": "This Klingon has lit candles, spoken words to honor their parents, and given their house’s sash to another, joining in a fellowship with another person, and becoming members of the same house (the original house of either party). The R’uustai Talent grants a Klingon an additional Value, which must reflect their relationship with the ritual sibling. In addition, whenever the Klingon assists, or is assisted by another, the character offering assistance may re-roll their die.",
-            "category": "Species:Klingon",
-            "page_reference": "Not in this rulebook"
-        },
-        "Killer’s Instinct": {
-            "description": "You have shed blood, and will not hesitate to do so again. So familiar are you with the intent to kill that you can even see it in others when you look them in the eyes. When you choose to make a lethal attack, you do not add to Threat for doing so. In addition, whenever an enemy you can see attempts to make a lethal attack against you, you may add 1 to Threat to increase the Difficulty of their attack by 1, as you react to their intent.",
-            "category": "Species:Klingon",
-            "page_reference": "p. 153"
-        },
-        "Chelon Shell": {
-            "description": "The hard shell extending over a Chelon’s body provides added protection from physical and radioactive threats. This natural armor gives the character a Resistance of 1. They may also ignore any Complications from radiation sources.",
-            "category": "Species:Chelon",
-            "page_reference": "Not in this rulebook"
-        },
-        "Toxic Claws": {
-            "description": "In times of danger Chelons excrete a contact toxin onto their claws that can be used to debilitate foes. Their Unarmed Strike is replaced with a melee attack Claw Strike (Melee, 1[D], Piercing 1, Debilitating, Non-lethal).",
-            "category": "Species:Chelon",
-            "page_reference": "Not in this rulebook"
-        },
-        "Exosex": {
-            "description": "The character possess a Z chromosome that strengthens their physical and survival instincts and abilities. Whenever attempting a Task using Fitness or Daring, roll 1 additional d20 and gain one bonus Momentum on such Tasks.",
-            "category": "Species:Jelna",
-            "page_reference": "Not in this rulebook"
-        },
-        "Industrious Mind": {
-            "description": "The Jelna are naturally enterprising and industrious, and have an affinity for technological developments and industrial engineering. When succeeding an Engineering or Science Task relating to fixing or adapting technology, and spending 2 or more Momentum, a Jelna may add an Advantage related to that technology for free.",
-            "category": "Species:Jelna",
-            "page_reference": "Not in this rulebook"
-        },
-        "Peaceful Existence": {
-            "description": "Your upbringing in a peaceful society, one that promotes harmony and has an outright ban on weapons, has developed the Risian ability for peaceful resolutions. Whenever a Risian attempts a Task to dissuade another individual or group from resorting to conflict, they reduce the Difficulty of that Task by 1.",
-            "category": "Species:Risian",
-            "page_reference": "Not in this rulebook"
-        },
-        "Open and Insightful": {
-            "description": "Risian open, and often frank, discussion of problems and personal opinion enables conversation and understanding when working in a team. Whenever a Risian assists another character using Insight or Reason they may re-roll a single d20 in their dice pool. In addition, if the lead character succeeds in the Task using Insight or Reason, they gain 1 bonus Momentum.",
-            "category": "Species:Risian",
-            "page_reference": "Not in this rulebook"
-        },
-        "Calm Under Pressure": {
-            "description": "Arboreals possess an unwaveringly calm nature, allowing them to ignore the stress of a crisis. When attempting Tasks with Control to resist stress or mental affliction they may reroll one die in your pool.",
-            "category": "Species:XindiArboreal",
-            "page_reference": "Not in this rulebook"
-        },
-        "A Mind for Design": {
-            "description": "Xindi-Primates are natural engineers and scientists, pushing at the frontiers of design and construction. When following the Scientific Method, they may suggest an additional Focus, which they do not have to possess, as ‘The Good Way’. Every Task they attempt in an Extended Task related to the Scientific Method automatically gains the Piercing 1 effect.",
-            "category": "Species:XindiPrimate",
-            "page_reference": "Not in this rulebook"
-        },
-        "Stun Resistance": {
-            "description": "Reptillians are naturally resistant to energy weapons stun settings. They gain +1 Resistance against Non-lethal attacks from energy weapons. They may always Avoid an Injury from a Non-lethal attack with a cost of 1 Momentum (Immediate), even if they have already Avoided an Injury during the scene.",
-            "category": "Species:XindiReptilian",
-            "page_reference": "Not in this rulebook"
-        },
-        "Protective Instinct": {
-            "description": "Insectoids have a profound instinct to defend your eggs and their off-spring, and this transfers onto teams or groups with which they develop a close bond. Whenever an Insectoid attempts a Guard Task in combat, and confers the benefits to another Main Character, ignore the increase in Difficulty when attempting the Task.",
-            "category": "Species:XindiInsectoid",
-            "page_reference": "Not in this rulebook"
-        },
-        "Tactical Voice": {
-            "description": "In command positions, the speed of Zakdorn tactical calculations enables them to give concise orders to their crew. During combat, a Zakdorn leader may use the Direct Task one additional time per scene (so, twice per scene overall). Further, when they use the Swift Task Momentum Spend for an extra Task, the cost is reduced to 1 Momentum, so long as the second Task is the Assist or Direct Task.",
-            "category": "Species:Zakdorn",
-            "page_reference": "Not in this rulebook"
-        },
-        "Master Strategist": {
-            "description": "Zakdorn strategic sense is unparalleled in contemporary military theory. Whenever a Zakdorn attempts a Task to Create an Advantage related to strategy or tactics (as opposed to spending Momentum), reduce the Difficulty by 1.",
-            "category": "Species:Zakdorn",
-            "page_reference": "Not in this rulebook"
-        },
-        "Morphogenic Matrix": {
-            "description": " The character may spend 1 Momentum as a Minor Action once per Turn to assume a different form, gaining an additional Trait to reflect whatever form they have chosen, though they cannot yet mimic an individual, and they must return to a liquid state for a few hours of rest every sixteen hours. While in an alternate form, it is next to impossible (Difficulty 5) to discern the Changeling’s true nature, without separating some part of the Changeling’s substance. The character also has a Resistance of 4.",
-            "category": "Species:ChangelingGamma",
-            "page_reference": "Not in this rulebook"
-        },
-        "Morphogenic Mastery": {
-            "description": "The Changeling may, when assuming an alternate form, assume the form of a specific individual, mimicking their appearance and personality sufficiently that even close friends may be unable to discern the truth. Further, the Changeling no longer needs to revert to a liquid state in order to rest.",
-            "category": "Species:ChangelingGamma",
-            "page_reference": "Not in this rulebook"
-        },
-        "Greed Is Eternal": {
-            "description": "As guided by the Rules of Acquisition, a proper Ferengi seeks profit in every endeavor. When engaged in negotiations – including Social Conflict – that have the potential for the Ferengi to profit financially, they may add 1 point to Threat in order to re-roll their dice pool.",
-            "category": "Species:Ferengi",
-            "page_reference": "p. 152"
-        },
-        "Never Place Friendship Above Profit": {
-            "description": "Ferengi accept and tolerate self-serving behavior as a natural part of business. When the character assists someone else – including using the Direct Task or other methods of assistance – and one or more Complications occurs, the character may add 1 to Threat to avoid suffering any effect from those Complications personally.",
-            "category": "Species:Ferengi",
-            "page_reference": "p. 152"
-        },
-        "Polyalloy Construction": {
-            "description": "While appearing extremely lifelike – even simulating breathing, blinking, and other autonomic processes – a Soong-type android is not organic life. They are highly resistant to environmental conditions, reducing the Difficulty of Tasks to resist extremes of heat and cold by 2, and they are immune to the effects of suffocation, hard vacuum, starvation, and thirst. Further, their sturdy construction grants them Resistance 1. Further, while they can detect damage and dangerous conditions, they do not experience real pain, gaining +3 Resistance against non-lethal attacks, and being entirely immune to any penalties or hindrances caused by pain.",
-            "category": "Species:Android",
-            "page_reference": "Not in this rulebook"
-        },
-        "Positronic Brain": {
-            "description": "A Soong –type android is normally created with a positronic brain that allows it to process information made available to them considerably quicker than a Human. The character gains one automatic success on all Tasks using Reason, in addition to any generated by rolling.",
-            "category": "Species:Android",
-            "page_reference": "Not in this rulebook"
-        },
-        "Cold Shoulder": {
-            "description": "Strong self-discipline and conservative cultural values prevent Arbazan from being susceptible to their baser desires. Any character attempting to use their physical attractiveness or seductive nature against an Arbazan during a Social Conflict increases their Difficulty by 1.",
-            "category": "Species:Arbazan",
-            "page_reference": "Not in this rulebook"
-        },
-        "The Protocol of Politics": {
-            "description": "Arbazan are naturally adept at the subtleties of social protocol, and often come to rely on it heavily during social interactions. To many other species, the Arbazan’s focus on such rules and guidelines is often viewed as obsessive, but to the Arbazan, it is simply the natural way to engage in interactions. Whenever a character with this Talent attempts a test during Social Conflict, they may re-roll a d20 so long as they succeeded at an earlier Test relating to the recollection or research of appropriate social graces, protocols, or faux pas.",
-            "category": "Species:Arbazan",
-            "page_reference": "Not in this rulebook"
-        },
-        "Cool Under Pressure": {
-            "description": "Demands of Arkarian society place strict requirements on social interactions. You are able to keep your outward expressions neutral, revealing as little as possible. Whenever you are engaged in a Social Conflict, you are considered to have an Advantage until you fail a Composure Test.",
-            "category": "Species:Arkarian",
-            "page_reference": "Not in this rulebook"
-        },
-        "Quick Recovery": {
-            "description": "The increased bone density of the brow and nasal areas are also found throughout the rest of their physical frame and provide Arkarians with superior protection from blunt trauma. They gain 2 additional Resistance against any attack made with blunt weapons.",
-            "category": "Species:Arkarian",
-            "page_reference": "Not in this rulebook"
-        },
-        "Aerial Combat": {
-            "description": "While most Aurelians avoid confrontation, they understand that sometimes it is necessary for survival. Some Aurelians have learned to take advantage of their natural flying ability. Characters with this Talent may use a Minor Action to move to any Zone within Long Range instead of Medium, and ignore any Difficulty increases associated with terrestrial terrain – however, they increase the Difficulty of any weather-related hazards by 1. Characters with this Talent are also considered to have the Advantage when making an attack against ground-based Targets.",
-            "category": "Species:Aurelian",
-            "page_reference": "Not in this rulebook"
-        },
-        "Keen Senses": {
-            "description": "Aurelians are known for their keen vision, hearing, and directional sense. Characters with this Talent reduce the Difficulty due to Distance of Perception Tasks by 1.",
-            "category": "Species:Aurelian",
-            "page_reference": "Not in this rulebook"
-        },
-        "Disarming Nature": {
-            "description": "Despite their reputation for being fierce warriors, Caitians are extremely sociable and adept at putting others at ease. Whenever you are engaged in a Social Conflict, you reduce the Difficulty of any Test to make your target relax or to trust you by 1.",
-            "category": "Species:Caitian",
-            "page_reference": "Not in this rulebook"
-        },
-        "Prehensile Tail": {
-            "description": "While most Caitians have some functional control over their tail, characters with this Talent have worked to increase their control over the appendage to the point of it becoming fully functional. This provides the character with the ability to hold and operate an additional piece of equipment, like an additional hand. In addition, the character gains a bonus d20 to any Fitness Test to maintain balance or to climb.",
-            "category": "Species:Caitian",
-            "page_reference": "Not in this rulebook"
-        },
-        "Duty and Discipline": {
-            "description": "When the character assists a superior, the superior gains a bonus Momentum.",
-            "category": "Species:Cardassian",
-            "page_reference": "Not in this rulebook"
-        },
-        "Suspicious by Nature": {
-            "description": "When attempting to detect hidden enemies, traps or other forms of danger, the character may re-roll a die.",
-            "category": "Species:Cardassian",
-            "page_reference": "Not in this rulebook"
-        },
-        "Regimented Mind": {
-            "description": "Whenever this character spends Momentum to Obtain Information, they reduce the Difficulty of their next Task by 1 so long as that Task in some way relates to the information gained.",
-            "category": "Species:Cardassian",
-            "page_reference": "p. 152"
-        },
-        "The Ends Justify the Means": {
-            "description": "When the character challenges a Directive, they gain a bonus die – in addition to any other benefits.",
-            "category": "Species:Cardassian",
-            "page_reference": "p. 152"
-        },
-        "Multi-Tasking (Edosian)": {
-            "description": "Edosians are capable, with extensive training and great effort, of compartmentalizing their thoughts and operating each arm completely independent of the others. Characters with this Talent may spend 3 Momentum to gain the benefit of an additional Senior Officer Role until the end of the current scene. This Talent may only be used once per episode.",
-            "category": "Species:Edosian",
-            "page_reference": "Not in this rulebook"
-        },
-        "The Long View": {
-            "description": "Due to their extremely long lifespans, Edosians come to understand and gain knowledge more extensively than most other individuals. When a character with this Talent uses a Milestone to exchange a Focus, they may do so twice instead of once.",
-            "category": "Species:Edosian",
-            "page_reference": "Not in this rulebook"
-        },
-        "Every Man Has His Price": {
-            "description": "The character gains a bonus die whenever engaged in Social Conflict where the opponent can be bribed, bought, or otherwise enticed by monetary gain.",
-            "category": "Species:Ferengi",
-            "page_reference": "Not in this rulebook"
-        },
-        "Hear All, Trust Nothing": {
-            "description": "Increase the Difficulty of any Social Conflict to deceive the character by 1.",
-            "category": "Species:Ferengi",
-            "page_reference": "Not in this rulebook"
-        },
-        "Knowledge Equals Profit": {
-            "description": "When the character spends Momentum to Obtain Information, an additional Momentum is added to the group’s Momentum Pool after all other Momentum spends are resolved.",
-            "category": "Species:Ferengi",
-            "page_reference": "Not in this rulebook"
-        },
-        "Communal": {
-            "description": "Grazerites are deeply communal and work well in coordination with others. Whenever a character with this Talent is providing assistance to another, they increase the Focus range to generate 2 successes by 1.",
-            "category": "Species:Grazerite",
-            "page_reference": "Not in this rulebook"
-        },
-        "Horn-Sense": {
-            "description": "A small minority of Grazerites are born with a genetic variance that causes their horns to be hollow. This gives them a highly sensitive organ that can detect subtle changes in air pressure, sound, and all manner of vibrations. When a character with this Talent attempts a Task that involves the detection or analysis of sound or vibrations of any kind, they may re-roll a d20.",
-            "category": "Species:Grazerite",
-            "page_reference": "Not in this rulebook"
-        },
-        "Contact Empathy": {
-            "description": "Haliians possess minor empathic abilities which, without the canar focusing crystal, is limited to touch. Once you make contact with another character, you can sense the emotions of that individual – as well as communicate telepathically with other empaths or telepaths. You cannot choose to not sense the emotions of those you make contact with. It may require effort and a Task to gain information from beings that are resistant to forms of telepathy. Such information can most often be used as an Advantage during Social Conflicts.",
-            "category": "General",
-            "page_reference": "Not in this rulebook"
-        },
-        "Faceted Attention": {
-            "description": "Characters with this Talent can suddenly divert their attention to other Tasks, leaving their current Task in whatever state it was in, and immediately begin work on the second. To many this may seem undisciplined and unfocused, but to characters with this Talent it is simply an effective way of completing several Tasks at once. Whenever this character is participating in a Challenge, they may choose to use this Talent and attempt two Tasks simultaneously. The attempt is made against the Task with the highest Difficulty, which is then attempted using the appropriate pool. Successes are then divided between the two Tasks. When attempting Tasks using this Talent – the Complication range is increased by one and any Complications rolled can be from either Task – as thematically appropriate.",
-            "category": "Species:Haliian",
-            "page_reference": "Not in this rulebook"
-        },
-        "Deep Determination": {
-            "description": "Turei have a well-earned reputation for becoming deeply committed to a particular goal – a single-minded determination to achieve success. When a Character with this Talent succeeds at a Task where they could have spent a point of Determination, but chose not to, they may spend 3 Momentum to gain a point of Determination. This Talent may only be used once per mission.",
-            "category": "Species:Turei",
-            "page_reference": "Not in this rulebook"
-        },
-        "Negotiate from Strength": {
-            "description": "Ktarians are loath to enter into negotiations unless they feel they are at an advantage. When a Character with this Talent enters into a Social Conflict and attempts to use negotiation, they may gain the benefit of an Advantage twice – however, the Advantage must be used differently each time. This Talent may only be used once per scene.",
-            "category": "Species:Ktarian",
-            "page_reference": "Not in this rulebook"
-        },
-        "Hardened Hide": {
-            "description": "Zaranite skin is extremely tough and capable of withstanding pressures, temperatures, and acidity levels that would prove lethal to other species. Characters with this Talent gain 2 natural Resistance.",
-            "category": "Species:Zaranite",
-            "page_reference": "Not in this rulebook"
-        },
-        "Multispectrum Vision": {
-            "description": "Zaranites can see a broader spectrum of light than most humanoid species. Characters with this Talent gain a bonus Momentum on a Perception Task based on vision. This bonus Momentum may only be used on the Gain Information Momentum spend.",
-            "category": "Species:Zaranite",
-            "page_reference": "Not in this rulebook"
-        },
-        "Absolute Conviction": {
-            "description": "The Argrathi come from a culture where crime has been systematically eliminated and therefore they view themselves as the true arbiters of justice across the Gamma Quadrant. They view criminals with disdain, and they live to show others the true greatness of their beliefs. An Argrathi gains +1 to all rolls when dealing with someone they know to be a criminal or who engages in criminal behavior. ",
-            "category": "Species:Argrathi",
-            "page_reference": "Not in this rulebook"
-        },
-        "Mind Games": {
-            "description": "The Argrathi’s memory technology is used in more ways than just their penal system. From education to entertainment, the average Argrathi is exposed to the effects of this technology at a very young age and learns how to tell when their memory has been altered or when they are under the effect of mind-altering abilities or powers. An Argrathi receives a +1 bonus to all rolls when attempting to resist these effects or uncover whether they have been affected at all. ",
-            "category": "Species:Argrathi",
-            "page_reference": "Not in this rulebook"
-        },
-        "Strength and Cunning": {
-            "description": "While they are a warrior culture, the Dosi do not teach their children to solve every matter with only one aspect of their being. In order to thrive in Dosi culture, they must utilize every skill and asset they possess and must combine them in ways they never thought possible. A Dosi may use their Fitness Attribute in situations where they must use Insight, and their Presence Attribute when they need to use their Reason. ",
-            "category": "Species:Dosi",
-            "page_reference": "Not in this rulebook"
-        },
-        "Glorious Notoriety": {
-            "description": "The Dosi’s culture has adapted itself to being able to look at an individual Dosi’s skin and being able to read their accomplishments before the other Dosi has even had a chance to open their mouth. The Dosi know other races are not as civilized as theirs and therefore they know how to radiate a sense of intimidation and respect to those who are around them, whether by flexing their muscles or by adding implied threats as they attempt to negotiate their deals. The Dosi reduces the Difficulty of all checks involving negotiations or diplomacy by 1. ",
-            "category": "Species:Dosi",
-            "page_reference": "Not in this rulebook"
-        },
-        "Genetic Mastery": {
-            "description": "Research into the field of genetics has become the cornerstone of the Drai’s technology. Some families have begun experimenting on their own children in order to produce the most powerful heirs and offspring possible. The character must choose one attribute to be the focus of Genetic Mastery. Once an attribute is assigned to Genetic Mastery, the character reduces the Difficulty of all Tasks that involve that attribute by 1. ",
-            "category": "Species:Drai",
-            "page_reference": "Not in this rulebook"
-        },
-        "Born Stalker": {
-            "description": "The Drai consider the Hunt to be the most important thing they will ever do in their lives, and their entire culture revolves around it. Whether it is pursuing the Tosk or other prey, the Drai have structured the very way they teach their children to view the world to be from the mind-set of a hunter stalking their prey. This helps the Drai in every walk of life as they are able to approach each task with precision and careful attention rather than blindly rushing into things. Once per scene the Drai may ignore their Complications when determining the Difficulty for a Task. ",
-            "category": "Species:Drai",
-            "page_reference": "Not in this rulebook"
-        },
-        "My Honor Is My Shield": {
-            "description": "While it can be difficult to maintain a sterling reputation and in doing so lead to hardship and loss, there are times when pursuing a higher path can reap great benefits for the individual. It is the difficult road, but one that will ultimately lead towards fulfilling the needs of the many rather than the selfish desires of the one. As long as the character has behaved honourably throughout the scene, they may use their Presence Attribute for any declared Attacks. The character is also assumed to pass any challenges involving impugning their character in front of witnesses. ",
-            "category": "Species:Karemma",
-            "page_reference": "Not in this rulebook"
-        },
-        "Instant Appraisal": {
-            "description": "A tricorder can tell someone what an object is composed of in only a few seconds but it is rumoured that the Karemma can do it in only one. Drawing upon past experience, the Karemma is able to instinctively identify the materials that make up an object that they interact with physically. In the event of dealing with unknown or exotic substances, they are able to identify familiar patterns within the material that can point the characters in the right direction while performing the Scientific Method and reduce the difficulty by 1. ",
-            "category": "Species:Karemma",
-            "page_reference": "Not in this rulebook"
-        },
-        "Into the Breach": {
-            "description": "Life is not worth living to a Lurian if there is not some risk involved. Always willing to dare greater than others, the Lurian finds that the real thrill lurks just beyond the edge of danger and that is what they should strive for even if their comrades do not. The character gains an additional point of Momentum if they succeed at a task that requires extreme acts of bravery to overcome. ",
-            "category": "Species:Lurian",
-            "page_reference": "Not in this rulebook"
-        },
-        "Resistant Anatomy": {
-            "description": "The Lurians are known for having one of the hardiest constitutions in the quadrant. Capable of taking a knife to one of their hearts and keep on fighting, the Lurians have evolved a musculature and cardiovascular system that rivals that of the Klingons. When mortally wounded or suffering under a Condition that affects their physiology, a Lurian can choose to ignore the effect for the remainder of the scene, after which they collapse from exhaustion and are incapacitated for a scene. ",
-            "category": "Species:Lurian",
-            "page_reference": "Not in this rulebook"
-        },
-        "Replicating Past Success": {
-            "description": "When encountering scientific tasks that they have already successfully completed for this scene, the character may spend a point of Momentum to replicate the dice result from the previous challenge. ",
-            "category": "Species:Paradan",
-            "page_reference": "Not in this rulebook"
-        },
-        "Distracting Senses": {
-            "description": "Paradans are infamous throughout the Gamma Quadrant for their pervasive odors, but some of them have been able to channel this portion of their physiology and use it as a weapon. A Paradan may spend their turn focusing on emitting obnoxious pheromones around them and increase the Difficulty towards attacking them in hand to hand combat by 1. ",
-            "category": "Species:Paradan",
-            "page_reference": "Not in this rulebook"
-        },
-        "The Truth of the Matter": {
-            "description": "The Rakhari culture is peppered with thousands of stories and legends that are shared by the Rakhari with their children as they grow up. This has led to the Rakhari being capable storytellers, and a skilled Rakhari knows how to incorporate small snippets of the truth into any web of lies he starts to weave. The Rakhari gains a free point of Momentum when they successfully convince another sentient being of a lie. ",
-            "category": "Species:Rakhari",
-            "page_reference": "Not in this rulebook"
-        },
-        "Disciplined Mind": {
-            "description": "The brutal laws that the Rakhari government has passed over the years has kept the population under control but led to most Rakhari being too afraid to share their intimate thoughts in public. This has led to several Rakhari becoming particularly adept at not only shielding their emotions while around others but also being able to discern the true feelings of those they communicate with. The Rakhari is able to reduce any psychic damage they may suffer by 1 and they gain a free reroll on one die in their pool when attempting to determine lies. ",
-            "category": "Species:Rakhari",
-            "page_reference": "Not in this rulebook"
-        },
-        "Agricultural Specialist": {
-            "description": "When tasked with dealing with matters that relate to a planet’s biosphere or agriculture, a Skreeaan may always use their Insight or Control attributes, depending on which is higher. ",
-            "category": "Species:Skreeaa",
-            "page_reference": "Not in this rulebook"
-        },
-        "Strength Through Struggle": {
-            "description": "Though some believe it is the Skreeaan’s history of being conquered that has made them expert laborers the truth is they are a tough and hardy people eager to throw off the reins of oppression. The fact that they are physically gifted when it comes to labor only means they are able to succeed easily where others struggle. When they succeed at performing a physically arduous Task they gain one bonus Momentum. This bonus Momentum cannot be saved into the group pool. ",
-            "category": "Species:Skreeaa",
-            "page_reference": "Not in this rulebook"
-        },
-        "At All Costs": {
-            "description": "Though a small power in the Alpha Quadrant, the Son’a have not become one of the dominant powers in the Briar Patch by engaging only in half measures or pulling their punches. When a Son’a declares their attack action, they may add an additional point of Momentum as long as they are not dealing Non-lethal damage. ",
-            "category": "Species:SonA",
-            "page_reference": "Not in this rulebook"
-        },
-        "Particle Engineering": {
-            "description": "The Son’a are hedonists who embrace all the pleasures that life has to offer but that does not mean they are not well educated. A large portion of the Son’a’s scientific research is dedicated towards understanding the unique particles that cling to the atmosphere of their former homeworld. When dealing with subatomic particles and the effects of radiation, the Son’a may ignore the effects of any Condition for the scene and may roll an additional d20 when attempting to understand the nature of these effects. ",
-            "category": "Species:SonA",
-            "page_reference": "Not in this rulebook"
-        },
-        "Survivor’s Luck": {
-            "description": "For the Drai, the greatest hunts always come when their prey manages to continually outwit them and the Tosk are cunning adversaries. Some are given extra stores of information when they are created while others are able to pick up survival techniques as they try to escape from the Hunters. The Tosk adds 1 bonus Momentum to the pool for each adversary they are trying to escape in the scene to a maximum of 3. ",
-            "category": "Species:Tosk",
-            "page_reference": "Not in this rulebook"
-        },
-        "Last Breath": {
-            "description": "The Tosk are designed to keep running no matter what, and refuse to allow themselves to be captured because they start to feel the effects of fatigue or exhaustion. A Tosk with this talent gains a free point of Momentum to their next action when attempting to escape while they are under the effects of a Complication. ",
-            "category": "Species:Tosk",
-            "page_reference": "Not in this rulebook"
-        },
-        "Come With Me": {
-            "description": "Life can be difficult if you are competitive, and sometimes people can get angry over perceived slights very quickly. By staying jovial and attempting to lighten the mood, you are better able to reduce sources of conflict and bring people over to your side. You can reroll one die when attempting to use social skills to alter someone’s feelings regarding something you have done this scene. ",
-            "category": "Species:Wadi",
-            "page_reference": "Not in this rulebook"
-        },
-        "Life is a Game": {
-            "description": "Life is meant to be enjoyed, and the more risk one puts into their life the sweeter the victory. A Wadi has a distinct ability to sense patterns when it comes to solving tasks, and the more involved they are with something the more competitive they get and the quicker they are at solving puzzles. When attempting to solve a task or a riddle that involves them becoming competitive they gain an additional point of Momentum.",
-            "category": "Species:Wadi",
-            "page_reference": "Not in this rulebook"
-        },
-        "Favored by Fortune": {
-            "description": "If the character is successful on a Task, the next Task performed during that scene gains one bonus Momentum if successful.",
-            "category": "Species:Ankari",
-            "page_reference": "Not in this rulebook"
-        },
-        "Vibration Senses": {
-            "description": "The character has learned to use their unique physiology to allow them to detect vibrations, enhancing their ability to see and hear, even in darkness. Characters with this Talent reduce the Difficulty of perception-related Tasks by 1.",
-            "category": "Species:Ankari",
-            "page_reference": "Not in this rulebook"
-        },
-        "Maximized Efficiency": {
-            "description": "When assisting another character, the Jye may re-roll their assist die. In addition, if the assist die generated one or more successes, the lead character gains a bonus Momentum if the Task is successful.",
-            "category": "Species:Jye",
-            "page_reference": "Not in this rulebook"
-        },
-        "Natural Coordinator": {
-            "description": "When assisting, or being assisted, the character is always considered to have an applicable Focus for that Task. In addition, the character counts as having a Command of 4 for the purposes of learning Talents.",
-            "category": "Species:Jye",
-            "page_reference": "Not in this rulebook"
-        },
-        "Borg Implants": {
-            "description": "A Liberated Borg character must select this Talent during character creation. When this Talent is chosen, pick one, two, or three Borg Implants. The character gains the benefits of those implants, but the Difficulty of Medicine Tasks performed on them increases by the number of implants they have. The character also increases the Complication range of all social interaction Tasks by the number of implants they have. An ordinary milestone may be used to remove one implant at a time, not the whole Talent; once all implants have been removed, this Talent can be swapped for another.",
-            "category": "Species:LiberatedBorg",
-            "page_reference": "Not in this rulebook"
-        },
-        "Direct Neural Interface": {
-            "description": "Having existed as an extension of one of the largest and most complex computer networks in the known Galaxy, Liberated Borg possess a natural affinity for computers and data processing equipment of all kinds, and are almost organic computers themselves. When the character attempts a Task that involves, or is assisted by, a computer (including the ship’s Computers system), the character gains a bonus d20 for their dice pool.",
-            "category": "Species:LiberatedBorg",
-            "page_reference": "Not in this rulebook"
-        },
-        "Hologram Taskmaster": {
-            "description": "In decades past, the Lokirrim designed and utilized holograms to perform countless tasks. The character’s ship’s Crew Support is increased by 1. In addition, the character’s ship gains the Photonic Crew Trait. This increase can only be applied to a ship once, regardless of the number of Main Characters who possess this Talent.",
-            "category": "Species:Lokirrim",
-            "page_reference": "Not in this rulebook"
-        },
-        "Photonic Prosecutor": {
-            "description": "The Lokirrim have a long history of interrogating rogue photonic individuals. When engaged in a Social Conflict with a hologram or other photonic character, this character is considered to have an Advantage.",
-            "category": "Species:Lokirrim",
-            "page_reference": "Not in this rulebook"
-        },
-        "Passive Persuader": {
-            "description": "During Social Conflict, the character reduces the Difficulty of all evidence and negotiation based Tasks but increases the Difficulty of intimidation Tasks by 1.",
-            "category": "Species:Mari",
-            "page_reference": "Not in this rulebook"
-        },
-        "Nomadic Heritage": {
-            "description": "Generations of traversing the stars ingrained a natural affinity for navigation and positioning. The character may reroll a d20 during any Task associated with positioning, course determination, and other forms of navigation.",
-            "category": "Species:Monean",
-            "page_reference": "Not in this rulebook"
-        },
-        "Submariner": {
-            "description": "Having lived underwater for centuries, the Moneans have long since developed a keen understanding of navigating underwater environments. The character reduces any Difficulty penalties to Conn Tasks while navigating or piloting underwater by 1.",
-            "category": "Species:Monean",
-            "page_reference": "Not in this rulebook"
-        },
-        "Quick Learner": {
-            "description": "Ocampa possess keen minds and enjoy near-perfect memories, and they take to new situations and new challenges quickly. When a character with this talent attempts a Task which they have seen at least one ally perform during this mission, you may add an additional d20 to that Task. ",
-            "category": "Species:Ocampa",
-            "page_reference": "Not in this rulebook"
-        },
-        "Telepath (Ocampa)": {
-            "description": "The character can sense the surface thoughts and emotions of most living beings nearby, and can communicate telepathically with other empaths and telepaths, as well as those with whom they are extremely familiar. Surface thoughts are whatever a creature is thinking about at that precise moment. The character cannot choose not to sense the emotions or read the surface thoughts of those nearby, except for those who are resistant to telepathy. It will require effort and a Task to pick out the emotions or thoughts of a specific individual in a crowd, to search a creature’s mind for specific thoughts or memories, or to block out the minds of those nearby. Unwilling targets may resist with an Opposed Task.\nWhile all Ocampa are telepathic, their short lifespan and rapid development means that a young Ocampa character may not fully develop their abilities until later in life, so it is possible to choose the Talent after character creation. Unlike other telepathic/empathic species, the Ocampa have demonstrated the ability to develop even greater psychic abilities, including precognition, mental projection, telekinesis, and the ability to manipulate matter at a subatomic level.",
-            "category": "Species:Ocampa",
-            "page_reference": "Not in this rulebook"
-        },
-        "Born to Fight": {
-            "description": "The character may reroll one d20 when making an attack. In addition, if an attack is successful, the character generates one point of bonus Momentum which may only be spent to re-roll the damage roll or to increase the total damage. Bonus Momentum may not be saved.",
-            "category": "Species:Pendari",
-            "page_reference": "Not in this rulebook"
-        },
-        "Robust Physiology": {
-            "description": "Various physiological redundancies mean that wounds that would kill other humanoid species don’t affect Pendari as much. The character gains +2 Resistance against all nonlethal attacks. In addition, whenever the Pendari is the target of a First Aid Task, reduce the Difficulty of that Task by 1, to a minimum of 1.",
-            "category": "Species:Pendari",
-            "page_reference": "Not in this rulebook"
-        },
-        "Canonic Law": {
-            "description": "A deep respect for and adherence to established laws provides the character with emotional assuredness. When spending Determination to bring one of their Values into play, the character may select two benefits instead of one. The circumstances of this Task and the Value being used must relate to the character’s belief and adherence to the laws of their people. This Talent may only be used once per mission, and it cannot be used when challenging the selected Value.",
-            "category": "Species:Sikarian",
-            "page_reference": "Not in this rulebook"
-        },
-        "Riveting Storyteller": {
-            "description": "When engaged in a Social Conflict, if the character can tell a story as part of their interaction, they may reroll a d20.",
-            "category": "Species:Sikarian",
-            "page_reference": "Not in this rulebook"
-        },
-        "Well Regarded": {
-            "description": "When engaged in a Social Conflict, the character increases the Difficulty of Tasks that target them by 1.",
-            "category": "Species:Sikarian",
-            "page_reference": "Not in this rulebook"
-        },
-        "Being of Many Talents": {
-            "description": "The character has developed a degree of ability across a broad range of disciplines. When attempting a Task where more than one of the character’s Focuses apply, the character may reroll a d20.",
-            "category": "Species:Talaxian",
-            "page_reference": "Not in this rulebook"
-        },
-        "Infectous Nature": {
-            "description": "The character comes from a race of social beings that are outgoing, good-natured, and enjoy the company of others. This exuberance has the pleasant side effect of improving the attitude and outlooks of the people around them – regardless of whether those beings like it or not. When engaged in a Social Conflict, the character may spend 2 Momentum to improve the outlook and attitude of those around them. This provides one of two effects. The character is considered to have an Advantage in subsequent social interactions with the individual affected by this Talent. In addition, the character may choose to allow the individual to recover Stress equal to the character’s Command score.",
-            "category": "Species:Talaxian",
-            "page_reference": "Not in this rulebook"
-        },
-        "Widely Traveled": {
-            "description": "Having traveled space for more of their adult life, the character has seen much and has picked up bits of knowledge and unusual skills along the way. Once per mission, the character may add 1 to Threat to gain an additional Focus for the remainder of that mission, representing a specific skill or field of knowledge the character possesses which is useful in the current situation.",
-            "category": "Species:Talaxian",
-            "page_reference": "Not in this rulebook"
-        },
-        "Underdweller": {
-            "description": "When attempting any Task involving navigating subspace realms, such as Underspace corridors, the character reduces the Difficulty of that Task by 1, to a minimum of 1.",
-            "category": "Species:Turei",
-            "page_reference": "Not in this rulebook"
-        },
-        "Thermal Regulation": {
-            "description": "This species is capable of regulating their body temperatures such that they can survive in hostile environments with ease. Reduce the severity of any negative Trait dealing with temperature by 1. This can eliminate any ongoing damage the character would normally be required to suffer due to these Traits.",
-            "category": "Species:Zahl",
-            "page_reference": "Not in this rulebook"
-        },
-        "Expanded Program": {
-            "description": "Your programming has been expanded considerably, with subroutines and databases covering a wide range of additional subjects and fields of expertise. You may select up to two additional Focuses.",
-            "category": "Species:Hologram",
-            "page_reference": "Not in this rulebook"
-        },
-        "Mobile Emitter": {
-            "description": "You have a device that allows you a degree of autonomy from fixed holoemitters. Most of these mobile emitters are bulky, awkward pieces of equipment with a limited amount of power, making them useful only for short periods and emergencies, but the technology is improving. While you have your mobile emitter, you can move freely in places that lack holo-emitters. However, Complications may reflect damage to or problems with the emitter.",
-            "category": "Species:Hologram",
-            "page_reference": "Not in this rulebook"
-        },
-        "Cruel": {
-            "description": "You have a tendency towards ruthlessness and cruelty, and the reputation to match, always seeking to undermine those you wish to destroy before you deal the final blow. When you attempt a Task to identify the weaknesses or flaws of an enemy, or matters they are particularly sensitive or protective about, you may reduce the Difficulty by 1. If the enemy has a trait which reflects this weakness (such as an advantage you’ve created, or a complication they’re suffering from), you may re-roll a single d20 on the next attack or persuasion Task you attempt against them.",
-            "category": "Species:KlingonQuchHa_2E",
-            "page_reference": "Not in this rulebook"
-        },
-        "Superior Ambition": {
-            "description": "You believe that your cunning and insight give you an advantage over other Klingons, and your ambition is greater than theirs. When you spend Determination, you may add three to Threat in order to gain two benefits from spending Determination, instead of one.",
-            "category": "Species:KlingonQuchHa_2E",
-            "page_reference": "Not in this rulebook"
-        },
-        "A Better Path": {
-            "description": "Akaru value efficiency in all things, including when working on problems or tasks. Whenever you succeed at a task during an extended task, add 1[D] to your dice pool to determine Work completed.",
-            "category": "Species:Akaru",
-            "page_reference": "Not in this rulebook"
-        },
-        "Charming Demeanor": {
-            "description": "Akaru are a robust and passionate people, and readily build relationships with others. Whenever you engage in a social interaction or social conflict with another character, you may re-roll a single d20 in your dice pool. In addition, if you succeed in that task, you gain 1 bonus Momentum.",
-            "category": "Species:Akaru",
-            "page_reference": "Not in this rulebook"
-        },
-        "Water Glassing": {
-            "description": "A Cal-Mirran can learn to “glass” water on contact, i.e., harden it temporarily, similar to freezing, but without expansion or temperature change. Glassing can create tools or be used for defense. It is a skill that must be mastered, and requires concentration. Advanced glassers can harden anywhere from their body volume of water, to large swaths of ocean, but the larger the volume and the longer it is held, the greater the strain on the Cal-Mirran mind. Glassing requires a Fitness + Science task, with a Difficulty determined by the quantity of water being affected. After a successful use of this ability, the character is sluggish and will be unable to use this talent or change their own body’s state for the remainder of the scene.",
-            "category": "Species:CalMirran",
-            "page_reference": "Not in this rulebook"
-        },
-        "Time Refraction": {
-            "description": "With training, Cal-Mirrans can absorb tachyon radiation and use it to refract space-time, bending their surroundings slightly into the future or past. The more radiation, the further the slide, but the greater the risk – too much refraction can result in severe physical or mental damage and a weakening of their crystalline matrix. By spending a point of Determination and attempting an Insight + Science task, the character can perceive a glimpse of the past or future as if they were in that location at that time. The Difficulty of this task is based on how far into the past or future the character is looking; a glimpse of up to a minute earlier or later is Difficulty 1, up to an hour is Difficulty 2, up to a day is Difficulty 3, and longer durations have a higher Difficulty at the gamemaster’s discretion. Success allows the character to ask one question, plus one extra question per Momentum spent, about events in that time and place. Glimpses of the future are subject to change, as future events are not fixed.",
-            "category": "Species:CalMirran",
-            "page_reference": "Not in this rulebook"
-        },
-        "That Wasn’t Me": {
-            "description": "The Orions are known as one of the most untrustworthy species in the Galaxy next to the Ferengi, and yet people are always willing to do business with them or are continually tricked by them. This is due to the subtle dance of social interactions and the release of pheromones that make the Orion endearing to whom they are dealing with, and can be used to gain their trust. An Orion adds 1 bonus Momentum to their pool when they have successfully completed a task to win a target’s trust.",
-            "category": "Species:Orion",
-            "page_reference": "p. 153"
-        },
-        "Criminal Understanding": {
-            "description": "Orion culture is based around understanding the complicated meanings behind words and plans. They do not take things at face value but look to see the underlying scheme going on behind the scenes, whether it is noticing a word that was omitted from a contract agreement to understanding how a pickpocket slipped a watch off their victim’s wrist. When trying to understand a matter involving intrigue or guile, an Orion may roll an additional d20 when attempting to decipher the hidden meaning behind the action.",
-            "category": "Species:Orion",
-            "page_reference": "Not in this rulebook"
-        },
-        "Mental Imaging": {
-            "description": "You can envision complicated technology and project the details forward, yielding results with the accuracy of real-world testing. Provided with a schematic or the time to inspect an unfamiliar device, you can quickly determine its use and any necessary repairs. This also makes you an excellent game player; imagine multiple choices and follow their consequences along branching paths to develop the best response. When you attempt a task involving Reason, you may re-roll one d20. In addition, when you succeed at a Reason-based task which is subject to time pressure, the Momentum cost to reduce the time taken is reduced by 1.",
-            "category": "Species:Qofuari",
-            "page_reference": "Not in this rulebook"
-        },
-        "Nimble": {
-            "description": "Your long, flexible body makes you an excellent swimmer. You can move rapidly and acrobatically on land. Maneuvering and climbing in cramped spaces tubes is easier for you than humanoids evolved for fully upright walking. When you attempt a Fitness test to maneuver through water, within a tight space, or when climbing, gain one additional d20 in your dice pool.",
-            "category": "Species:Qofuari",
-            "page_reference": "Not in this rulebook"
-        },
-        "Silent Scream": {
-            "description": "The VinShari’s bone collars allow them to attenuate their vocal cords to achieve harmonic resonance in a silent scream that can cause pain, unconsciousness, and death. Two or more VinShari harmonizing together can shatter bone. The silent scream can be used as a ranged weapon (2d, Area and Piercing 1 effects). Other VinShari with this talent may assist these attacks, and each VinShari providing assistance increases the Stress inflicted by 1[D].",
-            "category": "Species:VinShari",
-            "page_reference": "Not in this rulebook"
-        },
-        "Vocal Gymnastics": {
-            "description": "VinShari are among the best singers in the Shackleton Expanse, perhaps even the Beta Quadrant. They are also experts at ventriloquism and mimicking voices. A VinShari with this talent can mimic any voice they have heard, and most non-vocal sounds they hear, accurate to a degree where even a computer analysis cannot distinguish the mimicry from the real thing. When you attempt to distract or deceive someone using this mimicry, you may re-roll your entire dice pool.",
-            "category": "Species:VinShari",
-            "page_reference": "Not in this rulebook"
-        },
-        "Looking for a Fight": {
-            "description": "Many members of the permanently calcified Lo’Kari faction will look for any excuse to start a fight with the sea-dwelling I’Qosa. During the first round of any combat against sea dwellers, the character may ignore the normal cost to Retain the Initiative.",
-            "category": "Species:IQosa",
-            "page_reference": "Not in this rulebook"
-        },
-        "Waters of Renewal": {
-            "description": "The waters of I’Qosa nourish and restore the inhabitants of the planet. While in the waters of their homeworld, the character recovers 2 Stress at the start of each round, up to the character’s normal maximum Stress.",
-            "category": "Species:IQosa",
-            "page_reference": "Not in this rulebook"
-        },
-        "Zero-G Swimmer": {
-            "description": "I’Qosa are experts at moving both in underwater and zero-gravity environments due to their natural aquatic habitat. The character receives a bonus d20 on any task related to swimming or zero-g maneuvering.",
-            "category": "Species:IQosa",
-            "page_reference": "Not in this rulebook"
-        },
-        "Campaign Fatigue": {
-            "description": "The constant churn of the election cycle on Sigma Iotia II has made most Iotians experts at sniffing our liars and frauds. Whenever the character attempts a task to resist being deceived, they add a bonus d20 to their dice pool.",
-            "category": "Species:Iotian",
-            "page_reference": "Not in this rulebook"
-        },
-        "Imitative": {
-            "description": "Iotians study and quickly adopt the technology of alien species. When the character attempts a task using Reason to discern the purpose of or to reverse-engineer a piece of alien technology, reduce the Difficulty by 1, to a minimum of 0.",
-            "category": "Species:Iotian",
-            "page_reference": "Not in this rulebook"
-        },
-        "Crystalline Telepathy": {
-            "description": "Tholian exoskeletons can emit and detect specific forms of radiation capable of transmitting messages over short distances. This ability acts as a form of physical telepathy among the Tholian species, allowing them to communicate over limited distances.",
-            "category": "Species:Tholian",
-            "page_reference": "Not in this rulebook"
-        },
-        "Immune to Vacuum (Tholian)": {
-            "description": "Some Tholians can spend extended periods of time exposed to vacuum without suffering any ill effects, allowing them, for instance, to scale the strands of Tholian webs without the protection of EV suits. This immunity usually only lasts a single scene before vacuum starts causing complications or injuries.",
-            "category": "Species:Tholian",
-            "page_reference": "Not in this rulebook"
-        },
-        "Radiation Burst": {
-            "description": "Some Tholians can channel radiation into intense bursts that act as a ranged weapon in combat (3[D], Vicious 1 damage effect).",
-            "category": "Species:Tholian",
-            "page_reference": "Not in this rulebook"
-        },
-        "Duplicate": {
-            "description": "As long as you, the Player, are constantly eating from a large stash of food, once per Scene you may duplicate yourself. Photocopy your character sheet and hand it to another Player at the table. They too are now a tribble. Once everyone at the table, including the Gamemaster becomes a tribble, the session ends.",
-            "category": "Species:Tribble",
-            "page_reference": "Not in this rulebook"
-        },
-        "Soothe": {
-            "description": "You may attempt to help a character recover Stress. To do this you must attempt to replicate the calming purr of a tribble for at least 30 seconds. If successful, the target character recovers 1 point of Stress, plus an additional point per Momentum spent.",
-            "category": "Species:Tribble",
-            "page_reference": "Not in this rulebook"
-        },
-        "Klingons": {
-            "description": "Your Gamemaster must tell you if a Klingon character enters into Close range with you. Upon being told this, you must shriek loudly and shudder until you are told the character has backed away out of Close range. A Klingon character must attempt a Control + Command Task with a Difficulty of 3 when hearing this shriek, or you inflict 2 A of damage. You may attempt an Insight + Command Task to detect Klingons at further ranges.",
-            "category": "Species:Tribble",
-            "page_reference": "p. 220"
-        },
-        "Threat Ganglia": {
-            "description": "Kelpiens have special organs on the back of their heads called ganglia. These organs do different things depending on what stage of life the Kelpien is in, as such, this talent grants different abilities based on the character’s Vahar’ai trait. Pre-Vahar’ai: When the gamemaster spends Threat to either add a complication, or to add dice to a pool or that directly affects the character, roll 1[D]; if an effect is rolled, add 1 Momentum to the pool. Post-Vahar’ai: The character gains the following attack: Ganglia Dart (Ranged, 2[D], Piercing 1). The character’s Security is added as normal to the attack’s Stress rating.",
-            "category": "Species:Kelpien",
-            "page_reference": "Not in this rulebook"
-        },
-        "On All Fours": {
-            "description": "Kelpiens are able to run at considerable speeds for short bursts when necessary. Whenever the character succeeds at a Sprint task, they generate 2 additional Momentum which may only be used to move additional zones.",
-            "category": "Species:Kelpien",
-            "page_reference": "Not in this rulebook"
-        },
-        "Expert Quartermaster": {
-            "description": "The Barzan have long had to make do with less, and this has taught them to be especially considerate of all resources at their command. When needing a rare element or device to accomplish an action, a Barzan may reroll a d20 in their task roll to determine if another element or device can be used in its stead. The Barzan are also aware of most of the alternate uses any piece of personal equipment they possess can do should the need arise, such as substituting a tricorder’s memory module to repair a terminal.",
-            "category": "Species:Barzan",
-            "page_reference": "Not in this rulebook"
-        },
-        "Unyielding Resolve": {
-            "description": "The Barzan possess such great determination in accomplishing their tasks that they refuse to let any setback deter them. When a Barzan spends a point of Determination on a task, but the task fails, the character regains the spent point of Determination.",
-            "category": "Species:Barzan",
-            "page_reference": "Not in this rulebook"
-        },
-        "Born to a Task": {
-            "description": "The Osnullus caste system is a relic from a bygone age but it still affects the futures of many of their species. Some Osnullus are born with advanced reflexes for working in space, while others have a hardier carapace to assist them with construction. Over time, an Osnullus can shift their bodies slightly to assist them with certain tasks. When this talent is chosen, the Osnullus may pick a discipline that they are gifted toward. Whenever the character attempts a task involving this talent, they may reroll one of their d20s.",
-            "category": "Species:Osnullus",
-            "page_reference": "Not in this rulebook"
-        },
-        "Unreadable Face": {
-            "description": "While their fellow Osnullus can tell what each other are thinking by looking at each other’s faces, it is more difficult for other species to do so. This natural trait gives them an advantage when it comes to treachery and deceit. The Osnullus may roll an additional d20 for the purposes of trying to mislead or lie to another species.",
-            "category": "Species:Osnullus",
-            "page_reference": "Not in this rulebook"
-        },
-        "Discerning Scientific Mind": {
-            "description": "Xahean culture allows them to discern scientific phenomena quickly and inspires them in how to replicate it. When a Xahean is attempting to perform an extended task to determine the purpose of a piece of technology, they may re-roll any number of [D] the first time they roll to determine progress.",
-            "category": "General",
-            "page_reference": "Not in this rulebook"
-        },
-        "Camouflage Field": {
-            "description": "While most Xaheans can generate a limited camouflage field to obscure their presence, training and practice can heighten this ability further. The Xahean may spend 2 Momentum (Immediate) as a minor action to become virtually invisible, adding +2 to the Difficulty of all tasks to observe, locate, or target the Xahean. This effect ends when the Xahean makes an attack, takes a minor action to end the effect, or otherwise loses concentration. This ability is taxing to maintain, and each additional time during a scene it is used increases the Momentum cost by 1; this increase is cumulative.",
-            "category": "General",
-            "page_reference": "Not in this rulebook"
-        },
-        "Enhanced Metabolism": {
-            "description": "Saurian biology allows them to process toxins at a much higher rate than other species. A Saurian is capable of recovering from the effects of a toxin in half the time as other species, and may reroll one d20 in any task to determine if they can resist the effects of toxic substances introduced to their body.",
-            "category": "Species:Saurian",
-            "page_reference": "Not in this rulebook"
-        },
-        "Hunter’s Senses": {
-            "description": "Due to their natural gifted senses of smell and sight, a Saurian can detect minute pheromone signatures, and can see into the infrared portion of the EM spectrum. With practice, they can hone these senses into a superlative tracking Department. When a Saurian attempts to determine the presence of hidden creatures, or attempts a task to track a creature which has passed through an area within the last 24 hours, reduce the Difficulty by 2. If this is part of an extended task, then the Saurian also rolls +2[D] when determining progress on the Work track.",
-            "category": "Species:Saurian",
-            "page_reference": "Not in this rulebook"
-        },
-        "Synthetic Physiology": {
-            "description": "Some injuries suffered by organic beings require extensive augmentations and improvements of an individual’s body. Some of these improvements leave the Cybernetically Enhanced possessing physical abilities superior to their original capabilities, and allow them to achieve feats well beyond what they once could. The Cybernetically Enhanced increases their Resistance by 1 against non-lethal attacks. The Cybernetically Enhanced may also spend 2 Momentum (Immediate) to re-roll a single die for any task involving Fitness.",
-            "category": "Species:CyberneticallyEnhanced",
-            "page_reference": "Not in this rulebook"
-        },
-        "Analytical Recall": {
-            "description": "Some Cybernetically Enhanced find themselves able to recall information faster than they used to and are able to process crucial details to a greater degree. Three times per session, a Cybernetically Enhanced individual may ask the gamemaster for more information regarding data they have recorded or situations they have personally seen, as if they had spent a point of Momentum to Obtain Information.",
-            "category": "Species:CyberneticallyEnhanced",
-            "page_reference": "Not in this rulebook"
-        },
-        "Guile and Cunning": {
-            "description": "Secrecy is as natural as breathing for you. When you attempt to remain hidden or for your actions to remain unnoticed, you may add 1 to Threat in order to increase the Difficulty of a task to detect you or discern the true nature of your actions.",
-            "category": "Species:Romulan",
-            "page_reference": "p. 153"
-        },
-        "Wary": {
-            "description": "Danger can come from any quarter, and you will not be caught off-guard. When you attempt a task to notice or detect an enemy or hazard, you may reroll one d20.",
-            "category": "Species:Romulan",
-            "page_reference": "p. 154"
-        },
-        "Residual Strange Energies": {
-            "description": "The Ancient Ones’ strange energies that have permeated the planet have morphed your genetics, giving you the ability to change objects into other things. Once per mission, you may turn one non-living, simple object into another. Both objects must be able to be held in your hand.",
-            "category": "Species:Apergosian",
-            "page_reference": "Not in this rulebook"
-        },
-        "Number Sense": {
-            "description": "You have a mastery of what numbers mean, not just mathematically, but philosophically too. Whenever you attempt a task without using a computer that involves analyzing numbers, you may reduce the Difficulty by 1.",
-            "category": "Species:Apergosian",
-            "page_reference": "Not in this rulebook"
-        },
-        "Three-Dimensional Thinking": {
-            "description": "You possess a knack for navigating which terrestrial species tend to lack, and can easily lend this grasp of maneuverability to starship piloting. When you attempt a task utilizing your Conn discipline, the complication range associated with that task is always considered to be one less (2 instead of 3, 0 instead of 1 and so on).",
-            "category": "Species:Cetacean",
-            "page_reference": "Not in this rulebook"
-        },
-        "Song of the Ocean": {
-            "description": "Your bio-sonar capabilities allow for communication across great distances. Even without technological assistance, you may freely communicate with any other species which possesses bio-sonar sensory communication, even across the vacuum of space, up to a distance of 100 kilometers.",
-            "category": "Species:Cetacean",
-            "page_reference": "Not in this rulebook"
-        },
-        "Thickened Carapace": {
-            "description": "You have been bred to have an exoskeleton that can absorb tremendous force. This selective breeding process is typically used to create new warriors. Your Resistance is increased to 2.",
-            "category": "Species:Clicket",
-            "page_reference": "Not in this rulebook"
-        },
-        "Communication Pheromones": {
-            "description": "While all Clickets can communicate using clicks from their mouthparts, some have evolved a secondary ability to communicate using scent. These pheromones are subtle and usually require antennae structures for biological organisms to recognize. The Difficulty of tasks to understand this language is increased by 1 unless there is an organism with antennae performing the task.",
-            "category": "Species:Clicket",
-            "page_reference": "Not in this rulebook"
-        },
-        "Enhanced Thrusters": {
-            "description": "Many Exocomps have been known to create structural upgrades to themselves to help be better at the job they are assigned to. Often this can take the form of more efficient and powerful thrusters to increase their maneuverability and flight duration. You may reduce the Difficulty of tasks to avoid falling or floating debris by 1.",
-            "category": "Species:Exocomp",
-            "page_reference": "Not in this rulebook"
-        },
-        "Extra Power Supply": {
-            "description": "Some Exocomps install an additional power supply in order to accomplish multiple tasks at the same time. You may ignore the opportunity cost of up to three pieces of equipment per scene.",
-            "category": "Species:Exocomp",
-            "page_reference": "Not in this rulebook"
-        },
-        "Carnivorous Reptilian Physiology": {
-            "description": "You tower over most other humanoid species, and possess thick armored skin, dense muscles and bones, and razor-sharp teeth and talons. You have a Resistance of 2, and your unarmed attacks lose the Non-Lethal quality and gain Vicious 1 instead. Gorn characters must select this talent during character creation.",
-            "category": "Species:Gorn",
-            "page_reference": "Not in this rulebook"
-        },
-        "Throw Anything": {
-            "description": "When a Gorn with extreme might gets into a fight, anything can be a weapon as long as it isn’t too heavy or bolted down. Once per combat encounter, you can make the following attack if a sufficient-sized object is in your zone: Thrown Object: 3[D] + Security, Knockdown.",
-            "category": "Species:Gorn",
-            "page_reference": "Not in this rulebook"
-        },
-        "Gorn Royal Bloodline": {
-            "description": "The blood of the royal family runs through your veins. When dealing with social conflicts involving Gorn politics, you are considered to have the Gorn Royal Family advantage.",
-            "category": "Species:Gorn",
-            "page_reference": "Not in this rulebook"
-        },
-        "Resolution-Bound": {
-            "description": "From birth, you were taught the societal importance of The Resolution. You embrace the idea and use it as a guide for planning your life’s work. This dedication to your plan means you will do whatever it takes to ensure your legacy is fulfilled before The Resolution. Whenever you cite a value connected to your legacy and spend a point of Determination on Perfect Opportunity, you may also reroll one dice from that pool.",
-            "category": "Species:Kaelon",
-            "page_reference": "Not in this rulebook"
-        },
-        "Evolved Telebellum": {
-            "description": "Over time, the telebellum of some Kaelons has become a much more powerful defense against psychic probes. In addition to being immune to telepathic and empathic reading, you know exactly who attempted to read you and where that person is located.",
-            "category": "Species:Kaelon",
-            "page_reference": "Not in this rulebook"
-        },
-        "Make It Go": {
-            "description": "You are great at patching things up and fixing them regardless of the difficulties the solution may cause later. When attempting an Engineering task, you may increase the complication range by 1 or more. If you do, you may reduce the Difficulty of the task by 1, to a minimum of 1 for each complication range increase you make.",
-            "category": "Species:Pakled",
-            "page_reference": "Not in this rulebook"
-        },
-        "Too Stubborn to Die": {
-            "description": "Your body is capable of shrugging off even the most debilitating injuries. If you would be killed, you may spend 1 point of Determination to remain alive but injured.",
-            "category": "Species:Pakled",
-            "page_reference": "Not in this rulebook"
-        },
-        "Learn From the Past": {
-            "description": "Tamarians use stories from the past and mythology to teach lessons about the future. You are exceptionally adept at remembering the stories of your people’s past. When you succeed at a task to recall events you are familiar with, you generate 1 additional point of Momentum which must be spent on the Obtain Information Momentum spend.",
-            "category": "Species:Tamarian",
-            "page_reference": "Not in this rulebook"
-        },
-        "Storyteller": {
-            "description": "Tamarian teachers use stories to pass on knowledge to younger children. Known as Storytellers, these Tamarians are experts at weaving body motions, words, and music into lessons that young generations will cherish and use all their lives. Once per mission, at the start of a scene with an away team, you may spend ten minutes telling your team a story from the past that is applicable to their current situation. When the story ends, you may roll 1[D] and add the result to the Momentum pool.",
-            "category": "Species:Tamarian",
-            "page_reference": "Not in this rulebook"
-        },
-        "Hyper Agile": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "Telepathy (Anabaj)": {
-            "description": "The Anabaj can sense the surface thoughts and emotions of most living beings nearby and can communicate telepathically with other empaths and telepaths.",
-            "category": "Species:Anabaj",
-            "page_reference": "Not in this rulebook"
-        },
-        "Embed Egg": {
-            "description": "As an action, a female Anabaj may embed its eggs in another humanoid’s throat. This action may only be performed if the humanoid is unconscious. The eggs require a Difficulty 3 Control + Medicine task to be removed safely.",
-            "category": "Species:Anabaj",
-            "page_reference": "Not in this rulebook"
-        },
-        "Alluring Vision": {
-            "description": "The Anabaj looks like a humanoid species that the person observing it feels comforting. The observer may attempt a Difficulty 2 Presence + Command task to ignore this effect.",
-            "category": "Species:Anabaj",
-            "page_reference": "Not in this rulebook"
-        },
-        "Underwater Acrobat": {
-            "description": "While maneuvering in underwater environments, an Aquan with this talent can use a minor action to move to any zone within long range instead of medium and ignore any Difficulty increases associated with underwater terrain.",
-            "category": "Species:Aquan",
-            "page_reference": "Not in this rulebook"
-        },
-        "Aquatic Mutation": {
-            "description": "The Aquans can transform specimens of most humanoid species into water breathers through surgically induced mutations. An Aquan with this talent can perform the necessary procedure on any humanoid character with a Difficulty 1 Reason + Medicine task, so long as they are able to access the appropriate medical facilities. The procedure takes several hours to complete and can be reversed if the subject is given the appropriate reversal formula.",
-            "category": "Species:Aquan",
-            "page_reference": "Not in this rulebook"
-        },
-        "Cat-Like Reflexes": {
-            "description": "The feline nature of the Kzinti grants them heightened reflexes, agility, and balance. Reduce the Difficulty of any non-combat task that relies on precise body control and physical agility by 1 to a minimum of 0.",
-            "category": "Species:Kzinti",
-            "page_reference": "Not in this rulebook"
-        },
-        "Telepath (Kzinti)": {
-            "description": "Some Kzinti have telepathic abilities, though they can be mentally taxing to use. A character with this talent can sense the surface thoughts and emotions of most living beings nearby. Surface thoughts are whatever a character is thinking or feeling at that precise moment. It will require effort and a task to search another character’s mind for specific information or memories. Unwilling targets can resist with an opposed task. If a Kzinti fails a task attempting to probe the mind of another character, the strain temporarily overwhelms them, and they cannot access their telepathic abilities for the remainder of the scene.",
-            "category": "Species:Kzinti",
-            "page_reference": "Not in this rulebook"
-        },
-        "Triple Threat": {
-            "description": "The individual organisms that comprise a Pandronian are largely autonomous and can separate from one another. A character with this talent can spend 1 Momentum to cause a component organism to separate from the others and send the disassembled organism to a different location.\n\nIn this manner, the character can participate in scenes taking place in up to three different locations simultaneously, at a cost of 1 Momentum per component organism. Each individual component organism uses the character’s full game statistics, talents, and abilities. However, the character can attempt only one task per turn in combat, as usual. Each component organism does not get its own turn in combat. In non- combat situations or in scenes that don’t involve strict time limits, the component organisms can attempt tasks separately at the gamemaster’s discretion.",
-            "category": "Species:Pandronian",
-            "page_reference": "Not in this rulebook"
-        },
-        "Colony Creature": {
-            "description": "Because the individual organisms that make up a colony creature are largely autonomous, it’s possible for one component organism to assist another component organism on a task. This ability can be used only once per scene.",
-            "category": "Species:Pandronian",
-            "page_reference": "Not in this rulebook"
-        },
-        "Toxic Familiarity": {
-            "description": "The Phylosians’ advanced scientific capabilities, combined with their unique physiology, have made many members of their species experts at detecting and counteracting environmental toxins. Whenever a character with this talent attempts a task to diagnose a toxic substance or to develop a treatment or antidote to counteract a toxin’s effects, reduce the Difficulty of the task by 1 to a minimum of 0.",
-            "category": "Species:Phylosian",
-            "page_reference": "Not in this rulebook"
-        },
-        "Omnidirectional Vision": {
-            "description": "Phylosians’ eyes rest on stalks that can be moved in any direction around their heads. This ability grants them a much wider range of vision than most humanoid species. Any time a character with this talent attempts a task to detect nearby activity using their eyesight, add one bonus d20 to the roll.",
-            "category": "Species:Phylosian",
-            "page_reference": "Not in this rulebook"
-        },
-        "Reconnaissance Flight": {
-            "description": "Skorr have sharp senses that allow them to scout an area quickly from above. A character with this talent can spend 2 Momentum to take flight and conduct an aerial search that reveals any visible threats within long range. This talent relies on the ability of the character to gain sufficient altitude to get a bird’s-eye view of the terrain and does not work in enclosed spaces.",
-            "category": "Species:Skorr",
-            "page_reference": "Not in this rulebook"
-        },
-        "Talons": {
-            "description": "Though a peaceful and civilized species, the Skorr were once warlike and retain sharp beaks and talons that can be used as lethal weapons. Unarmed strikes by characters with this talent have the Vicious 1 Damage effect and Deadly quality.",
-            "category": "Species:Skorr",
-            "page_reference": "Not in this rulebook"
-        },
-        "Acute Senses": {
-            "description": "The Aenar have honed their senses to the point that they are able to respond to stimuli just as well as, if not superior to, those who possess the ability to see. When attempting a task to detect something which is hidden from conventional senses, or which would normally be difficult to perceive, the Aenar may re-roll one d20.",
-            "category": "Species:Aenar",
-            "page_reference": "p. 151"
-        },
-        "Chosen Speaker": {
-            "description": "Among Aenar communities, leaders and mediators are chosen as and when the need arises, nominating an individual to serve as Speaker. You've been chosen for this role often, and are adept at using your senses and your telepathy to aid communication. When attempting a task to communicate telepathically with a willing being, you may re-roll 1d20.",
-            "category": "Species:Aenar",
-            "page_reference": "p. 151"
-        },
-        "Immense Self-Discipline": {
-            "description": "Arcadians are renowned for their ability to maintain control of their emotions and are extraordinarily hard to goad into taking violent action. Any task to provoke, anger, or compel an Arcadian to take aggressive action increases in Difficulty by 2. However, an Arcadian must add 1 to Threat in order to make an attack against an enemy during combat.",
-            "category": "Species:Arcadian",
-            "page_reference": "Not in this rulebook"
-        },
-        "Rapid Data Assimilation": {
-            "description": "The Arcadian’s genetic makeup allows them to absorb massive amounts of data and apply it quickly. When the Arcadian succeeds at a task as part of a timed challenge or timed task, the Momentum cost to reduce the number of Intervals taken is reduced by 1. Further, if the task is failed, the Arcadian may reduce the number of Intervals taken by 1 by adding 1 to Threat.",
-            "category": "Species:Arcadian",
-            "page_reference": "Not in this rulebook"
-        },
-        "Powerful Frame": {
-            "description": "Ariolo possess a dense musculature and powerful limbs that allow them to run for extended periods of time and allow them to lift heavy objects with ease. They receive one free d20 when attempting to perform a task involving physical labor.",
-            "category": "Species:Ariolo",
-            "page_reference": "Not in this rulebook"
-        },
-        "All in Due Time": {
-            "description": "The passage of time is meaningless to the Ariolo, who believe that stressing over tense situations will only lead to making mistakes. The character may reduce the Difficulty of a task they attempt involving Presence or Control by 1.",
-            "category": "Species:Ariolo",
-            "page_reference": "Not in this rulebook"
-        },
-        "Verbal Warfare": {
-            "description": "Engaging in debate is one of the highest forms of expression in Betelgeusian culture, and a Betelgeusian who deigns to engage someone in argument is considered to be giving them a great gift. During an opposed task in a social conflict, Betelgeusians gain 1 bonus Momentum so long as they succeed at their task.",
-            "category": "Species:Betelgeusian",
-            "page_reference": "Not in this rulebook"
-        },
-        "Strength of the Elders": {
-            "description": "Betelgeusians are descended from predators who used speed and ferocity to overwhelm their prey. In modern times a Betelgeusian can enter a mental state where they strike their opponent viciously in order to defeat them quickly. A Betelgeusian may use Fitness + Security rather than Daring + Security to make melee attacks. In addition, they inflict +1[D] Stress with any successful melee attack.",
-            "category": "Species:Betelgeusian",
-            "page_reference": "Not in this rulebook"
-        },
-        "Intention Detector": {
-            "description": "Years of weathering betrayal and manipulation by others has given the Coridanites a strong sense of knowing when they are being misled. The Coridanite may use the higher of their Insight or Presence during a task to determine if someone is lying or attempting to mislead them.",
-            "category": "Species:Coridanite",
-            "page_reference": "Not in this rulebook"
-        },
-        "Radiation Resistant Anatomy": {
-            "description": "Coridanites hail from a world where dilithium and certain radioactive elements are common and their biology has compensated for high levels of particles in the atmosphere. When suffering Stress from radiation, halve the total Stress suffered (rounded down), to a minimum of 1.",
-            "category": "Species:Coridanite",
-            "page_reference": "Not in this rulebook"
-        },
-        "Thick Skin": {
-            "description": "The insults and jabs of others mean little to Megarites, who have mastered the ability to take praise in their own achievements. If a Megarite is successful in a task against someone trying to manipulate them emotionally, they may ignore all subsequent attempts by their opponent for the remainder of the scene.",
-            "category": "Species:Megarite",
-            "page_reference": "Not in this rulebook"
-        },
-        "Master of Aquatic Engineering": {
-            "description": "The Megarites’ homeworld necessitated not only being able to build their settlements along the coasts but also being able to withstand devastating tidal waves and impacts by glaciers. This has allowed them to develop their aquatic engineering skills to the point they are praised by other species, leading to Megarites often being employed as consultants. When attempting a task involving aquatic engineering, the Megaritie may reroll a d20.",
-            "category": "Species:Megarite",
-            "page_reference": "Not in this rulebook"
-        },
-        "Trained from Birth": {
-            "description": "When you make a Security task, you ignore the 1st complication rolled. In addition, if you are making an opposed task using Security, you generate 1 Momentum for each complication your opponent suffers. Bonus Momentum may not be saved.",
-            "category": "Species:Talarian",
-            "page_reference": "Not in this rulebook"
-        },
-        "Talarian Cruelty": {
-            "description": "You are cruel & have a reputation to match it. When you attempt a Task to identify the weaknesses or flaws of an enemy you reduce Difficulty by 1. If the enemy has a trait which reflects this weakness, you may re-roll a single d20 on the next attack or persuasion Task you attempt vs them.",
-            "category": "Species:Talarian",
-            "page_reference": "Not in this rulebook"
-        },
-        "The B'Nar": {
-            "description": "A Talarian will perform The B'Nar when in mourning or cut off from other Talarians. After they have made the B'Nar for a length of time equivalient to their Fitness score, they immediately regain all Stress points. Also, making the B'Nar is so enheartening to a Talarian that they gain 1d20 to Control or Fitness rolls",
-            "category": "Species:Talarian",
-            "page_reference": "Not in this rulebook"
-        },
-        "Telepathic Interference": {
-            "description": "Your skills at telepathy can interfere with the ability of others to read minds, send telepathic signals, or sense thoughts and emotions. As a Minor Action, you can shield the minds of others, preventing the detection of surface thoughts and emotions, as well as blocking telepathic communication. Attempts to push past your block is an Opposed Task. Additionally, you can assist other creatures in resisting having their mind read.",
-            "category": "Species:Aenar",
-            "page_reference": "Not in this rulebook"
-        },
-        "Networked": {
-            "description": "You are connected to either the Bynar master system or your ship’s mainframe. Provided the computer is in communication range and there is no interference, that computer can assist you on Tasks where its Communication, Computer, or Sensor Systems would apply to the Task.",
-            "category": "Species:Bynar",
-            "page_reference": "Not in this rulebook"
-        },
-        "Paired": {
-            "description": "You are genetically paired to another Bynar on the crew. This Bynar is a support character that does not count against your Crew Support for the mission. Once per scene, you can use their Disciplines on a Reason or Insight roll in place of your own.",
-            "category": "Species:Bynar",
-            "page_reference": "Not in this rulebook"
-        },
-        "Unpaired": {
-            "description": "Your genetic pair is dead or is otherwise unavailable, and can’t be replaced during your current mission or deployment. Mentally alone, you are compulsively driven to aid others. When you assist another character with a Task, one d20 related to that Task can be re- rolled.",
-            "category": "Species:Bynar",
-            "page_reference": "Not in this rulebook"
-        },
-        "The Long View (El-Aurian)": {
-            "description": "Due to their extremely long lifespans, El-Aurians come to understand and gain knowledge more extensively that most other individuals. When a character with this Talent uses a Milestone to exchange a Focus, they may do so twice instead of once.",
-            "category": "Species:ElAurian_2E",
-            "page_reference": "Not in this rulebook"
-        },
-        "Temporal Awareness": {
-            "description": "One hundred and fifty El-Aurian refugees who were aboard the SS Lakul in 2293 became caught in the Nexus. For them it was akin to “being inside joy”. Forty-Seven of these refugees were “yanked out” by the USS Enterprise-B, leaving a temporal “echo” of themselves behind within the Nexus that exists outside of all of time. These El-Aurians are still connected to their “echoes” granting them an awareness of manipulations made to the time-space continuum. Any alterations to the natural flow of time leaves the El-Aurian with this talent with a nagging “feeling” that something is just not right, or is fundamentally “off”. The Gamemaster secretly makes a Difficulty 0 Insight + Science Task check for the player. If the Task fails the player is oblivious to the changes. On one success, the El-Aurian knows something is wrong, but not exactly what it is. For each success past the first, the Gamemaster may give the player brief hints as the character begins to remember brief impulses of “how things should be”. Additionally, the player may spend a point of Momentum to remember a specific fact about the former timeline.",
-            "category": "Species:ElAurian_2E",
-            "page_reference": "Not in this rulebook"
-        },
-        "Listener": {
-            "description": "You know how to subtly use your empathic skills to discern not only what is being said but also what is being unsaid. This allows you to tell someone exactly what they needs to hear. When you attempt a Task to advise or convince someone into taking or refraining from a specific course of action, you may add a bonus d20",
-            "category": "Species:ElAurian_2E",
-            "page_reference": "Not in this rulebook"
-        },
-        "Wisdom of Years": {
-            "description": "You have many decades if not several centuries of experiences to draw upon. You may have one additional Value and Focus, reflecting the insights you received from your long life",
-            "category": "Species:ElAurian_2E",
-            "page_reference": "Not in this rulebook"
-        },
-        "Mind for Information": {
-            "description": "You have a gift for processing information and retaining it. When you attempt a Task to organize information or recall it, you may add a bonus d20 to your dice pool.",
-            "category": "Species:Yridian",
-            "page_reference": "Not in this rulebook"
-        },
-        "Scavenger Instinct": {
-            "description": "Your Yridian evolutionary ancestors were scavengers, which gives you an instinct for searching, as well as furtive skills such as spying, burglary, and smuggling. When you attempt a Task where non-detection or searching is an asset, and you add a d20 to your dice pool by adding to Threat, you may re-roll two d20s.",
-            "category": "Species:Yridian",
-            "page_reference": "Not in this rulebook"
-        },
-        "Vow of Silence": {
-            "description": "You are intensely loyal and have taken a vow of silence and will only speak to your direct superior. Whenever you attempt to resist efforts to make you speak or betray your employer’s trust, reduce the Difficulty of the Task by two.",
-            "category": "Species:Hupyrian",
-            "page_reference": "Not in this rulebook"
-        },
-        "Dolbargy Healing Trance": {
-            "description": "You have learned the technique of inducing a voluntary deep coma that simulates death. Entering the trance is a Control+Medicine Task. Choose a Difficulty of 1, 2, or 3. Success means that any attempt to detect your vital signs must increase the Difficulty of that task by an amount equal to the Difficulty you chose. While in this trance, you may listen but do nothing else. Gain a temporary Trait: Appears Dead that lasts until you wake up. To wake from the trance is a Control+Medicine Task at Difficulty 1.",
-            "category": "Species:Hupyrian",
-            "page_reference": "Not in this rulebook"
-        },
-        "Extra Arms": {
-            "description": "You know how to use your twin sets of arms with coordination and efficiency. On your turn, you can take an additional Minor Action, which can only be used for the Draw Item or Interact Minor Actions. Additionally, you add the Vicious 1 effect to your Unarmed Strike.",
-            "category": "Species:Tzenkethi",
-            "page_reference": "Not in this rulebook"
-        },
-        "Technological Savvy": {
-            "description": "You were taught at a young age about robotics and machinery. When you perform or assist with a Task where knowledge of robotics or machines would help, you may re- roll a d20.",
-            "category": "Species:Tiburonian",
-            "page_reference": "Not in this rulebook"
-        },
-        "Tiburonian Charm": {
-            "description": "You are able to bring out the best in people with your natural charisma. If you assist someone with your Presence Attribute, if they succeed at the assisted Task, add an extra point of Momentum.",
-            "category": "Species:Tiburonian",
-            "page_reference": "Not in this rulebook"
-        },
-        "Untapped Potential": {
-            "description": "The character is inexperienced, but talented and with a bright future in Starfleet. The character may not have or increase any Attribute above 11, or any Discipline above 4 while they have this Talent (and may have to adjust Attributes and Disciplines accordingly at the end of character creation). Whenever the character succeeds at a Task for which they bought one or more additional dice with either Momentum or Threat, they may roll 1[D]. The character receives bonus Momentum equal to the roll, and adds one point to Threat if an Effect is rolled. The character cannot gain any higher rank than lieutenant (junior grade) while they possess this Talent.",
-            "category": "Career",
-            "page_reference": "Not in this rulebook"
-        },
-        "Veteran": {
-            "description": "The character is wise and experienced, and draws upon inner reserves of willpower and determination in a more measured and considered way. Whenever the character spends a point of Determination, roll 1[D]. If an Effect is rolled, immediately regain that spent point of Determination. The character has a rank of at least Lieutenant Commander.",
-            "category": "Career",
-            "page_reference": "Not in this rulebook"
-        },
-        "Constantly Watching": {
-            "description": "When you attempt a Task to detect danger or hidden enemies, reduce the Difficulty by 1.",
-            "category": "General",
-            "page_reference": "p. 149"
-        },
-        "Dauntless": {
-            "description": "Whenever you attempt a Task to resist being intimidated or threatened, you may add a bonus d20 to your dice pool.",
-            "category": "General",
-            "page_reference": "p. 149"
-        },
-        "Personal Effects": {
-            "description": "The character possesses some significant and uncommon item or device which is not part of Starfleet’s standard issue, but which is nevertheless useful for missions. The character may select one item with an Opportunity Cost of 2, or two items with an Opportunity Cost of 1 each. Neither items may have an Escalation Cost greater than 1.",
-            "category": "General",
-            "page_reference": "p. 150"
-        },
-        "Studious": {
-            "description": "Whenever you spend one or more Momentum to Obtain Information, you may ask one additional question (in total, not per Momentum spent on Obtain Information).",
-            "category": "General",
-            "page_reference": "p. 150"
-        },
-        "Technical Expertise": {
-            "description": "Whenever you attempt a Task assisted by the ship’s Computers or Sensors, you may re-roll one d20 (which may be the ship’s die).",
-            "category": "General",
-            "page_reference": "p. 150"
-        },
-        "Tough": {
-            "description": "Whenever you Avoid an Injury, the cost is reduced by 1, to a minimum of 1.",
-            "category": "General",
-            "page_reference": "p. 150"
-        },
-        "Neural Interface": {
-            "description": "The character has had a cybernetic device implanted directly into their brain, allowing them to interface with computers and similar technologies with their thoughts. Initiating or breaking the link between their minds and a computer system takes a Minor Action, and while they are connected they may reroll the d20 gained from using ship’s Systems. However, any time the ship suffers a Breach the character also suffers 3[D] of Stress.",
-            "category": "Enhancement",
-            "page_reference": "p. 155"
-        },
-        "Physical Enhancement": {
-            "description": "The character has some portion of their body replaced by an advanced piece of bio-mechanical hardware. This device functions exactly like its organic counterpart; however, before attempting a Task, the Character may choose to take 3[D] Stress to add a single additional d20 to their dice pool. Any Injuries caused by this damage is resolved after the effects of the Task. Multiple dice may be bought in this way, but the damage is added together (so, buying two dice inflicts 6[D] damage, and buying 3 dice inflicts 9[D] damage). These dice count towards the normal limit of bonus d20s purchased.",
-            "category": "Enhancement",
-            "page_reference": "Not in this rulebook"
-        },
-        "Sensory Replacement": {
-            "description": "Due to physical injury or irreparable birth defect, the character has been forced to adopt a cybernetic device that replaces one of their sensory functions – most commonly sight or hearing. The character gains the Artificial Sense Trait, which can be used normally. In addition, when the character is using the Obtain Information Momentum spend, they may ask questions or be given information not normally available with organic senses.",
-            "category": "Enhancement",
-            "page_reference": "p. 155"
-        },
-        "Back-Up Plans": {
-            "description": "You have plans and contingencies which are set into motion whenever something goes awry. Whenever you or an ally fails a task, you may add 1 point to the group’s Momentum pool.",
-            "category": "General",
-            "page_reference": "p. 149"
-        },
-        "Calm and Logical": {
-            "description": "You are a highly rational individual, with a disciplined mind that can set aside your feelings to view things as objectively as possible. You may still have to deal with those feelings later, however. When you would gain a trait or complication which represents a mood or emotional state, you may immediately remove that trait by adding 1 to Threat.",
-            "category": "General",
-            "page_reference": "p. 149"
-        },
-        "Close-Knit Crew": {
-            "description": "You and your crew have bonded through shared adversity, and you all pull together when the situation demands. When a scene begins, if there are fewer points of Momentum in the group pool than there are characters in the scene who possess this talent, immediately add 1 point of Momentum to the group pool.",
-            "category": "General",
-            "page_reference": "p. 149"
-        },
-        "Constant Presence": {
-            "description": "You’re a regular fixture of away missions and other important work, relied upon by the senior staff for your expertise and judgement. Introducing this Supporting Character in subsequent adventures no longer costs Crew Support, and the Supporting Character gains 1 Determination the first time they are used in an adventure.",
-            "category": "General",
-            "page_reference": "p. 149"
-        },
-        "Extra Effort": {
-            "description": "You can push yourself to extremes to succeed, but at a cost. When you attempt a task, you may reduce the Difficulty of the task by 1, to a minimum of 0. However, once the task is completed, you reduce your maximum Stress by 2 for the remainder of the current adventure (after which you can rest sufficiently to return your maximum Stress to its normal value).",
-            "category": "General",
-            "page_reference": "p. 149"
-        },
-        "Gut Feeling": {
-            "description": "You’ve learned to trust your gut when something doesn’t feel right, and your instincts are rarely wrong. When the gamemaster spends one or more Threat to introduce reinforcements or to cause a Reversal, they must spend 2 additional Threat to do so (2 extra Threat in total, not per reinforcement).",
-            "category": "General",
-            "page_reference": "p. 149"
-        },
-        "Indefatigable": {
-            "description": "You don’t give up, and you don’t let failure deter you. When you fail a task, and attempt that task again during the same scene, reduce the Difficulty of the second attempt (and any subsequent attempts if you still fail) by 1.",
-            "category": "General",
-            "page_reference": "p. 149"
-        },
-        "Methodical Planning": {
-            "description": "You have a clear path to achieving your goals and objectives, and you have a thorough understanding of what you and your allies need to do at each step. When an ally attempts a task which benefits from an advantage or other trait you created based on your plans or strategy, you may assist that ally’s task even if you are not present. In combat, this assistance does not require you to use your task to assist that ally.",
-            "category": "General",
-            "page_reference": "p. 150"
-        },
-        "No Hesitation": {
-            "description": "You know that responding quickly to dangerous situations can be vital, so you are always the first to act. At the start of any round in an action scene, you may add 1 to Threat to take the first turn, regardless of who would otherwise have acted first.",
-            "category": "General",
-            "page_reference": "p. 150"
-        },
-        "No Pain, No Gain": {
-            "description": "You prefer to achieve your goal first, and then deal with the consequences felt along the way. When you fail a task (but not an opposed task) which used your Daring, you may always choose to succeed at a cost.",
-            "category": "General",
-            "page_reference": "p. 150"
-        },
-        "Quick Survey": {
-            "description": "You have a way of getting a good impression of a situation with only a moment’s observation. At the start of a scene, you may immediately ask one question, as if you had spent one Momentum on the Obtain Information Momentum spend. The answer can only provide information that you could obtain with your own senses; you cannot gain information from equipment in so short a time.",
-            "category": "General",
-            "page_reference": "p. 150"
-        },
-        "Reassuring": {
-            "description": "Your presence is a boon to your comrades, providing them with a little extra confidence when they need it most. When you succeed at a task using your Presence, you may spend Momentum to reassure your allies, so long as they are within communication range of you. It costs 1 Momentum (Repeatable) to reassure an ally, and this effect allows them to ignore a single complication rolled. This cannot be used to ignore complications from succeeding at cost.",
-            "category": "General",
-            "page_reference": "p. 150"
-        },
-        "Second Wind": {
-            "description": "You can sometimes draw upon deep reserves of energy and resilience when the situation becomes desperate. You may spend a point of Determination to remove all the Stress you have accumulated. The normal requirements for spending a point of Determination still apply.",
-            "category": "General",
-            "page_reference": "p. 150"
-        },
-        "Self-Reliant": {
-            "description": "While you understand the value of teamwork, you’re just as capable when you’re forced to rely on your own abilities. Whenever you succeed at a task where you did not purchase additional dice by spending Momentum or adding to Threat, you generate bonus Momentum equal to the task’s Difficulty. Bonus Momentum cannot be saved.",
-            "category": "General",
-            "page_reference": "p. 150"
-        },
-        "Voice of Authority": {
-            "description": "The tone of your voice and the clarity of your words conveys that you are in control, that you are someone who should be listened to. When you assist someone, and use your Presence to do so, you may add 2 to Threat to treat your assistance die as if it had rolled a 1 instead of rolling it.",
-            "category": "General",
-            "page_reference": "p. 150"
-        },
-        "Well-Informed": {
-            "description": "You have contacts everywhere and you listen for news and rumors from far and wide. At the start of a scene, you may add 1 to Threat to ask the gamemaster two questions about the situation or location, as if you had spent Momentum on the Obtain Information spend. The answers you receive will be knowledge you’ve gained from your contacts and the news and rumors you’ve heard.",
-            "category": "General",
-            "page_reference": "p. 150"
-        },
-        "Extra-Sensory Perception": {
-            "description": "You have an ability to perceive things beyond the normal limits of humanoid senses, allowing you to gain knowledge of people, places, and objects beyond your ability to sense them conventionally. This is known as Extra-Sensory Perception, or ESP. It is not directly under your control, but instead tends to come in the form of accurate guesses, strong feelings, or flashes of insight. Such sensitivity often leaves you vulnerable to psychic dangers as well. At any point during play, you may ask the gamemaster for hints or insights about the current situation, and the gamemaster may similarly offer you information about the current situation that you would not normally be able to determine. Each hint adds 1 point to Threat, and you may always refuse to accept the hints offered.",
-            "category": "Esoteric",
-            "page_reference": "p. 155"
-        },
-        "Psychokinesis": {
-            "description": "You can manipulate and control objects using only the power of the mind, an ability referred to as psychokinesis or telekinesis. You may exert a psychic force upon an object within Close range equivalent to the force that you would normally be able to exert physically, though this takes concentration and cannot be applied suddenly or violently. Greater force may be applied but requires greater effort; you may spend 1 or more Momentum (Immediate) to increase the magnitude of the force you apply, with each Momentum spent counting as an additional person’s worth of force applied (that is, you can move or manipulate objects that would take two people to move or manipulate by spending 1 Momentum). Momentum (Immediate) may also be spent to increase the range: 1 Momentum to affect objects in Medium range, 2 to affect objects at Long range, and gamemaster’s discretion for distances beyond. To apply force violently instead, add 1 point to Threat to make a Control + Security task with a Difficulty of 2 to strike an opponent, inflicting 2+Security[D] Stress with the Knockdown effect (you may apply the Grapple or Shove melee combat options instead).",
-            "category": "Esoteric",
-            "page_reference": "p. 156"
-        },
-        "Telepathic Projection": {
-            "description": "Your telepathic ability is more potent than most, and you are quite accustomed to projecting your thoughts into other minds. You can send your thoughts into the minds of other creatures – other than those immune to telepathy – even if those creatures are not telepathic themselves. You can “hear” their responses by reading their minds as normal. You are also capable of using this ability offensively, overwhelming a target’s mind with pain-inducing psychic noise. This requires a Presence + Security task with a Difficulty of 2 (increasing by 1 for each range category beyond Close), and inflicting [D] Stress equal to your Presence, with the Intense effect.",
-            "category": "Esoteric",
-            "page_reference": "p. 156"
-        },
-        "Childhood Insight": {
-            "description": "The character is young, but often spots details or reaches conclusions that adults might overlook. The character may not have or increase any attribute above 10, or any discipline above 3 while they have this talent (and may have to adjust attributes and disciplines accordingly at the end of character creation). Select a single discipline, which must be rated at least 2. Whenever you attempt a task using that discipline and buy one or more dice either by spending Momentum or adding to Threat, roll one [D] for each die you bought. You generate bonus Momentum equal to the total rolled on the [D] (bonus Momentum may not be saved). You add 1 to Threat for each effect rolled.",
-            "category": "Career",
-            "page_reference": "Not in this rulebook"
-        },
-        "Menagerie": {
-            "description": "When in your private lab, you automatically receive the advantage: Weapons and Monsters. Increase the complication range of any task by 2 when the advantage is active.",
-            "category": "General",
-            "page_reference": "Not in this rulebook"
-        },
-        "An Answer for Everything": {
-            "description": "You relish intense debate, where you can see your opponent’s argument unfold, then turn it back against them. When you succeed at a task as part of an extended task in a social conflict, you may reroll a number of [D] up to your Command score.",
-            "category": "General",
-            "page_reference": "Not in this rulebook"
-        },
-        "Combat Gunner": {
-            "description": "You have trained to operate ground vehicles and mounted weapons. You may use your Conn instead of Security when making an attack with a weapon mounted on a ground vehicle.",
-            "category": "General",
-            "page_reference": "Not in this rulebook"
-        },
-        "Demolitionist": {
-            "description": "You are skilled in making, setting, and defusing explosive devices. Whenever you attempt an Engineering task to create, set, or to defuse an explosive device or whenever you make an attack with a weapon with the Grenade weapon quality, the first d20 you purchase is free. In addition, you can ignore the first complication on an Engineering task involving explosives once per scene.",
-            "category": "General",
-            "page_reference": "Not in this rulebook"
-        },
-        "Exploit Weakness": {
-            "description": "You are trained in surprising your opponent and taking advantage of any weaknesses they have. When you attempt an attack against an unaware enemy, or an enemy suffering from a trait that represents weakness or vulnerability, the attack gains the Piercing 2 effect.",
-            "category": "General",
-            "page_reference": "Not in this rulebook"
-        },
-        "Finesse Strikes": {
-            "description": "You are graceful on the field of battle, often dancing around the enemy with relative ease. Once per combat encounter, you may reroll all the [D] for the Stress you inflict when you make a single successful melee attack.",
-            "category": "General",
-            "page_reference": "Not in this rulebook"
-        },
-        "Focused Fire": {
-            "description": "You are adept at focusing your attacks on the same point of an enemy to inflict massive damage in that area. When you make a successful ranged attack against an enemy that has already been shot this turn and choose to spend Momentum to increase the amount of Stress suffered, you may reroll up to 3[D].",
-            "category": "General",
-            "page_reference": "Not in this rulebook"
-        },
-        "Improvised Weapon Training": {
-            "description": "You are able to turn the most innocuous items into weapons at a moment’s notice. Once per scene, you may use an item such as a rock, crystal, or shard of metal laying around into a melee weapon. This weapon deals 2[D] + Security damage and is removed at the end of the encounter.",
-            "category": "General",
-            "page_reference": "Not in this rulebook"
-        },
-        "Moving Target": {
-            "description": "Your training in hit-and-move tactics allows you to confuse attackers as you run to take cover. When you take the Sprint task, the Difficulty of ranged attacks that target you is increased by 1 until your next turn.",
-            "category": "General",
-            "page_reference": "Not in this rulebook"
-        },
-        "Nimble (War)": {
-            "description": "You are quick on your feet and know how to navigate obstacles around you. When attempting a task to move through difficult terrain or similar physical obstacles, you may reduce the Difficulty of the task by 2. If this reduces the Difficulty to 0, you may move over or around that obstacle as if it wasn’t there.",
-            "category": "General",
-            "page_reference": "Not in this rulebook"
-        },
-        "Out of Harm's Way": {
-            "description": "You are used to balancing the need to keep a patient still and the need to get them somewhere safer. When attempting to carry or restrain another person, you may use Medicine instead of Security, and you ignore the first complication rolled on any such tasks.",
-            "category": "General",
-            "page_reference": "Not in this rulebook"
-        },
-        "Reasoned Discourse": {
-            "description": "You are precise and succinct with language, allowing you to convey facts and logical arguments effectively and quickly. When you need to communicate complicated information or argue with logic over emotion, reduce the Difficulty of the task by 1.",
-            "category": "General",
-            "page_reference": "Not in this rulebook"
-        },
-        "Rousing Speaker": {
-            "description": "You are accustomed to public speaking, stirring the emotions of your audience. When you attempt a task to convince or persuade others with a stirring speech, reduce the Difficulty of the task by 1.",
-            "category": "General",
-            "page_reference": "Not in this rulebook"
-        },
-        "Saboteur (War)": {
-            "description": "You have a knack for breaking things. When attacking an object, structure, or stationary vehicle, you may use your Engineering score instead of Security. In addition, when inflicting Stress on such a target, you can spend 2 Momentum to change any challenge dice to an effect result, up to your Engineering score.",
-            "category": "General",
-            "page_reference": "Not in this rulebook"
-        },
-        "Tracker": {
-            "description": "You can follow even the faintest of tracks. When you attempt a task to track animals, people, or ground vehicles, the first d20 you buy is free. If the tracking was done as part of an extended task then the roll gains Progression 1.",
-            "category": "General",
-            "page_reference": "Not in this rulebook"
-        },
-        "Durability": {
-            "description": "Requires the Augment or Cyborg trait. You gain Protection 2.",
-            "category": "Enhancement",
-            "page_reference": "p. 155"
-        },
-        "Open Book": {
-            "description": "Requires Betazoid or gamemaster permission. When a character enters a scene, spend 1 Momentum (Immediate) to ask the gamemaster about their current emotions or surface thoughts; this cannot target someone immune to telepathy.",
-            "category": "Species:Betazoid",
-            "page_reference": "p. 151"
-        },
-        "Abrupt Insights": {
-            "description": "Requires Betazoid or gamemaster permission. During a social-conflict task, you may increase the Complication Range by 1 to 3; on success, gain bonus Momentum equal to that increase, which cannot be saved.",
-            "category": "Species:Betazoid",
-            "page_reference": "p. 152"
-        },
-        "Pheromones": {
-            "description": "Requires an Orion female or gamemaster permission. Against males of an affected species, gain 2 bonus Momentum on Persuade or Command tasks; affected females often suffer headaches, increasing the Complication Range of interaction tasks by 1.",
-            "category": "Species:Orion",
-            "page_reference": "p. 153"
-        },
-        "Asking the Right Questions": {
-            "description": "Requires Tellarite or gamemaster permission. When a task uses information gained through Obtain Information in the current scene, you may re-roll one d20.",
-            "category": "Species:Tellarite",
-            "page_reference": "p. 154"
-        },
-        "Get Down": {
-            "description": "Requires Security 2+. You and allies within Close range gain +1 Protection while in Cover.",
-            "category": "Department:Security",
-            "page_reference": "p. 161"
-        },
-        "Piercing Salvo": {
-            "description": "Requires Security 4+. On a torpedo attack, spend 2 Momentum (Immediate) to add the Piercing quality.",
-            "category": "Department:Security",
-            "page_reference": "p. 162"
-        },
-        "Precision Targeting (2e)": {
-            "description": "",
-            "category": "Department:Security",
-            "page_reference": "Not in this rulebook"
-        },
-        "Steady Hands": {
-            "description": "Requires Security 3+ and Control 9+. After taking Aim before a ranged attack, increase the attack?s Severity by 1.",
-            "category": "Department:Security",
-            "page_reference": "p. 162"
-        },
-        "Positive Reinforcement": {
-            "description": "Requires the Ship?s Counselor role, Medicine 3+, and Presence 9+. Once per mission, a successful Difficulty 3 Presence + Medicine task during treatment gives a patient Boosted Confidence until the mission ends. The patient may re-roll a dice pool once as if spending Determination; if that re-roll fails, remove the trait.",
-            "category": "Department:Medicine",
-            "page_reference": "p. 165"
-        },
-        "Command and Control": {
-            "description": "",
-            "category": "Department:Command",
-            "page_reference": "Not in this rulebook"
-        },
-        "Project Manager": {
-            "description": "",
-            "category": "Department:Command",
-            "page_reference": "Not in this rulebook"
-        },
-        "Fix 'Em and Fly 'Em": {
-            "description": "",
-            "category": "Department:Conn",
-            "page_reference": "Not in this rulebook"
-        },
-        "Hot Rod Shuttle": {
-            "description": "",
-            "category": "Department:Conn",
-            "page_reference": "Not in this rulebook"
-        },
-        "Custom Tools": {
-            "description": "",
-            "category": "Department:Engineering",
-            "page_reference": "Not in this rulebook"
-        },
-        "Wrote the Book": {
-            "description": "",
-            "category": "Department:Engineering",
-            "page_reference": "Not in this rulebook"
-        },
-        "Calibrated Munitions": {
-            "description": "",
-            "category": "Department:Security",
-            "page_reference": "Not in this rulebook"
-        },
-        "Well-Maintained Arsenal": {
-            "description": "",
-            "category": "Department:Security",
-            "page_reference": "Not in this rulebook"
-        },
-        "Tactical Countermeasures": {
-            "description": "",
-            "category": "Department:Security",
-            "page_reference": "Not in this rulebook"
-        },
-        "On the Shoulders of Giants": {
-            "description": "",
-            "category": "Department:Science",
-            "page_reference": "Not in this rulebook"
-        },
-        "The Power of Math": {
-            "description": "",
-            "category": "Department:Science",
-            "page_reference": "Not in this rulebook"
-        },
-        "Combat Stimulants": {
-            "description": "",
-            "category": "Department:Medicine",
-            "page_reference": "Not in this rulebook"
-        },
-        "Transformative Treatments": {
-            "description": "",
-            "category": "Department:Medicine",
-            "page_reference": "Not in this rulebook"
-        },
-        "Evasion": {
-            "description": "",
-            "category": "General",
-            "page_reference": "Not in this rulebook"
-        },
-        "Go to Ground": {
-            "description": "",
-            "category": "General",
-            "page_reference": "Not in this rulebook"
-        },
-        "Head on a Swivel": {
-            "description": "",
-            "category": "General",
-            "page_reference": "Not in this rulebook"
-        },
-        "Just a Scratch": {
-            "description": "",
-            "category": "General",
-            "page_reference": "Not in this rulebook"
-        },
-        "Life Lessons": {
-            "description": "",
-            "category": "General",
-            "page_reference": "Not in this rulebook"
-        },
-        "Make Your Own Luck": {
-            "description": "",
-            "category": "General",
-            "page_reference": "Not in this rulebook"
-        },
-        "Mercurial": {
-            "description": "",
-            "category": "General",
-            "page_reference": "Not in this rulebook"
-        },
-        "Objective Focused": {
-            "description": "",
-            "category": "General",
-            "page_reference": "Not in this rulebook"
-        },
-        "Persistent": {
-            "description": "",
-            "category": "General",
-            "page_reference": "Not in this rulebook"
-        },
-        "Preparation": {
-            "description": "",
-            "category": "General",
-            "page_reference": "Not in this rulebook"
-        },
-        "Prestigious Career": {
-            "description": "",
-            "category": "General",
-            "page_reference": "Not in this rulebook"
-        },
-        "Protector": {
-            "description": "",
-            "category": "General",
-            "page_reference": "Not in this rulebook"
-        },
-        "Ransack": {
-            "description": "",
-            "category": "General",
-            "page_reference": "Not in this rulebook"
-        },
-        "Rivalry": {
-            "description": "",
-            "category": "General",
-            "page_reference": "Not in this rulebook"
-        },
-        "Shared Joy": {
-            "description": "",
-            "category": "General",
-            "page_reference": "Not in this rulebook"
-        },
-        "Show-Off": {
-            "description": "",
-            "category": "General",
-            "page_reference": "Not in this rulebook"
-        },
-        "Supportive": {
-            "description": "",
-            "category": "General",
-            "page_reference": "Not in this rulebook"
-        },
-        "Suppressive Fire": {
-            "description": "",
-            "category": "General",
-            "page_reference": "Not in this rulebook"
-        },
-        "Swift": {
-            "description": "",
-            "category": "General",
-            "page_reference": "Not in this rulebook"
-        },
-        "True North": {
-            "description": "",
-            "category": "General",
-            "page_reference": "Not in this rulebook"
-        },
-        "Walk It Off": {
-            "description": "",
-            "category": "General",
-            "page_reference": "Not in this rulebook"
-        },
-        "Biosynthetic Construction": {
-            "description": "",
-            "category": "Species:Android",
-            "page_reference": "Not in this rulebook"
-        },
-        "Airborne Advantage": {
-            "description": "",
-            "category": "Species:Aurelian",
-            "page_reference": "Not in this rulebook"
-        },
-        "An Eye on the Horizon": {
-            "description": "",
-            "category": "Species:Aurelian",
-            "page_reference": "Not in this rulebook"
-        },
-        "Strive and Sacrifice": {
-            "description": "",
-            "category": "Species:Barzan",
-            "page_reference": "Not in this rulebook"
-        },
-        "Thorough and Methodical": {
-            "description": "",
-            "category": "Species:Benzite",
-            "page_reference": "Not in this rulebook"
-        },
-        "Piratical Understanding": {
-            "description": "",
-            "category": "Species:BlueOrion",
-            "page_reference": "Not in this rulebook"
-        },
-        "True Blue": {
-            "description": "",
-            "category": "Species:BlueOrion",
-            "page_reference": "Not in this rulebook"
-        },
-        "Cold Warrior": {
-            "description": "",
-            "category": "Species:Breen",
-            "page_reference": "Not in this rulebook"
-        },
-        "Disregard for Hardship": {
-            "description": "",
-            "category": "Species:Breen",
-            "page_reference": "Not in this rulebook"
-        },
-        "Ablative Hide": {
-            "description": "",
-            "category": "Species:Brikar",
-            "page_reference": "Not in this rulebook"
-        },
-        "Massive (Brikar)": {
-            "description": "",
-            "category": "Species:Brikar",
-            "page_reference": "Not in this rulebook"
-        },
-        "Entangled Consciousness": {
-            "description": "",
-            "category": "Species:Bynar",
-            "page_reference": "Not in this rulebook"
-        },
-        "Synchronistic Operation": {
-            "description": "",
-            "category": "Species:Bynar",
-            "page_reference": "Not in this rulebook"
-        },
-        "Feral Aggression": {
-            "description": "",
-            "category": "Species:Caitian",
-            "page_reference": "Not in this rulebook"
-        },
-        "Anatomical Expertise": {
-            "description": "",
-            "category": "Species:Chameloid",
-            "page_reference": "Not in this rulebook"
-        },
-        "Rapid Shift": {
-            "description": "",
-            "category": "Species:Chameloid",
-            "page_reference": "Not in this rulebook"
-        },
-        "Altered Changeling": {
-            "description": "",
-            "category": "Species:ChangelingGamma",
-            "page_reference": "Not in this rulebook"
-        },
-        "Defensive Posture": {
-            "description": "",
-            "category": "Species:Chelon",
-            "page_reference": "Not in this rulebook"
-        },
-        "Strength in Service": {
-            "description": "",
-            "category": "Species:Chelon",
-            "page_reference": "Not in this rulebook"
-        },
-        "Empathic Touch": {
-            "description": "",
-            "category": "Species:Deltan",
-            "page_reference": "Not in this rulebook"
-        },
-        "Geospatial Awareness": {
-            "description": "",
-            "category": "Species:Efrosian",
-            "page_reference": "Not in this rulebook"
-        },
-        "Touched the Nexus": {
-            "description": "",
-            "category": "Species:ElAurian_2E",
-            "page_reference": "Not in this rulebook"
-        },
-        "Old as Dirt": {
-            "description": "",
-            "category": "Species:Horta_2E",
-            "page_reference": "Not in this rulebook"
-        },
-        "Tunnel-Wise": {
-            "description": "",
-            "category": "Species:Horta_2E",
-            "page_reference": "Not in this rulebook"
-        },
-        "Heightened Senses": {
-            "description": "",
-            "category": "Species:HumanAugment",
-            "page_reference": "Not in this rulebook"
-        },
-        "Regenerative Healing": {
-            "description": "",
-            "category": "Species:HumanAugment",
-            "page_reference": "Not in this rulebook"
-        },
-        "Augmented Immunity": {
-            "description": "",
-            "category": "Species:Illyrian_2E",
-            "page_reference": "Not in this rulebook"
-        },
-        "Rapid Comprehension": {
-            "description": "",
-            "category": "Species:Illyrian_2E",
-            "page_reference": "Not in this rulebook"
-        },
-        "Inquisitive Drive": {
-            "description": "",
-            "category": "Species:Jelna",
-            "page_reference": "Not in this rulebook"
-        },
-        "The Shroud": {
-            "description": "",
-            "category": "Species:JemHadar",
-            "page_reference": "Not in this rulebook"
-        },
-        "Victory is Life!": {
-            "description": "",
-            "category": "Species:JemHadar",
-            "page_reference": "Not in this rulebook"
-        },
-        "Out of Necessity": {
-            "description": "",
-            "category": "Species:Kellerun",
-            "page_reference": "Not in this rulebook"
-        },
-        "Pragmatic Professional": {
-            "description": "",
-            "category": "Species:Kellerun",
-            "page_reference": "Not in this rulebook"
-        },
-        "Predator's Insight": {
-            "description": "",
-            "category": "Species:Kelpien",
-            "page_reference": "Not in this rulebook"
-        },
-        "Threat Awareness": {
-            "description": "",
-            "category": "Species:Kelpien",
-            "page_reference": "Not in this rulebook"
-        },
-        "Culinary Comforts": {
-            "description": "",
-            "category": "Species:Klowahkan",
-            "page_reference": "Not in this rulebook"
-        },
-        "The Spice of Life": {
-            "description": "",
-            "category": "Species:Klowahkan",
-            "page_reference": "Not in this rulebook"
-        },
-        "Relentless": {
-            "description": "",
-            "category": "Species:Ktarian",
-            "page_reference": "Not in this rulebook"
-        },
-        "Bait for the Carrion Reaver": {
-            "description": "",
-            "category": "Species:Kwejian",
-            "page_reference": "Not in this rulebook"
-        },
-        "Natural Bond": {
-            "description": "",
-            "category": "Species:Kwejian",
-            "page_reference": "Not in this rulebook"
-        },
-        "Predatory Posture": {
-            "description": "",
-            "category": "Species:Kzinti",
-            "page_reference": "Not in this rulebook"
-        },
-        "Collective Insights": {
-            "description": "",
-            "category": "Species:LiberatedBorg",
-            "page_reference": "Not in this rulebook"
-        },
-        "The Pursuit of Perfection": {
-            "description": "",
-            "category": "Species:LiberatedBorg",
-            "page_reference": "Not in this rulebook"
-        },
-        "Ancient Expertise": {
-            "description": "",
-            "category": "Species:Lanthanite",
-            "page_reference": "Not in this rulebook"
-        },
-        "Esoteric Experiences": {
-            "description": "",
-            "category": "Species:Lanthanite",
-            "page_reference": "Not in this rulebook"
-        },
-        "Put Your Hearts into It": {
-            "description": "",
-            "category": "Species:Lurian",
-            "page_reference": "Not in this rulebook"
-        },
-        "Containment Suit": {
-            "description": "",
-            "category": "Species:Medusan",
-            "page_reference": "Not in this rulebook"
-        },
-        "Intuitive Navigator": {
-            "description": "",
-            "category": "Species:Medusan",
-            "page_reference": "Not in this rulebook"
-        },
-        "Inner Workings": {
-            "description": "",
-            "category": "Species:Nanokin",
-            "page_reference": "Not in this rulebook"
-        },
-        "Lifelike Conveyance": {
-            "description": "",
-            "category": "Species:Nanokin",
-            "page_reference": "Not in this rulebook"
-        },
-        "Pack Hunter": {
-            "description": "",
-            "category": "Species:Nausicaan",
-            "page_reference": "Not in this rulebook"
-        },
-        "Let No Challenge Stand": {
-            "description": "",
-            "category": "Species:Nausicaan",
-            "page_reference": "Not in this rulebook"
-        },
-        "Fresh Perspective": {
-            "description": "",
-            "category": "Species:Ocampa",
-            "page_reference": "Not in this rulebook"
-        },
-        "Push Towards a Single Goal": {
-            "description": "",
-            "category": "Species:Osnullus",
-            "page_reference": "Not in this rulebook"
-        },
-        "Familiar with Suffering": {
-            "description": "",
-            "category": "Species:Reman",
-            "page_reference": "Not in this rulebook"
-        },
-        "Shock Assault": {
-            "description": "",
-            "category": "Species:Reman",
-            "page_reference": "Not in this rulebook"
-        },
-        "Patience Before Aggression": {
-            "description": "",
-            "category": "Species:Saurian",
-            "page_reference": "Not in this rulebook"
-        },
-        "To the Fullest": {
-            "description": "",
-            "category": "Species:SonA",
-            "page_reference": "Not in this rulebook"
-        },
-        "Because We Feel Like It": {
-            "description": "",
-            "category": "Species:Terran",
-            "page_reference": "Not in this rulebook"
-        },
-        "Doppleganger": {
-            "description": "",
-            "category": "Species:Terran",
-            "page_reference": "Not in this rulebook"
-        },
-        "Paranoia": {
-            "description": "",
-            "category": "Species:Terran",
-            "page_reference": "Not in this rulebook"
-        },
-        "Manipulative": {
-            "description": "",
-            "category": "Species:Vorta",
-            "page_reference": "Not in this rulebook"
-        },
-        "Overseer": {
-            "description": "",
-            "category": "Species:Vorta",
-            "page_reference": "Not in this rulebook"
-        },
-        "Technopathy": {
-            "description": "",
-            "category": "Species:Xahean",
-            "page_reference": "Not in this rulebook"
-        },
-        "Circumspect": {
-            "description": "",
-            "category": "Species:XindiAquatic",
-            "page_reference": "Not in this rulebook"
-        },
-        "Seek Consensus": {
-            "description": "",
-            "category": "Species:XindiAquatic",
-            "page_reference": "Not in this rulebook"
-        },
-        "Patient Counsel": {
-            "description": "",
-            "category": "Species:XindiArboreal",
-            "page_reference": "Not in this rulebook"
-        },
-        "Unwavering Calm": {
-            "description": "",
-            "category": "Species:XindiArboreal",
-            "page_reference": "Not in this rulebook"
-        },
-        "Rapid Processing": {
-            "description": "",
-            "category": "Species:XindiInsectoid",
-            "page_reference": "Not in this rulebook"
-        },
-        "Voice of the Xindi": {
-            "description": "",
-            "category": "Species:XindiPrimate",
-            "page_reference": "Not in this rulebook"
-        },
-        "Cold-Blooded Supremacy": {
-            "description": "",
-            "category": "Species:XindiReptilian",
-            "page_reference": "Not in this rulebook"
-        },
-        "Triumph Against Any Odds": {
-            "description": "",
-            "category": "Species:XindiReptilian",
-            "page_reference": "Not in this rulebook"
-        },
-        "Heirloom": {
-            "description": "",
-            "category": "Species:VauNAkat",
-            "page_reference": "Not in this rulebook"
-        },
-        "Share Strength": {
-            "description": "",
-            "category": "Species:VauNAkat",
-            "page_reference": "Not in this rulebook"
-        },
-        "Don't Look Threatening": {
-            "description": "",
-            "category": "Species:Yridian_2E",
-            "page_reference": "Not in this rulebook"
-        },
-        "See All, Admit Nothing": {
-            "description": "",
-            "category": "Species:Yridian_2E",
-            "page_reference": "Not in this rulebook"
-        },
-        "Engineering/Science Affinity (Unofficial)": {
-            "description": "",
-            "category": "Species:Napean",
-            "page_reference": "Not in this rulebook"
-        },
-        "Acidic Touch (Unofficial)": {
-            "description": "",
-            "category": "Species:Horta",
-            "page_reference": "Not in this rulebook"
-        },
-        "Hardened Biology (Unofficial)": {
-            "description": "",
-            "category": "Species:Horta",
-            "page_reference": "Not in this rulebook"
-        },
-        "Rocky Exterior (Unofficial)": {
-            "description": "",
-            "category": "Species:Horta",
-            "page_reference": "Not in this rulebook"
-        },
-        "Ablative Armor": {
-            "description": "The vessel’s hull plating has an additional ablative layer that disintegrates slowly under extreme temperatures, such as those caused by energy weapons and torpedo blasts, dissipating the energy, and protecting the ship. This plating is replaced periodically. The ship’s Resistance is increased by 2.",
-            "category": "Starship",
-            "page_reference": "p. 218"
-        },
-        "Advanced Research Facilities": {
-            "description": "The vessel is equipped with additional laboratories and long-term research facilities, which allow the crew to study phenomena over a protracted period, and thus generate a wealth of useful information. Whenever a character on board the ship attempts a Task to perform research, and they are assisted by the ship’s Computers + Science, the character gains one bonus Momentum, which must be used for the Obtain Information Momentum Spend.",
-            "category": "Starship",
-            "page_reference": "p. 219"
-        },
-        "Advanced Sensor Suites": {
-            "description": "The vessel’s sensors are amongst the most sophisticated and advanced available in the fleet. Unless the ship’s Sensors have suffered one or more Breaches, whenever a character performs a Task assisted by the ship’s Sensors, they may reduce the Difficulty of the Task by one, to a minimum of 0.",
-            "category": "Starship",
-            "page_reference": "p. 219"
-        },
-        "Advanced Shields": {
-            "description": "The vessel’s shields are state of the art, using developments that other cultures have not yet learned to overcome, or which simply provide greater protection for the same power expenditure. The ship’s maximum Shields are increased by 5.",
-            "category": "Starship",
-            "page_reference": "p. 219"
-        },
-        "Advanced Sickbay": {
-            "description": "The ship’s medical ward or sickbay is well equipped, and larger than normal for a ship of this size. The ship gains the Advanced Medical Ward or Advanced Sickbay advantage, which applies to all tasks related to medicine and biology performed within the ward or sickbay. This advantage is lost if the ship’s Computers system is disabled.",
-            "category": "Starship",
-            "page_reference": "p. 219"
-        },
-        "Backup EPS Conduits": {
-            "description": "The ship’s power conduits have additional redundancies, which can be activated to reroute power more easily in case of an emergency, keeping it from being lost when the ship is damaged. Whenever the ship would lose one or more Power because of suffering damage, roll [D] for each Power lost. Each Effect rolled prevents the loss of that point of Power.",
-            "category": "Starship",
-            "page_reference": "p. 220"
-        },
-        "Command Ship": {
-            "description": "The ship has command and control systems allowing it to coordinate easily with allies during a crisis. When a character on the ship succeeds at a Direct Task to create an Advantage, they may always be assisted by the ship’s Communications + Command, and they may confer the Advantage to allied ships or away teams with whom the ship maintains a communications link.",
-            "category": "Starship",
-            "page_reference": "p. 220"
-        },
-        "Diplomatic Suites": {
-            "description": "The ship has numerous high-quality staterooms for hosting VIPs, as well as briefing rooms and other facilities that allow the ship to serve as a neutral ground for diplomatic summits, trade negotiations, and similar functions. When hosting negotiations, members of the crew may be assisted by the ship’s Computers + Command or Structure + Command.",
-            "category": "Starship",
-            "page_reference": "p. 221"
-        },
-        "Electronic Warfare Systems": {
-            "description": "The ship’s communications systems have been speciallydesigned to intercept and disrupt enemy communications in battle. Whenever a character on the ship succeeds at the Intercept or Signals Jamming Tasks, they may spend 2 Momentum to select one additional ship to target.",
-            "category": "Starship",
-            "page_reference": "p. 222"
-        },
-        "Emergency Medical Hologram": {
-            "description": "The ship’s sickbay is equipped with holoemitters and a stateof-the-art holographic doctor, able to assist medical personnel during emergencies. The ship has one additional Supporting Character, an Emergency Medical Hologram, using the Attributes, Disciplines, and so forth as shown in the sidebar, which does not cost any Crew Support to introduce, and which does not automatically improve when introduced. This character cannot go into any location not equipped with holoemitters.",
-            "category": "Starship",
-            "page_reference": "p. 222"
-        },
-        "Extensive Shuttlebays": {
-            "description": "The vessel’s shuttlebays are large, well-supplied, and able to support a larger number of active shuttle missions simultaneously. The ship may have twice as many small craft active at any one time as it would normally allow, and it may carry up to two Scale 2 small craft.",
-            "category": "Starship",
-            "page_reference": "p. 223"
-        },
-        "Fast Targeting Systems": {
-            "description": "The ship’s targeting systems can lock weapons on target much faster and more accurately than other ships of its class, giving it an edge in battle. The ship does not suffer the normal Difficulty increase for targeting a specific System on the enemy ship.",
-            "category": "Starship",
-            "page_reference": "p. 223"
-        },
-        "Improved Damage Control": {
-            "description": "The ship has more efficient damage reporting systems, and better-trained teams of technicians, allowing the crew to respond more quickly to damage during a crisis. When a character takes the Damage Control Task aboard this ship, they may re-roll a single d20. If the repairs require an Extended Task, then the characters also gain Progression 1, adding +1 to Work done for each Effect rolled.",
-            "category": "Starship",
-            "page_reference": "p. 223"
-        },
-        "Improved Hull Integrity": {
-            "description": "The ship’s hull has been reinforced to hold together better under stress and damage. The ship’s Resistance is increased by 1.",
-            "category": "Starship",
-            "page_reference": "p. 223"
-        },
-        "Improved Impulse Drive": {
-            "description": "The ship’s Impulse drives are more powerful than on most ships, allowing the ship to accelerate much more quickly. When the flight controller succeeds at the Impulse, Attack Pattern, Evasive Action, or Ramming Speed Tasks, they may spend 2 Momentum to increase the Difficulty of attacks against the ship by 1 until the start of the flight controller’s next Turn, due to the ship’s rapid acceleration.",
-            "category": "Starship",
-            "page_reference": "p. 223"
-        },
-        "Improved Power Systems": {
-            "description": "The ship’s power systems are extremely efficient, allowing power to be redirected and rerouted from different systems very quickly. Whenever a character succeeds at a Power Management Task, the ship gains 2 Power per Momentum spent (Repeatable) instead of 1.",
-            "category": "Starship",
-            "page_reference": "p. 223"
-        },
-        "Improved Reaction Control System": {
-            "description": "The ship’s maneuvering thrusters operate with greater precision, allowing the ship to adjust its course more carefully. Whenever a Task to move or maneuver the ship would increase in Difficulty because of obstacles or hazards, reduce the Difficulty by 1 (to a minimum of the Task’s normal Difficulty).",
-            "category": "Starship",
-            "page_reference": "p. 224"
-        },
-        "Improved Shield Recharge": {
-            "description": "The ship’s deflector shields have redundant capacitors and emitter arrays that allow the shields to be recharged and replenished much more efficiently. Whenever the Regenerate Shields Task is successful, the ship regains 3 points of Shields, plus 3 more for each Momentum spent (Repeatable), instead of the normal amount.",
-            "category": "Starship",
-            "page_reference": "p. 224"
-        },
-        "Improved Warp Drive": {
-            "description": "The ship’s warp drive is more efficient, capitalizing on improved field dynamics, better control of antimatter flow rates, or some other advancement that allows the ship to expend less energy when travelling at warp. Whenever the ship spends power to go to warp, roll 1 for each Power spent; for each Effect rolled, that point of Power is not spent.",
-            "category": "Starship",
-            "page_reference": "p. 224"
-        },
-        "Modular Laboratories": {
-            "description": "The ship has considerable numbers of empty, multi-purpose compartments that can be converted to laboratories as and when required. At the start of an adventure, the crew may decide how the modular laboratories are configured; this configuration counts as an Advantage which applies to work performed within the laboratories.",
-            "category": "Starship",
-            "page_reference": "p. 224"
-        },
-        "Quantum Torpedoes": {
-            "description": "The vessel has been equipped with the latest in ship-to-ship munitions: the quantum torpedoes. The ship has quantum torpedoes in addition to any other form of torpedo it carries.",
-            "category": "Starship",
-            "page_reference": "p. 222"
-        },
-        "Rapid-Fire Torpedo Launcher": {
-            "description": "The vessel’s torpedo launchers have been redesigned to allow the ship to fire multiple torpedoes much more quickly and accurately. Whenever the crew add 3 to Threat to fire a torpedo salvo, they may re-roll a single d20 on the attack, and any number of [D] on the damage roll.",
-            "category": "Starship",
-            "page_reference": "p. 225"
-        },
-        "Rugged Design": {
-            "description": "The ship is designed with the frontier in mind, with a durable construction and easy access to critical systems that allow repairs to be made easily. Reduce the Difficulty of all Tasks to repair the ship by 1, to a minimum of 1.",
-            "category": "Starship",
-            "page_reference": "p. 225"
-        },
-        "Saucer Separation": {
-            "description": "The ship is designed so that the saucer section can be separated from the engineering section, to operate as two distinct ships. Each section has the same Systems, Departments, Talents, and weapons, but their Scale is one lower than the whole ship (recalculate anything derived from Scale), and each section only has half the Power (round down) that the ship had before separation. Further, if the ship has suffered any damage, ongoing effects of that damage apply equally to both sections. The saucer section, which contains the crew quarters and recreational areas, does not have the capacity to go to warp.",
-            "category": "Starship",
-            "page_reference": "Not in this rulebook"
-        },
-        "Secondary Reactors": {
-            "description": "The ship has additional impulse and fusion reactors, that allow the ship to generate far greater quantities of energy. Increase the ship’s normal Power capacity by 5.",
-            "category": "Starship",
-            "page_reference": "p. 225"
-        },
-        "Captain’s Yacht": {
-            "description": "The vessel has a single additional support craft, normally mounted in a dedicated port under the saucer section of the ship. These craft, larger than most shuttles, are often used for diplomatic missions and special excursions by the commanding officer, and are often known as the Captain’s Yacht (though not always; some Intrepid-class vessels have a similar craft called an aeroshuttle). The ship has one additional Small Craft, which does not count against the number which may be active at any one time.",
-            "category": "Starship",
-            "page_reference": "p. 220"
-        },
-        "Dedicated Personnel": {
-            "description": "The ship gains two additional Crew Support, which may only be used to establish Supporting Characters.",
-            "category": "Starship",
-            "page_reference": "p. 220"
-        },
-        "High-Power Tractor Beam": {
-            "description": "The ship’s tractor beam systems channel far greater quantities of power and exert much more force on the target. The ship’s tractor beam has a strength two higher than normal. Further, the ship may spend Power whenever a target attempts to escape the tractor beam to increase its strength for that attempt; the strength increases by 1 for every two Power spent.",
-            "category": "Starship",
-            "page_reference": "p. 223"
-        },
-        "Independent Phaser Supply": {
-            "description": "The ship’s phasers use an independent power supply, rather than drawing directly from the ship’s other power sources. Attacking with the ship’s phasers no longer has a Power Requirement. However, the ship may not spend additional Power to boost the effectiveness of an attack with the phasers.",
-            "category": "Starship",
-            "page_reference": "Not in this rulebook"
-        },
-        "Polarized Hull Plating": {
-            "description": "The ship does not have deflector shielding, but rather is equipped with layers of hull plating that can be polarized to resist attack. This functions in the same way as Shields do, with one difference: the ship suffers a Breach if four or more damage is suffered after deductions for Resistance.",
-            "category": "Starship",
-            "page_reference": "Not in this rulebook"
-        },
-        "Grappler Cables": {
-            "description": "This precursor to tractor beams uses sturdy cables and magnetic grapplers to grab on to objects and ships. This functions as a tractor beam, but if the target breaks free, roll 1[D] — on an Effect, the cables have been Damaged and cannot be used again until repaired.",
-            "category": "Starship",
-            "page_reference": "Not in this rulebook"
-        },
-        "Photonic Torpedoes": {
-            "description": "The vessel is equipped with photonic torpedoes instead of spatial torpedoes.",
-            "category": "Starship",
-            "page_reference": "Not in this rulebook"
-        },
-        "Nuclear Warheads": {
-            "description": "The vessel is equipped with nuclear warheads in addition to its spatial torpedoes.",
-            "category": "Starship",
-            "page_reference": "Not in this rulebook"
-        },
-        "Specialized Crew (Command)": {
-            "description": "Rare in Starfleet, a starship with a specialized crew has had personnel assigned to it primarily from a specific division. During an adventure, if the players wish to introduce supporting characters, they may not use more than half their ship’s Crew Support rating on characters from divisions outside of the ship’s specialty. An example of this is the Crossfield class that is specialized with the Science division and is Scale 4. This means that only two crew points could be used for supporting characters from the Command or Operations divisions, while the other two could be used only for the Science division.",
-            "category": "Starship",
-            "page_reference": "Not in this rulebook"
-        },
-        "Specialized Crew (Operations)": {
-            "description": "Rare in Starfleet, a starship with a specialized crew has had personnel assigned to it primarily from a specific division. During an adventure, if the players wish to introduce supporting characters, they may not use more than half their ship’s Crew Support rating on characters from divisions outside of the ship’s specialty. An example of this is the Crossfield class that is specialized with the Science division and is Scale 4. This means that only two crew points could be used for supporting characters from the Command or Operations divisions, while the other two could be used only for the Science division.",
-            "category": "Starship",
-            "page_reference": "Not in this rulebook"
-        },
-        "Specialized Crew (Science)": {
-            "description": "Rare in Starfleet, a starship with a specialized crew has had personnel assigned to it primarily from a specific division. During an adventure, if the players wish to introduce supporting characters, they may not use more than half their ship’s Crew Support rating on characters from divisions outside of the ship’s specialty. An example of this is the Crossfield class that is specialized with the Science division and is Scale 4. This means that only two crew points could be used for supporting characters from the Command or Operations divisions, while the other two could be used only for the Science division.",
-            "category": "Starship",
-            "page_reference": "Not in this rulebook"
-        },
-        "Ablative Armor Generator": {
-            "description": "The ship is fitted with a number of external replicators pre-set to materialize an outer layer of armor plating over the hull, reinforced with structural integrity fields that make it extraordinarily resilient. When the ship raises its Shields, it may deploy armor instead, by spending 3 Power. This increases the maximum Shields capacity by 5 and increases the ship’s Resistance by 3. While armor is deployed, the Modulate Shields and Regenerate Shields actions cannot be taken – the armor cannot be fine-tuned in those ways.",
-            "category": "Starship",
-            "page_reference": "Not in this rulebook"
-        },
-        "Ablative Field Projector": {
-            "description": "The ship’s shield emitters are combined with an ablative field projector that allows its graviton field to be shared with another target in Close range. These projectors charge the target’s shields while dissipating its own. Doing so requires a Difficulty 1 Control + Security task. On a success, your ship loses 1 Shield point and the target gains 1 Shield point. This process can be repeated any number of times by spending 1 Momentum for each swap.",
-            "category": "Starship",
-            "page_reference": "Not in this rulebook"
-        },
-        "Adaptable Energy Weapons": {
-            "description": "The ship’s weapon delivery systems are enhanced by multiparticle emitters. These emitters allow for the ship’s energy weapon capabilities to be modified when fired. If desired, before an attack is rolled, the ship’s weapon’s Stress Rating is reduced by 1[D], but the officer making the attack roll may swap out any one Stress effect for another.",
-            "category": "Starship",
-            "page_reference": "p. 218"
-        },
-        "Advanced Emergency Crew Holograms": {
-            "description": "The starship has the entirety of its interior spaces and some critical areas on its exterior outfitted with holoemitters, allowing the computer to project simulated personnel during emergencies. The ship has a number of holographic supporting characters (which should be pre-created) equal to half the ship’s Computers score, rounding up; their appearance and personality are determined when the ship is created. These can be activated or deactivated as a minor action, and they do not require any Crew Support to appear. They cannot operate away from the ship, and they do not improve when introduced in subsequent adventures.",
-            "category": "Starship",
-            "page_reference": "p. 219"
-        },
-        "Advanced Transporters": {
-            "description": "The ship is outfitted with dozens of transporter emitter array pads, allowing targeting scanners to lock on to their targets and destination more easily. While accurate, this system is Power intensive. The Difficulty of all transporter tasks are decreased by 1. The Power requirement of all transporter tasks is increased by 1.",
-            "category": "Starship",
-            "page_reference": "p. 219"
-        },
-        "Annular Confinement Jacketing": {
-            "description": "The ship’s energy weapon emitters create an annular confinement beam around its energy beams, allowing the weapons to fire short distances at warp speeds. The ship may make an attack with its energy weapons at Close range while at warp; however, the Difficulty for the attack is increased by 2.",
-            "category": "Starship",
-            "page_reference": "p. 219"
-        },
-        "Automated Defenses": {
-            "description": "The ship’s weapons systems can automatically lock on to a target and fire. At the end of a combat round, if nobody fired a ship weapon, the ship may make an unassisted energy weapon attack using its Weapons + Security against a target. Momentum may be used and generated as normal for this attack.",
-            "category": "Starship",
-            "page_reference": "p. 219"
-        },
-        "Automated Return": {
-            "description": "The ship’s computer is programmed to recognize a starbase, colony, or some other location as its home base. The shuttles on board have the same programming and recognize the ship as their home base. If the ship’s Computers system goes for 10 days without commands from the crew, it will automatically pilot the ship back to the home base at maximum impulse.",
-            "category": "Starship",
-            "page_reference": "Not in this rulebook"
-        },
-        "Cloaked Mines": {
-            "description": "The ship’s mines are equipped with state-of-the-art cloaking technology, making them almost impossible to detect. Mines that the ship places have the Hidden 2 Weapon Quality.",
-            "category": "Starship",
-            "page_reference": "Not in this rulebook"
-        },
-        "Cloaking Device": {
-            "description": "The vessel has a device that allows it to vanish from sensors. Operating the device requires a Control + Engineering task with a Difficulty of 2, assisted by the ship’s Engines + Security as this is a task from the tactical position. This task has a Power requirement of 3. If successful, the vessel gains the Cloaked trait. While cloaked, the vessel cannot attempt any attacks, nor can it be the target of an attack unless the attacker has found some way of detecting the cloaked vessel. While cloaked, a vessel’s shields are down. It requires a minor action to decloak a vessel.",
-            "category": "Starship",
-            "page_reference": "p. 220"
-        },
-        "Dedicated Subspace Transceiver Array": {
-            "description": "A starship with this talent has a section of its hull that slides away where a long, tether-like subspace transceiver array can be deployed to enhance the vessel’s communication range and clarity, even at warp. Any tasks involving sending, receiving, or intercepting subspace or standard EM communications have their Difficulty reduced by 1.",
-            "category": "Starship",
-            "page_reference": "p. 220"
-        },
-        "Deluxe Galley": {
-            "description": "The ship’s mess hall is equipped with top-of-the-line food preparation systems as well as vast stores of non- replicated food. Whenever the ship’s cook or chef uses their role ability while in the ship’s galley, they generate 1 additional Momentum. In addition, whenever a crew member meets with a guest of the ship in the galley, they gain the Fine Dining advantage, which comes into play with all Presence and Command tasks.",
-            "category": "Starship",
-            "page_reference": "p. 221"
-        },
-        "Dual Environment": {
-            "description": "The ship is outfitted with redundant system rooms that can be filled with gases or liquids that allow crew members requiring different atmospheric conditions to work side by side with the rest of the crew. In addition, passages that can be filled with the necessary liquids or gases run parallel to all passages in the ship, allowing these crew members to move freely throughout. A character who is in a redundant system room may assist others in the connected system room as if they were in the same room.",
-            "category": "Starship",
-            "page_reference": "p. 221"
-        },
-        "Expanded Munitions": {
-            "description": "The ship has been designed to defend itself from all manner of threats. As such, it has either additional energy delivery systems or extended storage for torpedoes or mines. The ship may add any one weapon to its profile. This talent may be taken multiple times, adding a different weapon each time. Any prerequisites for the weapon or its delivery system still apply.",
-            "category": "Starship",
-            "page_reference": "p. 222"
-        },
-        "Expansive Department": {
-            "description": "This talent represents a highly-focused starship with many specialists in their field working closely together to perform tasks at peak efficiency. This talent must be taken for a starship to have a department score of 6 through application of a mission profile or through game events and player actions. Starbases do not need this talent to have a department above 5. All tasks that include this Expansive Department have a target number calculated as normal. Whenever the ship assists a task using this department, or performs a task on its own using this department, the ship may re-roll a d20.",
-            "category": "Starship",
-            "page_reference": "p. 222"
-        },
-        "High-Resolution Sensors": {
-            "description": "The vessel’s sensors can gain large amounts of accurate data, though they are extremely sensitive. While the vessel is not in combat, any successful task that is assisted by the ship’s Sensors gains one bonus Momentum.",
-            "category": "Starship",
-            "page_reference": "p. 223"
-        },
-        "Multi-Vector Assault Mode": {
-            "description": "Like the Saucer Separation talent, Multi-Vector Assault Mode changes the statistics of the ship as it splits apart into three distinct sections. Each section has the same systems and departments scores as the original fully integrated starship, but each individual section has only one third the power (divide original Power rating by 3, rounding down) that it originally hadd and each of the sections has a Scale 1 less than the original starship. Starships that wish to take this talent must also have the Redundant Systems (Propulsion) talent. All energy weapons’ Stress ratings for each section is one less due to the reduction in Scale.\nSeparating the starship into three sections (Command and two attack sections) requires a Control + Conn task with a Difficulty of 2, assisted by the ship’s Structure + Engineering. Reconnecting the separate sections requires the same task as separation, but done twice. Sections may not disconnect or reconnect if the Structure of any section of the ship, or the ship as a whole, has been damaged or disabled.",
-            "category": "Starship",
-            "page_reference": "Not in this rulebook"
-        },
-        "Point Defense System": {
-            "description": "The ship is equipped with a system of small energy weapon emitters that operates independently from the main weapons systems. When a torpedo targets the ship, these emitters start firing in the direction it is traveling from, potentially destroying it before it impacts the shields or the ship’s hull. This system only works at subwarp speeds. The ship is considered to have Cover 2[D] against torpedo attacks.",
-            "category": "Starship",
-            "page_reference": "p. 224"
-        },
-        "Regenerative Hull": {
-            "description": "The ship’s hull is infused with reverse-engineered Borg nanite technology that seeks out and repairs the hull immediately when it is damaged, often preventing a breach before it can happen. The amount of Stress needed for the ship to sustain a breach is increased by 1.",
-            "category": "Starship",
-            "page_reference": "Not in this rulebook"
-        },
-        "Self-Replicating Mines": {
-            "description": "The ship carries mines that are capable of replicating themselves over time, allowing for a more thorough spread filling the area they’re deployed in. The Difficulty of any task made to avoid the mines does not reduce when mines are detonated.",
-            "category": "Starship",
-            "page_reference": "Not in this rulebook"
-        },
-        "Siphoning Shields": {
-            "description": "The vessel’s shield emitters are connected to a network of particle siphons that capture some of the energy released when hit by an energy weapon, channeling it back into the shields. When the ship is hit by an energy weapon, after Stress is rolled, roll 1[D] for each point of Shields lost, then regain a number of Shield points equal to the number of effects rolled.",
-            "category": "Starship",
-            "page_reference": "p. 225"
-        },
-        "Slim Sensor Silhouette": {
-            "description": "Through a combination of advanced alloys, EM shielding, and electronic countermeasures, the starship is difficult to detect via electromagnetic radiation and subspace sensors. While not a true cloaking device, these vessels can sneak into star systems entirely undetected. Like a cloaking device, utilizing the EM shielding and ECM systems on board requires a Control + Engineering task with a Difficulty of 2. If this task is successful, the maximum Power rating of the ship is reduced by 2 to represent the power usage of the systems and “running silent,” and shields are deactivated. All tasks to detect the stealthy starship have their Difficulty increased by 1. There are no restrictions on weapons fire from the ship using this talent.",
-            "category": "Starship",
-            "page_reference": "Not in this rulebook"
-        },
-        "Tachyon Detection Field": {
-            "description": "The ship is equipped with a field generator that projects a cloud of tachyons around it. Activating the field generator requires a Control + Engineering task with a Difficulty of 2, assisted by the ship’s Sensors + Science, and has a Power requirement of 2. The field remains active until the ship moves. While the field is active, the ship is notified of any cloaked vessels that are within or pass into Close range. The ship may attack a cloaked target within the field, though the Difficulty for the attack is increased by 2.",
-            "category": "Starship",
-            "page_reference": "Not in this rulebook"
-        },
-        "Variable Geometry Warp Field": {
-            "description": "An extension of the variable pitch warp nacelles seen on the Intrepid class and the warp vector technology found on many Vulcan-designed starships, a ship with a variable geometry warp field can adjust its subspace field in highly turbulent spacetime and can continue to provide propulsive force even then. These vessels provide the advantage of Variable Geometry Warp Field in any scene involving a disadvantage related to difficulties forming or maintaining a stable warp field.",
-            "category": "Starship",
-            "page_reference": "p. 225"
-        },
-        "Versatile Tractor Beam": {
-            "description": "The ship has exotic particle emitters integrated with its tractor beam system. With a few simple adjustments, the tractor beam can become even more useful against ships trapped within. When the tractor beam is activated, the operator may choose to add one of the following effects:\nDepleting: At the end of each round a target remains within the tractor beam, it loses 1 Shield.\nDraining: At the end of each round a target remains within the tractor beam, it loses 1 Power.",
-            "category": "Starship",
-            "page_reference": "Not in this rulebook"
-        },
-        "Wormhole Relay System": {
-            "description": "The ship has an additional sensor system outfitted with high-energy transceivers, verteron sensors, and neutrino sensors. These sensors, combined with field-generation devices, allow the ship to send and receive data streams through wormholes. The Difficulty of all Science tasks to send or receive data through a wormhole is reduced by 2 to a minimum of 0.",
-            "category": "Starship",
-            "page_reference": "p. 225"
-        },
-        "Adaptive Shield Modulator": {
-            "description": "Requires a 24th-century-or-later ship. Modulate Shields grants an additional +1 Resistance, and the ship may raise shields while in silent running.",
-            "category": "Starship",
-            "page_reference": "p. 218"
-        },
-        "Expanded Emergency Medical Facilities": {
-            "description": "When diagnosing patients, one character can assess a number equal to the ship?s Medicine rating; Triage can add two more for 1 Momentum. Each participant in an extended task treating multiple patients adds 1 Impact.",
-            "category": "Starship",
-            "page_reference": "p. 222"
-        },
-        "Extensive Automation": {
-            "description": "Requires Computer 10+. The ship can operate with reduced crew support (half, rounded up) and perform tasks itself, adding 1 Threat before each such task.",
-            "category": "Starship",
-            "page_reference": "p. 223"
-        },
-        "Extensive Medical Laboratories": {
-            "description": "Requires Medicine 4+. In sickbay, each participant in an extended task to study an unknown condition or develop its treatment adds 1 Impact.",
-            "category": "Starship",
-            "page_reference": "p. 223"
-        },
-        "High-Intensity Energy Weapons": {
-            "description": "Requires Weapons 10+. After Reserve Power is routed to Weapons, the next energy-weapon attack deals +2 Damage.",
-            "category": "Starship",
-            "page_reference": "p. 223"
-        },
-        "Sophisticated Astrometrics Facilities": {
-            "description": "At stellar cartography or navigation, re-roll a d20 on tasks to plot a course or map a large region; a resulting course or knowledge trait gains one step of Potency.",
-            "category": "Starship",
-            "page_reference": "p. 225"
-        },
-        "Transport Inhibitors": {
-            "description": "While active, the ship prevents transport to or from it, including use of its own transporters.",
-            "category": "Starship",
-            "page_reference": "p. 225"
-        },
-        "Improved Probe Bay": {
-            "description": "A launched probe can travel up to five zones and withstand damage until it suffers a breach; each has 3 Shields.",
-            "category": "Starship",
-            "page_reference": "p. 223"
-        },
-        "Additional Propulsion System (Talent)": {
-            "description": "",
-            "category": "Starship",
-            "page_reference": "Not in this rulebook"
-        },
-        "Cluster Torpedoes": {
-            "description": "",
-            "category": "Starship",
-            "page_reference": "Not in this rulebook"
-        },
-        "Extended Sensor Range": {
-            "description": "",
-            "category": "Starship",
-            "page_reference": "Not in this rulebook"
-        },
-        "Industrial Replicators": {
-            "description": "",
-            "category": "Starship",
-            "page_reference": "Not in this rulebook"
-        },
-        "Minelayer": {
-            "description": "",
-            "category": "Starship",
-            "page_reference": "Not in this rulebook"
-        },
-        "Modular Cargo Bays": {
-            "description": "",
-            "category": "Starship",
-            "page_reference": "Not in this rulebook"
-        },
-        "Traceable Payload System": {
-            "description": "",
-            "category": "Starship",
-            "page_reference": "Not in this rulebook"
-        },
-        "Docking Capacity": {
-            "description": "The station has additional ports and pylons that allow it to support a greater number of docked vessels as well as larger vessels than would normally be the case. The starbase has a number of docking ports equal to one-and-a-half times its Scale (rounding down), instead of half its Scale. The maximum Scale of any ship that may dock at the station is increased by 2.",
-            "category": "Starbase",
-            "page_reference": "Not in this rulebook"
-        },
-        "Drydock": {
-            "description": "A space station with this talent has facilities that can assist in construction or repair of starships, including the fabrication facilities for equipment, and limited refining capabilities for producing alloys from raw material. Space stations with this talent provide an advantage called Drydock that applies to all repairs and construction tasks involved with starships docked to it.",
-            "category": "Starbase",
-            "page_reference": "Not in this rulebook"
-        },
-        "Enhanced Defense Grid": {
-            "description": "The station’s Shields are increased by an amount equal to half the station’s Scale.",
-            "category": "Starbase",
-            "page_reference": "Not in this rulebook"
-        },
-        "Firebase": {
-            "description": "The station is built to defend itself and surrounding space from attack and can unleash colossal firepower. Whenever a character makes an Attack with the station, they may use the Swift Task Momentum Spend for 1 Momentum instead of the normal 2, so long as their second Task is also an Attack.",
-            "category": "Starbase",
-            "page_reference": "Not in this rulebook"
-        },
-        "Repair Crews": {
-            "description": "With additional personnel to support repair and maintenance work, the station may prioritize repairs to a number of ships equal to its Engineering Department.",
-            "category": "Starbase",
-            "page_reference": "Not in this rulebook"
-        },
-        "Self-Propelled": {
-            "description": "All space stations have limited propulsive capabilities to adjust their orbit around a planetary body or move slowly through empty space to new positions. A space station with this talent has the ability to not only move through regular space, but to also move at warp speeds. The majority of space stations with this talent are self-propelled drydocks capable of assisting stranded starships or moving between star systems to where they are most needed. All Power requirements for tasks related to warp speeds are doubled to represent the bulk and mass of the station.",
-            "category": "Starbase",
-            "page_reference": "Not in this rulebook"
-        },
-        "Sturdy Construction": {
-            "description": "When the station suffers damage, after Resistance, from an attack or hazard, it suffers a Breach if 8 or more damage is inflicted, rather than 5 or more as is normally the case.",
-            "category": "Starbase",
-            "page_reference": "Not in this rulebook"
-        },
-        "Additional Propulsion System": {
-            "description": "The vessel includes an additional, non-standard form of propulsion, such as Transwarp or Quantum Slipstream Drive.",
-            "category": "Starship",
-            "page_reference": "Not in this rulebook"
-        },
-        "Aquarius Escort": {
-            "description": "The Aquarius escort is a small starship, about the size of a Defiant-class ship, embedded in a docking slip at the aft of the Odyssey class. The Aquarius is an independent starship and can travel at warp, though its endurance is relatively limited and it is not designed to go on extended missions without frequent resupply. When deployed, the Aquarius can be an NPC ally starship or can be commanded by a player at the gamemaster's discretion. The Aquarius uses the stats of a Defiant-class starship, but cannot have a cloaking device. When docked, the Aquarius's power and defensive systems supplement that of the mothership, and so when deployed, the scale of the Odyssey-class ship (and all derived stats except for its number of talents) is reduced from 7 to 6.",
-            "category": "Starship",
-            "page_reference": "Not in this rulebook"
-        },
-        "Backpacking": {
-            "description": "Norway-class vessels can tow cargo containers while at warp between their widely-spaced nacelles. The extra equipment and supplies this provides produces the advantage “We Have That!” in scenes where the gamemaster feels these extra supplies and parts could come in handy. While towing these cargo containers, all Conn tasks have their Difficulty and complication range increased by 1 to represent the difficulties in keeping the cargo containers secure. Failure on these tasks could be resolved by loss of the containers, or damage to the vessel.",
-            "category": "Starship",
-            "page_reference": "Not in this rulebook"
-        },
-        "Constitution Saucer Separation": {
-            "description": "All Constitution-class vessels have the capability to detach their saucer section in an emergency to be used as a lifeboat. However, unlike the Saucer Separation talent, the Constitution class is unable to re-dock the detached saucer with the secondary hull outside of a drydock. Ship’s systems are halved (round down) for the saucer and the secondary hull when separated, the saucer is unable to enter warp speeds, and each section is considered a Scale 3 vessel. However the saucer is able to land on a planetary surface with extended landing legs that fold down from the ventral side of its hull. In the original series era, the saucer has both phasers and photon torpedoes, and the secondary hull has only phasers, but the opposite is true after the refit program of the 2270s.",
-            "category": "Starship",
-            "page_reference": "Not in this rulebook"
-        },
-        "Defiant Class Cloaking Device": {
-            "description": "The ship has a cloaking device, allowing it to vanish from view. Activating the device is a Control + Engineering task with a Difficulty of 2, assisted by the ship’s Engines + Security, performed from the tactical position. Th task has a Power requirement of 3. If successful, the vessel gains the Cloaked trait. While cloaked, the vessel cannot attack, nor can it be the target of an attack unless the attacker has found some way of detecting the cloaked ship. While cloaked, the vessel’s shields are down. It takes a minor action to decloak. Due to incompatibilities between Romulan and Federation technology, and Federation unfamiliarity with cloaking technology, any task relating to using the cloaking device has a +1 complication range.",
-            "category": "Starship",
-            "page_reference": "Not in this rulebook"
-        },
-        "Do No Harm": {
-            "description": "As the Olympic class is considered a non-combatant and its phaser system is seen as defensive only, any use of the ship’s phaser system outside of self-defense or as a tool automatically generates 1 Threat per scene. In addition, the characters on an Olympic-class vessel may, once per adventure, gain an extra d20 for a task involving convincing another group of the good intentions of Starfleet, the Federation, or the crew themselves due to the reputation of these hospital vessels.",
-            "category": "Starship",
-            "page_reference": "Not in this rulebook"
-        },
-        "Efficiency": {
-            "description": "Daedalus-class vessels are constructed with simple systems that are easily maintained, and a highly adaptable modular construction beyond what most Starfleet vessels of even the 24th century use. These vessels may have up to five talents, rather than the three its Scale would normally permit.",
-            "category": "Starship",
-            "page_reference": "Not in this rulebook"
-        },
-        "Excelsior Saucer Separation": {
-            "description": "All Excelsior-class vessels have the capability to detach their saucer section in an emergency to be used as a lifeboat. However, unlike the Saucer Separation talent, the Excelsior class is unable to re-dock the detached saucer with the secondary hull outside of a drydock. Ships’ systems are halved (round down) for the saucer and the secondary hull when separated, the saucer is unable to enter warp speeds, and each section is considered a Scale 4 vessel. However, the saucer is able to land on a planetary surface with extended landing legs down from the ventral side of its hull.",
-            "category": "Starship",
-            "page_reference": "Not in this rulebook"
-        },
-        "EXEO Holographic Core": {
-            "description": "The EXEO Holographic Core allows the ship to support a holographic life form as part of its crew. This supporting character can be from any discipline and does not count against the ship's crew support total. This holographic life form also has a primitive mobile emitter. The mobile emitter provides the EXEO with some EVA mobility, but it is not as advanced as the Doctor's 29th-centry emitter and will not function more than 100,000 kilometers away from the EXEO core itself. Unlike a standard EMH, the EXEO may improve.",
-            "category": "Starship",
-            "page_reference": "Not in this rulebook"
-        },
-        "Four-Nacelle Stability": {
-            "description": "",
-            "category": "Starship",
-            "page_reference": "Not in this rulebook"
-        },
-        "Modular Cargo Pods": {
-            "description": "The modular cargo pods of the Par’tok class transport can be replaced or removed at any rudimentary spacedock as long as other pods are available and service vehicles such as shuttlecraft can assist in tractoring new pods into place. Depending on the mission assigned to the Par’tok class vessel, the performance and traits of the vessel can drastically change.",
-            "category": "Starship",
-            "page_reference": "Not in this rulebook"
-        },
-        "Ploughshares to Swords": {
-            "description": "Miranda-class vessels were originally designed to be vessels of war, and although the Starfleet Advanced Technologies Group redesigned and repurposed the vessel, aspects of the ship's martial pedigree show through. This spaceframe's phaser banks may be used as phaser cannons when at Close range, which increases their Stress rating by 1.",
-            "category": "Starship",
-            "page_reference": "Not in this rulebook"
-        },
-        "Expanded Connectivity": {
-            "description": "Extensive user-interface reworking has been done throughout the ship. Due to this any Override actions taken, where an action is taken from a different station on the bridge, can be attempted with no penalty.",
-            "category": "Starship",
-            "page_reference": "Not in this rulebook"
-        },
-        "Linked Fire Control": {
-            "description": "The spaceframe gains an advantage \"Linked Fire Control\" that applies to fleet combat as determined by the gamemaster, reducing the complication range on weapons fire.",
-            "category": "Starship",
-            "page_reference": "Not in this rulebook"
-        },
-        "Modular Mission Bay": {
-            "description": "A Pathfinder must take one talent from the list below. This talen counts against the ship's maximum number of talents, but the crew may exchange it for another on the list during a week-long layover at a Federation starbase. Advanced Research Facilities. Advanced Sickbay. Dedicated Personnel (Medicine). Dedicated Personnel (Science). Dedicated Personnel (Security). Diplomatic Suites. Extensive Shuttlebays. Improved Damage Control. Modular Laboratories.",
-            "category": "Starship",
-            "page_reference": "Not in this rulebook"
-        },
-        "Refracting Energy Shunt": {
-            "description": "This starship can use its deflector array to temporarily absorb energy from a target vessel and channel that back into its own power reserves. Once per scene, the crew can spend 3 Momentum to reduce an enemy starship's Power by 3 and provide their own ship with 3 bonus Power, even exceeding the ship's maximum Power rating. This is executed on a Daring + Engineering task with a Difficulty of 3, and, depending on the result of the check, the gamemaster may create a complication related to the ship's Power or weapons systems.",
-            "category": "Starship",
-            "page_reference": "Not in this rulebook"
-        },
-        "Steamrunner Separation": {
-            "description": "The small secondary hull can be jettisoned as a sizable emergency lifeboat. This secondary hull has limited impulse power and no capability for warp. The secondary hull has no talents or weapons, and uses the systems and departments of a Type-6 shuttle. Once detached, the primary hull is unable to enter warp and has all of its systems reduced by 2. Reattaching the secondary hull requires extensive work at a drydock facility.",
-            "category": "Starship",
-            "page_reference": "Not in this rulebook"
-        },
-        "Mission Pod": {
-            "description": "Ships of this class have a mission pod. This mission pod provides two talents to the vessel that count toward the maximum normally allowed, but the entire mission pod (and all of its benefits) may be swapped out as if it were a single talent. If equipping a mission pod results in a talent being taken twice, a new talent may be chosen.",
-            "category": "Starship",
-            "page_reference": "Not in this rulebook"
-        },
-        "Stealth Systems": {
-            "description": "Prior to the treaty with the Romulan Star Empire and gaining access to advanced cloaking devices, the Klingon Empire used stealth systems based on reverse-engineered Hur’Q technology left behind on Qo’noS after their departure. These stealth systems include adaptive chromatic plates on the outer hull to blend into the background in the near infrared to ultraviolet wavelengths, thermal buffers and heat sinks to reduce the emissions in the far infrared, and microscale wavelength guides to absorb incoming sensor beams and prevent returns. This equipment functions in a similar way to the Cloaking Device found on page 207 of The Klingon Empire core rulebook, except it is more difficult to use, requiring a Control + Engineering task with a Difficulty of 3 rather than 2, and a Power requirement of 5 instead of 3.",
-            "category": "Starship",
-            "page_reference": "Not in this rulebook"
-        },
-        "Monopole Warp Field": {
-            "description": "A monopole warp field results from either tightly packed warp coils or through what is referred to as “warp rings” such as early Vulcan superluminal propulsion. These fields provide excellent straight-line warp acceleration, allowing vessels to outrun or escape from pursuers with ease. If an enemy wishes to pursue a vessel with this talent, they must spend at least 2 more Power than the vessel with the talent, rather than only one more. If both vessels have this talent, treat it as though it were a normal warp pursuit. Additionally, a vessel with this talent does not need to spend Power to enter warp.",
-            "category": "Starship",
-            "page_reference": "Not in this rulebook"
-        },
-        "Compact Vessel": {
-            "description": "",
-            "category": "Starship",
-            "page_reference": "Not in this rulebook"
-        },
-        "Grappler Cable (Special Rule)": {
-            "description": "",
-            "category": "Starship",
-            "page_reference": "Not in this rulebook"
-        },
-        "Landing Gear": {
-            "description": "",
-            "category": "Starship",
-            "page_reference": "Not in this rulebook"
-        },
-        "Polarized Hull Plating (Special Rule)": {
-            "description": "",
-            "category": "Starship",
-            "page_reference": "Not in this rulebook"
-        },
-        "Saucer Separation and Reconnect": {
-            "description": "",
-            "category": "Starship",
-            "page_reference": "Not in this rulebook"
-        },
-        "Prototype Cloaking Device": {
-            "description": "",
-            "category": "Starship",
-            "page_reference": "Not in this rulebook"
-        },
-        "Larger Crew": {
-            "description": "",
-            "category": "Starship",
-            "page_reference": "Not in this rulebook"
-        },
-        "Reliable": {
-            "description": "",
-            "category": "Starship",
-            "page_reference": "Not in this rulebook"
-        },
-        "Prestigious Posting": {
-            "description": "",
-            "category": "Starship",
-            "page_reference": "Not in this rulebook"
-        },
-        "Mission of Mercy": {
-            "description": "",
-            "category": "Starship",
-            "page_reference": "Not in this rulebook"
-        },
-        "Experimental Vessel": {
-            "description": "",
-            "category": "Starship",
-            "page_reference": "Not in this rulebook"
-        },
-        "Ready for Battle": {
-            "description": "",
-            "category": "Starship",
-            "page_reference": "Not in this rulebook"
-        },
-        "Jury-Rigged (Service Record)": {
-            "description": "",
-            "category": "Starship",
-            "page_reference": "Not in this rulebook"
-        },
-        "Lucky (Service Record)": {
-            "description": "",
-            "category": "Starship",
-            "page_reference": "Not in this rulebook"
-        },
-        "Refuses to Die (Service Record)": {
-            "description": "",
-            "category": "Starship",
-            "page_reference": "Not in this rulebook"
-        },
-        "Premonitions (Service Record)": {
-            "description": "",
-            "category": "Starship",
-            "page_reference": "Not in this rulebook"
-        },
-        "Efficiency (Service Record)": {
-            "description": "",
-            "category": "Starship",
-            "page_reference": "Not in this rulebook"
-        },
-        "Encounter the Strange (Service Record)": {
-            "description": "",
-            "category": "Starship",
-            "page_reference": "Not in this rulebook"
-        },
-        "The Last Generation (Service Record)": {
-            "description": "",
-            "category": "Starship",
-            "page_reference": "Not in this rulebook"
-        },
-        "Far from Home (Service Record)": {
-            "description": "",
-            "category": "Starship",
-            "page_reference": "Not in this rulebook"
-        },
-        "Upgraded Systems (Service Record)": {
-            "description": "",
-            "category": "Starship",
-            "page_reference": "Not in this rulebook"
-        },
-        "Peak Performance (Service Record)": {
-            "description": "",
-            "category": "Starship",
-            "page_reference": "Not in this rulebook"
-        },
-        "Any Knowledge of Your Actions": {
-            "description": "",
-            "category": "Starship",
-            "page_reference": "Not in this rulebook"
-        },
-        "Once More Unto the Breach": {
-            "description": "",
-            "category": "Starship",
-            "page_reference": "Not in this rulebook"
-        },
-        "Dreaded": {
-            "description": "",
-            "category": "Starship",
-            "page_reference": "Not in this rulebook"
-        },
-        "Classified Design": {
-            "description": "",
-            "category": "Starship",
-            "page_reference": "Not in this rulebook"
-        },
-        "Preferential Targeting": {
-            "description": "",
-            "category": "Starship",
-            "page_reference": "Not in this rulebook"
-        },
-        "Specialized Shuttlebay": {
-            "description": "",
-            "category": "Starship",
-            "page_reference": "Not in this rulebook"
-        },
-        "Pulse Phaser Cannons": {
-            "description": "",
-            "category": "Starship",
-            "page_reference": "Not in this rulebook"
-        },
-        "Quantum Slipstream Burst Drive": {
-            "description": "",
-            "category": "Starship",
-            "page_reference": "Not in this rulebook"
-        },
-        "Saucer Separation (2nd Edition)": {
-            "description": "",
-            "category": "Starship",
-            "page_reference": "Not in this rulebook"
-        },
-        "First into Battle": {
-            "description": "When the Klingon Veteran makes a successful attack, they may spend 3 Momentum to assist another Klingon’s next attack with their Daring + Command.",
-            "category": "Species:Klingon",
-            "page_reference": "Not in this rulebook"
-        },
-        "Precision Targeting (Klingon)": {
-            "description": "When the character makes an attack that targets a specific system, he may reroll one d20 in his dice pool, and the attack gains the Piercing 1 damage effect",
-            "category": "Species:Klingon",
-            "page_reference": "Not in this rulebook"
-        },
-        "Cunning Negotiator": {
-            "description": "Whenever the character attempts a Presence task to influence an opponent during a negotiation, they may re-roll one d20.",
-            "category": "Species:Klingon",
-            "page_reference": "Not in this rulebook"
-        },
-        "Cutting Wit": {
-            "description": "The character fights as much with words as with weapons. When in personal combat against an enemy who can understand them, they may use Presence instead of Daring to attack.",
-            "category": "Species:Klingon",
-            "page_reference": "Not in this rulebook"
-        },
-        "Tactical Genius": {
-            "description": "Once per scene, if the character succeeds at an Insight + Command task to assess their opponent, they may spend 2 Threat to allow all under their command to re-roll one d20 on their next task.",
-            "category": "Species:Klingon",
-            "page_reference": "Not in this rulebook"
-        },
-        "Fleet Commander (NPC)": {
-            "description": "Commanding a vessel during a fleet action reduces the Difficulty of a task to grant a bonus to the character's vessel or group by 1, to a minimum of 1. Aboard a vessel during a fleet action, the character may treat the vessel as having a Command department of 4+, regardless of the actual value.",
-            "category": "Species:Klingon",
-            "page_reference": "Not in this rulebook"
-        },
-        "Threatening 3 (Klingon)": {
-            "description": "When the player characters encounter the Klingon character, add three Threat to the Threat pool.",
-            "category": "Species:Klingon",
-            "page_reference": "Not in this rulebook"
-        },
-        "Free Advice Is Seldom Cheap": {
-            "description": "Increase the Difficulty of all Social Conflict to persuade a Ferengi Merchant by 2. This Difficulty increase is removed as soon as the Ferengi is offered something in trade.",
-            "category": "Species:Ferengi",
-            "page_reference": "Not in this rulebook"
-        },
-        "Keep Your Ears Open": {
-            "description": "Whenever the character attempts a Task to detect danger or hidden enemies, or to listen in on someone’s conversation, reduce the Difficulty by 1.",
-            "category": "Species:Ferengi",
-            "page_reference": "Not in this rulebook"
-        },
-        "You Can’t Make a Deal If You’re Dead": {
-            "description": "This Ferengi will never make a lethal attack. Further, whenever attempting a Task to make a deal or otherwise persuade an enemy who they have previously incapacitated, or an enemy who obviously outmatches them, they may add a bonus d20 to the roll.",
-            "category": "Species:Ferengi",
-            "page_reference": "Not in this rulebook"
-        },
-        "Ambush": {
-            "description": "When attacking an opponent who is unaware, the Romulan Officer may spend 2 Threat, to allow the Officer and all Romulans under their command to re-roll any number of d20s on their attack rolls.",
-            "category": "Species:Romulan",
-            "page_reference": "p. 161"
-        },
-        "Ruthless and Determined": {
-            "description": "The character may spend 2 Threat to gain the effects of a point of Determination, rather than the normal 3.",
-            "category": "Species:Romulan",
-            "page_reference": "Not in this rulebook"
-        },
-        "Supreme Authority": {
-            "description": "Whenever a Romulan currently under the character's command attempts a Task to resist persuasion or intimidation, the character may spend 1 Threat to allow that Romulan to re-roll, even if they are not present in that scene.",
-            "category": "Species:Romulan",
-            "page_reference": "Not in this rulebook"
-        },
-        "Supreme Authority (Cardassian)": {
-            "description": "Whenever a Cardassian currently under the character's command attempts a Task to resist persuasion or intimidation, the character may spend 1 Threat to allow that Cardassian to re-roll, even if they are not present in that scene.",
-            "category": "Species:Cardassian",
-            "page_reference": "Not in this rulebook"
-        },
-        "Supreme Authority (Breen)": {
-            "description": "Whenever a Breen warrior currently under the character's command attempts a Task to resist persuasion or intimidation, the character may spend 1 Threat to allow that Breen warrior to re-roll, even if they are not present in that scene.",
-            "category": "Species:Breen",
-            "page_reference": "Not in this rulebook"
-        },
-        "Senatorial Presence": {
-            "description": "Whenever one of the senator's subordinates attempts a Task to resist persuasion, intimidation, or interrogation, the senator may spend two Threat to allow that Romulan to roll as if they had the benefit of their assistance using Control + Command, even if they are not present in the scene.",
-            "category": "Species:Romulan",
-            "page_reference": "Not in this rulebook"
-        },
-        "Reman Bodyguard": {
-            "description": "The senator has a Reman bodyguard who is completely devoted to their well-being. If attacked while in the presence of the bodyguard, the senator may use the bodyguard’s Fitness + Security for purposes of Stress, providing they are within Reach.",
-            "category": "Species:Romulan",
-            "page_reference": "Not in this rulebook"
-        },
-        "Romulan Military Efficiency": {
-            "description": "The character grants all Romulan NPCs under their command an additional Task each turn.",
-            "category": "Species:Romulan",
-            "page_reference": "Not in this rulebook"
-        },
-        "Manipulation is Second Nature": {
-            "description": "The character may attempt to Negotiate or Intimidate as an additional Task on their turn.",
-            "category": "Species:Romulan",
-            "page_reference": "Not in this rulebook"
-        },
-        "I Anticipated Your Move": {
-            "description": "Unless a Player Character has a higher Daring than the Romulan officer, the Romulan always acts before the first Player Character.",
-            "category": "Species:Romulan",
-            "page_reference": "Not in this rulebook"
-        },
-        "Ambushes and Traps": {
-            "description": "Whenever a Cardassian uses the Ready Task to ready a Ranged attack, that Ranged attack gains one bonus d20.",
-            "category": "Species:Cardassian",
-            "page_reference": "Not in this rulebook"
-        },
-        "Loyal and Disciplined": {
-            "description": "Whenever a Cardassian receives assistance from a superior on a Task, the Cardassian may re-roll a single d20.",
-            "category": "Species:Cardassian",
-            "page_reference": "Not in this rulebook"
-        },
-        "Expects Success": {
-            "description": "Whenever a Cardassian uses the Direct or Assist Task to aid a subordinate, that Task may always Succeed at Cost.",
-            "category": "Species:Cardassian",
-            "page_reference": "Not in this rulebook"
-        },
-        "Ruthless": {
-            "description": "A Cardassian Officer may re-roll any d20s in their dice pool when making an attack against an enemy that was not aware of or prepared for an attack, or against an enemy that is defenseless.",
-            "category": "Species:Cardassian",
-            "page_reference": "Not in this rulebook"
-        },
-        "No Quarter": {
-            "description": "When commanding a boarding action and assisting the soldiers under their command by giving them orders, the character may re-roll a single d20.",
-            "category": "Species:Orion",
-            "page_reference": "Not in this rulebook"
-        },
-        "Cutthroat Crew": {
-            "description": "Whenever the pirates attempt a Task related to boarding a captured vessel, and they buy additional d20s with Threat, they may re-roll a single d20.",
-            "category": "Species:Orion",
-            "page_reference": "Not in this rulebook"
-        },
-        "Vicious": {
-            "description": "The character knows how to use cruelty to motivate others. When enforcing discipline using threats or violence and buying additional d20s with Threat, the character may re-roll a single d20.",
-            "category": "Species:Orion",
-            "page_reference": "Not in this rulebook"
-        },
-        "A Little Bit Extra": {
-            "description": "An Orion Science Officer is always on the lookout for something interesting, profitable, or valuable. Whenever performing a Task with Science, the Orion Scientist gains 1 bonus Momentum, that they can only spend on Obtain Information.",
-            "category": "Species:Orion",
-            "page_reference": "Not in this rulebook"
-        },
-        "Assess Odds": {
-            "description": "The character knows when and where to apply their efforts for maximum payoff and how to best utilize their skills. Pick either Insight or Presence; when the character attempts a Task using that Attribute and don’t have an applicable Focus, each die that rolls a “2” scores two successes.",
-            "category": "Species:Orion",
-            "page_reference": "Not in this rulebook"
-        },
-        "Potent Pheromones": {
-            "description": "While at Close range, when attempting a Task to negotiate, persuade, or seduce a humanoid creature physically attracted to them, the character adds a bonus d20 to the roll.",
-            "category": "Species:Orion",
-            "page_reference": "Not in this rulebook"
-        },
-        "Subservient": {
-            "description": "Used to supplicating themselves to a higher authority (typically a female Orion slave master) the character will not willingly act against their superiors. Whenever they attempt a Task to resist being coerced into disobeying an order, betraying their allies, or otherwise acting against a directive, they reduce the Difficulty by 1.",
-            "category": "Species:Orion",
-            "page_reference": "Not in this rulebook"
-        },
-        "Pheromonal Thrall": {
-            "description": "Thanks to years of conditioning, exposure to an Orion superior's pheromones, and careful manipulation by that slave master, the character gains an additional d20 when assisting their superior in Tasks where the superior spends Threat.",
-            "category": "Species:Orion",
-            "page_reference": "Not in this rulebook"
-        },
-        "False-Faced": {
-            "description": "When deceiving others, the character reduces the difficulty by 1, to a minimum of zero.",
-            "category": "Species:Orion",
-            "page_reference": "Not in this rulebook"
-        },
-        "Better Than You Know Yourself": {
-            "description": "The character has honed their skill at reading others to an almost-psychic level. When using Insight + Command to do so, they roll an additional d20.",
-            "category": "Species:Orion",
-            "page_reference": "Not in this rulebook"
-        },
-        "Provocative": {
-            "description": "When performing a Task using Presence + Command, the character may spend a Threat to gain some small but useful secret from their target, whatever the Task’s result.",
-            "category": "Species:Orion",
-            "page_reference": "Not in this rulebook"
-        },
-        "Devious and Untrustworthy": {
-            "description": "If Yridians are involved, things may get treacherous. When a Yridian free agent first becomes involved in a Mission, roll 3[D]. For each point rolled, add one to the Threat pool. This effect may only apply once regardless of how many other Yridian free agents are encountered during the Mission.",
-            "category": "Species:Yridian",
-            "page_reference": "Not in this rulebook"
-        },
-        "Brute Force": {
-            "description": "The character adds the Vicious 1 Effect to their Unarmed Strike, and removes the Non-lethal Quality.",
-            "category": "Species:Nausicaan",
-            "page_reference": "Not in this rulebook"
-        },
-        "Nausicaan Bloodlust": {
-            "description": "When the character attempts a melee attack, and purchases one or more additional dice with Threat, they may re-roll any number of d20s.",
-            "category": "Species:Nausicaan",
-            "page_reference": "Not in this rulebook"
-        },
-        "Ruthless and Determined (Nausicaan)": {
-            "description": "The character may spend 2 Threat to gain the effects of a point of Determination, rather than the normal 3.",
-            "category": "Species:Nausicaan",
-            "page_reference": "Not in this rulebook"
-        },
-        "Bullying Demeanor": {
-            "description": "When the Nausicaan attempts a Task to intimidate or frighten a creature they consider weaker and buy one or more d20s with Threat, they ignore any complications.",
-            "category": "Species:Nausicaan",
-            "page_reference": "Not in this rulebook"
-        },
-        "Lust for Violence": {
-            "description": "When a Nausicaan attempts a Melee attack, and purchases one or more additional dice with Threat, the Nausicaan may re-roll any number of [D] from that attack",
-            "category": "Species:Nausicaan",
-            "page_reference": "Not in this rulebook"
-        },
-        "Nausicaan Toughness": {
-            "description": "The Nausicaan only suffers an injury after sustaining 6 damage instead of just 5.",
-            "category": "Species:Nausicaan",
-            "page_reference": "Not in this rulebook"
-        },
-        "Crippling Attack": {
-            "description": "When the Nausicaan performs a Task using Security, they may spent 1 Threat to prevent their target from taking the Movement Minor Action.",
-            "category": "Species:Nausicaan",
-            "page_reference": "Not in this rulebook"
-        },
-        "Menacing": {
-            "description": "When the Nausicaan enters a scene, immediately add a point to the Threat pool.",
-            "category": "Species:Nausicaan",
-            "page_reference": "Not in this rulebook"
-        },
-        "Bodyguard": {
-            "description": "Whenever a Bodyguard attempts a Task to notice or detect an enemy or hazard, they may re-roll one d20.",
-            "category": "General",
-            "page_reference": "Not in this rulebook"
-        },
-        "Accomplished Strategist": {
-            "description": "The character is a skilled commander who learned the arts of warfare commanding ships in battle. Whenever they attempt a Task to formulate, execute, or explain a strategy, they may spend 1 Threat to re-roll his dice pool.",
-            "category": "General",
-            "page_reference": "Not in this rulebook"
-        },
-        "Counter Ploy": {
-            "description": "Whenever an enemy attempts a Task to create an Advantage representing some manner of strategy or tactic, the character may spend 1 Threat to increase the Difficulty by 1. Further, if this Task then fails, the character may immediately spend one additional Threat to create an Advantage of their own, representing their own stratagem.",
-            "category": "General",
-            "page_reference": "Not in this rulebook"
-        },
-        "Sector Specialist": {
-            "description": "The character is an expert in a specific sector of space. All Tasks involving the mapping of that sector, location of bodies, navigational hazards, etc. have their Difficulty reduced by 1. But this reliance on their own knowledge makes anything that is different from what they know often go unnoticed as they assume they know better, and the Complication range of these Tasks is increased by 1.",
-            "category": "General",
-            "page_reference": "Not in this rulebook"
-        },
-        "Specialist Subject: Exploring Life": {
-            "description": "A character that chooses this has an interest in Biology and Medicine, but no formal medical training. However, they have a great deal of knowledge about plant and animal species and how they may help or hinder a humanoid. Taking this increases the explorer’s Medicine Discipline by 1.",
-            "category": "General",
-            "page_reference": "Not in this rulebook"
-        },
-        "Specialist Subject: Trailblazer": {
-            "description": "The character has a wanderlust that drives them to be the first to see a new world, or be the first to explore a new sector of space. This can bring notoriety when they discover a new civilization or the remains of an ancient one, but the dangers of being on your own in the unknown mean many scientists risk their lives. A scientist with this choice may increase their Conn or Security Discipline by 1.",
-            "category": "General",
-            "page_reference": "Not in this rulebook"
-        },
-        "Specialist Subject: Academic Explorer": {
-            "description": "These scientists have been more formerly trained to accurately chart the unknown. Choosing this allows a Focus of one of the following: Stellar Cartography, Planetary Geography, or Geomorphology.",
-            "category": "General",
-            "page_reference": "Not in this rulebook"
-        },
-        "Specialist Subject: Hard Science": {
-            "description": "The scientist gains a Focus based on a single scientific field of study, e.g. Astrophysics, Subspace Theory, Quantum Mechanics.",
-            "category": "General",
-            "page_reference": "Not in this rulebook"
-        },
-        "Specialist Subject: Research Lead": {
-            "description": "The scientist has a broad background in the sciences and have honed their people skills to be able to lead other researchers in their projects. The professor does not gain a Focus; rather their Command Discipline is increased by 1.",
-            "category": "General",
-            "page_reference": "Not in this rulebook"
-        },
-        "Specialist Subject: Social Scientist": {
-            "description": "A social scientist is trained in how intelligent beings interact with the world around them in fields such as Anthropology, Geography, and Linguistics. Like the Hard Science choice above, the choices in Focus should also have a specific world or culture attached to them, e.g. History of Andor, Vulcan Linguistics, or Tellarite Law.",
-            "category": "General",
-            "page_reference": "Not in this rulebook"
-        },
-        "Armchair Analysis": {
-            "description": "When the counselor uses their Insight to gain psychological information about someone with whom they are in dialogue, they can reroll a single d20.",
-            "category": "General",
-            "page_reference": "Not in this rulebook"
-        },
-        "Son'a Desperation": {
-            "description": "Whenever a Son’a officer is below their maximum Stress, and buys additional d20s with Threat, the Son’a officer may re-roll a single d20.",
-            "category": "Species:SonA",
-            "page_reference": "Not in this rulebook"
-        },
-        "Son'a Authority": {
-            "description": "Whenever a Son’a command officer uses the Direct or Assist Task to command a Tarlac, Ellora, or another Son’a under their command, the officer may roll 2d20 instead of 1d20.",
-            "category": "Species:SonA",
-            "page_reference": "Not in this rulebook"
-        },
-        "Endure the Pain": {
-            "description": "Reduce non-lethal damage against the Talarian by 2. This is unaffected by Piercing.",
-            "category": "Species:Talarian",
-            "page_reference": "Not in this rulebook"
-        },
-        "Sharing Victory": {
-            "description": "When a Talarian succeeds in a Task, the next Talarian in the initiative order, if performing a Task, may re-roll a d20 in their pool at no cost.",
-            "category": "Species:Talarian",
-            "page_reference": "Not in this rulebook"
-        },
-        "Guerilla Maneuvers": {
-            "description": "The Talarian Officer may Create an Advantage once per adventure for free, representing a pre-arranged strategy, such as a rigged explosion or ambush. Such an explosion is treated as (Ranged, 5[D] Area).",
-            "category": "Species:Talarian",
-            "page_reference": "Not in this rulebook"
-        },
-        "Renowned Diplomat": {
-            "description": "The character’s renown and reputation are such that his mere presence can serve as the groundwork for diplomatic talks. Once per scene, when a character is involved in a Social Conflict reflecting peace talks, negotiations, or some other diplomatic mission, they may re-roll a single d20 as long as the ambassador is present in the scene or was instrumental in establishing the talks.",
-            "category": "General",
-            "page_reference": "Not in this rulebook"
-        },
-        "Break the Ice": {
-            "description": "The ambassador's manner breaks through formality in a way that sometimes puts other diplomats and negotiators ill-at-ease. It does open up talks in a way that proper etiquette and procedure often do not. When attempting a Task during a Social Conflict, the ambassador may choose to increase their Complication Range by 1, 2, or 3. If the Task succeeds, they gain bonus Momentum equal to the amount by which they increased her Complication range.",
-            "category": "General",
-            "page_reference": "Not in this rulebook"
-        },
-        "Diplomatic Expertise": {
-            "description": "Whenever the ambassador attempts a Task within a Social Conflict and buys one or more additional dice, they may re-roll their dice pool.",
-            "category": "General",
-            "page_reference": "Not in this rulebook"
-        },
-        "Adaptable": {
-            "description": "An Intelligence Operative may spend 2 Threat to gain a single focus for the remainder of the scene.",
-            "category": "General",
-            "page_reference": "p. 218"
-        },
-        "Covert": {
-            "description": "Whenever required to attempt  task to conceal their activities for an Intelligence Operative—including to maintain their cover identity—they may roll an additional d20.",
-            "category": "General",
-            "page_reference": "Not in this rulebook"
-        },
-        "Jurisprudence": {
-            "description": "The JAG Officer is extremely well-versed in the theory and philosophy of law, and may re-roll one d20 on a Task that uses the character’s Reason and their Law Focus.",
-            "category": "General",
-            "page_reference": "Not in this rulebook"
-        },
-        "Proficiency: Courtroom Arguments": {
-            "description": "When engaged in courtroom Tasks such as making a legal argument or cross-examining a witness the JAG officer may add one bonus d20.",
-            "category": "General",
-            "page_reference": "Not in this rulebook"
-        },
-        "Threatening 1": {
-            "description": "The character is powerful and dangerous, with a vitality and drive that allows them to triumph where others might fail. The character begins each scene with 1 Threat, that may only be used to benefit themself, and which are not drawn from the general Threat pool.",
-            "category": "General",
-            "page_reference": "Not in this rulebook"
-        },
-        "Threatening 2": {
-            "description": "The character is powerful and dangerous, with a vitality and drive that allows them to triumph where others might fail. The character begins each scene with 2 Threat, that may only be used to benefit themself, and which are not drawn from the general Threat pool.",
-            "category": "General",
-            "page_reference": "Not in this rulebook"
-        },
-        "Threatening 3": {
-            "description": "The character is powerful and dangerous, with a vitality and drive that allows them to triumph where others might fail. The character begins each scene with 3 Threat, that may only be used to benefit themself, and which are not drawn from the general Threat pool.",
-            "category": "General",
-            "page_reference": "Not in this rulebook"
-        },
-        "Fast Recovery 2": {
-            "description": "The character recovers from stress and injury quickly. At the start of each of their Turns, the character regains 2 Stress, up to their normal maximum. If the character is Injured at the start of their turn, they may instead spend two Threat to remove that Injury.",
-            "category": "General",
-            "page_reference": "Not in this rulebook"
-        },
-        "Slippery": {
-            "description": "The Smuggler is used to playing upon their essentially harmless nature to wriggle out of trouble. The Smuggler reduces all Difficulties when trying to convince authorities to let them go using Presence by 1 (to a minimum of 0).",
-            "category": "General",
-            "page_reference": "Not in this rulebook"
-        },
-        "Proficiency: Concealing Contraband": {
-            "description": "When engaged in Tasks associated with hiding contraband or evading scans the smuggler may add one bonus d20.",
-            "category": "General",
-            "page_reference": "Not in this rulebook"
-        },
-        "One with the Ship": {
-            "description": "Whenever the Smuggler attempts a Task to pilot their ship, they may reduce the Difficulty by one, to a minimum of zero.",
-            "category": "General",
-            "page_reference": "Not in this rulebook"
-        },
-        "Considered Every Outcome": {
-            "description": "The character is a keenly analytical commander, regarding every situation from myriad different angles and considering the advice of her senior staff before coming to a command decision. When they succeed at a Reason + Command Task, the character scores one additional Momentum than normal.",
-            "category": "General",
-            "page_reference": "Not in this rulebook"
-        },
-        "Tough 1": {
-            "description": "This adversary’s Resistance against melee attacks is increased by 1.",
-            "category": "General",
-            "page_reference": "Not in this rulebook"
-        },
-        "Threatening (Pakled)": {
-            "description": "When a Pakled adds dice to a pool by spending Threat, they may re-roll a single d20.",
-            "category": "Species:Pakled",
-            "page_reference": "Not in this rulebook"
-        },
-        "Klingon Friends": {
-            "description": "Once per combat encounter, the character may add two Minor Klingon adversaries to the encounter without spending Threat.",
-            "category": "Species:Pakled",
-            "page_reference": "Not in this rulebook"
-        },
-        "Intensive Training (Special Rule)": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "Adaptive Shielding (Special Rule)": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "Assimilation (Special Rule)": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "Exoplating (Special Rule)": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "Threat Protocols (Special Rule)": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "Reclamation (Special Rule)": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "Interlink Node (Special Rule)": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "Contained Form (Special Rule)": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "Healthy Suspicions (Special Rule)": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "Loyal (Special Rule)": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "Interview Technique (Special Rule)": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "Background Research (Special Rule)": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "Absolute Candor (Special Rule)": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "Choose to Live (Special Rule)": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "Qalankhkai (Special Rule)": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "Crystalline Telepathy (Special Rule)": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "Radiation Burst (Special Rule)": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "Vulnerability to Cold (Special Rule)": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "Coerced Action (Special Rule)": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "Concealed (Special Rule)": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "Contingency (Special Rule)": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "No Idle Threat (Special Rule)": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "Specialty Goods (Special Rule)": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "Trade (Special Rule)": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "Significant Relics (Special Rule)": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "Dubious Provenance (Special Rule)": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "Font of Knowledge (Special Rule)": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "Quick, Efficient, and Deadly (Special Rule)": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "Illicit Goods (Special Rule)": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "The Shroud (Special Rule)": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "Victory is Life (Special Rule)": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "Overseer (Special Rule)": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "In the Name of the Founders (Special Rule)": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "Manipulative (Special Rule)": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "A Contract is a Contract is a Contract... (Special Rule)": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "...But only Between Ferengi (Special Rule)": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "Hunter's Skill (Hirogen Talent)": {
-            "description": "",
-            "category": "Species:Hirogen",
-            "page_reference": "Not in this rulebook"
-        },
-        "Tools of the Hunt (Hirogen Talent)": {
-            "description": "",
-            "category": "Species:Hirogen",
-            "page_reference": "Not in this rulebook"
-        },
-        "Ambush Hunter": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "Camouflaged X": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "Coordination": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "Corrosive Spit": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "Energy Based": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "Entangling Vines": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "Fast Recovery": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "Flight": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "Formless": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "Immune to Cold": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "Immune to Disease": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "Immune to Fear": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "Immune to Heat": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "Immune to Pain": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "Immune to Poison": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "Immune to Vacuum": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "Incorporeal": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "Instinctive Dodge": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "Initiative X": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "Machine": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "Menacing X": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "Massive": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "Mimicry": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "Multi-Limbed": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "Multidimensional": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "Natural Climber": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "Natural Protection X": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "Night Vision": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "Pheromones (Creature)": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "Ram": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "Resilient": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "Sense Spectrum": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "Spiked Tail": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "Spore Attack": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "Stealthy": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "Sturdy (Special Rule)": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "Threat Gesture": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "Tool User": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "Toxic, Poisonous or Venomous": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "Stink Attack": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "Wall Climber": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "Attach": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "Durable (Special Rule)": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "Martial Artist (Special Rule)": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "Mind-Shielded (Special Rule)": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "Spined (Special Rule)": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "Swarm X": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        },
-        "Tough (Special Rule)": {
-            "description": "",
-            "category": "SpecialRule",
-            "page_reference": "Not in this rulebook"
-        }
+  "career_events": {
+    "BetrayedIdealsForASuperior": {
+      "name": "Betrayed Ideals for a Superior",
+      "d20": 1,
+      "page_reference": "p. 129",
+      "attribute": "+1 Presence",
+      "department": "+1 Command",
+      "focus_suggestions": [
+        "Persuasion",
+        "Inspiration",
+        "Investigation"
+      ],
+      "description": "The character was placed in a situation where they had to choose between a trusted superior and their own ideals, and they chose to follow the superior. Attribute: +1 Presence. Department: +1 Command. Focus suggestions: Persuasion, Inspiration, Investigation."
     },
-    "species": {
-        "Andorian": {
-            "name": "Andorian",
-            "trait": "Andorian",
-            "trait_description": "This trait may reduce the Difficulty of Tasks to resist extreme cold, or Tasks impacted by extremely low temperatures. Their antennae aid in balance and spatial awareness; a lost antenna can be debilitating until it regrows. Andorians also have a high metabolism, meaning, amongst other things, that they tire more quickly than Humans; this also makes them more vulnerable to infection from certain types of injury. Before the Federation, Andorians and Vulcans had numerous disputes; though these issues are largely considered to be ancient history, Andorians and Vulcans don’t always get along.",
-            "page_reference": "p. 99"
-        },
-        "Bajoran": {
-            "name": "Bajoran",
-            "trait": "Bajoran",
-            "trait_description": "For obvious reasons, Bajorans tend to be hostile towards Cardassians, and resentful of those who are dismissive of, or turned a blind eye to, the suffering of the Bajoran people. While not all Bajorans are spiritual or religious to the same degree, most have a cultural understanding of the Prophets’ place in Bajoran society.",
-            "page_reference": "p. 102"
-        },
-        "Betazoid": {
-            "name": "Betazoid",
-            "trait": "Betazoid",
-            "trait_description": "All Betazoids are telepathic to varying degrees, and even when not actively using their abilities, they are highly perceptive of others around them, but also highly sensitive to telepathic disturbances and mental assaults. They have little familiarity with lies and deception, due to their open culture and ability to read the thoughts and emotions of others. As they are sensitive to the minds of other living beings, they tend not to be comfortable around animals, for fear of losing themselves in the minds of wild creatures.",
-            "page_reference": "p. 103"
-        },
-        "Denobulan": {
-            "name": "Denobulan",
-            "trait": "Denobulan",
-            "trait_description": "Denobulans have a robust immune system, but a vulnerability to various forms of radiation poisoning. They are naturally adept climbers, scuttling up sheer walls like some forms of terrestrial lizard. Denobulans do not need to sleep, but must hibernate for several days each year, becoming disoriented if kept awake during this period.",
-            "page_reference": "p. 105"
-        },
-        "Human": {
-            "name": "Human",
-            "trait": "Human",
-            "trait_description": "Humans are adaptable and resilient, and their resolve and ambition often allow them to resist great hardship and triumph despite great adversity. However, Humans can also be reckless and stubborn, irrational, and unpredictable.",
-            "page_reference": "p. 99"
-        },
-        "Tellarite": {
-            "name": "Tellarite",
-            "trait": "Tellarite",
-            "trait_description": "Tellarites have a keen sense of smell and a high tolerance for many common drugs, toxins, and inebriants (Tellarites don’t get drunk, just feisty). They also have excellent eyesight, and more acute perception of distance, depth, and dimension than Humans.",
-            "page_reference": "p. 111"
-        },
-        "Trill": {
-            "name": "Trill",
-            "trait": "Trill",
-            "trait_description": "Trill are especially resilient to parasites, as a quirk of their potential to be Joined; Joined Trill are entirely immune to parasitic infection. However, they tend to have strong allergic reactions to insect bites and other forms of venom, which can disrupt their neurochemistry, particularly if they’re Joined. As many of the specifics of Trill physiology — especially with regards to symbiosis — are not widely known, this can result in medical complications.",
-            "page_reference": "p. 112"
-        },
-        "Vulcan": {
-            "name": "Vulcan",
-            "trait": "Vulcan",
-            "trait_description": "Due to the harsh, arid, high-gravity world they come from, Vulcans are naturally resistant to extreme heat and dehydration; they are also extremely strong, with keen auditory and olfactory senses. They are also telepathic, though this takes training to properly manifest, and they learn mental discipline and emotional control from childhood. However, this control takes regular meditation to maintain, and their controlled nature and desire for privacy can distance them from others, and make interactions awkward.",
-            "page_reference": "p. 99"
-        },
-        "KlingonExt": {
-            "name": "Klingon",
-            "trait": "Klingon",
-            "trait_description": "Klingon physiology is hardy, with many redundant internal organs allowing them to withstand harm and a number of poisons, which would be deadly for many other species. They are significantly stronger and more resilient than Humans, though they have less tolerance for the cold.",
-            "page_reference": "p. 108"
-        },
-        "RomulanExt": {
-            "name": "Romulan",
-            "trait": "Romulan",
-            "trait_description": "Romulan physiology is not meaningfully different to that of Vulcans, though a portion of the Romulan species exhibits a v-shaped forehead ridge not evident in Vulcans. The largest difference is that Romulans lack the intense mental discipline common to Vulcans. Psychologically and culturally, Romulans prize cunning and strength of will, and are distrustful of other species: this opinion is reciprocated, as Romulans have a reputation for manipulation, deception, and betrayal.",
-            "page_reference": "p. 110"
-        },
-        "Borg": {
-            "name": "Borg",
-            "trait": "Borg",
-            "trait_description": "Borg are extremely strong and resilient, owing to their technologically-enhanced physiology. They lack self-determination and intuition, relying on directives and protocols from the Collective, and the gestalt consciousness of countless other Borg drones.",
-            "page_reference": "p. 114"
-        },
-        "FerengiExt": {
-            "name": "Ferengi",
-            "trait": "Ferengi",
-            "trait_description": "Ferengi physiology does not lend itself to physical activity, nor does their culture value such hardship, though they have a high resistance to many common diseases. Ferengi have exceptionally keen hearing, and highly-sensitive ears, though this also means that intense sounds (and physical force applied to the ears) can inflict debilitating pain. Their unusual brain structure means that telepaths cannot read Ferengi minds. Culturally, Ferengi are acquisitive, regarding the accumulation of wealth as the highest virtue, and while this has given them a reputation as cunning negotiators, they are also often seen as duplicitous and manipulative as well.",
-            "page_reference": "p. 106"
-        },
-        "CardassianExt": {
-            "name": "Cardassian",
-            "trait": "Cardassian",
-            "trait_description": "Cardassians possess extraordinary mental discipline, and commonly have photographic memories, the result of intense training during childhood. They are intolerant of cold environments, but quite comfortable at higher temperatures. Cardassian hearing is slightly less acute than that of Humans, and they are uncomfortable in bright light. Cardassians have a negative reputation amongst many Alpha Quadrant cultures, particularly Bajorans, whose homeworld they occupied for decades.",
-            "page_reference": "p. 102"
-        },
-        "JemHadar": {
-            "name": "Jem'Hadar",
-            "trait": "Jem'Hadar",
-            "trait_description": "Individual Jem’Hadar are physically powerful, and far stronger and more resilient than Humans. They also have exceptionally keen eyesight, and act utterly without fear or hesitation in battle. They do not regard death with any apprehension, and are extremely aggressive, limited only by their absolute obedience to the Founders and the Vorta.",
-            "page_reference": "Not in this rulebook"
-        },
-        "Vorta": {
-            "name": "Vorta",
-            "trait": "Vorta",
-            "trait_description": "Vorta have extremely keen hearing, but relatively poor eyesight. They are immune to most forms of poison. Vorta are absolutely loyal to the Dominion, revering the Founders as living gods. Those who encounter the Vorta often regard them as insincere or manipulative.",
-            "page_reference": "Not in this rulebook"
-        },
-        "Ardanan": {
-            "name": "Ardanan",
-            "trait": "Ardanan",
-            "trait_description": "Ardana natives from either caste are hardy individuals, whose duality of art and culture, and resource mining and management, make them excellent all-rounders. Without the exposure to zenite gas many Troglytes reach a level of academic and artistic ability on par with the city-dwellers, making the Ardanans both a people of stout endurance and cultural excellence.",
-            "page_reference": "Not in this rulebook"
-        },
-        "Benzite": {
-            "name": "Benzite",
-            "trait": "Benzite",
-            "trait_description": "A Benzite’s average body temperature is several degrees lower than an average, warm blooded humanoid, though the Benzite themselves are not cold blooded. Their blood being mercury and platinum based. Benzites also have 2 apposable thumbs on each hand, aiding their dexterity.",
-            "page_reference": "Not in this rulebook"
-        },
-        "Bolian": {
-            "name": "Bolian",
-            "trait": "Bolian",
-            "trait_description": "Bolians are able, thanks to their cartilaginous tongues, to consume substances unsafe to other species, such as acids or decaying meat. Bolian hearts are on the right side of their body, moving blue blood around their circulatory system. Bolians are an understanding, hospitable species, often forward-facing in their duties in customer relations or diplomatic service.",
-            "page_reference": "Not in this rulebook"
-        },
-        "Deltan": {
-            "name": "Deltan",
-            "trait": "Deltan",
-            "trait_description": "Deltans are considered to be beautiful individuals, with powerful empathic abilities and heightened sensuality. The pheromones they excrete are a natural aphrodisiac in most species throughout the Federation, and while serving aboard Starfleet they must be very careful with their natural physiology, using chemical suppressants to cancel the effect.",
-            "page_reference": "Not in this rulebook"
-        },
-        "Efrosian": {
-            "name": "Efrosian",
-            "trait": "Efrosian",
-            "trait_description": "As the natives to a planet of harsh freezing storms, Efrosians have natural resilience and survival instincts. They have two stomachs to break down any tough foodstuffs and protect from infection, while their naturally poor eyesight is made up for by their enhanced senses of smell and taste. Interestingly, even though they have poor vision compared to other humanoids, they can perceive a greater portion of the light spectrum than most.",
-            "page_reference": "Not in this rulebook"
-        },
-        "Klingon": {
-            "name": "Klingon",
-            "trait": "Klingon",
-            "trait_description": "There is a great redundancy in Klingon organs, with two livers, multiple stomachs, three lungs, and an eight-chambered heart. Their skeletal structure also has several redundancies that mitigate injuries that would prove fatal to other humanoids.",
-            "page_reference": "p. 108"
-        },
-        "Chelon": {
-            "name": "Rigellian Chelon",
-            "trait": "Rigellian Chelon",
-            "trait_description": "The Chelon species retains a lot of characteristics from its ancestral species, a type of saber-toothed turtle. They have beaks, and a strong (if clumsy) bite; some have trained to use this in closequarters combat. During times of stress or physical combat they also emit a deadly toxin through their skin. This can be used with their claws so that the toxin reaches an opponent’s blood. They are skilled swimmers and prefer a warm, humid climate. They are also resistant to ultraviolet radiation and, to a lesser extent, other radioactivity. This is probably due to the shells that extend over much their bodies.",
-            "page_reference": "Not in this rulebook"
-        },
-        "Jelna": {
-            "name": "Rigellian Jelna",
-            "trait": "Rigellian Jelna",
-            "trait_description": "The Jelna on Rigel V evolved along similar lines to most humanoids, aside from their four sexes. Endosexes are comparable to other humanoids, while exosexes possess a more robust physique and aggressive tendancies. Endosexes have exclusively gray skin and red eyes and are more suited to nurture and care; exosexes have a pale brown complexion.",
-            "page_reference": "Not in this rulebook"
-        },
-        "Risian": {
-            "name": "Risian",
-            "trait": "Risian",
-            "trait_description": "Risians appear much like Humans, save a decorative gold emblem in the center of the forehead. They have open and adventurous personalities but also have a great patience with others.",
-            "page_reference": "Not in this rulebook"
-        },
-        "XindiArboreal": {
-            "name": "Xindi-Arboreal",
-            "trait": "Xindi-Arboreal",
-            "trait_description": "Covered in hair, and with distinctive ridges on their nose and cheekbones, the Arboreals are evolved from creatures similar to that of the Earth sloth. They possess sharp claws and have slightly longer arms than the average humanoid. With a naturally calm, rational mind, they do not panic or stress easily though they do fear large bodies of water. Their dark eyes allow them to see easier in low light conditions compared to other humanoids.",
-            "page_reference": "Not in this rulebook"
-        },
-        "XindiPrimate": {
-            "name": "Xindi-Primate",
-            "trait": "Xindi-Primate",
-            "trait_description": "With a similar physiology to humans, Primates share their characteristic internal organ structure and metabolism, as well as their sensory perceptions. Their facial structure is markedly different, however, with pronounced foreheads and ridged cheekbones like other Xindus species. Amongst other Xindi, Primates have a reputation for fairness and honesty. Many people beyond Xindus have come to regard Xindi-Primates as trustworthy and decent.",
-            "page_reference": "Not in this rulebook"
-        },
-        "XindiReptilian": {
-            "name": "Xindi-Reptilian",
-            "trait": "Xindi-Reptilian",
-            "trait_description": "These are cold blooded individuals who prefer hotter climates. Scales, ridges and spikes cover their body and they have vertical slit eyes, for adapting to low light conditions and judging depth. A carnivorous, protein-heavy diet gives them muscular tone and definition that enhances their strength and endurance. They have a reputation amongst other Xindi for being aggressive, impatient, stubborn, and untrustworthy.",
-            "page_reference": "Not in this rulebook"
-        },
-        "XindiInsectoid": {
-            "name": "Xindi-Insectoid",
-            "trait": "Xindi-Insectoid",
-            "trait_description": "Reproduction is asexual with a single adult laying a clutch of eggs. Life expectancy is very short compared to other species with 12 years as the average. Their insectoid bodies grant them enhanced abilities, such as crawling and climbing, while their cheek ridges distinguish them as Xindus natives.",
-            "page_reference": "Not in this rulebook"
-        },
-        "Zakdorn": {
-            "name": "Zakdorn",
-            "trait": "Zakdorn",
-            "trait_description": "Zakdorn tend to be of shorter stature than most humanoids and have distinctive wrinkles of fatty tissue over their faces and bodies. This fatty layer enables Zakdorn to survive without food for much longer periods than normal humanoids. Their analytical brains give them an edge in logic and reasoning that rivals even Vulcans.",
-            "page_reference": "Not in this rulebook"
-        },
-        "Changeling": {
-            "name": "Changeling",
-            "trait": "Changeling",
-            "trait_description": "A Changeling is naturally a gelatinous orange-brown fluid, which can adopt the form and structure of any solid object, including other living creatures and diffuse substances like fog. While they cannot become energy, a Changeling’s ability to assume other forms is limited more by skill and experience than by physical capacity: it is theorized that they transfer mass to and from subspace in order to change size and density. Many Changelings find themselves persecuted by “solids” for their shapeshifting ability, and often crave a sense of order and justice in the universe, with a rigid attitude at odds with their fluid forms.",
-            "page_reference": "Not in this rulebook"
-        },
-        "Ferengi": {
-            "name": "Ferengi",
-            "trait": "Ferengi",
-            "trait_description": "Ferengi physiology does not lend itself to physical activity, nor does their culture value such hardship, though they have a resistance to many common diseases. Ferengi have exceptional hearing, and highlysensitive ears, though this also means that intense sounds (and physical force applied to the ears) can inflict debilitating pain. Their unusual brain structure means that telepaths cannot read Ferengi minds. Culturally, Ferengi are acquisitive, regarding the accumulation of wealth as the highest virtue, and while this has given them a reputation as cunning negotiators, they are also often seen as duplicitous and manipulative as well.",
-            "page_reference": "p. 106"
-        },
-        "Android": {
-            "name": "Soong-type Android",
-            "trait": "Soong-type Android",
-            "trait_description": "The physical and mental capabilities of a Soong-type android are superior to that of most organic or cybernetic life-forms, allowing them to ignore or resist effects like hard vacuum, disease, radiation, oxygen deprivation, telepathy, or biochemical imbalance. However, some environmental conditions, such as highly-ionized atmospheres, and electromagnetic fields, can have a severe effect. Further, Soong-type androids do not naturally have the capacity for emotions, requiring additional hardware to process and experience any feelings. The legal personhood of Soong-type androids is somewhat disputed, though a landmark case involving Lieutenant Commander Data establishes their right to self-determination.",
-            "page_reference": "Not in this rulebook"
-        },
-        "Reman": {
-            "name": "Reman",
-            "trait": "Reman",
-            "trait_description": "Remans are tall, powerfully built beings, stronger and more durable even than Romulans. Their nocturnal nature means that they cannot easily tolerate bright light. A proportion of Remans have telepathic abilities, allowing them to read the minds of others and to project their thoughts to others, though using these powers effectively takes skill and training.",
-            "page_reference": "Not in this rulebook"
-        },
-        "Orion": {
-            "name": "Orion",
-            "trait": "Orion",
-            "trait_description": "Orions thrive in Class-M environments and are well suited to long voyages through space. The Orions are a dimorphic species where the females secrete special pheromones that can stimulate the adrenal systems of other species and make them become fascinated with them, which the Orion women have used to maintain control over not only Orion males but to manipulate other species. The pheromones produced by Orion males can generally make them seem attractive to other humanoids, but not to the same degree as that produced by Orion females.",
-            "page_reference": "p. 109"
-        },
-        "GornExt": {
-            "name": "Gorn",
-            "trait": "Gorn",
-            "trait_description": "Gorn are large and powerfully-built, even more so than other famously-mighty species such as the Klingons or Nausicaans. They are many times stronger than a human being, and resilient enough to ignore massive blunt force trauma or even short periods in hard vacuum. However, Gorn are not especially agile or fast. Gorn are ectothermic — cold-blooded — with their body temperature varying by external factors, and thus favour warm environments where they can be most active and effective.",
-            "page_reference": "Not in this rulebook"
-        },
-        "Arbazan": {
-            "name": "Arbazan",
-            "trait": "Arbazan",
-            "trait_description": "Arbazan have been Federation members since shortly after its founding and are found throughout Federation space, often serving as ambassadors, attaches, advisors, and negotiators – though there have also been several well-known scientific discoveries and engineering advancements by dedicated Arbazan.",
-            "page_reference": "Not in this rulebook"
-        },
-        "Arkarian": {
-            "name": "Arkarian",
-            "trait": "Arkarian",
-            "trait_description": "Direct and hardworking, Arkarians have a reputation for detail-oriented work practices and high expectations. Due to their historical authoritarian nobility, Arkarians tend to be more socially reserved than many other Federation member species and tend to be inwardly uncomfortable in social gatherings where ‘mingling’ and ‘small talk’ are expected. In addition, Arkarians are accustomed to slightly warmer climates than other humanoids and can endure higher temperatures than many other species without difficulty.",
-            "page_reference": "Not in this rulebook"
-        },
-        "Aurelian": {
-            "name": "Aurelian",
-            "trait": "Aurelian",
-            "trait_description": "Aurelians are capable of flight, thanks to large and muscular wings. This allows them to quickly traverse distances and avoid obstacles on the ground. They also possess keen sight and a natural directional sense based on the magnetic poles of planetary bodies. Nearly all Aurelians suffer from claustrophobia, though the severity of the affliction differs from individual to individual.",
-            "page_reference": "Not in this rulebook"
-        },
-        "Caitian": {
-            "name": "Caitian",
-            "trait": "Caitian",
-            "trait_description": "Caitians are all slightly smaller in both height and weight than average humanoids – with most reaching between 1.5-1.7 meters. They have retained the retractable claws of their evolutionary ancestors along with a flexible tail. Caitians are carnivorous and prefer uncooked meat. While they evolved from predatory felines, the Caitians are regarded as some of the greatest poets and philosophers within the Federation.",
-            "page_reference": "Not in this rulebook"
-        },
-        "Cardassian": {
-            "name": "Cardassian",
-            "trait": "Cardassian",
-            "trait_description": "Cardassians are known for their dedication and discipline – mentally and culturally. With an emphasis on the superiority of the State, Cardassians are a xenophobic species, considering themselves superior to nearly all others. Many dislike them, viewing them as arrogant, intolerant, and cruel. Physically, Cardassians are similar to most species, save for slightly reduced hearing and a biological preference for hotter climates.",
-            "page_reference": "p. 102"
-        },
-        "Edosian": {
-            "name": "Edosian",
-            "trait": "Edosian",
-            "trait_description": "With three legs, Endosians are somewhat slower than most humanoids, but far more stable. With three multidextrous arms, they are able to operate multiple stations or controls at the same time. They are long-lived and capable of deep thought – which others often mistake as antisocial behavior. Their long lives grant them a perspective most others lack and they are often able to recall details and facts from disciplines outside their areas of focus due to decades of exposure and broad study.",
-            "page_reference": "Not in this rulebook"
-        },
-        "FerengiAlpha": {
-            "name": "Ferengi",
-            "trait": "Ferengi",
-            "trait_description": "Ferengi possess acute hearing far beyond  that of other humanoid races and are able to hear both higher and lower frequencies. However, this means that they experience severe pain at intense sound and any physical trauma to their enlarged ears. They also possess hardy immune systems, rendering them immune to many common diseases, but their small stature makes them ill-suited for intense or prolonged physical exertion and many consider them weak. Ferengi try to avoid hard labor and direct confrontation, leading to a reputation for cowardice. The structure of Ferengi brains renders them immune to telepathy.",
-            "page_reference": "p. 106"
-        },
-        "Grazerite": {
-            "name": "Grazerite",
-            "trait": "Grazerite",
-            "trait_description": "Grazerites possess powerful jaws and durable teeth – allowing them to chew through a surprising number of hardened substances. They cannot, however, digest inorganic materials, despite being able to chew through them, and as evolutionary vegetarians, have a difficult time digesting meats. Their brows are adorned with a pair of durable horns, which slope back in the vast majority. Further, Grazerite fingers evolved from hooves and their fingernails remain extremely dense, and are capable of supporting their full weight – making them excellent climbers.",
-            "page_reference": "Not in this rulebook"
-        },
-        "Haliian": {
-            "name": "Haliian",
-            "trait": "Haliian",
-            "trait_description": "Physically, Haliians are similar to other humanoid species within the Federation; however, the natives of Halii possess distinctive bulges along the bridge of their noses and just above their brows. Haliians tend to have close family bonds and numerous festivals and holidays. Much like other telepathic species, Haliians struggle with the use of deception, and will often misinterpret it during social encounters.",
-            "page_reference": "Not in this rulebook"
-        },
-        "Ktarian": {
-            "name": "Ktarian",
-            "trait": "Ktarian",
-            "trait_description": "Ktarians are a hard people, determined and relentless in pursuit of their goals. The intertwining of the two native species has led to the Ktarians possessing the best traits of both. They are physically fit and quick witted – adapting and responding to adversity with ease. They rarely engage in negotiations unless they feel they have the upper hand.",
-            "page_reference": "Not in this rulebook"
-        },
-        "Zaranite": {
-            "name": "Zaranite",
-            "trait": "Zaranite",
-            "trait_description": "Zaranites are hardy and immune to toxic gases, complications due to bright lighting, and can survive the extremes conditions of the vacuum of space, so long as their respirator tanks last. In general, Zaranites are pleasant if not somewhat reserved. In addition to their service in Starfleet, Zaranites also serve in various positions within the scientific community and diplomatic corps.",
-            "page_reference": "Not in this rulebook"
-        },
-        "Argrathi": {
-            "name": "Argrathi",
-            "trait": "Argrathi",
-            "trait_description": "The Argrathi are blunt and direct, with an emphasis on seeing that punishments are carried out quickly and that the Argrathi legal system knows best. Although some might claim that mistakes are made, the Argrathi’s desire to promote peace and justice has led to them being seen as one of the more reasonable races in the Gamma Quadrant. The Argrathi hope that one day all other cultures, including the Dominion, will acknowledge the superiority of their legal system. Until that day, they will follow the rules as best they can and work to insure law and order across the quadrant. ",
-            "page_reference": "Not in this rulebook"
-        },
-        "ChangelingGamma": {
-            "name": "Changeling",
-            "trait": "Changeling",
-            "trait_description": "A Changeling is naturally a gelatinous orange-brown fluid, which can adopt the form and structure of any solid object, including other living creatures and diffuse substances like fog. While they cannot become energy, a Changeling’s ability to assume other forms is limited more by skill and experience than by physical capacity: it is theorized that they transfer mass to and from subspace in order to change size and density. Many Changelings find themselves persecuted by “solids” for their shapeshifting ability, and often crave a sense of order and justice in the universe, with a rigid attitude at odds with their fluid forms. ",
-            "page_reference": "Not in this rulebook"
-        },
-        "Dosi": {
-            "name": "Dosi",
-            "trait": "Dosi",
-            "trait_description": "The Dosi are a conundrum to outsiders, but their culture has lasted over a thousand years. Each Dosi paints their skin in brilliant swirling patterns of stripes and dots to denote battles they have won or great accomplishments they have achieved. The Dosi do not do things subtly, and when they walk into a room they wish to make sure that everyone has noticed that they have arrived. They consider everything to be a test of their skill, and when it comes to trade negotiations they approach each business deal with the same meticulous planning one might focus towards winning a war. ",
-            "page_reference": "Not in this rulebook"
-        },
-        "Drai": {
-            "name": "Drai",
-            "trait": "Drai",
-            "trait_description": "The Drai care only for the Hunt and each one will wear the finest hunting gear that they can buy. Even their day to day clothing is focused more towards being fit for survival, with hidden pouches and miniaturized survival equipment being commonly found on Drai at all times. While they are on the Hunt they will often not change clothes and will spend every waking hour pursuing their prey. When they are not hunting, the Drai dedicate themselves towards maintaining peak physical fitness and train to keep their eyes and reflexes sharp. ",
-            "page_reference": "Not in this rulebook"
-        },
-        "Karemma": {
-            "name": "Karemma",
-            "trait": "Karemma",
-            "trait_description": "The Karemmas’ tall appearance and bird-like nature causes them to stand out in a crowd, but most Karemma would prefer to be seen rather than ignored. From an early age they are taught the delicate art of appraising what they see around them, and the Karemma are able to tell an object’s true worth in a few moments of inspection. This often leads them to inadvertently offend their hosts when a Karemma, who is truly curious about the worth of objects around them, moves about the bridge of the ship and declaring how much each individual’s possessions are worth. ",
-            "page_reference": "Not in this rulebook"
-        },
-        "Lurian": {
-            "name": "Lurian",
-            "trait": "Lurian",
-            "trait_description": "Lurians are a passionate people, and never do anything by half measure. Whether it is by devoting themselves to the arts or by trying to become the greatest pilots in the quadrant, the Lurians live with their emotions on their sleeves despite their normally impassive facial features. Lurians are always great thinkers and dreamers, and even though they may appear quiet their minds are often on important matters and on formulating plans for their futures. The Dominion War is of great interest on the Lurians’ homeworld, where their people swing from obsession with how the war will play out for their people to mild annoyance that the war is all that off worlders will talk about. ",
-            "page_reference": "Not in this rulebook"
-        },
-        "Paradan": {
-            "name": "Paradan",
-            "trait": "Paradan",
-            "trait_description": "Paradans rely upon their olfactory glands to help determine the mood of whomever they are speaking with, and they possess potent scent glands around their bodies that release potent odors. The Paradans are also physically imposing, and are able to survive comfortably in hot environments. ",
-            "page_reference": "Not in this rulebook"
-        },
-        "Rakhari": {
-            "name": "Rakhari",
-            "trait": "Rakhari",
-            "trait_description": "The Rakhari live under a strict set of laws known as the Canon. These laws were put in place over a century ago to insure strict obedience to the state but in recent years the control of the Rakhari government has lessened, allowing many Rakhari to begin to think for themselves. Though some still carry themselves in a rough and cautious manner, a growing portion of the population is starting to dream of a different kind of life and demonstrations are becoming more common as these firebrands seek to exact change upon their society. The Rakhari are primarily driven by their families, and whether it is their biological families or adopted ones they will do anything to insure the safety and survival of the group. ",
-            "page_reference": "Not in this rulebook"
-        },
-        "Skreeaa": {
-            "name": "Skreeaa",
-            "trait": "Skreeaa",
-            "trait_description": "A Skreeaan’s skin sheds routinely, causing them to leave behind skin flakes. Skreeaan females are also generally taller than males and it is not uncommon for a Skreeaan woman to have multiple husbands. Their language uses a unique syntax that takes time for some universal translators to develop a translation matrix.",
-            "page_reference": "Not in this rulebook"
-        },
-        "SonA": {
-            "name": "Son’a",
-            "trait": "Son’a",
-            "trait_description": "The Son’a were once similar to humans in appearance but centuries of exile from their homeworld has led them to experiment upon themselves to stay alive. Most Son’a must spend several hours each day undergoing beautification treatments and extensive genetic modifications in order to stay alive. Most Son’a can be described as possessing a stretched appearance to their faces, while others develop painful lesions along their body. Son’a children, who are almost never permitted to leave their homeworld, are similar in appearance to the Ba’ku but possess pale skin.",
-            "page_reference": "Not in this rulebook"
-        },
-        "Tosk": {
-            "name": "Tosk",
-            "trait": "Tosk",
-            "trait_description": "The Tosk are almost completely identical as their genome is often replicated from the same source material. Although some might differ due to the preferences of a Hunter’s requests, each Tosk is strong, resourceful, and cunning. When a Tosk enters a room they instinctively size up the many ways to escape as well as anything that could help them in a fight. Though the Tosk are often peaceful and do not wish to inflict harm on others, they have inborn feral instincts that allow them to fight ferociously when the need calls for it. A Tosk is often issued a simple suit that helps their memetic abilities as well as providing storage compartments for the protein mixes they are issued as a food supply. If a Tosk holds still, they can initiate their Shroud in the same manner as a Jem’Hadar soldier. ",
-            "page_reference": "Not in this rulebook"
-        },
-        "Wadi": {
-            "name": "Wadi",
-            "trait": "Wadi",
-            "trait_description": "The Wadi are mysterious, but at the same time very outgoing as a species. Prone to wearing bright colors and brilliant tattoos on their bodies, they attract attention but are experts at deflecting any real scrutiny. The Wadi are also competitive and when they feel they have been cheated, they must avenge their honor not only by crushing their opponents at whatever game or task they are at but they must teach them a lesson. Their obsession with the game of Allamaraine is used to teach both the innocent and the guilty of what it is like to cross a Wadi. ",
-            "page_reference": "Not in this rulebook"
-        },
-        "Ankari": {
-            "name": "Ankari",
-            "trait": "Ankari",
-            "trait_description": "Ankari are reptilian humanoids and possess many of the biological attributes common to those species. Their skin is coarse and thick, with light to dark brown coloring. Like most reptilian species, the Ankari do not possess body hair – though they do have soft spines that run along the back of their skulls. These, along with their brows, provide the Ankari with the ability to detect faint vibrations and act as a form of sixth sense. Their native, harmonic language likely developed due to this additional sense.",
-            "page_reference": "Not in this rulebook"
-        },
-        "Jye": {
-            "name": "Jye",
-            "trait": "Jye",
-            "trait_description": "The Jye have developed a reputation for effective administration and coordination of large projects and organizations. Most are trained in this area of expertise professionally, and while Jye are capable of physical feats similar to those of Humans, they are not known for their physical attributes. Jye originate from a frigid Class-M planet at the very far edge of its star’s habitable zone. It is a world of dim solar light and cold, relentless winters, and the Jye have evolved with a resistance to the cold. Conversely, the Jye struggle more than other humanoids in hot temperatures",
-            "page_reference": "Not in this rulebook"
-        },
-        "LiberatedBorg": {
-            "name": "Liberated Borg",
-            "trait": "Liberated Borg",
-            "trait_description": "As they come from many different species, Liberated Borg have little physically in common with each other, save for the remnants of their former lives. Each still retains at least some of the cybernetic implants so common to Borg drones, as not all the implants can be safely removed. The characteristics of their original species slowly begin to reassert their influence the longer the drone remains free of the collective. Borg are highly resistant to natural diseases and other ailments, but suffer a slight weakness to direct electrical shocks and exotic radiation. Those who still possess a significant number of Borg implants can even survive hard vacuum and other harsh environments, though they may still be susceptible to influence from the collective, and failing implants can be hazardous to a Liberated Borg’s health. In addition, while Liberated Borg do not sleep conventionally, they require routine access to a Borg regeneration alcove.",
-            "page_reference": "Not in this rulebook"
-        },
-        "Lokirrim": {
-            "name": "Lokirrim",
-            "trait": "Lokirrim",
-            "trait_description": "Lokirrim are strikingly similar to Humans, save for the signature “v” shape ridge that runs from the bridge of their nose up toward their hairline. Their world is a temperate one, with mild seasons and fair weather. Unfortunately, it is also lacking in natural resources – which forced the Lokirrim to mine deep into the planet’s crust and eventually reach out into their solar system. While they may have used holograms to perform most manual labor, the Lokirrim retained their physical stature and endurance. Most Lokirrim have a deep distrust or outright aggressive response to holograms.",
-            "page_reference": "Not in this rulebook"
-        },
-        "Mari": {
-            "name": "Mari",
-            "trait": "Mari",
-            "trait_description": "Mari are a gentle, telepathic species, who uphold a state of mental pacifism through the use of memory purging – not dissimilar to Vulcan mental conditioning. Physically they are nearly indistinguishable from Humans and possess similar physical characteristics. Their technological level is a century or more behind the Federation, though their medical techniques, especially those relating to the adjustment of thought patterns, is significantly advanced. The Mari homeworld is pleasantly temperate and, given their warm nature, could easily be a vacation spot in the quadrant – were it not for their justice system. While rare, it is not unheard of to encounter Mari off-world, though this is usually as a passenger on another species’ ship.",
-            "page_reference": "Not in this rulebook"
-        },
-        "Monean": {
-            "name": "Monean",
-            "trait": "Monean",
-            "trait_description": "As their new world suggests, the Moneans likely evolved from an amphibioid-mammalian or other similar aquatic species. This theory is supported by their physical appearance. Monean skin coloration and markings all reflect an aquatic origin. As such, Moneans are capable swimmers and can hold their breath for an extended period. Despite this, however, Moneans require an atmosphere similar to Humans and are an air-breathing species.",
-            "page_reference": "Not in this rulebook"
-        },
-        "Ocampa": {
-            "name": "Ocampa",
-            "trait": "Ocampa",
-            "trait_description": "Ocampa are an interesting and unique humanoid species. Their development is more closely akin to that of insects than to Humans. Long-time support, provided by the enigmatic Caretaker, has left the species in somewhat of a socially stunted state, and their society has since become entirely dependent upon the services the Caretaker provided. When separated from this welfare state, Ocampa are curious and studious learners – voraciously devouring information with incredible speed.Further still, they are capable of truly astounding psychic feats.",
-            "page_reference": "Not in this rulebook"
-        },
-        "Pendari": {
-            "name": "Pendari",
-            "trait": "Pendari",
-            "trait_description": "By their outward appearance, Pendari look to be a species of near-Humans – with hair and skin tones similar to those of Humans and other similar humanoids. They do possess strong bone and cartilage growth along the bridge of the nose and on their brows up to their hair line. The likeness, however, ends there. Physiologically, Pendari are significantly more robust, and possess redundant pulmonary and neurological systems that allow them to withstand tremendous physical punishment. This, combined with a nearly genetic predisposition to aggressive behavior, makes them natural born warriors.",
-            "page_reference": "Not in this rulebook"
-        },
-        "Sikarian": {
-            "name": "Sikarian",
-            "trait": "Sikarian",
-            "trait_description": "Physically, Sikarians are very similar to Humans and other near-Human species. They are of similar height and mass, with a similar range of skin tones and hair colors. Their utopian existence has nearly eliminated all forms of hard labor, and the Sikarians, by and large, enjoy lives of leisure. This can be seen in both their slight frames and their style of dress. Sikarians prefer loose, flowing robes and delicate wireframe headwear.",
-            "page_reference": "Not in this rulebook"
-        },
-        "Talaxian": {
-            "name": "Talaxian",
-            "trait": "Talaxian",
-            "trait_description": "While humanoid in most respects, Talaxians do have several interesting biological adaptations. First and foremost, Talaxians are capable of enduring heat well beyond what the average Human can comfortably tolerate and can go much longer without water. Talaxian skulls have much more pronounced ridges where the plates meet. Talaxian hair tends to be thin and wispy, and large portions of their heads are bald to allow for greater cooling. Talaxian sight is a touch less refined than that of a Human, though their senses of taste and smell are much keener.",
-            "page_reference": "Not in this rulebook"
-        },
-        "Turei": {
-            "name": "Turei",
-            "trait": "Turei",
-            "trait_description": "The Turei are an ancient spacefaring species, once under the thrall of the Vaadwaur. The Turei are now the controlling power of the Underspace – a strange extradimensional realm. With their command of the Underspace, the Turei are powerful and feared. The Turei are a resilient species, both mentally and physically. Their skin is extremely thick and much of their body is covered with cartilage-like protrusions. Lacking a proper nose, the Turei instead possess the ability to “smell” the air through glands along their tongue, similar to a snake.",
-            "page_reference": "Not in this rulebook"
-        },
-        "Kobali": {
-            "name": "Kobali",
-            "trait": "Kobali",
-            "trait_description": "The Kobali are humanoids with grayish skin and hairless heads. Their internal physiology is quite different from that of Humans. They also possess unusual tastes in food: for example, meals normally considered tasty by Humans and many humanoids are strongly disliked by Kobali. Similarly, Kobali physiology differs markedly from that of Humans. They have a six-lobed brain and a binary cardiovascular system. The effect of the genetic engineering is not reversable by Starfleet medical technology because there is not enough original DNA present after the alteration to do so.",
-            "page_reference": "Not in this rulebook"
-        },
-        "Zahl": {
-            "name": "Zahl",
-            "trait": "Zahl",
-            "trait_description": "The Zahl are advanced and enjoy the benefits of that technological capability. Having eliminated want throughout their territory, the Zahl are well known for their kind, welcoming nature and generosity. Before their world was climate regulated, the Zahl were no strangers to environmental extremes, and are capable of thriving in both extreme cold and heat. Their bodies are covered in dermal ridges that regulate their body temperature in a manner far superior to most species.",
-            "page_reference": "Not in this rulebook"
-        },
-        "Hologram": {
-            "name": "Hologram",
-            "trait": "Hologram",
-            "trait_description": "Holograms can be programmed to any specification, though the nature of their holomatrix means that they are essentially impervious to direct physical harm – they can allow energy and objects to pass through them at will. However, they are unable to go anywhere that lacks holographic emitters that can project their image and forcefields, and those emitters can be damaged even if the holograms themselves cannot. Holograms also tend not to receive much respect or consideration from flesh-and-blood people, who see them as tools at best or annoyances at worst. Holograms may also have a second species trait, reflecting the species they were designed to emulate.",
-            "page_reference": "Not in this rulebook"
-        },
-        "KlingonQuchHa": {
-            "name": "Klingon (QuchHa’)",
-            "trait": "Klingon (QuchHa’)",
-            "trait_description": "Those Klingons affected by this metagenic plague are frequently discriminated against or regarded as cowardly, shameful, or un-Klingon in nature, a stigma that they frequently strive to disprove, or which frees them to take actions that other Klingons may not regard as proper. Their altered genetics leave them less susceptible to a number of diseases and disorders that affect Klingons but allows them to contract a number of Human diseases that Klingons are normally immune to.",
-            "page_reference": "Not in this rulebook"
-        },
-        "Akaru": {
-            "name": "Akaru",
-            "trait": "Akaru",
-            "trait_description": "The Akaru are a bipedal, mammalian species that resembles Romulans and Vulcans to some extent – possessing copper-based blood and slightly pointed ears – but as a whole have more widely-set eyes, more robust physical frames, and generational instances of digital fusion or vestigial webbing between fingers and toes. Their mindset is something of a blend of Romulan and Vulcan perspectives – Akaru are an enthusiastic and passionate species who embrace efficiency of thought and operation, with a keen focus on the betterment of all, be it the individual, the family, or the entire Akaru culture.",
-            "page_reference": "Not in this rulebook"
-        },
-        "CalMirran": {
-            "name": "Cal-Mirran",
-            "trait": "Cal-Mirran",
-            "trait_description": "Cal-Mirrans are graceful, adaptive, persistent, and highly analytical. They have strong logic skills and excel at long-term problem solving. Because their bodies can shift states, they can tolerate extremes – heat, cold, pressure, vacuum – but are sensitive to vibration and certain types of radiation, which can disrupt the cohesion of their consciousness. Since their physiology is crystalline, physical injuries (separation of body mass) reduce dexterity and speed.",
-            "page_reference": "Not in this rulebook"
-        },
-        "Qofuari": {
-            "name": "Qofuari",
-            "trait": "Qufuari",
-            "trait_description": "Qofuari tend to live in harmony with each other and their environment. They are natural swimmers and nimble climbers. Their mental capacity is huge, allowing them to think through complicated problems in their minds before taking action.",
-            "page_reference": "Not in this rulebook"
-        },
-        "VinShari": {
-            "name": "VinShari",
-            "trait": "VinShari",
-            "trait_description": "Hunted as prey in their early history caused the VinShari to become evolutionary survivors. Psychologically, they learned to thrive and adapt in stressful situations. Physically, the VinShari have bone collars they use for self-defense. They are resistant to most forms of radiation, have a robust immune system, can see into various visual spectrums, and have perfect night vision. Traditional VinShari see the Galaxy through their evolutionary lens and believe they must dominate to survive. Other VinShari, like the Ar-Ka-Se, believe in equal coexistence.",
-            "page_reference": "Not in this rulebook"
-        },
-        "IQosa": {
-            "name": "I’Qosa",
-            "trait": "I’Qosa",
-            "trait_description": "I’Qosa are an aquatic species. They can spend limited amounts of time in dry environments, though they prefer to do so wearing specialized EV suits containing water. The I’Qosa embrace the concept of fluidity in all facets of their identities. They can change their name, gender, and – to some extent – their appearance at will. This ability depends on recent contact with the renewing waters of their homeworld. If an I’Qosa spends an extended period away from the waters of their homeworld, they take on the trait Calcified. This trait locks the character into their current identity and prevents them from flowing into new ones. The trait can be removed if a character returns to the waters of I’Qos in time, but the trait can become permanent if the character spends too long outside the water. The Lo’Kari are a faction of I’Qosa who choose to live permanently calcified on land.",
-            "page_reference": "Not in this rulebook"
-        },
-        "Iotian": {
-            "name": "Iotian",
-            "trait": "Iotian",
-            "trait_description": "Sigma Iotians largely resemble Humans in appearance. They possess keen intellects and a natural proclivity for imitation.",
-            "page_reference": "Not in this rulebook"
-        },
-        "Tholian": {
-            "name": "Tholian",
-            "trait": "Tholian",
-            "trait_description": "Tholians possess crystalline exoskeletons that grant them 2 resistance and allow them to withstand vacuum for extended, though not unlimited, periods of time. Tholian exoskeletons also transmit radiation that can be modulated, or sensed, by other Tholians. This can act as a form of communication, similar to telepathy, though the full extent of this ability varies by individual.",
-            "page_reference": "Not in this rulebook"
-        },
-        "Kelpien": {
-            "name": "Kelpien",
-            "trait": "Kelpien",
-            "trait_description": "The Kelpiens are a bipedal species that are adapted to living on land and in the water. Kelpiens are able to run at considerable speeds for short bursts and can see into the ultraviolet and infrared spectrums of light. Pre-Vahar’ai / Post-Vahar’ai. When created, choose one of these two traits. If Pre-Vahar’ai is chosen, and your character ever experiences the changes that come with Vahar’ai, the trait is replaced by the Post-Vahar’ai trait.",
-            "page_reference": "Not in this rulebook"
-        },
-        "Barzan": {
-            "name": "Barzan",
-            "trait": "Barzan",
-            "trait_description": "The Barzan have long struggled to make do without some of the advantages other species benefit from, but this has turned into one of their greatest strengths. A Barzan takes on each task with their full focus and determination while keeping a keen eye for not only how to accomplish the task but to do so with as few resources as possible. To the Barzan, any resources not spent in this way can be used in the future to help benefit their family or crew. The Barzan also form close bonds with their crewmates, and are willing to sacrifice their own needs if it benefits the group as a whole.",
-            "page_reference": "Not in this rulebook"
-        },
-        "Osnullus": {
-            "name": "Osnullus",
-            "trait": "Osnullus",
-            "trait_description": "The Osnullus exemplify being at peace with themselves as much as they do coexisting with others. They are able to notice changes in the behavior of their friends and crewmates while also being able to exist on their own. The Osnullus prize their independence and there is nothing more abhorrent to them than the subjugation of others against their will. They see working toward the same goal as something that others should strive for, but being coerced into doing so makes them want to rebel against it.",
-            "page_reference": "Not in this rulebook"
-        },
-        "Xahean": {
-            "name": "Xahean",
-            "trait": "Xahean",
-            "trait_description": "The Xaheans are technologically gifted as a species, to the point that they often appear smug in the face of technological advancements by other species. When they encounter a technology unfamiliar to them, they adapt quickly to its uses and seek out ways to construct devices of their own. Their innate ability to manipulate energy fields allows them to activate many different types of machinery in their proximity, and their ability to shroud themselves in a field that obscures their appearance allows them to remain undetected from pursuers.",
-            "page_reference": "Not in this rulebook"
-        },
-        "Saurian": {
-            "name": "Saurian",
-            "trait": "Saurian",
-            "trait_description": "Saurians possess enhanced senses that are often superior to their colleagues. With six nasal canals, they can pick up scents from kilometers away and their sharp fangs and claws make them imposing. As a civilization, they respect strength and decisiveness but prefer to avoid aggression if at all possible. Saurians also possess a high tolerance for alcohol, and Saurian brandy is prized throughout the Alpha and Beta Quadrants.",
-            "page_reference": "Not in this rulebook"
-        },
-        "CyberneticallyEnhanced": {
-            "name": "Cybernetically Enhanced",
-            "trait": "Cybernetically Enhanced",
-            "trait_description": "Though most cyborgs still consider themselves to be members of their original species, there are some who cannot help but face the reality that every day they are alive is thanks to the machinery installed in their bodies. They embrace their reality with stoicism and with determination to prove to others that they are more than just a combination of organic and cybernetic parts but are living beings in their own rights. Some even come to fully embrace the advantages their new components can offer them and use it to leverage an advantage over others.",
-            "page_reference": "Not in this rulebook"
-        },
-        "Baul": {
-            "name": "Ba'ul",
-            "trait": "Ba'ul",
-            "trait_description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Romulan": {
-            "name": "Romulan",
-            "trait": "Romulan",
-            "trait_description": "Romulan physiology is not meaningfully different from that of Vulcans, though a portion of the Romulan species exhibits a V-shaped forehead ridge not evident in Vulcans. The largest differences are that most Romulans lack the intense mental discipline common to Vulcans, and do not develop their psychic abilities. Psychologically and culturally, Romulans prize cunning and strength of will, and are distrustful of other species: this opinion is reciprocated, as Romulans have a reputation for manipulation, deception, and betrayal.",
-            "page_reference": "p. 110"
-        },
-        "Apergosian": {
-            "name": "Apergosian",
-            "trait": "Apergosian",
-            "trait_description": "Apergosians have great peripheral vision due to their rectangular pupils. Because of this trait, Apergosians reduce the Difficulty of opposed tasks that rely on sight by 1.",
-            "page_reference": "Not in this rulebook"
-        },
-        "Cetacean": {
-            "name": "Cetacean",
-            "trait": "Cetacean",
-            "trait_description": "This cetacean species possesses fins and a tail, a smooth skin which reduces friction while swimming, and a layer of blubber which regulates internal temperature in cold liquid environments. Although quick and agile in water, cetaceans are generally lacking in hind legs, requiring adaptive suits to navigate outside of liquid- based environments. Although they typically dwell in water, they require air to breathe and circulate oxygen through their body before expelling it from a nostril-like blowhole located on their back.",
-            "page_reference": "Not in this rulebook"
-        },
-        "Clicket": {
-            "name": "Clicket",
-            "trait": "Clicket",
-            "trait_description": "Clickets live together in colonies on ships which they refer to as nests. Their exoskeleton is resilient and must be shed once a year. The gamemaster may rule that this means a Clicket has Resistance 1, or avoids dangers that would pierce a softer-skinned creature’s flesh.",
-            "page_reference": "Not in this rulebook"
-        },
-        "Exocomp": {
-            "name": "Exocomp",
-            "trait": "Exocomp",
-            "trait_description": "Exocomps are technological life-forms who can crawl across the ground or hover for short periods of time. They are experts at repairing damage. With a built-in micro-replicator, Exocomps are rarely caught without a tool they need. The gamemaster may rule that this means an Exocomp never suffers a penalty for lacking the right tools, or may waive the Opportunity cost of specialized equipment.",
-            "page_reference": "Not in this rulebook"
-        },
-        "Exocomp_2E": {
-            "name": "Exocomp",
-            "trait": "Exocomp",
-            "trait_description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Gorn": {
-            "name": "Gorn",
-            "trait": "Gorn",
-            "trait_description": "Gorn are tall, powerfully- muscled, and can often overpower members of other humanoid species. They are believed to be obligate carnivores, and many species tend to react to the presence of Gorn with an instinctive fear or revulsion which is difficult to overcome. For their part, Gorn tend to have little regard for how others react to them.",
-            "page_reference": "Not in this rulebook"
-        },
-        "Kaelon": {
-            "name": "Kaelon",
-            "trait": "Kaelon",
-            "trait_description": "Kaelons possess an organ called a telebellum attached to their brains that makes them immune to telekinetic and empathic reading. This structure manifests as dark lines beneath their skin on both sides of their head.",
-            "page_reference": "Not in this rulebook"
-        },
-        "Pakled": {
-            "name": "Pakled",
-            "trait": "Pakled",
-            "trait_description": "For reasons unknown to themselves or the Federation, Pakleds are immune to the effects of vacuum. The medical mystery still baffles the greatest xenobiologists.",
-            "page_reference": "Not in this rulebook"
-        },
-        "Tamarian": {
-            "name": "Tamarian",
-            "trait": "Tamarian",
-            "trait_description": "The tips of Tamarian thumbs act like a sucker and helps to maintain a tight grip on objects, especially their ritual daggers. Unless they choose otherwise, Tamarians cannot be disarmed.",
-            "page_reference": "Not in this rulebook"
-        },
-        "Kzinti": {
-            "name": "Kzinti",
-            "trait": "Kzinti",
-            "trait_description": "Kzinti physiology is designed to make them expert predators. In addition, Kzinti possess superior hearing and balance compared to many other species.",
-            "page_reference": "Not in this rulebook"
-        },
-        "Anabaj": {
-            "name": "Anabaj",
-            "trait": "Anabaj",
-            "trait_description": "Anabaj have sticky pads on their feet and hands that allow them to climb vertical surfaces without needing a task to do so. This trait only works if the Anabaj isn’t wearing hand and feet coverings.",
-            "page_reference": "Not in this rulebook"
-        },
-        "Aenar": {
-            "name": "Aenar",
-            "trait": "Aenar",
-            "trait_description": "",
-            "page_reference": "p. 99"
-        },
-        "Bynar": {
-            "name": "Bynar",
-            "trait": "Bynar",
-            "trait_description": "Despite their small size, Bynars are physical robust and durable. Their augmentations allow them to communicate instantaneously with their twin while in the same system, sharing all sensory input. However, they are vulnerable to electromagnetic pulses, which can disable or destroy their implants, leaving them disoriented or even disabled.",
-            "page_reference": "Not in this rulebook"
-        },
-        "Doopler": {
-            "name": "Doopler",
-            "trait": "Doopler",
-            "trait_description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Horta": {
-            "name": "Horta",
-            "trait": "Horta",
-            "trait_description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Illyrian": {
-            "name": "Illyrian",
-            "trait": "Illyrian",
-            "trait_description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Kazon": {
-            "name": "Kazon",
-            "trait": "Kazon",
-            "trait_description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Suliban": {
-            "name": "Suliban",
-            "trait": "Suliban",
-            "trait_description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Aquan": {
-            "name": "Aquan",
-            "trait": "Aquan",
-            "trait_description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Pandronian": {
-            "name": "Pandronian",
-            "trait": "Pandronian",
-            "trait_description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Phylosian": {
-            "name": "Phylosian",
-            "trait": "Phylosian",
-            "trait_description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Skorr": {
-            "name": "Skorr",
-            "trait": "Skorr",
-            "trait_description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Arcadian": {
-            "name": "Arcadian",
-            "trait": "Arcadian",
-            "trait_description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Ariolo": {
-            "name": "Ariolo",
-            "trait": "Ariolo",
-            "trait_description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Betelgeusian": {
-            "name": "Betelgeusian",
-            "trait": "Betelgeusian",
-            "trait_description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Coridanite": {
-            "name": "Coridanite",
-            "trait": "Coridanite",
-            "trait_description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Megarite": {
-            "name": "Megarite",
-            "trait": "Megarite",
-            "trait_description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "ElAurian": {
-            "name": "El-Aurian",
-            "trait": "El-Aurian",
-            "trait_description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Yridian": {
-            "name": "Yridian",
-            "trait": "Yridian",
-            "trait_description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Hupyrian": {
-            "name": "Hupyrian",
-            "trait": "Hupyrian",
-            "trait_description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Talarian": {
-            "name": "Talarian",
-            "trait": "Talarian",
-            "trait_description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Tzenkethi": {
-            "name": "Tzenkethi",
-            "trait": "Tzenkethi",
-            "trait_description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Tiburonian": {
-            "name": "Tiburonian",
-            "trait": "Tiburonian",
-            "trait_description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Napean": {
-            "name": "Napean",
-            "trait": "Napean",
-            "trait_description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Tribble": {
-            "name": "Tribble",
-            "trait": "Tribble, Hungry",
-            "trait_description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Breen": {
-            "name": "Breen",
-            "trait": "Breen",
-            "trait_description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Brikar": {
-            "name": "Brikar",
-            "trait": "Brikar",
-            "trait_description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Chameloid": {
-            "name": "Chameloid",
-            "trait": "Chameloid",
-            "trait_description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "BlueOrion": {
-            "name": "Orion, Blue",
-            "trait": "Orion, Blue",
-            "trait_description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "ElAurian_2E": {
-            "name": "El-Aurian",
-            "trait": "El-Aurian",
-            "trait_description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Horta_2E": {
-            "name": "Horta",
-            "trait": "Horta",
-            "trait_description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "HumanAugment": {
-            "name": "Human Augment",
-            "trait": "Human Augment",
-            "trait_description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Illyrian_2E": {
-            "name": "Illyrian",
-            "trait": "Illyrian",
-            "trait_description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Kellerun": {
-            "name": "Kellerun",
-            "trait": "Kellerun",
-            "trait_description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "KlingonQuchHa_2E": {
-            "name": "Klingon (QuchHa’)",
-            "trait": "Klingon and QuchHa’",
-            "trait_description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Klowahkan": {
-            "name": "Klowakhan",
-            "trait": "Klowakhan",
-            "trait_description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Kwejian": {
-            "name": "Kwejian",
-            "trait": "Kwejian",
-            "trait_description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Lanthanite": {
-            "name": "Lanthanite",
-            "trait": "Lanthanite",
-            "trait_description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Medusan": {
-            "name": "Medusan",
-            "trait": "Medusan",
-            "trait_description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Nanokin": {
-            "name": "Nanokin",
-            "trait": "Nanokin",
-            "trait_description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Nausicaan": {
-            "name": "Nausicaan",
-            "trait": "Nausicaan",
-            "trait_description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Terran": {
-            "name": "Terran",
-            "trait": "Terran",
-            "trait_description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "VauNAkat": {
-            "name": "Vau N'Akat",
-            "trait": "Vau N'Akat",
-            "trait_description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "XindiAquatic": {
-            "name": "Xindi-Aquatic",
-            "trait": "Xindi-Aquatic",
-            "trait_description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Yridian_2E": {
-            "name": "Yridian",
-            "trait": "Yridian",
-            "trait_description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Hirogen": {
-            "name": "Hirogen",
-            "trait": "Hirogen",
-            "trait_description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Custom": {
-            "name": "Custom",
-            "trait": "Custom",
-            "trait_description": "",
-            "page_reference": "Not in this rulebook"
-        }
+    "BreakthroughOrInvention": {
+      "name": "Breakthrough or Invention",
+      "d20": 2,
+      "page_reference": "p. 129",
+      "attribute": "+1 Any",
+      "department": "+1 Engineering",
+      "focus_suggestions": [
+        "Experimental Technology",
+        "Invention",
+        "Improvisation"
+      ],
+      "trait": "Inventor of X",
+      "description": "The character made an important technological discovery, devised a new way of using a particular technology, or invented some new technology that will be invaluable in the future. Attribute: +1 Any. Department: +1 Engineering. Focus suggestions: Experimental Technology, Invention, Improvisation. Optional Trait: Inventor of X."
     },
-    "environments": {
-        "Homeworld": {
-            "name": "Homeworld",
-            "description": "Raised on the world that founded their civilization, surrounded by its cultural, political, and spiritual traditions.",
-            "page_reference": "p. 116"
-        },
-        "BusyColony": {
-            "name": "Busy Colony",
-            "description": "Raised in an old or prosperous colony, the character may inherit the independence and pride of a pioneering community.",
-            "page_reference": "p. 115"
-        },
-        "IsolatedColony": {
-            "name": "Isolated Colony",
-            "description": "Raised apart from broader galactic society, often in a community shaped by learning and introspection.",
-            "page_reference": "p. 116"
-        },
-        "FrontierColony": {
-            "name": "Frontier Colony",
-            "description": "Raised near the edge of known space or another civilization, the character may be shaped by a demanding frontier and its risks.",
-            "page_reference": "p. 115"
-        },
-        "StarshipOrStarbase": {
-            "name": "Starship or Starbase",
-            "description": "Raised aboard a starship or space station, the character learns shipboard life and may develop early leadership or piloting skills.",
-            "page_reference": "p. 116"
-        },
-        "AnotherSpeciesWorld": {
-            "name": "Another Species' World",
-            "description": "Raised among another species, the character may develop distinctive perspectives on their own culture and the people who raised them.",
-            "page_reference": "p. 115"
-        },
-        "Andoria23rd": {
-            "name": "Andoria",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Betazed23rd": {
-            "name": "Betazed",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Denobula23rd": {
-            "name": "Denobula",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Earth23rd": {
-            "name": "Earth",
-            "description": "",
-            "page_reference": "p. 115"
-        },
-        "Qonos23rd": {
-            "name": "Qo'nos",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Risa23rd": {
-            "name": "Risa",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Romulus23rd": {
-            "name": "Romulus",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "TellarPrime23rd": {
-            "name": "Tellar Prime",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Trill23rd": {
-            "name": "Trill",
-            "description": "",
-            "page_reference": "p. 116"
-        },
-        "Vulcan23rd": {
-            "name": "Vulcan",
-            "description": "",
-            "page_reference": "p. 116"
-        },
-        "UtopianParadise": {
-            "name": "Utopian Paradise",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Cosmopolitan": {
-            "name": "Cosmopolitan",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "RigorousDiscipline": {
-            "name": "Rigorous Discipline",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "AscetismAndIntrospection": {
-            "name": "Ascetism and Introspection",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "StruggleAndHardship": {
-            "name": "Struggle and Hardship",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "OccupationOrWar": {
-            "name": "Occupation or War",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        }
+    "CalledOutASuperior": {
+      "name": "Called Out a Superior",
+      "d20": 3,
+      "page_reference": "p. 129",
+      "attribute": "+1 Reason",
+      "department": "+1 Conn",
+      "focus_suggestions": [
+        "Uniform Code of Justice",
+        "History",
+        "Starfleet Protocol"
+      ],
+      "description": "The character was placed in a situation where they had to choose between a trusted superior and their own ideals, and they chose to follow their ideals. Attribute: +1 Reason. Department: +1 Conn. Focus suggestions: Uniform Code of Justice, History, Starfleet Protocol."
     },
-    "upbringings": {
-        "MilitaryOrExploration": {
-            "name": "Military or Exploration",
-            "description": "The character’s family may have a strong tradition of military/exploration service, with at least one member of the family in every generation serving in this way. Perhaps both the character’s parents were military officers/explorers, who met in service. Either way, the character’s formative years were influenced by the service.",
-            "page_reference": "p. 118"
-        },
-        "BusinessOrTrade": {
-            "name": "Business or Trade",
-            "description": "The character’s family may have connections on countless worlds, overseeing and directing some grand business endeavor. They might have been traders or involved in interplanetary freight. Either way, the character has grown up encountering people from all walks of life, including those from outside their government's borders, and their outlook on life has been shaped accordingly.",
-            "page_reference": "p. 118"
-        },
-        "AgricultureOrRural": {
-            "name": "Agriculture or Rural",
-            "description": "The character grew up surrounded more by nature than by people, in rural communities, on the frontier, or somewhere else distanced from the bustle of cities. They might be heavily involved in agriculture, growing real food to supplement synthesized or replicated meals.",
-            "page_reference": "p. 118"
-        },
-        "ScienceAndTechnology": {
-            "name": "Science and Technology",
-            "description": "The character’s home was one filled with the potential of science, and cutting edge developments were familiar ground. Perhaps the character was raised by scientists or engineers, or had mentors and teachers who encouraged a talent for the technical.",
-            "page_reference": "p. 118"
-        },
-        "ArtisticAndCreative": {
-            "name": "Artistic and Creative",
-            "description": "The character’s life was filled with arts and creativity of all kinds, and no matter what pursuits the character favors, they are exposed to the great works of many cultures, and given every opportunity to express themselves.",
-            "page_reference": "p. 118"
-        },
-        "DiplomacyAndPolitics": {
-            "name": "Diplomacy and Politics",
-            "description": "The character has been exposed to the complexities of political thought and the nuances of diplomacy since they were young, perhaps because a family member was involved in those fields.",
-            "page_reference": "p. 118"
-        },
-        "ToExplore": {
-            "name": "To Explore",
-            "description": "You dreamed of exploring strange new worlds, seeking out new life and new civilizations, and boldly going where no one had gone before. You read everything you could about the bold explorers of the past and dreamed of one day sitting in the captain’s chair of your own starship.",
-            "page_reference": "Not in this rulebook"
-        },
-        "ToFly": {
-            "name": "To Fly",
-            "description": "You saw shuttles and transports soar overhead, and wanted to be up there with them, in the skies and among the stars. You took pilot’s lessons as soon as you were able and may have gotten in trouble a few times as a child for pushing your craft a little too far.",
-            "page_reference": "Not in this rulebook"
-        },
-        "ToCreate": {
-            "name": "To Create",
-            "description": "Locked away within your mind have always been things that didn’t exist. Your imagination has always been filled with ideas for things that might be, or could be, rather than simply things that already were. And you wanted to show people the worlds you saw. Whether your creations would take the form of works of fiction or new inventions to change the world, your creativity is boundless.",
-            "page_reference": "Not in this rulebook"
-        },
-        "ToDiscover": {
-            "name": "To Discover",
-            "description": "You want to know what’s out there. “Out there” might be the furthest reaches of unexplored space, or it might be the tiniest subatomic realms, or the depths of the mind, or the myriad complexities of the body, or some other field. Your drive is to find that which is unknown and to make it known.",
-            "page_reference": "Not in this rulebook"
-        },
-        "ToProtect": {
-            "name": "To Protect",
-            "description": "Your first concern is helping others. You have a deep disdain for anyone who would bring harm to the people you care about, or you have a deep compassion for those who have come to harm and seek to give them aid and comfort. Or both.",
-            "page_reference": "Not in this rulebook"
-        },
-        "ToProsper": {
-            "name": "To Prosper",
-            "description": "Success is your goal. This might mean fame or recognition in a particular field, or it might mean wealth, or influence, or power. There may be some noble agenda behind this – a desire to overcome being powerless or to escape hardship, or to be able to provide for family – or it may just be pure ambition, even greed. In whatever ways you seek to prosper, you have the drive to seize the chances you get, and, as the Ferengi say, the lobes to hear the opportunities coming your way.",
-            "page_reference": "Not in this rulebook"
-        },
-        "HardshipAndSubjugation": {
-            "name": "Hardship and Subjugation",
-            "description": "The character grew up under the yoke of oppression. Though their people had proud traditions, they were under the control of others and either served a specific purpose or hungered for freedom from hardship.",
-            "page_reference": "Not in this rulebook"
-        },
-        "WarriorCaste": {
-            "name": "Warrior",
-            "description": "Yours is a family of warriors, who have served the Empire with honor for generations. At least one member of your family in each generation will have gone to war for the Empire, and you were raised to tales of glorious battle.",
-            "page_reference": "Not in this rulebook"
-        },
-        "MerchantCaste": {
-            "name": "Merchant",
-            "description": "Your family members are traders, with connections on countless worlds, buying, moving, and selling goods across the Empire and to distant trading partners. You may have been raised into the world of commerce and trade or grown up on an interstellar freighter carrying vital cargo. Regardless, you’ve grown up encountering people from all walks of life, including those from outside the Empire, and your outlook on life has been shaped accordingly.",
-            "page_reference": "Not in this rulebook"
-        },
-        "ScientificCaste": {
-            "name": "Scientific",
-            "description": "Your family home was one filled with the potential of science, and cutting-edge developments were familiar ground, even if those pursuits are not well-appreciated by other Klingons. Where would the Empire be without warp drive, disruptors, cloaking devices, or even the alloys which make a warrior’s blades? Your family has always been one of those studying and providing these advances, for all that the outside Galaxy thinks that ‘Klingon scientist’ is a contradiction.",
-            "page_reference": "Not in this rulebook"
-        },
-        "AgriculturalCaste": {
-            "name": "Agriculture",
-            "description": "You grew up surrounded more by nature than by people, in rural communities, on the frontier, or somewhere else distant from the bustle of cities. Your family might be heavily involved in agriculture, growing real food, maintaining hunting grounds, or rearing livestock. Unlike the Federation, you do not rely on replicated food, inert and synthetic: a Klingon requires fresh, living food to sustain them, and your family has provided this for generations.",
-            "page_reference": "Not in this rulebook"
-        },
-        "ArtisticCaste": {
-            "name": "Artistic",
-            "description": "Your life was filled with arts and creativity of all kinds, and no matter the pursuits you favor, you’ve been exposed to the great works not only of the Empire’s storied history but also that of other cultures and given every opportunity to express yourself. Different forms of art are appreciated to different degrees amongst Klingons, but the performing arts are especially beloved: many warriors fancy themselves as poets or playwrights in the manner of WIlyam SeQpIr when recounting a glorious victory, and Klingon opera is known and studied across the Alpha and Beta Quadrants.",
-            "page_reference": "Not in this rulebook"
-        },
-        "AcademicCaste": {
-            "name": "Academic",
-            "description": "You’ve been surrounded by the complexities of political thought, the nuances of diplomacy, and intense study of a range of subjects and fields for your entire life. Your family is one of lawyers, civil servants, historians, diplomats, and more besides, maintaining the fabric of Empire just as the farmers feed it, the merchants keep it supplied, and the warriors protect it. The Klingon Empire is a nation often led by warriors, but it is the learned who govern it and keep it running, often without the respect such endeavors deserve.",
-            "page_reference": "Not in this rulebook"
-        }
+    "ConflictWithAHostileCulture": {
+      "name": "Conflict with a Hostile Culture",
+      "d20": 4,
+      "page_reference": "p. 129",
+      "attribute": "+1 Fitness",
+      "department": "+1 Security",
+      "focus_suggestions": [
+        "Hand Phasers",
+        "Hand-to-Hand Combat",
+        "Tactical Systems"
+      ],
+      "description": "The character was involved in a battle with a hostile force. Attribute: +1 Fitness. Department: +1 Security. Focus suggestions: Hand Phasers, Hand-to-Hand Combat, Tactical Systems."
     },
-    "careers": {
-        "Young": {
-            "name": "Young Officer",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Experienced": {
-            "name": "Experienced Officer",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Veteran": {
-            "name": "Veteran Officer",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        }
+    "DealtWithAPlague": {
+      "name": "Dealt with a Plague",
+      "d20": 5,
+      "page_reference": "p. 129",
+      "attribute": "+1 Insight",
+      "department": "+1 Medicine",
+      "focus_suggestions": [
+        "Infectious Diseases",
+        "Emergency Medicine",
+        "Triage"
+      ],
+      "description": "The character's ship was assigned to provide aid to a world dealing with an epidemic. Attribute: +1 Insight. Department: +1 Medicine. Focus suggestions: Infectious Diseases, Emergency Medicine, Triage."
     },
-    "ranks": {
-        "Captain": {
-            "name": "Captain",
-            "description": "",
-            "page_reference": "p. 140"
-        },
-        "Commander": {
-            "name": "Commander",
-            "description": "",
-            "page_reference": "p. 140"
-        },
-        "LtCommander": {
-            "name": "Lieutenant Commander",
-            "description": "",
-            "page_reference": "p. 140"
-        },
-        "Lieutenant": {
-            "name": "Lieutenant",
-            "description": "",
-            "page_reference": "p. 140"
-        },
-        "LieutenantJG": {
-            "name": "Lieutenant (Junior Grade)",
-            "description": "",
-            "page_reference": "p. 140"
-        },
-        "Ensign": {
-            "name": "Ensign",
-            "description": "",
-            "page_reference": "p. 140"
-        },
-        "MasterChiefPettyOfficer": {
-            "name": "Master Chief Petty Officer",
-            "description": "",
-            "page_reference": "p. 140"
-        },
-        "MasterChiefSpecialist": {
-            "name": "Master Chief Specialist",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "SeniorChiefPettyOfficer": {
-            "name": "Senior Chief Petty Officer",
-            "description": "",
-            "page_reference": "p. 140"
-        },
-        "SeniorChiefSpecialist": {
-            "name": "Senior Chief Specialist",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "ChiefPettyOfficer": {
-            "name": "Chief Petty Officer",
-            "description": "",
-            "page_reference": "p. 140"
-        },
-        "ChiefSpecialist": {
-            "name": "Chief Specialist",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "PettyOfficer1stClass": {
-            "name": "Petty Officer 1st Class",
-            "description": "",
-            "page_reference": "p. 140"
-        },
-        "PettyOfficer2ndClass": {
-            "name": "Petty Officer 2nd Class",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "PettyOfficer3rdClass": {
-            "name": "Petty Officer 3rd Class",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Specialist1stClass": {
-            "name": "Specialist 1st Class",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Specialist2ndClass": {
-            "name": "Specialist 2nd Class",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Specialist3rdClass": {
-            "name": "Specialist 3rd Class",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Yeoman1stClass": {
-            "name": "Yeoman 1st Class",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Yeoman2ndClass": {
-            "name": "Yeoman 2nd Class",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Yeoman3rdClass": {
-            "name": "Yeoman 3rd Class",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Crewman1stClass": {
-            "name": "Crewman 1st Class",
-            "description": "",
-            "page_reference": "p. 140"
-        },
-        "Crewman2ndClass": {
-            "name": "Crewman 2nd Class",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Crewman3rdClass": {
-            "name": "Crewman 3rd Class",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "FleetAdmiral": {
-            "name": "Fleet Admiral",
-            "description": "",
-            "page_reference": "p. 140"
-        },
-        "Admiral": {
-            "name": "Admiral",
-            "description": "",
-            "page_reference": "p. 140"
-        },
-        "ViceAdmiral": {
-            "name": "Vice-Admiral",
-            "description": "",
-            "page_reference": "p. 140"
-        },
-        "RearAdmiral": {
-            "name": "Rear Admiral",
-            "description": "",
-            "page_reference": "p. 140"
-        },
-        "RearAdmiralLower": {
-            "name": "Rear Admiral, Lower Half",
-            "description": "",
-            "page_reference": "p. 140"
-        },
-        "RearAdmiralUpper": {
-            "name": "Rear Admiral, Upper Half",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Commodore": {
-            "name": "Commodore",
-            "description": "",
-            "page_reference": "p. 140"
-        },
-        "FleetCaptain": {
-            "name": "Fleet Captain",
-            "description": "",
-            "page_reference": "p. 140"
-        },
-        "Civilian": {
-            "name": "Civilian",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Sergeant": {
-            "name": "Sergeant",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Corporal": {
-            "name": "Corporal",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Bekk": {
-            "name": "Bekk (beq)",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "General": {
-            "name": "General",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "LieutenantGeneral": {
-            "name": "Lieutenant General",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "MajorGeneral": {
-            "name": "Major General",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Brigadier": {
-            "name": "Brigadier",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Colonel": {
-            "name": "Colonel",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "LieutenantColonel": {
-            "name": "Lieutenant Colonel",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Major": {
-            "name": "Major",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "FirstLieutenant": {
-            "name": "First Lieutenant",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "SecondLieutenant": {
-            "name": "Second Lieutenant",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "MasterSergeant": {
-            "name": "Master Sergeant",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Private": {
-            "name": "Private",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "GrandGul": {
-            "name": "Grand Gul",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Legate": {
-            "name": "Legate",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Jagul": {
-            "name": "Jagul",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Gul": {
-            "name": "Gul",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Dal": {
-            "name": "Dal",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Dalin": {
-            "name": "Dalin",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Glinn": {
-            "name": "Glinn",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Gil": {
-            "name": "Gil",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Garresh": {
-            "name": "Gorr",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Trooper": {
-            "name": "Trooper",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "SubCommander": {
-            "name": "Sub-Commander",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "SubLieutenant": {
-            "name": "Sub-Lieutenant",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Centurion": {
-            "name": "Centurion",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Uhlan": {
-            "name": "Uhlan",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Administrator": {
-            "name": "Administrator",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "FleetCommander": {
-            "name": "Fleet Commander",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "CadetFirstClass": {
-            "name": "Cadet, first class",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "CadetSecondClass": {
-            "name": "Cadet, second class",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "CadetThirdClass": {
-            "name": "Cadet, third class",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "CadetFourthClass": {
-            "name": "Cadet, fourth class",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Menial": {
-            "name": "Menial",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Associate": {
-            "name": "Associate",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Salesman": {
-            "name": "Salesman",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "DaiMon": {
-            "name": "DaiMon",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Adhar": {
-            "name": "Subadhar",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "LorAA": {
-            "name": "Lor-AA",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "LorBB": {
-            "name": "Lor-BB",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "LorC": {
-            "name": "Lor-C",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Thot": {
-            "name": "Thot",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Chot": {
-            "name": "Chot",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "VelSh": {
-            "name": "Vel'sh",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "OkChed": {
-            "name": "Ok'ched",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "HRen": {
-            "name": "H'ren",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "First": {
-            "name": "First",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Second": {
-            "name": "Second",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Third": {
-            "name": "Third",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Fourth": {
-            "name": "Fourth",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Fifth": {
-            "name": "Fifth",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        }
+    "DeathOfAFriend": {
+      "name": "Death of a Friend",
+      "d20": 6,
+      "page_reference": "p. 129",
+      "attribute": "+1 Insight",
+      "department": "+1 Medicine",
+      "focus_suggestions": [
+        "Counseling",
+        "Memorial Pursuits"
+      ],
+      "description": "One of the character's friends was killed in action. Attribute: +1 Insight. Department: +1 Medicine. Focus suggestions: Counseling, or a skill or pursuit the character takes up in their fallen friend's memory."
     },
-    "roles": {
-        "CommandingOfficer": {
-            "name": "Commanding Officer",
-            "description": "The captain. Even if the commanding officer does not hold the rank of captain, they will be referred to as captain by their subordinates. Every ship must have a commanding officer.",
-            "page_reference": "p. 135"
-        },
-        "ExecutiveOfficer": {
-            "name": "Executive Officer",
-            "description": "Second-in-Command. The executive officer is the captain’s chief advisor, and takes command in situations where the captain is unable to. If a ship does not have a dedicated executive officer, an officer in another role should be noted as second-in-command, but they will not gain the benefits of this role.",
-            "page_reference": "p. 136"
-        },
-        "OperationsManager": {
-            "name": "Operations Manager",
-            "description": "The operations manager manages and oversees all technical operations aboard or involving the ship, normally from the Operations station on the Bridge, or in conjunction with the chief engineer (on smaller ships, one officer may fill both roles). This often entails taking on the duties of a science officer, if there is no dedicated science officer in the senior staff.",
-            "page_reference": "p. 136"
-        },
-        "ChiefEngineer": {
-            "name": "Chief Engineer",
-            "description": "The chief engineer is responsible for ensuring that the ship remains operational and functional, and commands the engineering department aboard the ship.",
-            "page_reference": "p. 136"
-        },
-        "ChiefOfSecurity": {
-            "name": "Chief of Security",
-            "description": "The chief of security oversees the ship’s security department, and is responsible for ensuring the safety of the ship and crew during missions, for the investigation of disciplinary and criminal matters, and for overseeing the protection of important persons aboard the ship. On many ships, the chief of security operates from the Tactical station on the bridge.",
-            "page_reference": "p. 136"
-        },
-        "ChiefMedicalOfficer": {
-            "name": "Chief Medical Officer",
-            "description": "The chief medical officer, also known as ship’s surgeon, or ship’s doctor, is responsible for the health and wellbeing of the crew and other persons aboard the ship, and leads the ship’s medical department. A chief medical officer can order, and countermand the orders of, senior officers where matters of that officer’s health are concerned.",
-            "page_reference": "p. 137"
-        },
-        "ScienceOfficer": {
-            "name": "Science Officer",
-            "description": "A science officer is responsible for advising the commanding officer of all matters scientific, providing hypotheses in matters concerning the unknown. Not all ships have a dedicated science officer within the senior staff, often having the operations manager take on these duties.",
-            "page_reference": "p. 136"
-        },
-        "FlightController": {
-            "name": "Flight Controller",
-            "description": "Not a typical senior staff role, some captains, particularly those operating in uncharted space, choose the most senior helmsman or flight control officer to serve as senior staff as well.",
-            "page_reference": "p. 137"
-        },
-        "Helmsman": {
-            "name": "Helmsman",
-            "description": "The helmsman manages and oversees all technical operations aboard or involving  the ship, normally from the helm station on the bridge, or in conjunction with the chief engineer (on smaller ships, one officer may fill both roles). This often entails taking on the duties of a science officer, if there is no dedicated science officer in the senior staff. When the helmsman succeeds at a Task assisted by the ship’s Computers or Sensors, or using a tricorder, the character generates one bonus Momentum, which may only be used on the Obtain Information Momentum spend.",
-            "page_reference": "p. 137"
-        },
-        "Navigator": {
-            "name": "Navigator",
-            "description": "Not a typical senior staff role, some captains, particularly those operating in uncharted space, choose the most senior navigator to serve as senior staff as well. When the navigator is required to analyze, or repair technology related to flight or propulsion, they may use the Conn Discipline instead of Engineering.",
-            "page_reference": "p. 137"
-        },
-        "ShipsCounselor": {
-            "name": "Ship's Counselor",
-            "description": "On larger ships and starbases, it’s common to have personnel dedicated to the mental soak. Some captains regard them as valuable advisors, as their training covers both culture and psychology, making them exceptionally good at reading the moods and intentions of others.",
-            "page_reference": "p. 138"
-        },
-        "CommunicationsOfficer": {
-            "name": "Communications Officer",
-            "description": "More common in the earlier days of Starfleet, dedicated communications officers are typically skilled in linguistics and cryptography, and aided with advanced translation and decryption technologies, and thus valuable during encounters with both new cultures, and with hostile ones.",
-            "page_reference": "p. 138"
-        },
-        "Admiral": {
-            "name": "Admiral",
-            "description": "Flag Officers only.",
-            "page_reference": "Not in this rulebook"
-        },
-        "Adjutant": {
-            "name": "Adjutant",
-            "description": "The adjutant must be at least a lieutenant commander. This is the admiral’s closest advisor and assistant, providing aid and support like an executive officer supports a commanding officer. A good adjutant is always prepared with mission proposals, alternative plans, and hypothetical scenarios to allow the admiral to react to problems.",
-            "page_reference": "Not in this rulebook"
-        },
-        "StrategicOperations": {
-            "name": "Strategic Operations Officer",
-            "description": " This officer coordinates the movements and activities of vessels and forces in a given region or on a particular mission. Typically officers with a keen understanding of strategy, they advise the admiral and adjust plans independently when they cannot consult the admiral.",
-            "page_reference": "Not in this rulebook"
-        },
-        "IntelligenceOfficer": {
-            "name": "Intelligence Officer",
-            "description": "An intelligence officer receives Starfleet Intelligence, other branch and Federation ally reports on strategic and diplomatic developments in the region. These reports, and analyses, allow the officer to inform the admiral and other cleared personnel about matters that might impact decisions.",
-            "page_reference": "Not in this rulebook"
-        },
-        "FleetLiaisonOfficer": {
-            "name": "Fleet Liaison Officer",
-            "description": "A fleet liaison represents the interests of the fleet, and Starfleet as a whole, to one of the Federation’s allies. A Starfleet officer will represent the Federation, though the Gamemaster may allow other fleet liaison officers; for example, a joint KlingonFederation task force may include a Klingon Empire liaison. These officers report to superiors and allow cooperation between allies.",
-            "page_reference": "Not in this rulebook"
-        },
-        "DiplomaticAttache": {
-            "name": "Diplomatic Attaché",
-            "description": "A civilian from the Federation Diplomatic Corps and a valuable part of the staff who advises the admiral, and briefs them on culture, protocol, and other essential information during negotiations and other diplomatic activities.",
-            "page_reference": "Not in this rulebook"
-        },
-        "ChiefSurgeon": {
-            "name": "Chief Surgeon",
-            "description": "On larger ships, the medical staff may be robust enough to support a dedicated surgery team. The head of this team is the chief surgeon. While the duties of this role may often be filled by the chief medical officer, when there is a dedicated surgeon, a character may choose to assume this role.",
-            "page_reference": "Not in this rulebook"
-        },
-        "HeadNurse": {
-            "name": "Head Nurse",
-            "description": "On almost any Federation starship, sickbay is staffed by a number of nurses, who assist the doctors on board with treating patients. There is, however, always a senior nurse – with the most experience, who works closely with the chief medical officer in managing the nursing staff.",
-            "page_reference": "Not in this rulebook"
-        },
-        "Anesthesiologist": {
-            "name": "Anesthesiologist",
-            "description": "These medical professionals are experts in treating pain and ensuring that patients do not suffer during the course of their treatments. This is of particular importance during major surgeries and other invasive treatments, as the anesthesiologist is also responsible for monitoring the patient’s vital signs and making adjustments to medications during the proceedings. This allows the surgeons and physicians to focus on the task at hand.",
-            "page_reference": "Not in this rulebook"
-        },
-        "PhysiciansAssistant": {
-            "name": "Physician's Assistant",
-            "description": "Filling a role between doctor and nurse, physician’s assistants are trained medical personnel that have attended medical school, but are not full doctors. Unlike nurses, however, they have sufficient training to diagnose and treat most minor to moderate conditions, and can make medical recommendations as well as prescribe medications. For more complex or life-threatening conditions, the physician’s assistant will call in a full doctor and then provide assistance.",
-            "page_reference": "Not in this rulebook"
-        },
-        "SecondOrThirdOfficer": {
-            "name": "Second Officer/Third Officer (yaS cha’DIch/yaS wejDIch)",
-            "description": "The second and third officers are the next in line to command after the first officer, though they typically have other roles aboard ship as well, and have less direct interaction with the commanding officer, often performing their duties on other shifts. The third officer in particular is likely to be a young officer with little field experience, learning how a starship is run.",
-            "page_reference": "Not in this rulebook"
-        },
-        "WeaponsOfficer": {
-            "name": "Weapons Officer (nuHpIn)",
-            "description": "The weapons officer has direct control of the ship’s weaponry, and is responsible for their maintenance and upkeep. Since this can vary from vessel to vessel, it is vital that a ship’s weapons officer be completely familiar with the arsenal they oversee. The weapons officer also has the duty of becoming familiar with enemy vessels, learning their strengths, weaknesses, and capabilities to advise the commanding officer during battle.",
-            "page_reference": "Not in this rulebook"
-        },
-        "ShipsCookOrChef": {
-            "name": "Ship’s Cook (vutwI’)",
-            "description": "Every Klingon ship has a cook – larger ships may have several, in which case this role applies to the head cook – who is responsible for ensuring that the crew is well-fed. The whole crew customarily eats together, and most Klingons are disdainful of replicated food. The ship’s cook is thus of vital importance, as good meals ensure the crew remains in good spirits and ready for battle. Their role also includes raising and butchering animals kept aboard, such as targs.",
-            "page_reference": "Not in this rulebook"
-        },
-        "Administrator": {
-            "name": "Administrator",
-            "description": "Administrators are important but often unappreciated. They oversee the smooth operation of colonies and other institutions, such as spaceports, hospitals, and research centers. These positions tend to be held by civilians in many cases, but military administrators necessarily exist to oversee military facilities, such as Starfleet commanders running a starbase. Their role often ensures that they are well-connected, given the variety of people and services involved in running a colony, port, or similar.",
-            "page_reference": "Not in this rulebook"
-        },
-        "Ambassador": {
-            "name": "Ambassador",
-            "description": "Ambassadors represent the interests of their nation or other political entity to other nations. The Federation has numerous ambassadors, as do member worlds within the Federation, and other powers such as the Cardassian Union, the Ferengi Alliance, the Klingon Empire, and the Romulan Star Empire. Ambassadors are the highest rank of diplomats, and thus possess all the rights, privileges, and responsibilities afforded to diplomatic personnel under international treaties observed by all cultures, including immunity from criminal prosecution.",
-            "page_reference": "Not in this rulebook"
-        },
-        "ArmoryOfficer": {
-            "name": "Armory Officer",
-            "description": "A presence on older Starfleet ships, and common in other militaries, this role is also known as tactical officer or weapons officer. The officer is responsible for the upkeep and use of the ship’s armaments and is typically an expert in ship-to-ship combat.",
-            "page_reference": "p. 137"
-        },
-        "Bartender": {
-            "name": "Bartender",
-            "description": "Found in civilian bars, casinos, and similar establishments across the Galaxy, and even aboard larger Federation starships in crew lounges. While this might seem like a minor role, bartenders interact closely with people and are in the business of helping people relax and enjoy themselves, and thus they often excel at getting people to talk about their problems and tend to know what’s going on with everyone who passes through. This may also represent other public-facing business owners, such as tailors, barbers, and spa owners.",
-            "page_reference": "Not in this rulebook"
-        },
-        "Bodyguard": {
-            "name": "Bodyguard",
-            "description": "You specialize in personal security, protecting an individual, whether a paying client, or someone you were assigned to. Militaries tend not to employ specific bodyguards in this sense, but most will have soldiers or security personnel who will be assigned to protect VIPs – ambassadors, admirals, political figures, and similar – as needed.",
-            "page_reference": "p. 138"
-        },
-        "Child": {
-            "name": "Child",
-            "description": "Child character only. You’re a child of one of the crew, and often get involved in the exploits and adventures of the crew simply by being aboard the ship, perhaps because you’re learning from them. Unless you cause trouble, you may be overlooked by the adults around you, but that and your youthful curiosity often lands you in places you shouldn’t be.",
-            "page_reference": "Not in this rulebook"
-        },
-        "CivilianBureaucrat": {
-            "name": "Civilian Bureaucrat",
-            "description": "You keep an organization functioning, ensuring that the wheels of civilization continue to turn. You’re often placed in charge of important matters within an organization, liaising with other groups to ensure that vital tasks get accomplished",
-            "page_reference": "Not in this rulebook"
-        },
-        "Constable": {
-            "name": "Constable",
-            "description": "A somewhat old-fashioned term for an officer of the law or a keeper of the peace, you serve a community by upholding the law, maintaining order, and arbitrating disputes. This is a common role in colonies and amongst the civilian population of space stations, either in place of or along- side more conventional security forces such as Starfleet. You may be a lone peace officer, handling matters with your wits and your words, or you might oversee a collection of deputies or other subordinates.",
-            "page_reference": "Not in this rulebook"
-        },
-        "Expert": {
-            "name": "Expert",
-            "description": "You are an expert in a particular field, working alongside the crew to consult upon a matter related to your expertise. You are highly specialized, and extremely capable in your chosen field, but this may lead you to ignore or overlook things that fall outside your knowledge, or result in an obsession that causes you to prioritize your work over other concerns.",
-            "page_reference": "p. 137"
-        },
-        "IntelligenceAgent": {
-            "name": "Intelligence Agent",
-            "description": "You are not a traditional part of the fleet. Instead, you are an operative of the intelligence services of your civilization. You are charged with gathering information from places and people that don’t want their information gathered, and you achieve this through a combination of your own skills and the network of informants and contacts you have cultivated.",
-            "page_reference": "p. 138"
-        },
-        "Merchant": {
-            "name": "Merchant",
-            "description": "You’re a merchant or trader, exchanging valuable goods for latinum, or for other goods. Even in the Federation, a civilization which has largely evolved beyond scarcity and the personal accumulation of wealth, merchants are necessary for ensuring that resources can easily move from place to place, and the Federation and its members maintain reserves of latinum and other precious commodities to allow them to trade with other civilizations. In a practical, day-to-day sense, merchants are well-connected and often have access to unusual items or specialized resources that might not be available normally.",
-            "page_reference": "p. 138"
-        },
-        "PoliticalLiaison": {
-            "name": "Political Liaison",
-            "description": "You serve as a representative of a government to the crew, representing the government’s needs and interests during the operations of the crew, and providing the crew with a means of communicating with that government in turn. This is often the case where multiple groups are required to coexist, such as a Starfleet facility operating close to an allied non-Federation world, or as part of a joint operation between Starfleet and Klingon Defense Force personnel. You represent the official government that your organization belongs to – i.e., if you are a member of the Bajoran Militia, then you represent the current Bajoran government.",
-            "page_reference": "p. 139"
-        },
-        "ShipsDoctor": {
-            "name": "Ship's Doctor",
-            "description": "You care for the crew of your ship, or the station you serve on (in which case, rename the role to Station Doctor), but unlike a Chief Medical Officer, you do not have an extensive medical department to manage or to aid you. This is common in smaller crews which do not require a large sickbay or infirmary and tends to mean that these smaller postings favor generalists who can adapt to a variety of circumstances, where a larger medical staff could rely on specialists.",
-            "page_reference": "p. 137"
-        },
-        "SpiritualLeader": {
-            "name": "Spritual Leader",
-            "description": "You are an important figure within your community, providing spiritual and philosophical guidance to those who are troubled. In many cases, this can overlap with the role of a counselor, but there are meaningful differences between the two. Spiritual leaders are more prominent in overtly religious or spiritual cultures, but religion is not necessary for spiritual leaders to be present in a culture, as demonstrated by the Vulcans and Klingons. The Bajoran faith is an example of one that has many spiritual leaders.",
-            "page_reference": "Not in this rulebook"
-        },
-        "Translator": {
-            "name": "Translator",
-            "description": "You are an expert in language and communication. While the development of the universal translator has reduced the need for translators during daily life, there are still situations which call for experts in linguistics. Encounters with new cultures often require support from xenolinguistics experts to smooth over any problems that the universal translator has, particularly if a culture has an unusual style or method of communication. Similarly, archaeological research often requires piecing together extinct languages from evidence in ways that can’t easily be automated. You are a polyglot, who knows enough of most common languages spoken by your culture and its neighbors to communicate freely without a universal translator.",
-            "page_reference": "p. 139"
-        },
-        "CombatEngineer": {
-            "name": "Combat Engineer",
-            "description": "Having combat squads on the ground of planets of interest can help change the face of the war. You are a member of one of these combat squads and use your engineering expertise to both aid the squad and disrupt the enemy. With your knowledge of structure, computers, and power flow, your presence ensures that the squad’s gear is in working order and that the enemy’s defenses will fall quickly in your presence.",
-            "page_reference": "Not in this rulebook"
-        },
-        "FieldMedic": {
-            "name": "Field Medic",
-            "description": "With perhaps the most important role during wartime, you are often on the ground, ensuring the health and well-being of your people. Often assigned to combat squads, you provide for the medical needs of those on the front lines, sometimes as they are seeing active combat. This duty is not for the weak of heart and requires dexterous reflexes and quick decision-making skills. In many cases, you alone hold the line between life and death.",
-            "page_reference": "Not in this rulebook"
-        },
-        "HeavyWeaponsSpecialist": {
-            "name": "Heavy Weapons Specialist",
-            "description": "In the unfortunate case where deadly conflict is necessary, an incursion force will usually bring along several soldiers who are adept at using larger, more devastating weapons. With an armory of weapons ranging from particle rifles to type-3 phasers and even grenade launchers, you have access to a terrifying number of destructive weapons that can even be effective when fired at ground vehicles and shuttles.",
-            "page_reference": "Not in this rulebook"
-        },
-        "OrdnanceExpert": {
-            "name": "Ordnance Expert",
-            "description": "You are usually a member of a combat squad deployed on a planet’s surface. Your specialty is knowing how to cause the most damage possible in the shortest period of time. In addition, you are knowledgeable about deactivating explosive devices, and making sure they don’t cause a massive number of casualties and destruction.",
-            "page_reference": "Not in this rulebook"
-        },
-        "Reconaissance": {
-            "name": "Reconaissance",
-            "description": "You are the eyes and ears of a combat squad and are adept at collecting information on tactical objectives and other important targets. Using advanced technology as your ally, you often move ahead of your group to collect the information necessary to create an effective plan for the operation.",
-            "page_reference": "Not in this rulebook"
-        },
-        "SquadLeader": {
-            "name": "Squad Leader",
-            "description": "You are the eyes and ears of a combat squad and are adept at collecting information on tactical objectives and other important targets. Using advanced technology as your ally, you often move ahead of your group to collect the information necessary to create an effective plan for the operation.",
-            "page_reference": "Not in this rulebook"
-        },
-        "TacticalOfficer": {
-            "name": "Tactical Officer",
-            "description": "You command the daunting firepower of a Federation starship, trading fire with Klingon warships in intense space battles. The lives of your crew depend on your ability to pinpoint enemy weaknesses, so you can incapacitate or destroy your adversary as efficiently as possible.",
-            "page_reference": "p. 137"
-        }
+    "DiscoveredAnArtifact": {
+      "name": "Discovered an Artifact",
+      "d20": 7,
+      "page_reference": "p. 129",
+      "attribute": "+1 Reason",
+      "department": "+1 Engineering",
+      "focus_suggestions": [
+        "Ancient Technology",
+        "Computers",
+        "Reverse Engineering"
+      ],
+      "description": "The character discovered a device or fragment of technology from a now-extinct civilization. Attribute: +1 Reason. Department: +1 Engineering. Focus suggestions: Ancient Technology, Computers, Reverse Engineering."
     },
-    "equipment": {
-        "Uniform": {
-            "name": "Uniform",
-            "description": "",
-            "page_reference": "p. 141"
-        },
-        "Clothing": {
-            "name": "Clothing",
-            "description": "",
-            "page_reference": "p. 141"
-        },
-        "ArmouredVest": {
-            "name": "Armoured Vest",
-            "description": "",
-            "page_reference": "p. 244"
-        },
-        "BodyArmour": {
-            "name": "Body Armour",
-            "description": "",
-            "page_reference": "p. 244"
-        },
-        "EnvironmentSuit": {
-            "name": "Environment Suit",
-            "description": "",
-            "page_reference": "p. 244"
-        },
-        "PersonalForceField": {
-            "name": "Personal Force Field",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Communicator": {
-            "name": "Communicator",
-            "description": "",
-            "page_reference": "p. 141"
-        },
-        "Tricorder": {
-            "name": "Tricorder",
-            "description": "",
-            "page_reference": "p. 141"
-        },
-        "MedKit": {
-            "name": "MedKit",
-            "description": "",
-            "page_reference": "p. 141"
-        },
-        "EngineeringKit": {
-            "name": "Engineering Kit",
-            "description": "",
-            "page_reference": "p. 246"
-        },
-        "OrionMultiKey": {
-            "name": "Orion Multi-Key",
-            "description": "",
-            "page_reference": "p. 247"
-        },
-        "UshaanTor": {
-            "name": "Ushaan-Tor ice pick",
-            "description": "",
-            "page_reference": "p. 242"
-        }
+    "EncounteredATrulyAlienBeing": {
+      "name": "Encountered a Truly Alien Being",
+      "d20": 8,
+      "page_reference": "p. 130",
+      "attribute": "+1 Reason",
+      "department": "+1 Science",
+      "focus_suggestions": [
+        "Empathy",
+        "Philosophy",
+        "Xenobiology"
+      ],
+      "description": "The character encountered a life-form which is truly alien, something barely within the comprehension of humanoid life (a godlike entity or space-dwelling creature). Attribute: +1 Reason. Department: +1 Science. Focus suggestions: Empathy, Philosophy, Xenobiology."
     },
-    "personal_weapons": {
-        "Phaser1": {
-            "name": "Phaser1",
-            "description": "",
-            "page_reference": "p. 243"
-        },
-        "Phaser2": {
-            "name": "Phaser2",
-            "description": "",
-            "page_reference": "p. 243"
-        },
-        "PhaserRifle": {
-            "name": "Phaser Rifle",
-            "description": "",
-            "page_reference": "p. 243"
-        },
-        "PhasePistol": {
-            "name": "Phase Pistol",
-            "description": "",
-            "page_reference": "p. 243"
-        },
-        "Blade": {
-            "name": "Blade",
-            "description": "",
-            "page_reference": "p. 243"
-        },
-        "HeavyBlade": {
-            "name": "Heavy Blade",
-            "description": "",
-            "page_reference": "p. 243"
-        },
-        "UshaanTor": {
-            "name": "Ushaan Tor",
-            "description": "",
-            "page_reference": "p. 242"
-        },
-        "MekLeth": {
-            "name": "Mek Leth",
-            "description": "",
-            "page_reference": "p. 242"
-        },
-        "BatLeth": {
-            "name": "Bat Leth",
-            "description": "",
-            "page_reference": "p. 242"
-        },
-        "TzenkethiHeavyBlade": {
-            "name": "Tzenkethi Heavy Blade",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "ParticleRifle": {
-            "name": "Particle Rifle",
-            "description": "",
-            "page_reference": "p. 243"
-        },
-        "PulseGrenade": {
-            "name": "Pulse Grenade",
-            "description": "",
-            "page_reference": "p. 243"
-        },
-        "DisruptorPistol": {
-            "name": "Disruptor Pistol",
-            "description": "",
-            "page_reference": "p. 243"
-        },
-        "DisruptorRifle": {
-            "name": "Disruptor Rifle",
-            "description": "",
-            "page_reference": "p. 243"
-        },
-        "DkTagh": {
-            "name": "Dk Tagh",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "SonaPlasmaDisruptorShotgun": {
-            "name": "Sona Plasma Disruptor Shotgun",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "JemHadarPlasmaPistol": {
-            "name": "Jem Hadar Plasma Pistol",
-            "description": "",
-            "page_reference": "p. 243"
-        },
-        "JemHadarPlasmaRifle": {
-            "name": "Jem Hadar Plasma Rifle",
-            "description": "",
-            "page_reference": "p. 243"
-        },
-        "EnergyWhip": {
-            "name": "Energy Whip",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Dagger": {
-            "name": "Dagger",
-            "description": "",
-            "page_reference": "p. 242"
-        },
-        "KeratinDart": {
-            "name": "Keratin Dart",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "PolaronDisruptorPistol": {
-            "name": "Polaron Disruptor Pistol",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "PolaronDisruptorRifle": {
-            "name": "Polaron Disruptor Rifle",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "NeuralTruncheon": {
-            "name": "Neural Truncheon",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "CryogenicGrenade": {
-            "name": "Cryogenic Grenade",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "TanQalanqSword": {
-            "name": "Tan Qalanq Sword",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "HirogenKukri": {
-            "name": "Hirogen Kukri",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "TetryonRifle": {
-            "name": "Tetryon Rifle",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        }
+    "FirstContact": {
+      "name": "First Contact",
+      "d20": 9,
+      "page_reference": "p. 130",
+      "attribute": "+1 Presence",
+      "department": "+1 Any",
+      "focus_suggestions": [
+        "Cultural Studies",
+        "Diplomacy",
+        "Infiltration"
+      ],
+      "description": "The character was involved in one of the most important of Starfleet's missions: first contact with another culture. Attribute: +1 Presence. Department: +1 Any. Focus suggestions: Cultural Studies, Diplomacy, Infiltration."
     },
-    "spaceframes": {
-        "Akira": {
-            "name": "Akira Class",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Constellation": {
-            "name": "Constellation Class",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Constitution": {
-            "name": "Constitution Class",
-            "description": "",
-            "page_reference": "p. 198"
-        },
-        "Defiant": {
-            "name": "Defiant Class",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Excelsior": {
-            "name": "Excelsior Class",
-            "description": "",
-            "page_reference": "p. 199"
-        },
-        "Galaxy": {
-            "name": "Galaxy Class",
-            "description": "",
-            "page_reference": "p. 202"
-        },
-        "Intrepid": {
-            "name": "Intrepid Class",
-            "description": "",
-            "page_reference": "p. 203"
-        },
-        "Miranda": {
-            "name": "Miranda Class",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Nova": {
-            "name": "Nova Class",
-            "description": "",
-            "page_reference": "p. 203"
-        },
-        "Daedalus": {
-            "name": "Daedalus Class",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "NX": {
-            "name": "NX Class",
-            "description": "",
-            "page_reference": "p. 197"
-        },
-        "Hermes": {
-            "name": "Hermes Class",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "ScoutType": {
-            "name": "Scout Type",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Oberth": {
-            "name": "Oberth Class",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Centaur": {
-            "name": "Centaur Class",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Ambassador": {
-            "name": "Ambassador Class",
-            "description": "",
-            "page_reference": "p. 200"
-        },
-        "Nebula": {
-            "name": "Nebula Class",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Olympic": {
-            "name": "Olympic Class",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Steamrunner": {
-            "name": "Steamrunner Class",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Norway": {
-            "name": "Norway Class",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Sovereign": {
-            "name": "Sovereign Class",
-            "description": "",
-            "page_reference": "p. 204"
-        },
-        "Luna": {
-            "name": "Luna Class",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Walker": {
-            "name": "Walker Class",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Crossfield": {
-            "name": "Crossfield Class",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "JClassYClass": {
-            "name": "J-Class/Y-Class",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Antares": {
-            "name": "Antares",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Odyssey": {
-            "name": "Odyssey",
-            "description": "",
-            "page_reference": "p. 202"
-        },
-        "Akira_UP": {
-            "name": "Akira Class",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Ambassador_UP": {
-            "name": "Ambassador Class",
-            "description": "",
-            "page_reference": "p. 200"
-        },
-        "Constellation_UP": {
-            "name": "Constellation Class",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Constitution_UP": {
-            "name": "Constitution Class",
-            "description": "",
-            "page_reference": "p. 198"
-        },
-        "Defiant_UP": {
-            "name": "Defiant Class",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Excelsior_UP": {
-            "name": "Excelsior Class",
-            "description": "",
-            "page_reference": "p. 199"
-        },
-        "Intrepid_UP": {
-            "name": "Intrepid Class",
-            "description": "",
-            "page_reference": "p. 203"
-        },
-        "Luna_UP": {
-            "name": "Luna Class",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Miranda_UP": {
-            "name": "Miranda Class",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Nebula_UP": {
-            "name": "Nebula Class",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "NX_UP": {
-            "name": "NX Class",
-            "description": "",
-            "page_reference": "p. 197"
-        },
-        "Oberth_UP": {
-            "name": "Oberth Class",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Sovereign_UP": {
-            "name": "Sovereign Class",
-            "description": "",
-            "page_reference": "p. 204"
-        },
-        "Pioneer": {
-            "name": "Pioneer Class",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "D7": {
-            "name": "D7-Class Battle Cruiser",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Brel": {
-            "name": "B'rel-Class Bird-of-Prey",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "KlingonCivilianTransport": {
-            "name": "Klingon Civilian Transport",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "ParTok": {
-            "name": "Par'Tok Transport",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "VorCha": {
-            "name": "Vor'Cha-Class Attack Cruiser",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Constitution_2E": {
-            "name": "Constitution Class",
-            "description": "",
-            "page_reference": "p. 198"
-        },
-        "Walker_2E": {
-            "name": "Walker",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Pioneer_2E": {
-            "name": "Pioneer class",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Crossfield_2E": {
-            "name": "Crossfield",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Miranda_2E": {
-            "name": "Miranda",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Oberth_2E": {
-            "name": "Oberth",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Columbia": {
-            "name": "Columbia",
-            "description": "",
-            "page_reference": "p. 197"
-        },
-        "Constellation_2E": {
-            "name": "Constellation",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Nebula_2E": {
-            "name": "Nebula",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Akira_2E": {
-            "name": "Akira",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Nova_2E": {
-            "name": "Nova",
-            "description": "",
-            "page_reference": "p. 203"
-        },
-        "Defiant_2E": {
-            "name": "Defiant",
-            "description": "",
-            "page_reference": "p. 198"
-        },
-        "Luna_2E": {
-            "name": "Luna",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Sagan": {
-            "name": "Sagan",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Odyssey_2E": {
-            "name": "Odyssey",
-            "description": "",
-            "page_reference": "p. 202"
-        },
-        "Merchantman": {
-            "name": "Merchantman class",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "XhosaType": {
-            "name": "Antares class (Xhosa-type)",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        }
+    "LaudedByAnotherCulture": {
+      "name": "Lauded by Another Culture",
+      "d20": 10,
+      "page_reference": "p. 130",
+      "attribute": "+1 Presence",
+      "department": "+1 Science",
+      "focus_suggestions": [
+        "Specific Culture Studies",
+        "Cultural Arts"
+      ],
+      "trait": "Friend to the X",
+      "description": "The character was involved in a mission that earned the official praise of a non-Federation culture; they are now considered a friend to those people. Attribute: +1 Presence. Department: +1 Science. Focus suggestions: X Culture. Optional Trait: Friend to the X."
     },
-    "mission_profiles": {
-        "Battlecruiser": {
-            "name": "Battlecruiser",
-            "description": "",
-            "page_reference": "p. 212"
-        },
-        "CrisisAndEmergencyResponse": {
-            "name": "Crisis Response and Interception",
-            "description": "",
-            "page_reference": "p. 213"
-        },
-        "EspionageIntelligence": {
-            "name": "Espionage/Intelligence",
-            "description": "",
-            "page_reference": "p. 213"
-        },
-        "Flagship": {
-            "name": "Flagship",
-            "description": "",
-            "page_reference": "p. 213"
-        },
-        "MultiroleExplorer": {
-            "name": "Multirole Battle Cruiser",
-            "description": "",
-            "page_reference": "p. 214"
-        },
-        "PathfinderAndReconaissance": {
-            "name": "Intelligence and Reconnaissance Operations",
-            "description": "",
-            "page_reference": "p. 214"
-        },
-        "Patrol": {
-            "name": "Patrol",
-            "description": "",
-            "page_reference": "p. 214"
-        },
-        "ScientificAndSurvey": {
-            "name": "Scientific and Survey Operations",
-            "description": "",
-            "page_reference": "p. 215"
-        },
-        "StrategicAndDiplomatic": {
-            "name": "Strategic and Diplomatic Operations",
-            "description": "",
-            "page_reference": "p. 215"
-        },
-        "Tactical": {
-            "name": "Tactical Operations",
-            "description": "",
-            "page_reference": "p. 215"
-        },
-        "CivilianMerchantMarine": {
-            "name": "Civilian Merchant Marine",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "ColonySupport": {
-            "name": "Colony Support",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "LogisticalQuartermaster": {
-            "name": "Logistical/Quartermaster",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "ReserveFleet": {
-            "name": "Reserve Fleet",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "TechnicalTestBed": {
-            "name": "Technical Test-Bed",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "ProjectEscalante": {
-            "name": "Project Escalante",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "EntertainmentPleasureShip": {
-            "name": "Entertainment/Pleasure Ship",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "Warship": {
-            "name": "Warship",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        },
-        "HouseGuard": {
-            "name": "House Guard",
-            "description": "",
-            "page_reference": "Not in this rulebook"
-        }
+    "LearnedUniqueLanguage": {
+      "name": "Learned Unique Language",
+      "d20": 11,
+      "page_reference": "p. 130",
+      "attribute": "+1 Insight",
+      "department": "+1 Science",
+      "focus_suggestions": [
+        "Linguistics",
+        "Cultural Studies",
+        "Negotiations"
+      ],
+      "description": "The character encounters a species with an unusual form of communication and learns to communicate with them. Attribute: +1 Insight. Department: +1 Science. Focus suggestions: Linguistics, Cultural Studies, Negotiations."
+    },
+    "Mentored": {
+      "name": "Mentored",
+      "d20": 12,
+      "page_reference": "p. 130",
+      "attribute": "+1 Any",
+      "department": "+1 Conn",
+      "focus_suggestions": [
+        "Mentor's Specialty",
+        "Leadership",
+        "Piloting"
+      ],
+      "description": "A respected superior took the character under their wing and offered guidance, passing on their experiences and lessons. Attribute: +1 Any. Department: +1 Conn. Focus suggestions: Any focus related to the mentor's lessons."
+    },
+    "NegotiatedATreaty": {
+      "name": "Negotiated a Treaty",
+      "d20": 13,
+      "page_reference": "p. 130",
+      "attribute": "+1 Control",
+      "department": "+1 Command",
+      "focus_suggestions": [
+        "Diplomacy",
+        "Negotiation",
+        "Galactic Politics"
+      ],
+      "description": "The character was part of a delegation that negotiated an accord or treaty with a culture outside the Federation. Attribute: +1 Control. Department: +1 Command. Focus suggestions: Diplomacy, Negotiation, Galactic Politics."
+    },
+    "NewBattleStrategy": {
+      "name": "New Battle Strategy",
+      "d20": 14,
+      "page_reference": "p. 130",
+      "attribute": "+1 Daring",
+      "department": "+1 Security",
+      "focus_suggestions": [
+        "Combat Tactics",
+        "Hazard Awareness"
+      ],
+      "description": "The character was in a combat situation and devised a new strategy or tactic. Attribute: +1 Daring. Department: +1 Security. Focus suggestions: Combat Tactics, Hazard Awareness."
+    },
+    "RequiredToTakeCommand": {
+      "name": "Required to Take Command",
+      "d20": 15,
+      "page_reference": "p. 130",
+      "attribute": "+1 Daring",
+      "department": "+1 Command",
+      "focus_suggestions": [
+        "Lead by Example",
+        "Inspiration",
+        "Starship Operations"
+      ],
+      "description": "The character was thrust into command during a crisis when senior officers were incapacitated or unavailable. Attribute: +1 Daring. Department: +1 Command. Focus suggestions: Lead by Example, Inspiration, Starship Operations."
+    },
+    "SeriousInjury": {
+      "name": "Serious Injury",
+      "d20": 16,
+      "page_reference": "p. 131",
+      "attribute": "+1 Fitness",
+      "department": "+1 Medicine",
+      "focus_suggestions": [
+        "Athletics",
+        "Rehabilitation",
+        "Pastimes"
+      ],
+      "trait": "Prosthetic / Disability",
+      "description": "The character was seriously injured and had to spend a considerable amount of time recovering. Attribute: +1 Fitness. Department: +1 Medicine. Focus suggestions: Athletics, or a pursuit taken up during recovery. Optional Trait: Prosthetic / Implant / Disability."
+    },
+    "ShipDestroyed": {
+      "name": "Ship Destroyed",
+      "d20": 17,
+      "page_reference": "p. 131",
+      "attribute": "+1 Daring",
+      "department": "+1 Security",
+      "focus_suggestions": [
+        "Extra Vehicular Operations",
+        "Small Craft",
+        "Survival"
+      ],
+      "description": "The ship or facility the character was serving on was destroyed during a mission, and the character was one of the few who survived. Attribute: +1 Daring. Department: +1 Security. Focus suggestions: Extra Vehicular Operations, Small Craft, Survival."
+    },
+    "SolvedAnEngineeringCrisis": {
+      "name": "Solved an Engineering Crisis",
+      "d20": 18,
+      "page_reference": "p. 131",
+      "attribute": "+1 Control",
+      "department": "+1 Engineering",
+      "focus_suggestions": [
+        "Electro-Plasma Power Systems",
+        "Fusion Reactors",
+        "Warp Engines"
+      ],
+      "description": "The character was instrumental in ending a crisis caused by malfunctioning technology and saved many lives in the process. Attribute: +1 Control. Department: +1 Engineering. Focus suggestions: Electro-Plasma Power Systems, Fusion Reactors, Warp Engines."
+    },
+    "SpecialCommendation": {
+      "name": "Special Commendation",
+      "d20": 19,
+      "page_reference": "p. 131",
+      "attribute": "+1 Fitness",
+      "department": "+1 Any",
+      "focus_suggestions": [
+        "Athletics",
+        "Survival",
+        "Emergency Medicine"
+      ],
+      "description": "During a crisis, the character saved the lives of several colleagues, helping them to safety. This earned the character a special commendation. Attribute: +1 Fitness. Department: +1 Any. Focus suggestions: Athletics, Survival, Emergency Medicine."
+    },
+    "TransporterAccident": {
+      "name": "Transporter Accident",
+      "d20": 20,
+      "page_reference": "p. 131",
+      "attribute": "+1 Control",
+      "department": "+1 Conn",
+      "focus_suggestions": [
+        "Transporters & Replicators",
+        "Small Craft",
+        "Quantum Mechanics"
+      ],
+      "description": "The character suffered some manner of strange accident while using a transporter. Attribute: +1 Control. Department: +1 Conn. Focus suggestions: Transporters & Replicators, Small Craft, Quantum Mechanics."
     }
+  },
+  "careers": {
+    "CivilianOfficial": {
+      "name": "Civilian (Official)",
+      "requirements": "Lifepath Step 4",
+      "page_reference": "p. 126",
+      "trait": "Administrator",
+      "departments": "+2 Command; +1 to two other departments",
+      "description": "Civil servant or government administrator. Grants trait Administrator, 1 value, 3 attribute points (at least +1 Insight or Presence), +2 Command (+1 to two others), 3 focuses, and 1 talent."
+    },
+    "CivilianPhysician": {
+      "name": "Civilian (Physician)",
+      "requirements": "Lifepath Step 4",
+      "page_reference": "p. 125",
+      "trait": "Physician",
+      "departments": "+2 Medicine; +1 to two other departments",
+      "description": "Civilian doctor, paramedic, counselor, or medical researcher. Grants trait Physician, 1 value, 3 attribute points, +2 Medicine (+1 to two others), 3 focuses, and 1 talent."
+    },
+    "CivilianScientist": {
+      "name": "Civilian (Scientist)",
+      "requirements": "Lifepath Step 4",
+      "page_reference": "p. 125",
+      "trait": "Scientist or Engineer",
+      "departments": "+2 Science or Engineering; +1 to two other departments",
+      "description": "Civilian scientist or engineer. Grants trait Scientist/Engineer, 1 value, 3 attribute points (at least +1 Reason), +2 Science or Engineering (+1 to two others), 3 focuses, and 1 talent."
+    },
+    "CivilianTrader": {
+      "name": "Civilian (Trader)",
+      "requirements": "Lifepath Step 4",
+      "page_reference": "p. 126",
+      "trait": "Merchant",
+      "departments": "+2 Command; +1 to two other departments",
+      "description": "Merchant, bartender, or free trader. Grants trait Merchant, 1 value, 3 attribute points (at least +1 Insight or Presence), +2 Command (+1 to two others), 3 focuses, and 1 talent."
+    },
+    "DiplomaticCorps": {
+      "name": "Diplomatic Corps",
+      "requirements": "Lifepath Step 4",
+      "page_reference": "pp. 124–125",
+      "trait": "Diplomat or Ambassador",
+      "departments": "+2 Command; +1 to two other departments",
+      "description": "Ambassador, envoy, or diplomat. Grants trait Diplomat/Ambassador, 1 value, 3 attribute points, +2 Command (+1 to two others), 3 focuses, and 1 talent."
+    },
+    "Experienced": {
+      "name": "Experienced",
+      "requirements": "Lifepath Step 5: Experience",
+      "page_reference": "p. 128",
+      "description": "Years of experience in your chosen field. Grants 1 freely chosen value and 1 freely chosen talent."
+    },
+    "Young": {
+      "name": "Novice",
+      "requirements": "Lifepath Step 5: Experience",
+      "page_reference": "p. 127",
+      "description": "Defined by potential more than experience. Grants 1 value reflecting inexperience and the Untapped Potential talent."
+    },
+    "StarfleetEnlisted": {
+      "name": "Starfleet (Enlisted)",
+      "requirements": "Lifepath Step 4",
+      "page_reference": "p. 123",
+      "trait": "Starfleet Crew",
+      "departments": "+2 Conn, Security, Engineering, or Science; +1 to two other departments",
+      "description": "Trained at Starfleet Technical Services Academy. Grants trait Starfleet Crew, 1 value, 3 attribute points, +2 Conn/Security/Engineering/Science (+1 to two others), 3 focuses, and 1 talent."
+    },
+    "StarfleetIntelligence": {
+      "name": "Starfleet (Intelligence)",
+      "requirements": "Lifepath Step 4",
+      "page_reference": "pp. 123–124",
+      "trait": "Intelligence Operative",
+      "departments": "+2 Command or Security; +1 to two other departments",
+      "description": "Operative or analyst in Starfleet Intelligence (or equivalent agency). Grants trait Intelligence Operative, 1 value, 3 attribute points, +2 Command or Security (+1 to two others), 3 focuses, and 1 talent."
+    },
+    "StarfleetOfficerCommand": {
+      "name": "Starfleet Officer (Command Track)",
+      "requirements": "Lifepath Step 4",
+      "page_reference": "pp. 120–121",
+      "trait": "Starfleet Officer",
+      "departments": "+2 Command or Conn; +1 to two other departments",
+      "description": "Starfleet Academy graduate in the Command track. Grants trait Starfleet Officer, 1 value, 3 attribute points, +2 Command or Conn (+1 to two others), 3 focuses, and 1 talent."
+    },
+    "StarfleetOfficerOperations": {
+      "name": "Starfleet Officer (Operations Track)",
+      "requirements": "Lifepath Step 4",
+      "page_reference": "pp. 120, 122",
+      "trait": "Starfleet Officer",
+      "departments": "+2 Engineering or Security; +1 to two other departments",
+      "description": "Starfleet Academy graduate in the Operations track. Grants trait Starfleet Officer, 1 value, 3 attribute points, +2 Engineering or Security (+1 to two others), 3 focuses, and 1 talent."
+    },
+    "StarfleetOfficerSciences": {
+      "name": "Starfleet Officer (Sciences Track)",
+      "requirements": "Lifepath Step 4",
+      "page_reference": "pp. 120, 122",
+      "trait": "Starfleet Officer",
+      "departments": "+2 Science or Medicine; +1 to two other departments",
+      "description": "Starfleet Academy graduate in the Sciences track. Grants trait Starfleet Officer, 1 value, 3 attribute points, +2 Science or Medicine (+1 to two others), 3 focuses, and 1 talent."
+    },
+    "Veteran": {
+      "name": "Veteran",
+      "requirements": "Lifepath Step 5: Experience",
+      "page_reference": "p. 128",
+      "description": "Decades of experience in your chosen profession. Grants 1 value reflecting years of experience and the Veteran talent."
+    }
+  },
+  "environments": {
+    "AnotherSpeciesWorld": {
+      "name": "Another Species' World",
+      "requirements": "None (Lifepath Step 2: Roll 1–3)",
+      "page_reference": "p. 115",
+      "attributes": "Choose another species from Step 1; increase one of that species' attributes by +1",
+      "departments": "Increase any one department by +1",
+      "description": "The character grew up among another species. Grants a value, +1 to one attribute from that other species, and +1 to any one department."
+    },
+    "BusyColony": {
+      "name": "Busy Colony",
+      "requirements": "None (Lifepath Step 2: Roll 4–6)",
+      "page_reference": "p. 115",
+      "attributes": "+1 Daring or +1 Presence",
+      "departments": "+1 Command, Security, or Science",
+      "description": "The character comes from one of their culture's oldest or most prosperous colonies. Grants a value, +1 Daring or Presence, and +1 Command, Security, or Science."
+    },
+    "FrontierColony": {
+      "name": "Frontier Colony",
+      "requirements": "None (Lifepath Step 2: Roll 7–9)",
+      "page_reference": "p. 115",
+      "attributes": "+1 Control or +1 Fitness",
+      "departments": "+1 Conn, Security, or Medicine",
+      "description": "The character comes from a colony on the fringes of known space. Grants a value, +1 Control or Fitness, and +1 Conn, Security, or Medicine."
+    },
+    "Homeworld": {
+      "name": "Homeworld",
+      "requirements": "None (Lifepath Step 2: Roll 10–12)",
+      "page_reference": "p. 116",
+      "attributes": "+1 to one of the three attributes your species improved",
+      "departments": "+1 Command, Security, or Science",
+      "description": "The character comes from the world that birthed their civilization. Grants a value, +1 to one of your species' three attributes, and +1 Command, Security, or Science."
+    },
+    "IsolatedColony": {
+      "name": "Isolated Colony",
+      "requirements": "None (Lifepath Step 2: Roll 13–15)",
+      "page_reference": "p. 116",
+      "attributes": "+1 Reason or +1 Insight",
+      "departments": "+1 Engineering, Science, or Medicine",
+      "description": "The character comes from a colony isolated from broader galactic society. Grants a value, +1 Reason or Insight, and +1 Engineering, Science, or Medicine."
+    },
+    "StarshipOrStarbase": {
+      "name": "Starship or Starbase",
+      "requirements": "None (Lifepath Step 2: Roll 16–18)",
+      "page_reference": "p. 116",
+      "attributes": "+1 Control or +1 Insight",
+      "departments": "+1 Command, Conn, or Engineering",
+      "description": "The character grew up in space aboard a starship, space station, or starbase. Grants a value, +1 Control or Insight, and +1 Command, Conn, or Engineering."
+    }
+  },
+  "equipment": {
+    "AntiGravSled": {
+      "name": "Anti-Grav Sled",
+      "category": "Field Equipment",
+      "page_reference": "p. 246",
+      "cost": "Opportunity 2",
+      "description": "Hovering cargo carrier utilizing graviton emitters to make heavy equipment nearly weightless. Cost: Opportunity 2."
+    },
+    "ArmoredVest": {
+      "name": "Armored Vest",
+      "category": "Armor",
+      "page_reference": "p. 244",
+      "protection": 1,
+      "cost": "Standard Issue",
+      "description": "Dense ceramic or composite ballistic vest. Grants Protection 1, reducing the cost to avoid injuries by 1. Cost: Standard Issue."
+    },
+    "AudioReceiver": {
+      "name": "Audio Receiver",
+      "requirements": "None",
+      "page_reference": "p. 247",
+      "cost": "Standard Issue (Comms Officer) / Opportunity 1",
+      "description": "High-gain acoustic and signal monitoring earpiece."
+    },
+    "MonitoringDevice": {
+      "name": "Biomedical Monitoring Device",
+      "category": "Medical Equipment",
+      "page_reference": "p. 246",
+      "cost": "Opportunity 1",
+      "description": "Wearable patient telemetry sensor scanning vital organs and diagnosing baseline physiological functions. Cost: Opportunity 1."
+    },
+    "BodyArmor": {
+      "name": "Body Armor",
+      "category": "Armor",
+      "page_reference": "p. 244",
+      "protection": 2,
+      "cost": "Opportunity 1, Escalation 1",
+      "description": "Full tactical reinforced plating worn in high-intensity combat zones. Grants Protection 2. Cost: Opportunity 1, Escalation 1."
+    },
+    "Communicator": {
+      "name": "Communicator / Combadge",
+      "requirements": "None",
+      "page_reference": "pp. 141, 245",
+      "cost": "Standard Issue (0)",
+      "description": "Personal subspace communication device with integrated universal translator (and personal transporter in the 32nd century)."
+    },
+    "DermalRegenerator": {
+      "name": "Dermal Regenerator / Anabolic Protoplaser",
+      "category": "Medical Equipment",
+      "page_reference": "p. 246",
+      "cost": "Part of Medkit",
+      "description": "Standard medical emitter accelerating humanoid cellular replication to seal cuts, burns, and wounds."
+    },
+    "Beacons": {
+      "name": "Emergency Beacons",
+      "category": "Field Equipment",
+      "page_reference": "p. 246",
+      "cost": "Opportunity 1",
+      "description": "Multispectral lights emitting across ultraviolet, white light, and near-infrared heat-source survival bands. Cost: Opportunity 1."
+    },
+    "EmergencySurgicalKit": {
+      "name": "Emergency Surgical Kit",
+      "category": "Medical Equipment",
+      "page_reference": "p. 246",
+      "cost": "Opportunity 1",
+      "description": "Field surgery unit with sterile single-use supplies and an interactive diagnostic PADD guiding triage. Cost: Opportunity 1."
+    },
+    "EngineeringKit": {
+      "name": "Engineering Multi-Tool / Engineering Toolkit",
+      "requirements": "Engineering Personnel or Opportunity 1",
+      "page_reference": "p. 246",
+      "cost": "Standard Issue (Engineering) / Opportunity 1",
+      "description": "Contains hyperspanners, micro-welders, plasma torches, and diagnostic tools required for field repairs."
+    },
+    "EnvironmentSuit": {
+      "name": "Environment Suit (EV Suit)",
+      "category": "Armor",
+      "page_reference": "p. 244",
+      "protection": 1,
+      "cost": "Opportunity 2",
+      "description": "Pressurized suit with self-contained life support for zero-g and toxic environments. Grants Protection 1. Cost: Opportunity 2."
+    },
+    "HolographicImager": {
+      "name": "Holographic Imager",
+      "requirements": "None",
+      "page_reference": "p. 247",
+      "cost": "Opportunity 1",
+      "description": "Handheld device capable of recording and projecting three-dimensional holo-images."
+    },
+    "LaserScalpel": {
+      "name": "Laser Scalpel (Exoscalpel)",
+      "category": "Medical Equipment",
+      "page_reference": "p. 246",
+      "cost": "Part of Medkit",
+      "description": "Micro-precision surgical laser providing sterile incisions at calibrated depths."
+    },
+    "MassSpectrometer": {
+      "name": "Mass Spectrometer",
+      "requirements": "None",
+      "page_reference": "p. 246",
+      "cost": "Opportunity 1",
+      "description": "Portable scientific analyzer used to determine the exact molecular and elemental composition of samples."
+    },
+    "HyposprayDevice": {
+      "name": "Medical Hypospray",
+      "category": "Medical Equipment",
+      "page_reference": "p. 246",
+      "cost": "Part of Medkit",
+      "description": "High-pressure aerosol medication applicator for rapid needle-free subcutaneous and intramuscular drug delivery."
+    },
+    "MedicalTricorder": {
+      "name": "Medical Tricorder",
+      "requirements": "Medical Personnel or Opportunity 1",
+      "page_reference": "pp. 141, 246",
+      "cost": "Standard Issue (Medical) / Opportunity 1",
+      "description": "Specialized tricorder tuned for biological, physiological, and diagnostic scanning."
+    },
+    "Medkit": {
+      "name": "Medkit",
+      "requirements": "Medical Personnel or Opportunity 1",
+      "page_reference": "p. 246",
+      "cost": "Standard Issue (Medical) / Opportunity 1",
+      "description": "Field medical kit containing hyposprays, dermal regenerators, bandages, and emergency pharmaceuticals."
+    },
+    "OrionMultiKey": {
+      "name": "Orion Multi-Key",
+      "requirements": "Not widely available",
+      "page_reference": "p. 247",
+      "cost": "Opportunity 2",
+      "description": "Illicit bypass tool used to pick mechanical and electronic locks."
+    },
+    "PADD": {
+      "name": "PADD (Personal Access Display Device)",
+      "requirements": "None",
+      "page_reference": "p. 247",
+      "cost": "No Cost (0)",
+      "description": "Handheld computer interface used for reading, writing, and transferring data and logs."
+    },
+    "PatternEnhancer": {
+      "name": "Pattern Enhancers",
+      "category": "Field Equipment",
+      "page_reference": "p. 247",
+      "cost": "Opportunity 1",
+      "description": "Set of three tripod beacons placed equidistant around a site to amplify transporter lock through atmospheric or cosmic interference. Cost: Opportunity 1."
+    },
+    "PersonalForcefield": {
+      "name": "Personal Forcefield",
+      "category": "Armor",
+      "page_reference": "p. 244",
+      "protection": 3,
+      "cost": "Opportunity 1, Escalation 2",
+      "description": "Wearable energy shield generator offering formidable defense. Grants Protection 3. Cost: Opportunity 1, Escalation 2."
+    },
+    "PlasmaTorch": {
+      "name": "Plasma Torch",
+      "category": "Engineering Tools",
+      "page_reference": "p. 246",
+      "cost": "Opportunity 1",
+      "description": "Superheated ionized helium cutting torch focused by magnetic fields to slice through reinforced alloys. Cost: Opportunity 1."
+    },
+    "Tricorder": {
+      "name": "Standard Tricorder",
+      "requirements": "None",
+      "page_reference": "pp. 141, 245",
+      "cost": "Standard Issue (0)",
+      "description": "Portable multifunction sensor, data recorder, and computer analysis tool."
+    },
+    "UniversalTranslator": {
+      "name": "Universal Translator (Standalone)",
+      "category": "Communications",
+      "page_reference": "p. 247",
+      "cost": "Opportunity 1",
+      "description": "Dedicated linguistics computer unit for deciphering unknown languages when combadges are unavailable. Cost: Opportunity 1."
+    }
+  },
+  "mission_profiles": {
+    "CrisisAndEmergencyResponse": {
+      "name": "Crisis and Emergency Response",
+      "requirements": "Starship Creation Step 2",
+      "page_reference": "p. 214",
+      "systems": "+1 Comms or Sensors, +1 Structure",
+      "departments": {
+        "command": 1,
+        "conn": 2,
+        "engineering": 1,
+        "security": 2,
+        "medicine": 3,
+        "science": 1
+      },
+      "description": "Systems: +1 Comms/Sensors, +1 Structure • Departments: Command 1, Conn 2, Engineering 1, Security 2, Medicine 3, Science 1 • Talent: Advanced Medical Ward,Advanced Transporters, Emergency Medical Hologram, Expanded Emergency Medical Facilities, or Extensive Shuttlebays."
+    },
+    "LogisticsAndQuartermaster": {
+      "name": "Logistics and Quartermaster Operations",
+      "requirements": "Starship Creation Step 2",
+      "page_reference": "p. 215",
+      "systems": "+1 Comms, +1 Structure",
+      "departments": {
+        "command": 2,
+        "conn": 1,
+        "engineering": 3,
+        "security": 1,
+        "medicine": 1,
+        "science": 2
+      },
+      "description": "Systems: +1 Comms, +1 Structure • Departments: Command 2, Conn 1, Engineering 3, Security 1, Medicine 1, Science 2 • Talent: Advanced Transporters, Dedicated Personnel, Extensive Shuttlebays, or High-Power Tractor Beam."
+    },
+    "MultiroleExplorer": {
+      "name": "Multirole Explorer",
+      "requirements": "Starship Creation Step 2",
+      "page_reference": "p. 215",
+      "systems": "+1 to any two systems",
+      "departments": {
+        "command": 2,
+        "conn": 2,
+        "engineering": 2,
+        "security": 2,
+        "medicine": 1,
+        "science": 1
+      },
+      "description": "Systems: +1 to any two systems • Departments: Command 2, Conn 2, Engineering 2, Security 2, Medicine 1, Science 1 (or similar balanced distribution) • Talent: Any one talent."
+    },
+    "PathfinderAndRecon": {
+      "name": "Pathfinder and Reconnaissance Operations",
+      "requirements": "Starship Creation Step 2",
+      "page_reference": "p. 214",
+      "systems": "+1 Engines, +1 Sensors",
+      "departments": {
+        "command": 1,
+        "conn": 3,
+        "engineering": 2,
+        "security": 1,
+        "medicine": 1,
+        "science": 2
+      },
+      "description": "Systems: +1 Engines, +1 Sensors • Departments: Command 1, Conn 3, Engineering 2, Security 1, Medicine 1, Science 2 • Talent: High-Resolution Sensors, Improved Reaction Control System, Improved Warp Drive, or Rugged Design."
+    },
+    "ReserveFleet": {
+      "name": "Reserve Fleet / Patrol",
+      "requirements": "Starship Creation Step 2",
+      "page_reference": "p. 215",
+      "systems": "+1 Sensors, +1 Weapons",
+      "departments": {
+        "command": 2,
+        "conn": 2,
+        "engineering": 2,
+        "security": 2,
+        "medicine": 1,
+        "science": 1
+      },
+      "description": "Systems: +1 Sensors, +1 Weapons • Departments: Command 2, Conn 2, Engineering 2, Security 2, Medicine 1, Science 1 • Talent: Fast Targeting Systems, High-Power Tractor Beam, Improved Damage Control, or Rugged Design."
+    },
+    "ScientificAndSurvey": {
+      "name": "Scientific and Survey Operations",
+      "requirements": "Starship Creation Step 2",
+      "page_reference": "p. 213",
+      "systems": "+1 Computers, +1 Sensors",
+      "departments": {
+        "command": 1,
+        "conn": 2,
+        "engineering": 1,
+        "security": 1,
+        "medicine": 2,
+        "science": 3
+      },
+      "description": "Systems: +1 Computers, +1 Sensors • Departments: Command 1, Conn 2, Engineering 1, Security 1, Medicine 2, Science 3 • Talent: Advanced Research Facilities, Advanced Sensor Suites, High-Resolution Sensors, or Modular Laboratories."
+    },
+    "StrategicAndDiplomatic": {
+      "name": "Strategic and Diplomatic Operations",
+      "requirements": "Starship Creation Step 2",
+      "page_reference": "p. 213",
+      "systems": "+1 Comms, +1 Computers",
+      "departments": {
+        "command": 3,
+        "conn": 1,
+        "engineering": 1,
+        "security": 2,
+        "medicine": 1,
+        "science": 2
+      },
+      "description": "Systems: +1 Comms, +1 Computers • Departments: Command 3, Conn 1, Engineering 1, Security 2, Medicine 1, Science 2 • Talent: Command Ship, Diplomatic Suites, Electronic Warfare Systems, or Extensive Shuttlebays."
+    },
+    "TacticalOperations": {
+      "name": "Tactical Operations",
+      "requirements": "Starship Creation Step 2",
+      "page_reference": "p. 214",
+      "systems": "+1 Structure, +1 Weapons",
+      "departments": {
+        "command": 2,
+        "conn": 2,
+        "engineering": 1,
+        "security": 3,
+        "medicine": 1,
+        "science": 1
+      },
+      "description": "Systems: +1 Structure, +1 Weapons • Departments: Command 2, Conn 2, Engineering 1, Security 3, Medicine 1, Science 1 • Talent: Ablative Armor, Expanded Munitions, Fast Targeting Systems, Improved Impulse Drive, or Quantum Torpedoes."
+    },
+    "TechnicalTestBed": {
+      "name": "Technical Test-Bed",
+      "requirements": "Starship Creation Step 2",
+      "page_reference": "p. 214",
+      "systems": "+1 Engines, +1 Other System",
+      "departments": {
+        "command": 1,
+        "conn": 2,
+        "engineering": 3,
+        "security": 1,
+        "medicine": 1,
+        "science": 2
+      },
+      "description": "Systems: +1 Engines, +1 any system • Departments: Command 1, Conn 2, Engineering 3, Security 1, Medicine 1, Science 2 • Talent: Advanced Shields, Backup EPS Conduits, High-Power Tractor Beam, Improved Power Systems, or Improved Warp Drive."
+    }
+  },
+  "personal_weapons": {
+    "AndorianPlasmaRifle": {
+      "name": "Andorian Plasma Rifle",
+      "page_reference": "p. 243",
+      "category": "Ranged",
+      "type": "Ranged",
+      "injury": "Deadly",
+      "severity": 4,
+      "size": "2H",
+      "qualities": [
+        "Accurate",
+        "Intense"
+      ],
+      "cost": "Not Available",
+      "description": "Andorian guard long gun firing superheated encapsulated plasma bolts. Type: Ranged. Injury: Deadly. Severity: 4. Size: 2H. Qualities: Accurate, Intense. Cost: Not Available."
+    },
+    "AnestheticHypospray": {
+      "name": "Anesthetic Hypospray",
+      "page_reference": "p. 243",
+      "category": "Melee",
+      "type": "Melee",
+      "injury": "Stun",
+      "severity": 3,
+      "size": "1H",
+      "qualities": [
+        "Cumbersome",
+        "Intense"
+      ],
+      "cost": "Opportunity 1",
+      "description": "Medical hypospray loaded with fast-acting anesthetics or tranquilizers. Type: Melee. Injury: Stun. Severity: 3. Size: 1H. Qualities: Cumbersome, Intense. Cost: Opportunity 1."
+    },
+    "Blade": {
+      "name": "Blade (incl. mek'leth, Ushaan-tor, sword)",
+      "page_reference": "p. 243",
+      "category": "Melee",
+      "type": "Melee",
+      "injury": "Deadly",
+      "severity": 3,
+      "size": "1H",
+      "qualities": [],
+      "cost": "Opportunity 1",
+      "description": "Single-handed bladed sidearm or ritual weapon. Type: Melee. Injury: Deadly. Severity: 3. Size: 1H. Qualities: None. Cost: Opportunity 1."
+    },
+    "Bludgeon": {
+      "name": "Bludgeon (club, baton, truncheon)",
+      "page_reference": "p. 243",
+      "category": "Melee",
+      "type": "Melee",
+      "injury": "Stun, Deadly",
+      "severity": 3,
+      "size": "1H",
+      "qualities": [],
+      "cost": "Opportunity 1",
+      "description": "Blunt impact weapon or improvised club. Type: Melee. Injury: Stun or Deadly. Severity: 3. Size: 1H. Qualities: None. Cost: Opportunity 1."
+    },
+    "DisruptorPistol": {
+      "name": "Disruptor Pistol",
+      "page_reference": "p. 243",
+      "category": "Ranged",
+      "type": "Ranged",
+      "injury": "Deadly",
+      "severity": 4,
+      "size": "1H",
+      "qualities": [
+        "Intense"
+      ],
+      "cost": "Not Available",
+      "description": "Standard energy weapon of the Klingon, Romulan, and Orion military. Inflicts agonizing thermal disintegration. Type: Ranged. Injury: Deadly. Severity: 4. Size: 1H. Qualities: Intense. Cost: Not Available."
+    },
+    "DisruptorRifle": {
+      "name": "Disruptor Rifle",
+      "page_reference": "p. 243",
+      "category": "Ranged",
+      "type": "Ranged",
+      "injury": "Deadly",
+      "severity": 5,
+      "size": "2H",
+      "qualities": [
+        "Accurate",
+        "Intense"
+      ],
+      "cost": "Not Available",
+      "description": "Heavy alien military rifle designed for maximum destructive tissue damage. Type: Ranged. Injury: Deadly. Severity: 5. Size: 2H. Qualities: Accurate, Intense. Cost: Not Available."
+    },
+    "HeavyBlade": {
+      "name": "Heavy Blade (incl. bat'leth, lirpa, Kar'takin)",
+      "page_reference": "p. 243",
+      "category": "Melee",
+      "type": "Melee",
+      "injury": "Deadly",
+      "severity": 3,
+      "size": "2H",
+      "qualities": [
+        "Intense"
+      ],
+      "cost": "Opportunity 1, Escalation 1",
+      "description": "Two-handed heavy martial weapon capable of devastating cleaving wounds. Type: Melee. Injury: Deadly. Severity: 3. Size: 2H. Qualities: Intense. Cost: Opportunity 1, Escalation 1."
+    },
+    "JemHadarPlasmaPistol": {
+      "name": "Jem'Hadar Plasma Pistol",
+      "page_reference": "p. 243",
+      "category": "Ranged",
+      "type": "Ranged",
+      "injury": "Deadly",
+      "severity": 4,
+      "size": "1H",
+      "qualities": [
+        "Debilitating"
+      ],
+      "cost": "Not Available",
+      "description": "Dominion sidearm discharging thermal plasma with anticoagulant toxins that hinder healing. Type: Ranged. Injury: Deadly. Severity: 4. Size: 1H. Qualities: Debilitating. Cost: Not Available."
+    },
+    "JemHadarPlasmaRifle": {
+      "name": "Jem'Hadar Plasma Rifle",
+      "page_reference": "p. 243",
+      "category": "Ranged",
+      "type": "Ranged",
+      "injury": "Deadly",
+      "severity": 5,
+      "size": "2H",
+      "qualities": [
+        "Accurate",
+        "Debilitating"
+      ],
+      "cost": "Not Available",
+      "description": "Dominion heavy military rifle delivering lethal plasma bursts with anticoagulant effects. Type: Ranged. Injury: Deadly. Severity: 5. Size: 2H. Qualities: Accurate, Debilitating. Cost: Not Available."
+    },
+    "Dagger": {
+      "name": "Knife / Dagger (incl. d'k tahg)",
+      "page_reference": "p. 243",
+      "category": "Melee",
+      "type": "Melee",
+      "injury": "Deadly",
+      "severity": 2,
+      "size": "1H",
+      "qualities": [
+        "Hidden 1"
+      ],
+      "cost": "Opportunity 1",
+      "description": "Utility knife or ceremonial fighting dagger. Type: Melee. Injury: Deadly. Severity: 2. Size: 1H. Qualities: Hidden 1. Cost: Opportunity 1."
+    },
+    "ParticleRifle": {
+      "name": "Particle Rifle",
+      "page_reference": "p. 243",
+      "category": "Ranged",
+      "type": "Ranged",
+      "injury": "Stun, Deadly",
+      "severity": 4,
+      "size": "2H",
+      "qualities": [
+        "Accurate"
+      ],
+      "cost": "Standard Issue (22nd C)",
+      "description": "MACO military particle-stream rifle used prior to phaser adoption. Type: Ranged. Injury: Stun or Deadly. Severity: 4. Size: 2H. Qualities: Accurate. Cost: Standard Issue (22nd Century)."
+    },
+    "PhasePistol": {
+      "name": "Phase Pistol",
+      "page_reference": "p. 243",
+      "category": "Ranged",
+      "type": "Ranged",
+      "injury": "Stun, Deadly",
+      "severity": 3,
+      "size": "1H",
+      "qualities": [],
+      "cost": "Standard Issue (22nd C)",
+      "description": "United Earth 22nd-century predecessor to hand phasers. Type: Ranged. Injury: Stun or Deadly. Severity: 3. Size: 1H. Qualities: None. Cost: Standard Issue (22nd Century)."
+    },
+    "PhaserType1": {
+      "name": "Phaser Type-1",
+      "page_reference": "p. 243",
+      "category": "Ranged",
+      "type": "Ranged",
+      "injury": "Stun, Deadly",
+      "severity": 3,
+      "size": "1H",
+      "qualities": [
+        "Charge",
+        "Hidden 1"
+      ],
+      "cost": "Standard Issue",
+      "description": "Palm-sized Starfleet defensive sidearm. Type: Ranged. Injury: Stun or Deadly. Severity: 3. Size: 1H. Qualities: Charge, Hidden 1. Cost: Standard Issue."
+    },
+    "PhaserType2": {
+      "name": "Phaser Type-2",
+      "page_reference": "p. 243",
+      "category": "Ranged",
+      "type": "Ranged",
+      "injury": "Stun, Deadly",
+      "severity": 4,
+      "size": "1H",
+      "qualities": [
+        "Charge"
+      ],
+      "cost": "Standard Issue",
+      "description": "Standard Starfleet service pistol issued to away teams and security. Type: Ranged. Injury: Stun or Deadly. Severity: 4. Size: 1H. Qualities: Charge. Cost: Standard Issue."
+    },
+    "PhaserType3": {
+      "name": "Phaser Type-3 (Phaser Rifle)",
+      "page_reference": "p. 243",
+      "category": "Ranged",
+      "type": "Ranged",
+      "injury": "Stun, Deadly",
+      "severity": 5,
+      "size": "2H",
+      "qualities": [
+        "Accurate",
+        "Charge"
+      ],
+      "cost": "Opportunity 1, Escalation 2",
+      "description": "High-powered military rifle with advanced gyro-stabilization and precision optics. Type: Ranged. Injury: Stun or Deadly. Severity: 5. Size: 2H. Qualities: Accurate, Charge. Cost: Opportunity 1, Escalation 2."
+    },
+    "PulseGrenade": {
+      "name": "Pulse Grenade",
+      "page_reference": "p. 243",
+      "category": "Ranged",
+      "type": "Ranged",
+      "injury": "Stun, Deadly",
+      "severity": 4,
+      "size": "1H",
+      "qualities": [
+        "Area",
+        "Grenade"
+      ],
+      "cost": "Opportunity 1, Escalation 2",
+      "description": "Timed explosive power cell discharging destructive bursts across an entire zone. Type: Ranged. Injury: Stun or Deadly. Severity: 4. Size: 1H. Qualities: Area, Grenade (3 attacks). Cost: Opportunity 1, Escalation 2."
+    },
+    "UnarmedStrike": {
+      "name": "Unarmed Strike",
+      "page_reference": "p. 243",
+      "category": "Melee",
+      "type": "Melee",
+      "injury": "Stun",
+      "severity": 2,
+      "size": "1H",
+      "qualities": [],
+      "cost": "—",
+      "description": "Close combat attack using martial arts, fists, feet, or brute force. Type: Melee. Injury: Stun. Severity: 2. Size: 1H. Qualities: None."
+    }
+  },
+  "ranks": {
+    "Admiral": {
+      "name": "Admiral",
+      "requirements": "Flag Officer",
+      "page_reference": "p. 140",
+      "description": "Flag officer commanding a sector or fleet operations."
+    },
+    "Cadet": {
+      "name": "Cadet",
+      "requirements": "Starfleet Academy Student",
+      "page_reference": "p. 140",
+      "description": "Starfleet Academy student (first-year through fourth-year cadet)."
+    },
+    "Captain": {
+      "name": "Captain",
+      "requirements": "Senior Officer (Cannot have Untapped Potential)",
+      "page_reference": "p. 140",
+      "description": "Most commanding officers hold this rank; commanding officers who do not are often referred to as captains out of tradition."
+    },
+    "ChiefPettyOfficer": {
+      "name": "Chief Petty Officer",
+      "requirements": "Lowest enlisted rank that may be taken with the Veteran talent",
+      "page_reference": "p. 140",
+      "description": "Non-commissioned officer. Normally addressed as chief."
+    },
+    "Commander": {
+      "name": "Commander",
+      "requirements": "Lowest rank a Commanding Officer may have under normal circumstances",
+      "page_reference": "p. 140",
+      "description": "Senior officer rank; lowest normal rank for a commanding officer."
+    },
+    "Commodore": {
+      "name": "Commodore",
+      "requirements": "Flag Officer",
+      "page_reference": "p. 140",
+      "description": "Flag officer. Occasionally referred to as 'rear admiral, lower half.'"
+    },
+    "Crewman": {
+      "name": "Crewman (1st, 2nd, or 3rd Class)",
+      "requirements": "Enlisted Crew",
+      "page_reference": "p. 140",
+      "description": "Enlisted crewmember, often addressed by duty title such as specialist, technician, or yeoman."
+    },
+    "Ensign": {
+      "name": "Ensign",
+      "requirements": "Commissioned Officer",
+      "page_reference": "p. 140",
+      "description": "The lowest rank available to any commissioned officer upon Academy graduation."
+    },
+    "FleetAdmiral": {
+      "name": "Fleet Admiral",
+      "requirements": "Flag Officer",
+      "page_reference": "p. 140",
+      "description": "The highest flag officer rank in Starfleet."
+    },
+    "FleetCaptain": {
+      "name": "Fleet Captain",
+      "requirements": "Senior Officer",
+      "page_reference": "p. 140",
+      "description": "A rare rank or honorary title given to the most respected captains."
+    },
+    "Lieutenant": {
+      "name": "Lieutenant",
+      "requirements": "Commissioned Officer",
+      "page_reference": "p. 140",
+      "description": "A mid-level commissioned officer rank."
+    },
+    "LieutenantJG": {
+      "name": "Lieutenant (Junior Grade)",
+      "requirements": "Highest officer rank that may be taken with the Untapped Potential talent",
+      "page_reference": "p. 140",
+      "description": "Junior commissioned officer rank."
+    },
+    "LtCommander": {
+      "name": "Lieutenant Commander",
+      "requirements": "Lowest officer rank that may be taken with the Veteran talent",
+      "page_reference": "p. 140",
+      "description": "Senior officer rank. Commonly referred to as 'commander' for brevity."
+    },
+    "MasterChiefPettyOfficer": {
+      "name": "Master Chief Petty Officer",
+      "requirements": "Enlisted NCO",
+      "page_reference": "p. 140",
+      "description": "The most senior non-commissioned officer (NCO). Normally addressed as master chief or chief."
+    },
+    "PettyOfficer": {
+      "name": "Petty Officer (1st, 2nd, or 3rd Class)",
+      "requirements": "Highest enlisted rank that may be taken with the Untapped Potential talent",
+      "page_reference": "p. 140",
+      "description": "Non-commissioned officer."
+    },
+    "RearAdmiral": {
+      "name": "Rear Admiral",
+      "requirements": "Flag Officer",
+      "page_reference": "p. 140",
+      "description": "Flag officer rank."
+    },
+    "SeniorChiefPettyOfficer": {
+      "name": "Senior Chief Petty Officer",
+      "requirements": "Enlisted NCO",
+      "page_reference": "p. 140",
+      "description": "Senior non-commissioned officer. Normally addressed as chief."
+    },
+    "ViceAdmiral": {
+      "name": "Vice-Admiral",
+      "requirements": "Flag Officer",
+      "page_reference": "p. 140",
+      "description": "Senior flag officer rank."
+    }
+  },
+  "roles": {
+    "Bodyguard": {
+      "name": "Bodyguard",
+      "requirements": "Other Role",
+      "page_reference": "p. 138",
+      "description": "Specializes in personal security for an assigned individual. Role Benefit: When in the same zone as your protected character, spend 1 Momentum (Immediate) when they are attacked to have the Attack target you instead at +1 Difficulty."
+    },
+    "ChiefEngineer": {
+      "name": "Chief Engineer",
+      "requirements": "Engineering Department",
+      "page_reference": "p. 136",
+      "description": "Commands the engineering department and ensures the ship remains operational. Role Benefit: Reduce Opportunity Cost of engineering teams by 1 (min 0). When attempting a task to repair a starship or push its capabilities beyond normal limits, spend 1 Momentum (Immediate) to re-roll a d20."
+    },
+    "ChiefMedicalOfficer": {
+      "name": "Chief Medical Officer",
+      "requirements": "Medicine Department (exclusive with Ship's Doctor)",
+      "page_reference": "p. 137",
+      "description": "Responsible for the health and well-being of the crew and leads the medical department. Role Benefit: Reduce Opportunity Cost of medical equipment and medical teams by 1 (min 0). When you attempt a task using Medicine and have assistance, generate 1 bonus Momentum."
+    },
+    "ChiefOfSecurity": {
+      "name": "Chief of Security",
+      "requirements": "Security Department",
+      "page_reference": "p. 136",
+      "description": "Oversees the ship's security department and crew safety. Role Benefit: Reduce Opportunity Cost of weapons and security teams by 1 (min 0). When you succeed at an Attack against an enemy during personal combat, spend 1 Momentum to increase the Difficulty of that enemy's next Attack by 1."
+    },
+    "ChiefTacticalOfficer": {
+      "name": "Chief Tactical Officer",
+      "requirements": "Security / Tactical Department",
+      "page_reference": "p. 137",
+      "description": "Responsible for the upkeep and use of the ship's armaments. Role Benefit: When you succeed at an Attack with the ship's weapons, you may increase the damage rating of that weapon system by spending 1 Momentum rather than 2."
+    },
+    "CommandingOfficer": {
+      "name": "Commanding Officer",
+      "requirements": "Rank of Commander or higher under normal circumstances",
+      "page_reference": "p. 135",
+      "description": "Responsible for the ship or facility under their command. Role Benefit: You may spend Determination to grant any other character you can communicate with 1 Determination; this does not have to be linked to using or challenging a value."
+    },
+    "CommunicationsOfficer": {
+      "name": "Communications Officer",
+      "requirements": "Communications / Operations",
+      "page_reference": "p. 138",
+      "description": "Skilled in linguistics, translation, and decryption. Role Benefit: When you attempt a task assisted by the ship's Computers or Communications systems, do not roll the ship's assist die; instead, count the ship's die as if it had rolled a 1."
+    },
+    "ExecutiveOfficer": {
+      "name": "Executive Officer",
+      "requirements": "Senior Staff",
+      "page_reference": "p. 136",
+      "description": "Second-in-command and chief advisor to the captain. Role Benefit: When an allied character in communication with you spends Determination, you may spend 3 Momentum (Immediate) to enable that character to regain the spent point of Determination."
+    },
+    "Expert": {
+      "name": "Expert",
+      "requirements": "Other Role",
+      "page_reference": "p. 138",
+      "description": "Consults on a specialized field of expertise. Role Benefit: Gain one additional value reflecting the importance of your work, and select one focus; when you succeed on a task using that focus, generate 1 bonus Momentum."
+    },
+    "FlightController": {
+      "name": "Flight Controller",
+      "requirements": "Conn Department",
+      "page_reference": "p. 137",
+      "description": "Also known as helmsman. Role Benefit: When you attempt an engineering task related to flight or propulsion, you may use Conn instead of Engineering. When you succeed at a Conn task to pilot a starship, generate 1 bonus Momentum for that task."
+    },
+    "IntelligenceAgent": {
+      "name": "Intelligence Agent",
+      "requirements": "Other Role",
+      "page_reference": "p. 138",
+      "description": "Operative of your civilization's intelligence service. Role Benefit: Once per adventure, create a trait without requiring a task or spending Momentum/Threat/Determination representing information, resources, or access provided by a contact or agency."
+    },
+    "Merchant": {
+      "name": "Merchant",
+      "requirements": "Other Role",
+      "page_reference": "p. 138",
+      "description": "Trader exchanging valuable goods and resources. Role Benefit: Once per adventure, ignore Opportunity Costs on up to three items of equipment acquired by other PCs (may also provide restricted items by adding 1 Threat per item)."
+    },
+    "Navigator": {
+      "name": "Navigator",
+      "requirements": "Conn / Science Department",
+      "page_reference": "p. 137",
+      "description": "Plots courses and updates astrometrics charts. Role Benefit: When you attempt a science task related to astrophysics or stellar navigation, you may use Conn instead of Science. When attempting or assisting a task to maneuver a starship through difficult terrain, spend 1 Momentum to ignore a complication (Repeatable)."
+    },
+    "OperationsManager": {
+      "name": "Operations Manager",
+      "requirements": "Senior Staff",
+      "page_reference": "p. 136",
+      "description": "Manages and oversees all technical operations aboard or involving the ship. Role Benefit: Whenever you create a trait representing a piece of equipment, or an alteration made to existing equipment, any character who benefits from that trait while you are present in the scene may re-roll a d20."
+    },
+    "PoliticalLiaison": {
+      "name": "Political Liaison",
+      "requirements": "Other Role",
+      "page_reference": "p. 139",
+      "description": "Serves as a representative of a government. Role Benefit: Gain an additional personal Directive reflecting the political stance of the government you represent."
+    },
+    "ScienceOfficer": {
+      "name": "Science Officer",
+      "requirements": "Science Department",
+      "page_reference": "p. 137",
+      "description": "Advises the commanding officer on all scientific matters. Role Benefit: When you succeed at a task assisted by the ship's Sensors or Computers, or a task using a tricorder or sensing device, you may ask one additional question as if you had spent Momentum on Obtain Information."
+    },
+    "ShipsCounselor": {
+      "name": "Ship's (or Station's) Counselor",
+      "requirements": "Medicine / Counseling",
+      "page_reference": "p. 138",
+      "description": "Dedicated to the mental well-being of the crew. Role Benefit: Re-roll your assist die when assisting a character suffering from a negative emotional trait. Once per mission, counsel a character who challenged a value so they can immediately rewrite it and gain 1 Determination."
+    },
+    "ShipsDoctor": {
+      "name": "Ship's Doctor",
+      "requirements": "Medicine Department (exclusive with Chief Medical Officer)",
+      "page_reference": "p. 137",
+      "description": "Cares for the crew of a smaller ship or station without an extensive medical department. Role Benefit: Gain two additional focuses related to medical fields; however, your ship cannot use Crew Support to introduce medical supporting characters."
+    },
+    "Translator": {
+      "name": "Translator",
+      "requirements": "Other Role",
+      "page_reference": "p. 139",
+      "description": "Expert in language and xenolinguistics. Role Benefit: Spend 2 Momentum (Immediate) to piece together basic understanding of an unfamiliar language immediately, allowing social tasks at complication range 18–20."
+    }
+  },
+  "rules_reference": {
+    "BridgeActionsCommand": {
+      "name": "Bridge Actions: Commanding Officer",
+      "category": "Starship Combat",
+      "page_reference": "p. 303",
+      "description": "Station: Bridge / Command Chair. Minor Actions: Direct (allow a subordinate to act immediately). Major Actions: Rally Crew (Presence + Command to restore morale or bolster tasks), Direct Crew (grant bonus d20s to officer tasks), Create Advantage (Tactical insight or fleet directive)."
+    },
+    "BridgeActionsConn": {
+      "name": "Bridge Actions: Flight Controller (Helm/Conn)",
+      "category": "Starship Combat",
+      "page_reference": "p. 304",
+      "description": "Station: Helm Console. Minor Actions: Adjust Speed, Change Position/Maneuver. Major Actions: Evasive Action (Daring + Conn to increase enemy attack Difficulty), Flyby (high-speed close-quarters pass), Ram (last-ditch collision attack), Warp / Impulse Jump."
+    },
+    "BridgeActionsEngineering": {
+      "name": "Bridge Actions: Operations & Engineering",
+      "category": "Starship Combat",
+      "page_reference": "p. 307",
+      "description": "Station: Main Engineering / Ops Console. Minor Actions: Prepare System. Major Actions: Damage Control (Presence + Engineering Diff 2 to patch a breach), Regain Power (Control + Engineering to replenish Reserve Power), Reroute Power (divert Reserve Power to Engines, Shields, or Weapons for bonus effects)."
+    },
+    "BridgeActionsScience": {
+      "name": "Bridge Actions: Sensors & Science",
+      "category": "Starship Combat",
+      "page_reference": "p. 270, 308",
+      "description": "Station: Sensor Operations / Science Station. Minor Actions: Launch Sensor Probe. Major Actions: Scan for Weakness (Reason + Science to reveal enemy flaws or lower target Resistance), Modulate Frequencies (pierce enemy jamming or dampening fields), Sensor Sweep (detect cloaked/hidden vessels)."
+    },
+    "BridgeActionsTactical": {
+      "name": "Bridge Actions: Tactical Officer",
+      "category": "Starship Combat",
+      "page_reference": "p. 309",
+      "description": "Station: Tactical / Weapons Console. Minor Actions: Calibrate / Target Lock. Major Actions: Fire Energy Weapons (Control + Security vs ship difficulty), Fire Torpedo Salvo (Daring + Security, adds 3 Threat and +1 Damage), Modulate Shields (restore shield arc or reinforce frequency)."
+    },
+    "DeterminationSpends": {
+      "name": "Determination Spends & Triggers",
+      "category": "Core Rules",
+      "page_reference": "p. 265-267",
+      "description": "Max 3 Determination. Spending (must align with a Value): 1) Perfect Opportunity: Re-roll any number of d20s. 2) Moment of Inspiration: Count one d20 as a 1 (scores 2 successes automatically). 3) Surge of Activity: Take an extra Major Action on your turn. 4) Shrug Off Injury / Lethal Blow: Avoid an injury or defeat entirely. Gaining: Challenge a Value (cross it out and gain 1 Determination) or Comply with a Value during a severe disadvantage (gain 1 Determination)."
+    },
+    "MomentumSpends": {
+      "name": "Momentum Spends (Personal & Starship)",
+      "category": "Core Rules",
+      "page_reference": "p. 264, 307",
+      "description": "Immediate Spends: Buy bonus d20s (1st costs 1, 2nd costs 2, 3rd costs 3), Create Trait / Advantage (2 Momentum), Re-roll 1 d20 (1 Momentum), Increase Attack Severity (2 Momentum per +1 Severity, or 1 Momentum if Intense). Repeatable Spends: Extra targets with Area weapons (1 Momentum per target), Obtain Information (1 Momentum per question). Starship Spends: Modulate Shields, Power Distribution, Targeting Lock."
+    },
+    "PersonalCombatInjuries": {
+      "name": "Personal Combat: Injuries & Treatment",
+      "category": "Personal Combat",
+      "page_reference": "p. 288-293",
+      "description": "Injuries & Severity: Weapons inflict Stun or Deadly injuries with a Severity rating (typically 2 to 5). Avoiding Injury costs Stress equal to Severity minus Protection (from armor). If unable to avoid, character is Injured. Treatment: First Aid is a Control or Insight + Medicine task with Difficulty equal to Injury Severity. Debilitating weapons add +1 Difficulty."
+    },
+    "StarshipDamageBreaches": {
+      "name": "Starship Combat: Shields & Breaches",
+      "category": "Starship Combat",
+      "page_reference": "p. 313-316",
+      "description": "Shields & Shaken: Starship damage reduces Shields. When shields reach 50% or ship takes damage without shields, the ship is Shaken. Breaches: Damage exceeding Resistance inflicts a Breach on a system (Comms, Computers, Engines, Sensors, Structure, Weapons). Suffering breaches equal to half Scale incapacitates the ship; breaches exceeding Scale destroy the vessel. Patching Breaches requires Damage Control (Diff 2)."
+    },
+    "ThreatSpends": {
+      "name": "Threat Spends (Gamemaster)",
+      "category": "Core Rules",
+      "page_reference": "p. 268-269",
+      "description": "GM Action Economy: Buy d20s for NPCs (1st costs 1, 2nd costs 2, 3rd costs 3 Threat), Trigger Complications (2 Threat), Introduce Environmental Hazard or Obstacle (1-2 Threat), Call NPC Reinforcements (Scale or Threat rating), Seize Initiative / Change Turn Order (2 Threat in personal combat, 1-2 in ship combat)."
+    }
+  },
+  "service_records": {
+    "AgingRelic": {
+      "name": "Aging Relic",
+      "page_reference": "p. 216",
+      "trait": "Aging Relic",
+      "special_rule": "Larger Crew: The ship's Crew Support is increased by 1.",
+      "description": "The ship has been in service for decades and has been home to many crews. Larger Crew: Crew Support is increased by 1."
+    },
+    "DependableWorkhorse": {
+      "name": "Dependable Workhorse",
+      "page_reference": "p. 216",
+      "trait": "Dependable Workhorse",
+      "special_rule": "Reliable: Whenever the ship rolls to assist a task attempt, the group may spend 1 Momentum to ignore any complications rolled on the ship's die.",
+      "description": "A mainstay of the fleet with a dedicated crew. Reliable: When the ship rolls to assist a task attempt, the group may spend 1 Momentum to ignore any complications rolled on the ship's die."
+    },
+    "HopeShip": {
+      "name": "Hope Ship",
+      "page_reference": "p. 216",
+      "trait": "Hope Ship",
+      "special_rule": "Mission of Mercy: The first time in a scene when an enemy makes an attack against this ship, the gamemaster must spend 1 Threat. The hope ship must add 1 Threat the first time in any scene it makes an attack.",
+      "description": "Heavily refitted for disaster relief and medical evacuation. Mission of Mercy: The first time in a scene when an enemy makes an attack against this ship, the GM must spend 1 Threat. The hope ship must add 1 Threat the first time in any scene it makes an attack."
+    },
+    "Legendary": {
+      "name": "Legendary",
+      "page_reference": "p. 216",
+      "trait": "Legendary",
+      "special_rule": "Prestigious Posting: When a new supporting character is first introduced, apply a single improvement to them immediately, like a milestone (p. 167).",
+      "description": "This ship is famous across the quadrant. Prestigious Posting: When a new supporting character is first introduced, apply a single improvement to them immediately, like a milestone."
+    },
+    "Prototype": {
+      "name": "Prototype",
+      "page_reference": "p. 216",
+      "trait": "Prototype",
+      "special_rule": "Experimental Vessel: When the ship is created, apply two additional refits. In addition, whenever the ship assists a task attempt, the ship's die increases its complication range by 2 (to 18-20). A milestone refit can remove this complication penalty.",
+      "description": "First of her class, laden with novel technologies. Experimental Vessel: Gains 2 additional refits upon creation, but complication range on the ship's assist die is increased by 2 (18-20)."
+    },
+    "SurvivorOfX": {
+      "name": "Survivor of X",
+      "page_reference": "p. 216",
+      "trait": "Survivor of X (replace X with battle or war name)",
+      "special_rule": "Ready for Battle: During the first round of ship combat, the gamemaster must spend 1 additional Threat to allow an enemy ship to take the first turn.",
+      "description": "Battle-hardened and scarred from fierce engagements. Ready for Battle: During the first round of ship combat, the GM must spend 1 additional Threat to allow an enemy ship to take the first turn."
+    }
+  },
+  "spaceframes": {
+    "Akira": {
+      "name": "Akira Class",
+      "requirements": "24th Century (2370+)",
+      "page_reference": "p. 204",
+      "scale": 5,
+      "systems": {
+        "comms": 9,
+        "computers": 9,
+        "engines": 10,
+        "sensors": 9,
+        "structure": 10,
+        "weapons": 11
+      },
+      "departments": {
+        "command": 0,
+        "conn": 1,
+        "engineering": 0,
+        "security": 2,
+        "medicine": 0,
+        "science": 0
+      },
+      "description": "Heavy tactical cruiser and shuttle/torpedo carrier • Scale 5 • Weapons 11, Extensive Shuttlebays, Rapid-Fire Torpedo Launcher."
+    },
+    "Ambassador": {
+      "name": "Ambassador Class",
+      "requirements": "24th Century (2320s+)",
+      "page_reference": "p. 200",
+      "scale": 5,
+      "systems": {
+        "comms": 9,
+        "computers": 9,
+        "engines": 9,
+        "sensors": 9,
+        "structure": 10,
+        "weapons": 9
+      },
+      "departments": {
+        "command": 1,
+        "conn": 0,
+        "engineering": 0,
+        "security": 1,
+        "medicine": 0,
+        "science": 1
+      },
+      "description": "Heavy cruiser bridging the Excelsior and Galaxy eras • Scale 5 • Systems: Comms 9, Computers 9, Engines 9, Sensors 9, Structure 10, Weapons 9."
+    },
+    "Brel": {
+      "name": "B'rel-Class Bird-of-Prey (Klingon)",
+      "requirements": "Klingon Defense Force (23rd–24th Century)",
+      "page_reference": "p. 207",
+      "scale": 3,
+      "systems": {
+        "comms": 8,
+        "computers": 7,
+        "engines": 9,
+        "sensors": 7,
+        "structure": 7,
+        "weapons": 9
+      },
+      "departments": {
+        "command": 0,
+        "conn": 1,
+        "engineering": 0,
+        "security": 2,
+        "medicine": 0,
+        "science": 0
+      },
+      "description": "Agile Klingon raider and scout • Scale 3 • Equipped with Cloaking Device."
+    },
+    "California": {
+      "name": "California Class",
+      "requirements": "Late 24th Century",
+      "page_reference": "p. 201",
+      "scale": 4,
+      "systems": {
+        "comms": 10,
+        "computers": 10,
+        "engines": 8,
+        "sensors": 9,
+        "structure": 9,
+        "weapons": 8
+      },
+      "departments": {
+        "command": 1,
+        "conn": 0,
+        "engineering": 1,
+        "security": 0,
+        "medicine": 0,
+        "science": 1
+      },
+      "description": "Utility and support vessel specializing in second contact and fleet support • Scale 4 • Systems: Comms 10, Computers 10, Engines 8, Sensors 9, Structure 9, Weapons 8."
+    },
+    "CaptainsYacht": {
+      "name": "Captain's Yacht",
+      "page_reference": "p. 235",
+      "scale": 2,
+      "launch_year": 2364,
+      "traits": [
+        "Specialized Shuttle",
+        "Small Craft",
+        "Luxurious"
+      ],
+      "systems": {
+        "comms": 8,
+        "computers": 8,
+        "engines": 7,
+        "sensors": 7,
+        "structure": 6,
+        "weapons": 5
+      },
+      "departments": {
+        "command": 2,
+        "conn": 1,
+        "engineering": 0,
+        "security": 0,
+        "medicine": 0,
+        "science": 1
+      },
+      "weapons": [
+        "Phaser Arrays",
+        "Tractor Beam (Strength 1)"
+      ],
+      "talents": [],
+      "description": "Scale 2 executive shuttlecraft docked to capital ships (Galaxy and Sovereign class) for diplomatic missions. Luxurious accommodations and conference facilities."
+    },
+    "Constellation": {
+      "name": "Constellation Class",
+      "requirements": "Late 23rd–24th Century",
+      "page_reference": "p. 200",
+      "scale": 4,
+      "systems": {
+        "comms": 8,
+        "computers": 7,
+        "engines": 9,
+        "sensors": 9,
+        "structure": 8,
+        "weapons": 8
+      },
+      "departments": {
+        "command": 0,
+        "conn": 1,
+        "engineering": 1,
+        "security": 1,
+        "medicine": 0,
+        "science": 0
+      },
+      "description": "Four-nacelled deep-space cruiser • Scale 4 • Departments: Conn +1, Engineering +1, Security +1."
+    },
+    "Constitution": {
+      "name": "Constitution Class",
+      "requirements": "23rd Century (2245+)",
+      "page_reference": "p. 198",
+      "scale": 4,
+      "systems": {
+        "comms": 7,
+        "computers": 7,
+        "engines": 8,
+        "sensors": 8,
+        "structure": 8,
+        "weapons": 8
+      },
+      "departments": {
+        "command": 1,
+        "conn": 0,
+        "engineering": 0,
+        "security": 1,
+        "medicine": 0,
+        "science": 1
+      },
+      "description": "Iconic 23rd-century heavy cruiser • Scale 4 • Systems: Comms 7, Computers 7, Engines 8, Sensors 8, Structure 8, Weapons 8 • Departments: Command +1, Security +1, Science +1."
+    },
+    "ConstitutionIII": {
+      "name": "Constitution III Class (Neo-Constitution)",
+      "page_reference": "p. 205",
+      "scale": 5,
+      "launch_year": 2396,
+      "traits": [
+        "Federation Starship",
+        "Constitution III class",
+        "Legacy Components"
+      ],
+      "systems": {
+        "comms": 9,
+        "computers": 10,
+        "engines": 11,
+        "sensors": 10,
+        "structure": 10,
+        "weapons": 10
+      },
+      "departments": {
+        "command": 0,
+        "conn": 1,
+        "engineering": 1,
+        "security": 0,
+        "medicine": 0,
+        "science": 1
+      },
+      "weapons": [
+        "Phaser Arrays",
+        "Phaser Banks",
+        "Photon Torpedoes",
+        "Tractor Beam (Strength 4)"
+      ],
+      "talents": [
+        "Extensive Shuttlebays",
+        "Improved Impulse Drive",
+        "Improved Warp Drive"
+      ],
+      "description": "Scale 5 multirole cruiser (USS Titan-A / Enterprise-G). High impulse power ratio, top speed Warp 9.99, legacy components. Systems: Comms 9, Computers 10, Engines 11, Sensors 10, Structure 10, Weapons 10. Departments: Conn +1, Engineering +1, Science +1."
+    },
+    "Dderidex": {
+      "name": "D'deridex-Class Warbird (Romulan)",
+      "requirements": "Romulan Star Empire (24th Century)",
+      "page_reference": "p. 209",
+      "scale": 7,
+      "systems": {
+        "comms": 8,
+        "computers": 9,
+        "engines": 10,
+        "sensors": 10,
+        "structure": 11,
+        "weapons": 10
+      },
+      "departments": {
+        "command": 1,
+        "conn": 0,
+        "engineering": 0,
+        "security": 1,
+        "medicine": 0,
+        "science": 1
+      },
+      "description": "Massive double-hulled Romulan Warbird • Scale 7 • Equipped with Cloaking Device and singularity core."
+    },
+    "Dkora": {
+      "name": "D'Kora-Class Marauder (Ferengi)",
+      "requirements": "Ferengi Alliance (24th Century)",
+      "page_reference": "p. 211",
+      "scale": 5,
+      "systems": {
+        "comms": 9,
+        "computers": 8,
+        "engines": 10,
+        "sensors": 9,
+        "structure": 10,
+        "weapons": 9
+      },
+      "departments": {
+        "command": 2,
+        "conn": 0,
+        "engineering": 1,
+        "security": 0,
+        "medicine": 0,
+        "science": 0
+      },
+      "description": "Armed commerce and exploration vessel of the Ferengi Alliance • Scale 5 • Deluxe Galley, Diplomatic Suites."
+    },
+    "D7": {
+      "name": "D7 Class Battlecruiser (Klingon)",
+      "page_reference": "p. 206",
+      "scale": 4,
+      "launch_year": 2257,
+      "traits": [
+        "Klingon Starship",
+        "D7 class",
+        "Symbol of Klingon Unity"
+      ],
+      "systems": {
+        "comms": 7,
+        "computers": 7,
+        "engines": 8,
+        "sensors": 6,
+        "structure": 8,
+        "weapons": 9
+      },
+      "departments": {
+        "command": 0,
+        "conn": 1,
+        "engineering": 0,
+        "security": 2,
+        "medicine": 0,
+        "science": 0
+      },
+      "weapons": [
+        "Disruptor Cannons",
+        "Phaser Banks",
+        "Photon Torpedoes",
+        "Tractor Beam (Strength 3)"
+      ],
+      "talents": [
+        "Rugged Design"
+      ],
+      "description": "Scale 4 Klingon Empire capital warship designed by Chancellor L'Rell. Forward command pod, twin torpedo launchers. Systems: Comms 7, Computers 7, Engines 8, Sensors 6, Structure 8, Weapons 9. Departments: Conn +1, Security +2."
+    },
+    "Daedalus": {
+      "name": "Daedalus Class",
+      "requirements": "Launch Year: 2160s",
+      "page_reference": "p. 197",
+      "scale": 3,
+      "systems": {
+        "comms": 6,
+        "computers": 6,
+        "engines": 6,
+        "sensors": 6,
+        "structure": 6,
+        "weapons": 5
+      },
+      "departments": {
+        "command": 0,
+        "conn": 0,
+        "engineering": 2,
+        "security": 0,
+        "medicine": 0,
+        "science": 1
+      },
+      "description": "Early Federation spherical-hull explorer • Scale 3 • Departments: Engineering +2, Science +1."
+    },
+    "DanubeRunabout": {
+      "name": "Danube Class Runabout",
+      "page_reference": "p. 234",
+      "scale": 2,
+      "launch_year": 2368,
+      "traits": [
+        "Light Starship",
+        "Small Craft"
+      ],
+      "systems": {
+        "comms": 8,
+        "computers": 7,
+        "engines": 7,
+        "sensors": 8,
+        "structure": 6,
+        "weapons": 6
+      },
+      "departments": {
+        "command": 1,
+        "conn": 1,
+        "engineering": 1,
+        "security": 0,
+        "medicine": 0,
+        "science": 1
+      },
+      "weapons": [
+        "Phaser Arrays",
+        "Micro-Torpedoes",
+        "Tractor Beam (Strength 1)"
+      ],
+      "talents": [],
+      "description": "Scale 2 long-range small craft with interchangeable aft mission modules (Cargo, Long Duration, Passenger, Sensor). Systems: Comms 8, Computers 7, Engines 7, Sensors 8, Structure 6, Weapons 6."
+    },
+    "Defiant": {
+      "name": "Defiant Class",
+      "requirements": "24th Century (2370+)",
+      "page_reference": "p. 203",
+      "scale": 3,
+      "systems": {
+        "comms": 9,
+        "computers": 9,
+        "engines": 10,
+        "sensors": 9,
+        "structure": 8,
+        "weapons": 11
+      },
+      "departments": {
+        "command": 0,
+        "conn": 1,
+        "engineering": 0,
+        "security": 2,
+        "medicine": 0,
+        "science": 0
+      },
+      "description": "Compact, heavily-armed escort/warship • Scale 3 • Weapons 11, Security +2, Ablative Armor, Quantum Torpedoes."
+    },
+    "Excelsior": {
+      "name": "Excelsior Class",
+      "requirements": "Late 23rd–24th Century (2285+)",
+      "page_reference": "p. 199",
+      "scale": 5,
+      "systems": {
+        "comms": 8,
+        "computers": 7,
+        "engines": 9,
+        "sensors": 8,
+        "structure": 9,
+        "weapons": 8
+      },
+      "departments": {
+        "command": 1,
+        "conn": 0,
+        "engineering": 2,
+        "security": 0,
+        "medicine": 0,
+        "science": 0
+      },
+      "description": "Scale 5 explorer and backbone of Starfleet • Systems: Comms 8, Computers 7, Engines 9, Sensors 8, Structure 9, Weapons 8 • Departments: Command +1, Engineering +2 • Talents: Improved Impulse Drive, Secondary Reactors."
+    },
+    "Galaxy": {
+      "name": "Galaxy Class",
+      "requirements": "24th Century (2360s+)",
+      "page_reference": "p. 202",
+      "scale": 6,
+      "systems": {
+        "comms": 9,
+        "computers": 10,
+        "engines": 10,
+        "sensors": 9,
+        "structure": 10,
+        "weapons": 9
+      },
+      "departments": {
+        "command": 1,
+        "conn": 0,
+        "engineering": 0,
+        "security": 0,
+        "medicine": 0,
+        "science": 2
+      },
+      "description": "Flagship deep-space explorer • Scale 6 • Systems: Comms 9, Computers 10, Engines 10, Sensors 9, Structure 10, Weapons 9 • Special Rule: Saucer Separation."
+    },
+    "Galor": {
+      "name": "Galor-Class Cruiser (Cardassian)",
+      "requirements": "Cardassian Union (24th Century)",
+      "page_reference": "p. 210",
+      "scale": 4,
+      "systems": {
+        "comms": 8,
+        "computers": 8,
+        "engines": 9,
+        "sensors": 8,
+        "structure": 9,
+        "weapons": 9
+      },
+      "departments": {
+        "command": 1,
+        "conn": 0,
+        "engineering": 1,
+        "security": 1,
+        "medicine": 0,
+        "science": 0
+      },
+      "description": "Primary warship of the Cardassian Central Command • Scale 4 • Equipped with spiral-wave disruptors."
+    },
+    "Intrepid": {
+      "name": "Intrepid Class",
+      "requirements": "24th Century (2370+)",
+      "page_reference": "p. 203",
+      "scale": 4,
+      "systems": {
+        "comms": 9,
+        "computers": 11,
+        "engines": 11,
+        "sensors": 10,
+        "structure": 8,
+        "weapons": 9
+      },
+      "departments": {
+        "command": 0,
+        "conn": 1,
+        "engineering": 0,
+        "security": 0,
+        "medicine": 0,
+        "science": 2
+      },
+      "description": "Long-range rapid scout and science vessel with bio-neural gel packs • Scale 4 • Computers 11, Engines 11, Sensors 10."
+    },
+    "Ktinga": {
+      "name": "K't'inga-Class Battlecruiser (Klingon)",
+      "requirements": "Klingon Defense Force (23rd–24th Century)",
+      "page_reference": "p. 206",
+      "scale": 4,
+      "systems": {
+        "comms": 7,
+        "computers": 7,
+        "engines": 8,
+        "sensors": 6,
+        "structure": 9,
+        "weapons": 9
+      },
+      "departments": {
+        "command": 1,
+        "conn": 0,
+        "engineering": 0,
+        "security": 2,
+        "medicine": 0,
+        "science": 0
+      },
+      "description": "Mainstay Klingon battlecruiser • Scale 4 • Equipped with Cloaking Device and Photon Torpedoes."
+    },
+    "Luna": {
+      "name": "Luna Class",
+      "requirements": "Late 24th–25th Century (2379+)",
+      "page_reference": "p. 205",
+      "scale": 5,
+      "systems": {
+        "comms": 9,
+        "computers": 10,
+        "engines": 11,
+        "sensors": 10,
+        "structure": 9,
+        "weapons": 10
+      },
+      "departments": {
+        "command": 0,
+        "conn": 0,
+        "engineering": 1,
+        "security": 0,
+        "medicine": 0,
+        "science": 2
+      },
+      "description": "Deep-space reconnaissance science vessel • Scale 5 • Engines 11, Sensors 10, Science +2."
+    },
+    "Miranda": {
+      "name": "Miranda Class",
+      "requirements": "23rd–24th Century",
+      "page_reference": "p. 199",
+      "scale": 4,
+      "systems": {
+        "comms": 8,
+        "computers": 7,
+        "engines": 8,
+        "sensors": 8,
+        "structure": 8,
+        "weapons": 8
+      },
+      "departments": {
+        "command": 1,
+        "conn": 1,
+        "engineering": 0,
+        "security": 0,
+        "medicine": 0,
+        "science": 1
+      },
+      "description": "Versatile medium cruiser and workhorse of the fleet • Scale 4 • Departments: Command +1, Conn +1, Science +1."
+    },
+    "Nebula": {
+      "name": "Nebula Class",
+      "requirements": "24th Century (2350s+)",
+      "page_reference": "p. 201",
+      "scale": 5,
+      "systems": {
+        "comms": 9,
+        "computers": 10,
+        "engines": 9,
+        "sensors": 10,
+        "structure": 10,
+        "weapons": 9
+      },
+      "departments": {
+        "command": 0,
+        "conn": 0,
+        "engineering": 1,
+        "security": 0,
+        "medicine": 0,
+        "science": 2
+      },
+      "description": "Modular-pod explorer sharing Galaxy-class lineage • Scale 5 • Special Rule: Mission Pod."
+    },
+    "NX": {
+      "name": "NX Class",
+      "requirements": "Launch Year: 2151",
+      "page_reference": "p. 197",
+      "scale": 3,
+      "systems": {
+        "comms": 5,
+        "computers": 5,
+        "engines": 6,
+        "sensors": 5,
+        "structure": 5,
+        "weapons": 5
+      },
+      "departments": {
+        "command": 0,
+        "conn": 1,
+        "engineering": 1,
+        "security": 0,
+        "medicine": 0,
+        "science": 1
+      },
+      "description": "Launch Year: 2151 • Scale 3 • Systems: Comms 5, Computers 5, Engines 6, Sensors 5, Structure 5, Weapons 5 • Departments: Conn +1, Engineering +1, Science +1 • Special Rules: Grappler Cable, Polarized Hull Plating."
+    },
+    "Oberth": {
+      "name": "Oberth Class",
+      "requirements": "23rd–24th Century",
+      "page_reference": "p. 198",
+      "scale": 3,
+      "systems": {
+        "comms": 7,
+        "computers": 8,
+        "engines": 6,
+        "sensors": 9,
+        "structure": 6,
+        "weapons": 5
+      },
+      "departments": {
+        "command": 0,
+        "conn": 0,
+        "engineering": 1,
+        "security": 0,
+        "medicine": 0,
+        "science": 2
+      },
+      "description": "Dedicated science and survey vessel • Scale 3 • High Sensors (9) and Science (+2) • Talent: High-Resolution Sensors."
+    },
+    "PeregrineFighter": {
+      "name": "Peregrine Class Attack Fighter",
+      "page_reference": "p. 235",
+      "scale": 1,
+      "launch_year": 2370,
+      "traits": [
+        "Attack Fighter",
+        "Small Craft",
+        "Agile"
+      ],
+      "systems": {
+        "comms": 6,
+        "computers": 6,
+        "engines": 8,
+        "sensors": 6,
+        "structure": 5,
+        "weapons": 7
+      },
+      "departments": {
+        "command": 0,
+        "conn": 2,
+        "engineering": 0,
+        "security": 2,
+        "medicine": 0,
+        "science": 0
+      },
+      "weapons": [
+        "Phaser Cannons",
+        "Micro-Torpedoes"
+      ],
+      "talents": [],
+      "description": "Scale 1 high-agility combat craft used by Starfleet and Maquis forces for tactical interception. Systems: Engines 8, Weapons 7. Departments: Conn +2, Security +2."
+    },
+    "Sovereign": {
+      "name": "Sovereign Class",
+      "requirements": "Late 24th Century (2372+)",
+      "page_reference": "p. 204",
+      "scale": 6,
+      "systems": {
+        "comms": 10,
+        "computers": 9,
+        "engines": 10,
+        "sensors": 10,
+        "structure": 11,
+        "weapons": 11
+      },
+      "departments": {
+        "command": 1,
+        "conn": 0,
+        "engineering": 0,
+        "security": 1,
+        "medicine": 0,
+        "science": 1
+      },
+      "description": "Premier late-24th-century battleship/explorer • Scale 6 • Structure 11, Weapons 11, Quantum Torpedoes."
+    },
+    "TLiss": {
+      "name": "T'Liss Class Bird-of-Prey (Romulan)",
+      "page_reference": "p. 208",
+      "scale": 4,
+      "launch_year": 2260,
+      "traits": [
+        "Romulan Starship",
+        "T'Liss class",
+        "Bird of Prey",
+        "Experimental"
+      ],
+      "systems": {
+        "comms": 6,
+        "computers": 8,
+        "engines": 7,
+        "sensors": 9,
+        "structure": 7,
+        "weapons": 9
+      },
+      "departments": {
+        "command": 0,
+        "conn": 1,
+        "engineering": 1,
+        "security": 1,
+        "medicine": 0,
+        "science": 0
+      },
+      "weapons": [
+        "Disruptor Banks",
+        "Plasma Torpedoes",
+        "Tractor Beam (Strength 3)"
+      ],
+      "talents": [
+        "Cloaking Device"
+      ],
+      "description": "Scale 4 Romulan Imperial Navy warbird. Equipped with duotronic systems and prototype cloaking device. Systems: Comms 6, Computers 8, Engines 7, Sensors 9, Structure 7, Weapons 9. Departments: Conn +1, Engineering +1, Security +1."
+    },
+    "Tvaro": {
+      "name": "T'varo-Class Light Warbird (Romulan)",
+      "requirements": "Romulan Star Empire (22nd–23rd Century)",
+      "page_reference": "p. 208",
+      "scale": 3,
+      "systems": {
+        "comms": 7,
+        "computers": 7,
+        "engines": 7,
+        "sensors": 7,
+        "structure": 6,
+        "weapons": 8
+      },
+      "departments": {
+        "command": 0,
+        "conn": 1,
+        "engineering": 0,
+        "security": 1,
+        "medicine": 0,
+        "science": 1
+      },
+      "description": "Early Romulan Bird-of-Prey • Scale 3 • Equipped with Cloaking Device and plasma torpedoes."
+    },
+    "Type6Shuttlecraft": {
+      "name": "Type-6 Shuttlecraft",
+      "page_reference": "p. 236",
+      "scale": 1,
+      "launch_year": 2366,
+      "traits": [
+        "Shuttlecraft",
+        "Small Craft"
+      ],
+      "systems": {
+        "comms": 6,
+        "computers": 6,
+        "engines": 6,
+        "sensors": 6,
+        "structure": 5,
+        "weapons": 4
+      },
+      "departments": {
+        "command": 0,
+        "conn": 1,
+        "engineering": 1,
+        "security": 0,
+        "medicine": 0,
+        "science": 1
+      },
+      "weapons": [
+        "Phaser Arrays"
+      ],
+      "talents": [],
+      "description": "Scale 1 standard Starfleet workhorse shuttlecraft carried aboard 24th-century starships for short-range transport and survey missions."
+    },
+    "Vorcha": {
+      "name": "Vor'cha-Class Attack Cruiser (Klingon)",
+      "requirements": "Klingon Defense Force (24th Century)",
+      "page_reference": "p. 207",
+      "scale": 5,
+      "systems": {
+        "comms": 8,
+        "computers": 8,
+        "engines": 9,
+        "sensors": 8,
+        "structure": 10,
+        "weapons": 10
+      },
+      "departments": {
+        "command": 1,
+        "conn": 0,
+        "engineering": 0,
+        "security": 2,
+        "medicine": 0,
+        "science": 0
+      },
+      "description": "Heavy Klingon attack cruiser • Scale 5 • Equipped with Cloaking Device and heavy disruptors."
+    }
+  },
+  "species": {
+    "Aenar": {
+      "name": "Aenar",
+      "requirements": "None",
+      "page_reference": "p. 101",
+      "attributes": [
+        "Control +1",
+        "Insight +1",
+        "Presence +1"
+      ],
+      "trait": "Aenar",
+      "trait_description": "Biologically similar to Andorians, Aenar differ in a number of ways. Aenar are typically blind, but their other senses are heightened to a degree that more than compensates for their lack of sight. They are also telepathic which further contributes to their awareness of their environment. Aenar are typically pacifists, and thus may be reluctant, or even outright refuse, to carry out violent acts.",
+      "species_ability": {
+        "name": "Telepathic",
+        "description": "Aenar can sense the minds of other living creatures in their vicinity, and can read the thoughts of others, though they have strict taboos about reading a mind without permission. See the Telepathy talent on page 156 for more details."
+      },
+      "sample_values": [
+        "Do not mistake my blindness for helplessness",
+        "I perceive things your eyes do not",
+        "Life is incomplete without purpose",
+        "Pacifism is not passive"
+      ],
+      "description": "Attributes: +1 Control, +1 Insight, +1 Presence. Trait: Aenar (typically blind with heightened compensatory senses, telepathic, pacifist ideology). Species Ability — Telepathic: Can sense the minds of living creatures in vicinity and read thoughts (see Telepathy talent, p. 156)."
+    },
+    "Andorian": {
+      "name": "Andorian",
+      "requirements": "None",
+      "page_reference": "p. 100",
+      "attributes": [
+        "Control +1",
+        "Daring +1",
+        "Presence +1"
+      ],
+      "trait": "Andorian",
+      "trait_description": "This trait may reduce the Difficulty of tasks to resist extreme cold, or tasks impacted by extremely low temperatures. Their antennae aid in balance and spatial awareness; a lost antenna can be debilitating until it regrows. Andorians also have a high metabolism, meaning, among other things, that they tire more quickly than Humans; this also makes them more vulnerable to infection from certain types of injury.",
+      "species_ability": {
+        "name": "Intense",
+        "description": "When you succeed at a task where you purchased one or more d20s by adding to Threat, you generate 1 bonus Momentum for each d20 purchased. Bonus Momentum may not be saved."
+      },
+      "sample_values": [
+        "I always repay my debts",
+        "No challenge unmet",
+        "Proud child of Andoria",
+        "Question my word, question my honor"
+      ],
+      "description": "Attributes: +1 Control, +1 Daring, +1 Presence. Trait: Andorian (cold resistance, antennae spatial awareness, high metabolism). Species Ability — Intense: When you succeed at a task where you purchased one or more d20s by adding to Threat, you generate 1 bonus Momentum for each d20 purchased (cannot be saved)."
+    },
+    "Bajoran": {
+      "name": "Bajoran",
+      "requirements": "None",
+      "page_reference": "p. 102",
+      "attributes": [
+        "Control +1",
+        "Daring +1",
+        "Insight +1"
+      ],
+      "trait": "Bajoran",
+      "trait_description": "Bajorans tend to be hostile towards Cardassians, and resentful of those who are dismissive of, or turned a blind eye to, the suffering of the Bajoran people. While not all Bajorans are spiritual or religious to the same degree, most have a cultural understanding of the Prophets' place in their society.",
+      "species_ability": {
+        "name": "The Will of the Prophets",
+        "description": "You may find strength in the Prophets even when the situation is dire: once per adventure, when the gamemaster spends 3 or more Threat at once, you gain 1 Determination."
+      },
+      "sample_values": [
+        "I help others to be closer to the Prophets",
+        "Survival at any cost",
+        "We are in the hands of the Prophets",
+        "You cannot explain faith to those who lack it"
+      ],
+      "description": "Attributes: +1 Control, +1 Daring, +1 Insight. Trait: Bajoran. Species Ability — The Will of the Prophets: Once per adventure, when the gamemaster spends 3 or more Threat at once, you gain 1 Determination."
+    },
+    "Betazoid": {
+      "name": "Betazoid",
+      "requirements": "None",
+      "page_reference": "p. 103",
+      "attributes": [
+        "Insight +1",
+        "Presence +1",
+        "Reason +1"
+      ],
+      "trait": "Betazoid",
+      "trait_description": "All Betazoids are telepathic to varying degrees, and even when not actively using their abilities, they are highly perceptive of others around them, but also highly sensitive to telepathic disturbances and mental assaults. They have little familiarity with lies and deception, due to their open culture and ability to read the thoughts and emotions of others. As they are sensitive to the minds of other living beings, they tend not to be comfortable around animals, for fear of losing themselves in the minds of wild creatures. Similarly, they can find species immune to telepathy to be off-putting.",
+      "species_ability": {
+        "name": "Telepathic",
+        "description": "Betazoids can sense the minds of living creatures in their vicinity and can read the thoughts and emotions of others. Each Betazoid has either Telepathy or Empathy (see pp. 155–156). Part-Betazoid characters generally have Empathy rather than Telepathy."
+      },
+      "sample_values": [
+        "A lie is a story told in bad faith",
+        "Do not be what others expect you to be",
+        "I can feel your pain",
+        "I'm just saying what you're thinking"
+      ],
+      "description": "Attributes: +1 Insight, +1 Presence, +1 Reason. Trait: Betazoid. Species Ability — Telepathic: Each Betazoid has either Telepathy or Empathy (pp. 155–156); part-Betazoids generally have Empathy."
+    },
+    "Cardassian": {
+      "name": "Cardassian",
+      "requirements": "None",
+      "page_reference": "p. 104",
+      "attributes": [
+        "Control +1",
+        "Presence +1",
+        "Reason +1"
+      ],
+      "trait": "Cardassian",
+      "trait_description": "Cardassians are a pseudo-reptilian species, used to an environment somewhat warmer and more humid than is comfortable for Humans, and tend to find bright light uncomfortable. Their culture prizes mental discipline and obedience to strict hierarchies and they have a reputation for arrogance, cruelty, and smug superiority.",
+      "species_ability": {
+        "name": "Healthy Suspicions",
+        "description": "You may add 1 Threat when interacting with an NPC to ask the gamemaster if that NPC is lying about something. The gamemaster must answer either Yes or No, and this answer must be accurate, but the gamemaster does not have to specify what the NPC is lying about."
+      },
+      "sample_values": [
+        "Everyone is guilty of something, but who and of what?",
+        "State above family; family above self",
+        "If you don't want me knowing, hide it better",
+        "All my stories are true, especially the lies"
+      ],
+      "description": "Attributes: +1 Control, +1 Presence, +1 Reason. Trait: Cardassian. Species Ability — Healthy Suspicions: Add 1 Threat when interacting with an NPC to ask the GM if that NPC is lying (accurate Yes/No answer)."
+    },
+    "Denobulan": {
+      "name": "Denobulan",
+      "requirements": "None",
+      "page_reference": "p. 105",
+      "attributes": [
+        "Fitness +1",
+        "Insight +1",
+        "Reason +1"
+      ],
+      "trait": "Denobulan",
+      "trait_description": "Denobulans have a robust immune system, but a vulnerability to various forms of radiation poisoning. They are adept climbers. Denobulans do not need to sleep, but must hibernate for several days each year, becoming disoriented if kept awake during this period.",
+      "species_ability": {
+        "name": "Breadth of Study",
+        "description": "You may select two additional focuses."
+      },
+      "sample_values": [
+        "You cannot truly learn about people unless you talk to them",
+        "Comfort in numbers",
+        "There's always someone new to meet",
+        "My patience exceeds your stubbornness"
+      ],
+      "description": "Attributes: +1 Fitness, +1 Insight, +1 Reason. Trait: Denobulan. Species Ability — Breadth of Study: You may select two additional focuses."
+    },
+    "Ferengi": {
+      "name": "Ferengi",
+      "requirements": "None",
+      "page_reference": "p. 106",
+      "attributes": [
+        "Control +1",
+        "Insight +1",
+        "Presence +1"
+      ],
+      "trait": "Ferengi",
+      "trait_description": "Ferengi physiology does not lend itself to physical activity, nor does their culture value such hardship, though they have a resistance to many common diseases. Ferengi have exceptional hearing, and highly sensitive ears, though this also means that intense sounds (and physical force applied to the ears) can inflict debilitating pain. Their unusual brain structure means that telepaths cannot read Ferengi minds. Ferengi regard the accumulation of wealth as the highest virtue, and while this has given them a reputation as cunning negotiators, they are also often seen as duplicitous and manipulative.",
+      "species_ability": {
+        "name": "The Great Material Continuum",
+        "description": "Once per session, when obtaining additional equipment, you may reduce the Opportunity Cost of an item by 1, to a minimum of 0."
+      },
+      "sample_values": [
+        "9TH RULE: Opportunity plus instinct equals profit",
+        "62ND RULE: The riskier the road, the greater the profit",
+        "125TH RULE: You can't make a deal if you're dead",
+        "263RD RULE: Never allow doubt to tarnish your lust for latinum"
+      ],
+      "description": "Attributes: +1 Control, +1 Insight, +1 Presence. Trait: Ferengi. Species Ability — The Great Material Continuum: Once per session, when obtaining additional equipment, reduce the Opportunity Cost of an item by 1 (minimum 0)."
+    },
+    "Human": {
+      "name": "Human",
+      "requirements": "None",
+      "page_reference": "p. 107",
+      "attributes": [
+        "Any three attributes +1"
+      ],
+      "trait": "Human",
+      "trait_description": "Humans are adaptable and resilient, and their resolve and ambition often allow them to resist great hardship and triumph despite great adversity. However, Humans can also be reckless, stubborn, irrational, and unpredictable.",
+      "species_ability": {
+        "name": "Faith of the Heart",
+        "description": "When you use one of your values to spend or gain Determination, you may also add 1 Momentum to the group pool."
+      },
+      "sample_values": [
+        "I believe in what the Federation stands for",
+        "Learn something new every day",
+        "We are stronger together",
+        "Seek out new life and new civilizations"
+      ],
+      "description": "Attributes: Add 1 each to any three attributes. Trait: Human. Species Ability — Faith of the Heart: When you use one of your values to spend or gain Determination, you may also add 1 Momentum to the group pool."
+    },
+    "Klingon": {
+      "name": "Klingon",
+      "requirements": "None",
+      "page_reference": "p. 108",
+      "attributes": [
+        "Daring +1",
+        "Fitness +1",
+        "Presence +1"
+      ],
+      "trait": "Klingon",
+      "trait_description": "Klingon physiology is hardy, with a reinforced skeleton and many redundant internal organs which allow them to withstand harm and numerous toxins that would be deadly to other species, though this has the potential for medical complications. They are significantly stronger and more resilient than Humans, though they have less tolerance for the cold.",
+      "species_ability": {
+        "name": "Brak'lul",
+        "description": "You gain 1 Protection which stacks with the benefits of any armor worn. Further, when another character attempts First Aid to heal you, they may re-roll a d20."
+      },
+      "sample_values": [
+        "It is a good day to die!",
+        "Own the day!",
+        "Revenge is a dish best served cold",
+        "I am a Klingon warrior; if you doubt it, a demonstration can be arranged!"
+      ],
+      "description": "Attributes: +1 Daring, +1 Fitness, +1 Presence. Trait: Klingon. Species Ability — Brak'lul: Gain 1 Protection (stacks with armor); when another character attempts First Aid on you, they may re-roll 1d20."
+    },
+    "Orion": {
+      "name": "Orion",
+      "requirements": "None",
+      "page_reference": "p. 109",
+      "attributes": [
+        "Daring +1",
+        "Fitness +1",
+        "Presence +1"
+      ],
+      "trait": "Orion",
+      "trait_description": "Orions have similar environmental tolerances to Humans and are physically and culturally well-accustomed to interstellar travel. The Orions' reputation as thieves, pirates, and illicit traders can make others wary of them, but it can also open doors and create opportunities in more unsavory parts of the Galaxy.",
+      "species_ability": {
+        "name": "Never at Face Value",
+        "description": "Once per scene, you may add 1 Threat to ask the gamemaster a question about the situation, as if you had spent Momentum to Obtain Information."
+      },
+      "sample_values": [
+        "Everything has a price",
+        "Your expectations limit you",
+        "I am not who you expect me to be",
+        "I thrive because I do not ignore opportunities"
+      ],
+      "description": "Attributes: +1 Daring, +1 Fitness, +1 Presence. Trait: Orion. Species Ability — Never at Face Value: Once per scene, add 1 Threat to ask the GM a question about the situation as if spending Momentum on Obtain Information."
+    },
+    "Romulan": {
+      "name": "Romulan",
+      "requirements": "None",
+      "page_reference": "p. 110",
+      "attributes": [
+        "Control +1",
+        "Fitness +1",
+        "Reason +1"
+      ],
+      "trait": "Romulan",
+      "trait_description": "Romulan physiology is like that of Vulcans, but subtly different in a variety of ways, enough to cause difficulties in using medical techniques designed for Vulcans, and enough that, with difficulty, sensors can distinguish between Vulcan and Romulan life-signs. Psychologically and culturally, Romulans prize cunning and strength of will, and are highly distrustful of outsiders. Romulans have a reputation for manipulation, deception, and betrayal.",
+      "species_ability": {
+        "name": "Paranoia",
+        "description": "When an action scene begins, if the gamemaster wishes an adversary to take the first turn, they must spend 1 Threat more than normal."
+      },
+      "sample_values": [
+        "I give my life to the service of the Empire",
+        "Secrecy is a shield against betrayal",
+        "Every secret I discover is another weapon in my arsenal",
+        "Even my secrets have secrets!"
+      ],
+      "description": "Attributes: +1 Control, +1 Fitness, +1 Reason. Trait: Romulan. Species Ability — Paranoia: When an action scene begins, the GM must spend 1 additional Threat if they wish an adversary to take the first turn."
+    },
+    "Tellarite": {
+      "name": "Tellarite",
+      "requirements": "None",
+      "page_reference": "p. 111",
+      "attributes": [
+        "Control +1",
+        "Fitness +1",
+        "Insight +1"
+      ],
+      "trait": "Tellarite",
+      "trait_description": "Tellarites have keen senses of smell and hearing, and excellent spatial awareness, allowing them to judge distance, depth, and dimension with considerable accuracy. They have a high tolerance for many common drugs, toxins, and inebriants (Tellarites don't get drunk, just 'feisty').",
+      "species_ability": {
+        "name": "Sturdy",
+        "description": "You gain +1 Protection against Stun Attacks only. Further, when you suffer a complication that represents a physical hindrance or being stunned, dazed, or disoriented, you may take 1 Stress to ignore that complication (and remove any associated trait)."
+      },
+      "sample_values": [
+        "No notion is above proper scrutiny",
+        "No voice silenced, no perspective unheard",
+        "You'll never get an answer if you don't ask questions",
+        "An idea left unchallenged can be dangerous"
+      ],
+      "description": "Attributes: +1 Control, +1 Fitness, +1 Insight. Trait: Tellarite. Species Ability — Sturdy: +1 Protection against Stun Attacks; take 1 Stress to ignore a complication representing a physical hindrance or being stunned/dazed/disoriented."
+    },
+    "Trill": {
+      "name": "Trill",
+      "requirements": "None",
+      "page_reference": "p. 112",
+      "attributes": [
+        "Control +1",
+        "Presence +1",
+        "Reason +1"
+      ],
+      "trait": "Trill",
+      "trait_description": "Trill are especially resistant to parasites and similar intrusion. However, they tend to have strong allergic reactions to insect bites and other venoms, which can disrupt their neurochemistry, especially if they are Joined. Many of the specifics of Trill physiology—specifically with regards to symbionts—are not widely understood by non-Trill doctors, which can result in medical complications. Many Joined Trill find using a transporter to be uncomfortable.",
+      "species_ability": {
+        "name": "Patient",
+        "description": "When you succeed at a task where you purchased one or more d20s by spending Momentum, you generate 1 bonus Momentum for each d20 purchased. Bonus Momentum may not be saved."
+      },
+      "sample_values": [
+        "Several lifetimes of experience",
+        "What will this mean a century from now?",
+        "What can I discover today?",
+        "Who I was is only part of who I am"
+      ],
+      "description": "Attributes: +1 Control, +1 Presence, +1 Reason. Trait: Trill. Species Ability — Patient: When you succeed at a task where you purchased one or more d20s by spending Momentum, generate 1 bonus Momentum per d20 purchased (cannot be saved)."
+    },
+    "Vulcan": {
+      "name": "Vulcan",
+      "requirements": "None",
+      "page_reference": "p. 113",
+      "attributes": [
+        "Control +1",
+        "Fitness +1",
+        "Reason +1"
+      ],
+      "trait": "Vulcan",
+      "trait_description": "Vulcans have a naturally high tolerance for extremes of heat, are resistant to dehydration, and can shield their eyes from blinding light with a set of secondary eyelids. Their auditory and olfactory senses are extremely keen, and the gravity of their homeworld means an average Vulcan is about three times as strong as a Human of similar size and weight. Vulcans are innately telepathic, and through extensive training since childhood, Vulcan minds can suppress their emotional responses, and even exert influence upon biological processes, though this takes regular meditation to maintain.",
+      "species_ability": {
+        "name": "Mental Discipline",
+        "description": "While Vulcans have some psychic capabilities, they require training to use it effectively (see the Mind Meld talent, page 154). Further, your maximum Stress is based on your Control rather than your Fitness, and you may suffer 2 Stress to avoid suffering any trait that represents an emotional state. However, if you become Fatigued, you increase the Potency of any such emotion-related trait by 1."
+      },
+      "sample_values": [
+        "Logic is the beginning of wisdom, not the end",
+        "Nothing that is, is unimportant",
+        "The needs of the many outweigh the needs of the few or the one",
+        "In accepting the inevitable, one finds peace"
+      ],
+      "description": "Attributes: +1 Control, +1 Fitness, +1 Reason. Trait: Vulcan. Species Ability — Mental Discipline: Maximum Stress is based on Control instead of Fitness; suffer 2 Stress to avoid any trait representing an emotional state (if Fatigued, increase Potency of emotion-related traits by 1)."
+    }
+  },
+  "starship_weapons": {
+    "AntiprotonBeam": {
+      "name": "Antiproton Beam",
+      "category": "Energy Weapon",
+      "page_reference": "p. 228",
+      "qualities": [
+        "Intense"
+      ],
+      "description": "Pulsed antiproton beams especially destructive against spaceframe structure and unshielded hulls. Qualities: Intense."
+    },
+    "DisruptorArrays": {
+      "name": "Disruptor Arrays",
+      "category": "Energy Weapon",
+      "page_reference": "p. 228",
+      "range": "Medium",
+      "damage_base": "Scale",
+      "qualities": [
+        "Area or Spread",
+        "Intense"
+      ],
+      "description": "Continuous disruptor strips. Range: Medium. Damage: Ship's Scale + Weapons Rating bonus. Qualities: Area or Spread, Intense."
+    },
+    "DisruptorBanks": {
+      "name": "Disruptor Banks",
+      "category": "Energy Weapon",
+      "page_reference": "p. 228",
+      "range": "Medium",
+      "damage_base": "Scale + 1",
+      "qualities": [
+        "Intense"
+      ],
+      "description": "Focused disruptor bank emitters. Range: Medium. Damage: Ship's Scale + 1 + Weapons Rating bonus. Qualities: Intense."
+    },
+    "DisruptorCannons": {
+      "name": "Disruptor Cannons",
+      "category": "Energy Weapon",
+      "page_reference": "p. 228",
+      "range": "Close",
+      "damage_base": "Scale + 2",
+      "qualities": [
+        "Intense"
+      ],
+      "description": "Heavy disruptor cannons (e.g. Klingon Bird-of-Prey wing mounts). Range: Close. Damage: Ship's Scale + 2 + Weapons Rating bonus. Qualities: Intense."
+    },
+    "DisruptorStarship": {
+      "name": "Disruptors (Starship)",
+      "category": "Energy Weapon",
+      "page_reference": "p. 228",
+      "qualities": [
+        "Intense",
+        "Piercing"
+      ],
+      "description": "Potent thermal disruption beams favored by Klingons and Romulans. Qualities: Intense, Piercing."
+    },
+    "GravimetricTorpedo": {
+      "name": "Gravimetric Torpedoes",
+      "category": "Torpedo",
+      "page_reference": "p. 229",
+      "range": "Long",
+      "damage": "4",
+      "qualities": [
+        "Calibration",
+        "Piercing"
+      ],
+      "description": "Distorts local spacetime upon detonation to rupture hulls directly. Range: Long. Damage: 4. Qualities: Calibration, Piercing."
+    },
+    "GravitonBeam": {
+      "name": "Graviton Beam",
+      "category": "Energy Weapon",
+      "page_reference": "p. 228",
+      "qualities": [
+        "Piercing"
+      ],
+      "description": "High-energy graviton shearing beams designed to rupture internal bulkheads. Qualities: Piercing."
+    },
+    "MicroTorpedoes": {
+      "name": "Micro-Torpedoes",
+      "category": "Torpedo",
+      "page_reference": "p. 234",
+      "range": "Long",
+      "damage": "3",
+      "qualities": [],
+      "description": "Compact torpedoes equipped on Runabouts and attack craft. Range: Long. Damage: 3."
+    },
+    "NeutronicTorpedo": {
+      "name": "Neutronic Torpedoes",
+      "category": "Torpedo",
+      "page_reference": "p. 229",
+      "range": "Long",
+      "damage": "4",
+      "qualities": [
+        "Calibration",
+        "Intense"
+      ],
+      "description": "Devastating neutron-burst warheads. Range: Long. Damage: 4. Qualities: Calibration, Intense."
+    },
+    "PhaseCannons": {
+      "name": "Phase Cannons / Phase Weapons",
+      "category": "Energy Weapon",
+      "page_reference": "p. 228",
+      "qualities": [
+        "Versatile 1"
+      ],
+      "description": "Early 22nd-century predecessor to phasers used on NX-class vessels. Qualities: Versatile 1."
+    },
+    "PhasedPolaronBeam": {
+      "name": "Phased Polaron Beam",
+      "category": "Energy Weapon",
+      "page_reference": "p. 228",
+      "qualities": [
+        "Dampening",
+        "Piercing"
+      ],
+      "description": "Dominion particle weapons engineered to penetrate standard shields and drain power reserves. Qualities: Dampening, Piercing."
+    },
+    "PhaserArrays": {
+      "name": "Phaser Arrays",
+      "category": "Energy Weapon",
+      "page_reference": "p. 228",
+      "range": "Medium",
+      "damage_base": "Scale",
+      "qualities": [
+        "Area or Spread",
+        "Versatile 2"
+      ],
+      "description": "Saucer and hull emitter strips. Range: Medium. Damage: Ship's Scale + Weapons Rating bonus. Qualities: Area or Spread, Versatile 2."
+    },
+    "PhaserBanks": {
+      "name": "Phaser Banks",
+      "category": "Energy Weapon",
+      "page_reference": "p. 228",
+      "range": "Medium",
+      "damage_base": "Scale + 1",
+      "qualities": [
+        "Versatile 2"
+      ],
+      "description": "Focused emitter clusters. Range: Medium. Damage: Ship's Scale + 1 + Weapons Rating bonus. Qualities: Versatile 2."
+    },
+    "PhaserCannons": {
+      "name": "Phaser Cannons",
+      "category": "Energy Weapon",
+      "page_reference": "p. 228",
+      "range": "Close",
+      "damage_base": "Scale + 2",
+      "qualities": [
+        "Versatile 2"
+      ],
+      "description": "Heavy forward pulse mounts (e.g. Defiant class). Range: Close. Damage: Ship's Scale + 2 + Weapons Rating bonus. Qualities: Versatile 2."
+    },
+    "PhaserStarship": {
+      "name": "Phasers (Starship)",
+      "category": "Energy Weapon",
+      "page_reference": "p. 228",
+      "qualities": [
+        "Versatile 2"
+      ],
+      "description": "Common to Starfleet and allied vessels; precise, adaptable particle beam weapons. Qualities: Versatile 2 (can adapt frequencies to bypass shields, stun craft, or amplify yield)."
+    },
+    "PhotonTorpedo": {
+      "name": "Photon Torpedoes",
+      "category": "Torpedo",
+      "page_reference": "p. 229",
+      "range": "Long",
+      "damage": "3",
+      "qualities": [
+        "High-Yield"
+      ],
+      "description": "Standard matter/antimatter warhead heavy projectiles. Firing adds 1 Threat (Salvo adds 3 Threat and +1 Damage). Range: Long. Damage: 3. Qualities: High-Yield."
+    },
+    "PhotonicTorpedo": {
+      "name": "Photonic Torpedoes",
+      "category": "Torpedo",
+      "page_reference": "p. 229",
+      "range": "Long",
+      "damage": "2",
+      "qualities": [
+        "High-Yield"
+      ],
+      "description": "Precursor to photon torpedoes used in the mid-22nd century. Range: Long. Damage: 2. Qualities: High-Yield."
+    },
+    "PlasmaTorpedo": {
+      "name": "Plasma Torpedoes",
+      "category": "Torpedo",
+      "page_reference": "p. 229",
+      "range": "Long",
+      "damage": "3",
+      "qualities": [
+        "Calibration",
+        "Intense"
+      ],
+      "description": "Romulan high-energy plasma envelopment torpedoes. Range: Long. Damage: 3. Qualities: Calibration, Intense."
+    },
+    "PolaronTorpedo": {
+      "name": "Polaron Torpedoes",
+      "category": "Torpedo",
+      "page_reference": "p. 229",
+      "range": "Long",
+      "damage": "3",
+      "qualities": [
+        "Dampening",
+        "Piercing"
+      ],
+      "description": "Heavy torpedoes carrying phased polaron charges that pierce shields and drain power. Range: Long. Damage: 3. Qualities: Dampening, Piercing."
+    },
+    "ProtonBeam": {
+      "name": "Proton Beam",
+      "category": "Energy Weapon",
+      "page_reference": "p. 228",
+      "qualities": [
+        "Intense"
+      ],
+      "description": "Focused proton streams that leave lingering disruptive radiation on target hulls. Qualities: Intense."
+    },
+    "QuantumTorpedo": {
+      "name": "Quantum Torpedoes",
+      "category": "Torpedo",
+      "page_reference": "p. 230",
+      "range": "Long",
+      "damage": "4",
+      "qualities": [
+        "Calibration",
+        "High-Yield"
+      ],
+      "description": "Advanced zero-point energy warheads developed to counter the Borg. Range: Long. Damage: 4. Qualities: Calibration, High-Yield."
+    },
+    "SpatialTorpedo": {
+      "name": "Spatial Torpedoes",
+      "category": "Torpedo",
+      "page_reference": "p. 230",
+      "range": "Medium",
+      "damage": "2",
+      "qualities": [],
+      "description": "Early nuclear/chemical explosive projectiles used before photonic weapons. Range: Medium. Damage: 2."
+    },
+    "TetryonBeam": {
+      "name": "Tetryon Beam",
+      "category": "Energy Weapon",
+      "page_reference": "p. 228",
+      "qualities": [
+        "Versatile 1"
+      ],
+      "description": "Subspace particle beams highly effective at destabilizing shields and energy grids. Qualities: Versatile 1."
+    },
+    "TetryonicTorpedo": {
+      "name": "Tetryonic Torpedoes",
+      "category": "Torpedo",
+      "page_reference": "p. 230",
+      "range": "Long",
+      "damage": "3",
+      "qualities": [
+        "Calibration",
+        "Dampening"
+      ],
+      "description": "Tzenkethi design torpedoes carrying concentrated tetryon warheads. Range: Long. Damage: 3. Qualities: Calibration, Dampening."
+    },
+    "TractorBeam": {
+      "name": "Tractor Beam",
+      "category": "Utility",
+      "page_reference": "p. 231",
+      "strength": "Scale - 1",
+      "description": "Graviton beam used to tow, capture, or stabilize vessels and objects. Strength equals Starship Scale - 1. Trapping a target is an opposed task; difficulty to escape is equal to Tractor Beam Strength."
+    },
+    "TransphasicTorpedo": {
+      "name": "Transphasic Torpedoes",
+      "category": "Torpedo",
+      "page_reference": "p. 230",
+      "range": "Long",
+      "damage": "5",
+      "qualities": [
+        "Calibration",
+        "Piercing"
+      ],
+      "description": "Future-tech torpedoes that shift out of phase to detonate inside target bulkheads. Range: Long. Damage: 5. Qualities: Calibration, Piercing."
+    },
+    "ArraysDelivery": {
+      "name": "Weapon Delivery: Arrays",
+      "category": "Delivery System",
+      "page_reference": "p. 228",
+      "range": "Long",
+      "damage_modifier": "+0",
+      "qualities": [
+        "Area or Spread"
+      ],
+      "description": "Continuous emitter strips wrapping across the saucer and hull allowing discharges from any point. Range: Long. Grants the Area or Spread quality."
+    },
+    "BanksDelivery": {
+      "name": "Weapon Delivery: Banks",
+      "category": "Delivery System",
+      "page_reference": "p. 228",
+      "range": "Medium",
+      "damage_modifier": "+0",
+      "qualities": [],
+      "description": "Standard energy weapon mounts with multiple emitters providing flexible firing arcs. Range: Medium."
+    },
+    "CannonDelivery": {
+      "name": "Weapon Delivery: Cannons",
+      "category": "Delivery System",
+      "page_reference": "p. 228",
+      "range": "Short",
+      "damage_modifier": "+1",
+      "qualities": [
+        "Area or Spread"
+      ],
+      "description": "Fixed forward or aft firing mounts that unleash concentrated energy pulses. Range: Short. Adds +1 Damage and grants the Area or Spread quality."
+    }
+  },
+  "talents": {
+    "Ablative Armor": {
+      "name": "Ablative Armor",
+      "category": "Starship Talent",
+      "requirements": "2370 or later",
+      "page_reference": "p. 218",
+      "description": "The ship's hull plating is reinforced with ablative armor layers that vaporize slowly under weapon fire to dissipate energy. The ship's Resistance is increased by 2."
+    },
+    "Abrupt Insights": {
+      "name": "Abrupt Insights",
+      "category": "Species:Betazoid",
+      "requirements": "Betazoid, or gamemaster's permission",
+      "page_reference": "p. 152",
+      "description": "When you attempt a task as part of a social conflict, you can increase the complication range by 1, 2, or 3; if you succeed, you generate bonus Momentum equal to the complication range increase. Bonus Momentum may not be saved."
+    },
+    "Acute Senses": {
+      "name": "Acute Senses",
+      "category": "Species:Aenar",
+      "requirements": "Aenar, or gamemaster's permission",
+      "page_reference": "p. 151",
+      "description": "When attempting a task to detect something which is hidden from conventional senses, or which would normally be difficult to perceive, you may re-roll 1d20."
+    },
+    "Advanced Emergency Crew Holograms": {
+      "name": "Advanced Emergency Crew Holograms",
+      "category": "Starship Talent",
+      "requirements": "2380 or later",
+      "page_reference": "p. 219",
+      "description": "The ship is outfitted with holo-emitters throughout interior spaces, allowing the computer to project emergency holographic supporting personnel equal to half the ship's Computers score (rounded up) without costing Crew Support."
+    },
+    "Advanced Medical Ward": {
+      "name": "Advanced Medical Ward",
+      "category": "Starship Talent",
+      "requirements": "None",
+      "page_reference": "p. 219",
+      "description": "The ship's sickbay is exceptionally well-equipped and larger than normal. The ship gains the Advanced Medical Ward trait, applying to all medicine and biology tasks performed within sickbay (lost if Computers is disabled)."
+    },
+    "Advanced Research Facilities": {
+      "name": "Advanced Research Facilities",
+      "category": "Starship Talent",
+      "requirements": "None",
+      "page_reference": "p. 219",
+      "description": "Whenever a character on board the ship attempts a task to perform research assisted by the ship's Computers + Science, they gain 1 bonus Momentum which must be used for the Obtain Information Momentum spend."
+    },
+    "Advanced Sensor Suites": {
+      "name": "Advanced Sensor Suites",
+      "category": "Starship Talent",
+      "requirements": "None",
+      "page_reference": "p. 219",
+      "description": "Unless the ship's Sensors have suffered one or more Breaches, whenever a character performs a task assisted by the ship's Sensors, they may re-roll the ship's assistance die."
+    },
+    "Advanced Shields": {
+      "name": "Advanced Shields",
+      "category": "Starship Talent",
+      "requirements": "None",
+      "page_reference": "p. 219",
+      "description": "The vessel's shields are state of the art, increasing the ship's maximum Shields by 5."
+    },
+    "Advanced Team Dynamics": {
+      "name": "Advanced Team Dynamics",
+      "category": "Department:Command",
+      "requirements": "Command 4+, main character only, commanding officer or executive officer only",
+      "page_reference": "p. 156",
+      "description": "The first time you introduce a supporting character in a mission, that supporting character may take one additional option to improve the supporting character (from the list on page 146)."
+    },
+    "Advanced Transporters": {
+      "name": "Advanced Transporters",
+      "category": "Starship Talent",
+      "requirements": "None",
+      "page_reference": "p. 219",
+      "description": "Outfitted with high-precision transporter emitter arrays. Reduces the Difficulty of all transporter tasks by 1, and allows transporting through phenomena with greater reliability."
+    },
+    "Advisor": {
+      "name": "Advisor",
+      "category": "Department:Command",
+      "requirements": "Command 2+",
+      "page_reference": "p. 156",
+      "description": "Whenever you Assist another character using your Command, the assisted character may re-roll one d20."
+    },
+    "Ambush Tactics": {
+      "name": "Ambush Tactics",
+      "category": "Department:Security",
+      "requirements": "Security 3+",
+      "page_reference": "p. 161",
+      "description": "When you succeed at an Attack against an enemy who is unaware of your presence, or who is suffering from a trait or complication which represents a weakness or vulnerability, increase the Severity of the Attack by 2."
+    },
+    "Applied Force": {
+      "name": "Applied Force",
+      "category": "Department:Security",
+      "requirements": "Security 4+, Fitness 9+",
+      "page_reference": "p. 161",
+      "description": "When you make a Melee Attack, you may use Fitness instead of Daring. In addition, you add 1 to the Severity of your Unarmed Attacks."
+    },
+    "Applied Research": {
+      "name": "Applied Research",
+      "category": "Department:Science",
+      "requirements": "Science 3+",
+      "page_reference": "p. 162",
+      "description": "Once per scene, when you attempt a task which relates to information you received earlier that scene from an Obtain Information question, the first bonus die you purchase is free."
+    },
+    "Asking the Right Questions": {
+      "name": "Asking the Right Questions",
+      "category": "Species:Tellarite",
+      "requirements": "Tellarite, or gamemaster's permission",
+      "page_reference": "p. 154",
+      "description": "When you attempt a task that relates to information you've received from Obtain Information questions in the current scene, you may re-roll 1d20."
+    },
+    "Attack Run": {
+      "name": "Attack Run",
+      "category": "Department:Conn",
+      "requirements": "Conn 4+",
+      "page_reference": "p. 158",
+      "description": "Whenever you take the Attack Pattern major action, enemy Attacks against you do not reduce in Difficulty due to that action."
+    },
+    "Augmented Ability": {
+      "name": "Augmented Ability",
+      "category": "Augment & Cybernetic",
+      "requirements": "Augment trait",
+      "page_reference": "p. 155",
+      "description": "Choose a single attribute. You gain the Extraordinary Attribute 1 special rule (p. 350) for the chosen attribute, granting one automatic success on all tasks using that attribute, but increasing the complication range by 2 when used."
+    },
+    "Automatic Return": {
+      "name": "Automatic Return",
+      "category": "Starship Talent",
+      "requirements": "None",
+      "page_reference": "p. 220",
+      "description": "The ship's computer and onboard shuttles are programmed to recognize a home base and automatically pilot back if left without crew commands."
+    },
+    "Back-Up Plans": {
+      "name": "Back-Up Plans",
+      "category": "General",
+      "requirements": "Control 9+",
+      "page_reference": "p. 149",
+      "description": "Whenever you or an ally fail a task (so long as you are present in the scene), you may add 1 point to the group's Momentum pool."
+    },
+    "Backup EPS Conduits": {
+      "name": "Backup EPS Conduits",
+      "category": "Starship Talent",
+      "requirements": "None",
+      "page_reference": "p. 220",
+      "description": "The ship's power conduits have additional redundancies that protect Reserve Power from being lost when the ship suffers system breaches."
+    },
+    "Baffling Briefing": {
+      "name": "Baffling Briefing",
+      "category": "Department:Science",
+      "requirements": "Science 3+ and Presence 9+",
+      "page_reference": "p. 162",
+      "description": "When you engage in a social conflict using deception, you may use Science in place of Command so long as your technical knowledge is used to mislead your opponent."
+    },
+    "Bargain": {
+      "name": "Bargain",
+      "category": "Department:Command",
+      "requirements": "Command 3+",
+      "page_reference": "p. 156",
+      "description": "When you use Negotiation to make an offer to someone during social conflict, you may re-roll a single d20 on your next Persuade task to convince that person. If the social conflict involves an extended task, your Impact is increased by 1."
+    },
+    "Bedside Manner": {
+      "name": "Bedside Manner",
+      "category": "Department:Medicine",
+      "requirements": "Command 3+ and Medicine 3+",
+      "page_reference": "p. 164",
+      "description": "When you succeed at a Medicine task to heal an Injury, you may immediately remove a trait from the patient, even if unrelated to the Injury. In addition, when you attempt a Reputation Check, add one additional positive influence."
+    },
+    "Bold (X)": {
+      "name": "Bold (X)",
+      "category": "General",
+      "requirements": "Cannot be taken for a department with Cautious",
+      "page_reference": "p. 149",
+      "description": "Choose a department when you select this talent. Whenever you attempt a task from that department, and you buy one or more d20s by adding Threat, you may re-roll a single d20. You may select this talent multiple times, once for each department."
+    },
+    "Bolster": {
+      "name": "Bolster",
+      "category": "Department:Command",
+      "requirements": "Command 3+",
+      "page_reference": "p. 156",
+      "description": "When you succeed at any task using your Command during an action scene, you may spend 1 Momentum (Repeatable) so one ally who can see and hear you recovers 1 Stress (max 1 Stress per ally per use)."
+    },
+    "Call Out Targets": {
+      "name": "Call Out Targets",
+      "category": "Department:Command",
+      "requirements": "Command 3+ and Security 3+",
+      "page_reference": "p. 157",
+      "description": "When you Assist a character in an Attack, the assisted character generates 2 bonus Momentum if their Attack succeeds. Bonus Momentum cannot be saved."
+    },
+    "Call to Action": {
+      "name": "Call to Action",
+      "category": "Department:Command",
+      "requirements": "Command 3+",
+      "page_reference": "p. 157",
+      "description": "In a conflict, you may use the Prepare minor action to grant one ally who you can communicate with a minor action of their choice, which they perform immediately."
+    },
+    "Calm and Logical": {
+      "name": "Calm and Logical",
+      "category": "General",
+      "requirements": "Reason 11+",
+      "page_reference": "p. 149",
+      "description": "When you gain a trait which represents a mood or emotional state, you may suppress that trait (ignoring its effect) for the duration of a single task or a single turn in combat by suffering 1 Stress."
+    },
+    "Captain's Yacht": {
+      "name": "Captain's Yacht",
+      "category": "Starship Talent",
+      "requirements": "Scale 4+",
+      "page_reference": "p. 220",
+      "description": "The vessel has a dedicated diplomatic/command support craft docked to the hull, which does not count against active small craft limits."
+    },
+    "Cautious (X)": {
+      "name": "Cautious (X)",
+      "category": "General",
+      "requirements": "Cannot be taken for a department with Bold",
+      "page_reference": "p. 149",
+      "description": "Choose a department when you select this talent. Whenever you attempt a task with that department, and you buy one or more d20s by spending Momentum, you may re-roll a single d20. You may select this talent multiple times, once for each department."
+    },
+    "Chief of Staff": {
+      "name": "Chief of Staff",
+      "category": "Department:Medicine",
+      "requirements": "Medicine 3+ and Command 3+",
+      "page_reference": "p. 164",
+      "description": "When you Assist another character attempting a Medicine task, each assisting character may re-roll their assistance die."
+    },
+    "Chosen Speaker": {
+      "name": "Chosen Speaker",
+      "category": "Species:Aenar",
+      "requirements": "Aenar, or gamemaster's permission",
+      "page_reference": "p. 151",
+      "description": "When attempting a task to communicate telepathically with a willing being, you may re-roll 1d20."
+    },
+    "Cloaking Device": {
+      "name": "Cloaking Device",
+      "category": "Starship Talent",
+      "requirements": "Gamemaster's permission (typically Romulan or Klingon)",
+      "page_reference": "p. 220",
+      "description": "Allows the vessel to vanish from sensors via a Control + Engineering task (Difficulty 2, assisted by Engines + Security) using Reserve Power, gaining the Cloaked trait."
+    },
+    "Close Protection": {
+      "name": "Close Protection",
+      "category": "Department:Security",
+      "requirements": "Security 4+",
+      "page_reference": "p. 161",
+      "description": "When you make a successful Attack, you may spend 1 Momentum to protect a single ally within Close range. The next Attack against that ally before the start of your next turn increases in Difficulty by 1."
+    },
+    "Close-Knit Crew": {
+      "name": "Close-Knit Crew",
+      "category": "General",
+      "requirements": "None",
+      "page_reference": "p. 149",
+      "description": "When a scene begins, if there are fewer points of Momentum in the group pool than there are characters in the scene who have this talent, immediately add 1 Momentum to the group pool."
+    },
+    "Cold Reading": {
+      "name": "Cold Reading",
+      "category": "Department:Command",
+      "requirements": "Command 4+",
+      "page_reference": "p. 157",
+      "description": "When you succeed at a task during social conflict, you generate 1 bonus Momentum which must be used for Obtain Information about one of the people you're interacting with. If the social conflict involves an extended task, ignore any Resistance."
+    },
+    "Collaboration (X)": {
+      "name": "Collaboration (X)",
+      "category": "General",
+      "requirements": "None",
+      "page_reference": "p. 149",
+      "description": "Choose a single department when you select this talent. Whenever an ally attempts a task using that department, you may spend 1 Momentum (Immediate) to allow them to use your rating for that department and one of your relevant focuses."
+    },
+    "Combat Medic": {
+      "name": "Combat Medic",
+      "category": "Department:Medicine",
+      "requirements": "Medicine 3+ and Security 2+",
+      "page_reference": "p. 164",
+      "description": "When attempting a Medicine task during combat, you may pick one trait which increases the Difficulty of the task and ignore it."
+    },
+    "Command Ship": {
+      "name": "Command Ship",
+      "category": "Starship Talent",
+      "requirements": "None",
+      "page_reference": "p. 220",
+      "description": "Equipped with fleet command and control systems. When a character on the ship succeeds at a Direct task or creates a tactical trait, they may be assisted by Communications + Command and confer the benefit to allied ships in communication range."
+    },
+    "Computer Expertise": {
+      "name": "Computer Expertise",
+      "category": "Department:Science",
+      "requirements": "Science 2+",
+      "page_reference": "p. 162",
+      "description": "Whenever you attempt a task that involves the programming or study of a computer system, the first bonus d20 you purchase is free."
+    },
+    "Constant Presence": {
+      "name": "Constant Presence",
+      "category": "General",
+      "requirements": "Supporting character only, must have at least two values and at least two other talents",
+      "page_reference": "p. 149",
+      "description": "Introducing this supporting character in subsequent adventures no longer costs Crew Support, and the supporting character gains 1 Determination the first time they are used in an adventure."
+    },
+    "Constantly Watching": {
+      "name": "Constantly Watching",
+      "category": "General",
+      "requirements": "None",
+      "page_reference": "p. 149",
+      "description": "At the start of an action scene, the gamemaster must spend an additional 2 Threat to have an NPC take the first turn. You may also re-roll 1d20 on any task attempted to locate a hidden enemy or danger."
+    },
+    "Coordinated Efforts": {
+      "name": "Coordinated Efforts",
+      "category": "Department:Command",
+      "requirements": "Command 4+",
+      "page_reference": "p. 157",
+      "description": "When you Assist another character during an extended task, the character you Assist increases their Impact by 1."
+    },
+    "Covering Advance": {
+      "name": "Covering Advance",
+      "category": "Department:Conn",
+      "requirements": "Conn 3+",
+      "page_reference": "p. 158",
+      "description": "When you succeed at a task to maneuver your ship, you may spend 2 Momentum to provide cover for allied ships. When an enemy vessel next makes an Attack before your next turn, if you are the closest ship to that attacker but they do not target you, the Difficulty of their Attack is equal to your ship's Scale."
+    },
+    "Crisis Management": {
+      "name": "Crisis Management",
+      "category": "Department:Security",
+      "requirements": "Security 3+ or Command 3+",
+      "page_reference": "p. 161",
+      "description": "The Momentum cost to use the Direct major action (p. 289) is removed."
+    },
+    "Cultural Flexibility": {
+      "name": "Cultural Flexibility",
+      "category": "Species:Denobulan",
+      "requirements": "Denobulan, or gamemaster's permission",
+      "page_reference": "p. 152",
+      "description": "When you attempt a task to learn about an unfamiliar culture, or to act in an appropriate manner when interacting with members of such a culture, you may re-roll 1d20."
+    },
+    "Cutting Edge Medicine": {
+      "name": "Cutting Edge Medicine",
+      "category": "Department:Medicine",
+      "requirements": "Medicine 4+",
+      "page_reference": "p. 164",
+      "description": "Whenever you attempt a Medicine task with a Difficulty of 3 or higher, you may spend up to 3 Momentum (Immediate) to reduce the Difficulty by the Momentum spent (minimum Difficulty 1), increasing the complication range by 1 per Momentum spent."
+    },
+    "Cyberneticist": {
+      "name": "Cyberneticist",
+      "category": "Department:Medicine",
+      "requirements": "Engineering 3+ and Medicine 3+",
+      "page_reference": "p. 164",
+      "description": "When you attempt a task to work on, install, or remove a cybernetic device from a patient, the first bonus d20 you purchase is free."
+    },
+    "Dauntless": {
+      "name": "Dauntless",
+      "category": "General",
+      "requirements": "None",
+      "page_reference": "p. 149",
+      "description": "Whenever another character attempts to intimidate or threaten you, you may suffer 2 Stress to ignore their attempt."
+    },
+    "Decisive Leadership": {
+      "name": "Decisive Leadership",
+      "category": "Department:Command",
+      "requirements": "Command 4+",
+      "page_reference": "p. 157",
+      "description": "In a conflict, once per round, you or your allies may Keep the Initiative for free."
+    },
+    "Dedicated Focus (X)": {
+      "name": "Dedicated Focus (X)",
+      "category": "Department:Science",
+      "requirements": "Science 4+",
+      "page_reference": "p. 163",
+      "description": "Choose one of your focuses. When attempting a task where that focus applies, you score a critical success for any die which rolls equal to or under twice the relevant department."
+    },
+    "Dedicated Personnel": {
+      "name": "Dedicated Personnel",
+      "category": "Starship Talent",
+      "requirements": "None",
+      "page_reference": "p. 220",
+      "description": "Choose a single department. The ship gains two additional Crew Support which may only be used to establish supporting characters from that department."
+    },
+    "Dedicated Subspace Transceiver Array": {
+      "name": "Dedicated Subspace Transceiver Array",
+      "category": "Starship Talent",
+      "requirements": "None",
+      "page_reference": "p. 221",
+      "description": "Enhances long-range communication clarity and signal penetration; reduces the Difficulty of tasks to send, receive, or intercept subspace communications by 1."
+    },
+    "Defensive Training": {
+      "name": "Defensive Training",
+      "category": "Department:Security",
+      "requirements": "Security 2+",
+      "page_reference": "p. 161",
+      "description": "Select either Melee Attacks or Ranged Attacks when you acquire this talent. Attacks against you of the chosen type increase in Difficulty by 1."
+    },
+    "Defuse the Tension": {
+      "name": "Defuse the Tension",
+      "category": "Department:Command",
+      "requirements": "Command 3+",
+      "page_reference": "p. 157",
+      "description": "Whenever you attempt a task to persuade someone not to resort to violence, the first d20 you purchase for that task is free."
+    },
+    "Deluxe Galley": {
+      "name": "Deluxe Galley",
+      "category": "Starship Talent",
+      "requirements": "None",
+      "page_reference": "p. 221",
+      "description": "Equipped with a full kitchen and non-replicated food stores, granting the Fine Dining trait for social and diplomatic tasks hosted aboard."
+    },
+    "Diagnostic Expertise": {
+      "name": "Diagnostic Expertise",
+      "category": "Department:Medicine",
+      "requirements": "Medicine 4+",
+      "page_reference": "p. 164",
+      "description": "When you succeed at a Medicine task to identify and diagnose the nature of a medical problem, you may ask one question—as per Obtain Information—for every additional d20 you bought by spending Momentum."
+    },
+    "Did the Reading": {
+      "name": "Did the Reading",
+      "category": "Department:Science",
+      "requirements": "Science 4+",
+      "page_reference": "p. 163",
+      "description": "When you attempt a task, you may spend 1 Momentum (Immediate) to use Science on that task instead of the department you would normally use, and count as having an applicable focus. Each subsequent use in the same scene increases the Momentum cost by +1 cumulatively."
+    },
+    "Diplomatic Suites": {
+      "name": "Diplomatic Suites",
+      "category": "Starship Talent",
+      "requirements": "None",
+      "page_reference": "p. 221",
+      "description": "Contains VIP staterooms and conference facilities. When hosting negotiations, crew members may be assisted by the ship's Computers + Command or Structure + Command."
+    },
+    "Doctor's Orders": {
+      "name": "Doctor's Orders",
+      "category": "Department:Medicine",
+      "requirements": "Medicine 4+",
+      "page_reference": "p. 164",
+      "description": "When you attempt a task to coordinate others, or to coerce someone into taking or refraining from a specific course of action, you may use your Medicine department instead of Command."
+    },
+    "Don't You Die on Me!": {
+      "name": "Don't You Die on Me!",
+      "category": "Department:Medicine",
+      "requirements": "Medicine 5",
+      "page_reference": "p. 164",
+      "description": "When a character is killed, spend Determination to attempt a Daring + Medicine task (Difficulty 3) within the scene (or before the end of the next scene if due to untreated lethal injury). If successful, the character is revived but remains Defeated for the rest of the adventure."
+    },
+    "Dual Environment": {
+      "name": "Dual Environment",
+      "category": "Starship Talent",
+      "requirements": "None",
+      "page_reference": "p. 221",
+      "description": "Outfitted with redundant environmental rooms and parallel passages supporting crew members who require non-Class-M atmospheric or aquatic conditions."
+    },
+    "Durability": {
+      "name": "Durability",
+      "category": "Augment & Cybernetic",
+      "requirements": "Augment or Cyborg trait",
+      "page_reference": "p. 155",
+      "description": "Whether through genetic engineering or cybernetic implants, you're more durable than most people. You gain Protection 2."
+    },
+    "Efficient Evasion": {
+      "name": "Efficient Evasion",
+      "category": "Department:Conn",
+      "requirements": "Conn 3+",
+      "page_reference": "p. 158",
+      "description": "When you attempt an Evasive Action major action for the second or subsequent time in a row during a scene, you add 1 Momentum to the group pool."
+    },
+    "Electronic Warfare Systems": {
+      "name": "Electronic Warfare Systems",
+      "category": "Starship Talent",
+      "requirements": "None",
+      "page_reference": "p. 222",
+      "description": "Specially designed communications and sensor suites for intercepting and jamming enemy signals during starship combat."
+    },
+    "Emergency Medical Hologram": {
+      "name": "Emergency Medical Hologram",
+      "category": "Starship Talent",
+      "requirements": "2371 or later",
+      "page_reference": "p. 222",
+      "description": "Sickbay is equipped with holo-emitters and an Emergency Medical Hologram (EMH) supporting character that does not cost Crew Support to introduce."
+    },
+    "Empathy": {
+      "name": "Empathy",
+      "category": "Esoteric",
+      "requirements": "Gamemaster's discretion (or Species Ability)",
+      "page_reference": "p. 155",
+      "description": "You can sense the emotions of most living beings nearby, and can communicate telepathically with other empaths and telepaths, as well as those with whom you are extremely familiar."
+    },
+    "Expanded Emergency Medical Facilities": {
+      "name": "Expanded Emergency Medical Facilities",
+      "category": "Starship Talent",
+      "requirements": "None",
+      "page_reference": "p. 222",
+      "description": "Cargo bays and secondary spaces are pre-rigged for rapid conversion into triage wards during mass-casualty relief missions."
+    },
+    "Expanded Munitions": {
+      "name": "Expanded Munitions",
+      "category": "Starship Talent",
+      "requirements": "None",
+      "page_reference": "p. 222",
+      "description": "The ship has additional weapon delivery systems or torpedo storage, allowing it to add one additional weapon system to its profile."
+    },
+    "Expansive Department": {
+      "name": "Expansive Department",
+      "category": "Starship Talent",
+      "requirements": "Department rating of 5",
+      "page_reference": "p. 222",
+      "description": "Required for a starship to have a department rating of 6. Whenever the ship assists or performs a task using this department, the ship may re-roll its d20."
+    },
+    "Expedition Expert": {
+      "name": "Expedition Expert",
+      "category": "Department:Science",
+      "requirements": "Science 3+ and Fitness 9+",
+      "page_reference": "p. 163",
+      "description": "Prior to participating in an away team mission, you may spend 2 Momentum (Immediate). During the expedition, any member of the away team may re-roll a single d20 on any task to navigate terrain or circumvent a hazard/obstacle (up to a total number of dice equal to your Science rating)."
+    },
+    "Extensive Automation": {
+      "name": "Extensive Automation",
+      "category": "Starship Talent",
+      "requirements": "None",
+      "page_reference": "p. 223",
+      "description": "The ship's systems are heavily automated to operate with a smaller crew; increases Computers assistance capabilities but reduces Crew Support."
+    },
+    "Extensive Medical Laboratories": {
+      "name": "Extensive Medical Laboratories",
+      "category": "Starship Talent",
+      "requirements": "None",
+      "page_reference": "p. 223",
+      "description": "Provides dedicated medical research labs; increases Impact by 1 on extended tasks related to medical, virological, or xenobiological research."
+    },
+    "Extensive Shuttlebays": {
+      "name": "Extensive Shuttlebays",
+      "category": "Starship Talent",
+      "requirements": "Scale 4+",
+      "page_reference": "p. 223",
+      "description": "The vessel's shuttlebays are large and well-supplied; the ship may have twice as many small craft active at one time as normal, and may carry Scale 2 small craft."
+    },
+    "Extra Effort": {
+      "name": "Extra Effort",
+      "category": "General",
+      "requirements": "Fitness 9+",
+      "page_reference": "p. 149",
+      "description": "When you attempt a task, you may reduce the Difficulty of the task by 1, to a minimum of 0. However, once the task is completed, you immediately take Stress equal to the original Difficulty of the task."
+    },
+    "Extrasensory Perception": {
+      "name": "Extrasensory Perception",
+      "category": "Esoteric",
+      "requirements": "Gamemaster's discretion",
+      "page_reference": "p. 155",
+      "description": "At any point during play, you may ask the gamemaster for hints or insights about the current situation, and the gamemaster may similarly offer you information you would not normally be able to determine. Each hint adds 1 Threat."
+    },
+    "Fast Targeting Systems": {
+      "name": "Fast Targeting Systems",
+      "category": "Starship Talent",
+      "requirements": "None",
+      "page_reference": "p. 223",
+      "description": "The ship does not suffer the normal Difficulty or Momentum penalty for targeting a specific subsystem on an enemy vessel."
+    },
+    "Fellowship Specialty": {
+      "name": "Fellowship Specialty",
+      "category": "Department:Medicine",
+      "requirements": "Medicine 4+",
+      "page_reference": "p. 165",
+      "description": "Select a focus. When you succeed at a Medicine task where that focus applies, the cost of the Create Trait Momentum spend is reduced to 1."
+    },
+    "Field Medicine": {
+      "name": "Field Medicine",
+      "category": "Department:Medicine",
+      "requirements": "None",
+      "page_reference": "p. 165",
+      "description": "When attempting a Medicine task, you may ignore any increase in Difficulty or complication range for working without the proper tools or equipment."
+    },
+    "Fire at Will": {
+      "name": "Fire at Will",
+      "category": "Department:Security",
+      "requirements": "Security 3+",
+      "page_reference": "p. 161",
+      "description": "If you make an Attack, you may use the Swift Action Momentum spend for 1 Momentum rather than 2, but the second major action you take must also be an Attack."
+    },
+    "First Response": {
+      "name": "First Response",
+      "category": "Department:Medicine",
+      "requirements": "Medicine 3+",
+      "page_reference": "p. 165",
+      "description": "When you attempt the First Aid task during combat, the first die you purchase is free. Further, you may always Succeed at Cost, with each complication adding 1 to the Difficulty of healing the patient's Injury subsequently."
+    },
+    "Fly-By": {
+      "name": "Fly-By",
+      "category": "Department:Conn",
+      "requirements": "Conn 2+",
+      "page_reference": "p. 158",
+      "description": "Whenever you use the Swift Action Momentum spend, you do not increase the Difficulty of the second task if one of the tasks you attempt is to pilot a vessel."
+    },
+    "Follow My Lead": {
+      "name": "Follow My Lead",
+      "category": "Department:Command",
+      "requirements": "Command 3+",
+      "page_reference": "p. 157",
+      "description": "When you succeed at a task during combat or another perilous situation, you may spend Determination. Choose a single ally who can hear you; their next task counts as having assistance from you using Presence + Command, and your assistance die counts as having rolled a 1."
+    },
+    "Former Initiate": {
+      "name": "Former Initiate",
+      "category": "Species:Trill",
+      "requirements": "Trill, or gamemaster's permission (cannot have Joined)",
+      "page_reference": "p. 154",
+      "description": "When you attempt a task using Control or Reason, and you spend Determination to set a die as a 1, you may also re-roll your dice pool after the roll."
+    },
+    "Get Down!": {
+      "name": "Get Down!",
+      "category": "Department:Security",
+      "requirements": "Security 2+",
+      "page_reference": "p. 161",
+      "description": "You and any allies within Close range gain +1 Protection while in Cover."
+    },
+    "Glancing Impact": {
+      "name": "Glancing Impact",
+      "category": "Department:Conn",
+      "requirements": "Conn 4+",
+      "page_reference": "p. 158",
+      "description": "Whenever you succeed at the Evasive Action major action, increase the Resistance of the ship you are piloting by 2 until the start of your next turn."
+    },
+    "Greed is Eternal": {
+      "name": "Greed is Eternal",
+      "category": "Species:Ferengi",
+      "requirements": "Ferengi, or gamemaster's permission",
+      "page_reference": "p. 152",
+      "description": "When engaged in negotiations—including in social conflict—that have the potential for you to profit personally, you may add 1 Threat to re-roll your dice pool."
+    },
+    "Guile and Cunning": {
+      "name": "Guile and Cunning",
+      "category": "Species:Romulan",
+      "requirements": "Romulan, or gamemaster's permission",
+      "page_reference": "p. 153",
+      "description": "When you attempt to remain hidden or for your actions to remain unnoticed, you may add 1 Threat to add 1 to the Difficulty of any task to detect you or reveal the nature of your actions."
+    },
+    "Gut Feeling": {
+      "name": "Gut Feeling",
+      "category": "General",
+      "requirements": "Insight 11+",
+      "page_reference": "p. 149",
+      "description": "When the gamemaster spends Threat to introduce reinforcements or to cause a Reversal, they must spend 2 additional Threat to do so. This is 2 extra Threat in total, not per reinforcement."
+    },
+    "Hands-on Pilot": {
+      "name": "Hands-on Pilot",
+      "category": "Department:Conn",
+      "requirements": "Conn 3+ and Engineering 3+",
+      "page_reference": "p. 158",
+      "description": "When you perform the Warp, Evasive Action, or Attack Pattern major actions, the ship may count its focus range as double the relevant department rating. However, when anyone else pilots the ship, increase the complication range by 1."
+    },
+    "High-Intensity Energy Weapons": {
+      "name": "High-Intensity Energy Weapons",
+      "category": "Starship Talent",
+      "requirements": "None",
+      "page_reference": "p. 223",
+      "description": "Overcharged energy emitters allow the ship to expend Reserve Power on an energy weapon attack to boost its damage."
+    },
+    "High-Power Tractor Beam": {
+      "name": "High-Power Tractor Beam",
+      "category": "Starship Talent",
+      "requirements": "None",
+      "page_reference": "p. 223",
+      "description": "Channels far greater power into the tractor beam emitters, increasing the Difficulty for targets to escape and allowing Reserve Power to bolster tractor strength."
+    },
+    "High-Resolution Sensors": {
+      "name": "High-Resolution Sensors",
+      "category": "Starship Talent",
+      "requirements": "None",
+      "page_reference": "p. 223",
+      "description": "While the vessel is not in combat, any successful task assisted by the ship's Sensors generates 1 bonus Momentum."
+    },
+    "I Know My Ship": {
+      "name": "I Know My Ship",
+      "category": "Department:Engineering",
+      "requirements": "Engineering 4+",
+      "page_reference": "p. 159",
+      "description": "Whenever you attempt a task to determine the source of a technical problem with your ship, the first bonus d20 you purchase is free."
+    },
+    "I'm Giving It All She's Got!": {
+      "name": "I'm Giving It All She's Got!",
+      "category": "Department:Engineering",
+      "requirements": "Engineering 4+",
+      "page_reference": "p. 159",
+      "description": "Once per scene, when the ship has no Reserve Power remaining at the start of your turn, you may add 2 Threat to gain Reserve Power."
+    },
+    "Improved Damage Control": {
+      "name": "Improved Damage Control",
+      "category": "Starship Talent",
+      "requirements": "None",
+      "page_reference": "p. 223",
+      "description": "When a character takes the Damage Control major action aboard this ship, they may re-roll a single d20 (and gain +1 Impact if part of an extended repair task)."
+    },
+    "Improved Hull Integrity": {
+      "name": "Improved Hull Integrity",
+      "category": "Starship Talent",
+      "requirements": "None",
+      "page_reference": "p. 223",
+      "description": "The ship's structural integrity fields and hull framing are reinforced, increasing the ship's Resistance by 1."
+    },
+    "Improved Impulse Drive": {
+      "name": "Improved Impulse Drive",
+      "category": "Starship Talent",
+      "requirements": "None",
+      "page_reference": "p. 223",
+      "description": "When the flight controller succeeds at the Impulse, Attack Pattern, Evasive Action, or Ramming Speed actions, they may spend 2 Momentum to increase the Difficulty of attacks against the ship by 1 until the start of their next turn."
+    },
+    "Improved Power Systems": {
+      "name": "Improved Power Systems",
+      "category": "Starship Talent",
+      "requirements": "None",
+      "page_reference": "p. 223",
+      "description": "Whenever a character succeeds at a task to regain or reroute Reserve Power, they may spend 1 Momentum to restore Reserve Power to an additional system."
+    },
+    "Improved Reaction Control System": {
+      "name": "Improved Reaction Control System",
+      "category": "Starship Talent",
+      "requirements": "None",
+      "page_reference": "p. 224",
+      "description": "Whenever a task to move or maneuver the ship would increase in Difficulty because of obstacles or hazards, reduce the Difficulty by 1 (to a minimum of the task's base Difficulty)."
+    },
+    "Improved Shield Recharge": {
+      "name": "Improved Shield Recharge",
+      "category": "Starship Talent",
+      "requirements": "None",
+      "page_reference": "p. 224",
+      "description": "Whenever the Regenerate Shields major action is successful, the ship regains 2 additional Shields."
+    },
+    "Improved Warp Drive": {
+      "name": "Improved Warp Drive",
+      "category": "Starship Talent",
+      "requirements": "None",
+      "page_reference": "p. 224",
+      "description": "Improved warp field dynamics allow the ship to enter and sustain high warp without expending Reserve Power when rolling a complication-free Conn task."
+    },
+    "In the Nick of Time": {
+      "name": "In the Nick of Time",
+      "category": "Department:Engineering",
+      "requirements": "Engineering 3+ or Science 3+",
+      "page_reference": "p. 159",
+      "description": "Whenever you succeed at an Engineering or Science task as part of an extended task, you increase your Impact by 1."
+    },
+    "Incisive Scrutiny": {
+      "name": "Incisive Scrutiny",
+      "category": "Species:Tellarite",
+      "requirements": "Tellarite, or gamemaster's permission",
+      "page_reference": "p. 154",
+      "description": "When you succeed at a task using Control or Insight, you may ask one question, as if you had spent Momentum to Obtain Information."
+    },
+    "Indefatigable": {
+      "name": "Indefatigable",
+      "category": "General",
+      "requirements": "Fitness 11+",
+      "page_reference": "p. 149",
+      "description": "When you fail a task, and attempt that task again during the same scene, reduce the Difficulty of the second attempt (and any subsequent attempts if you still fail) by 1."
+    },
+    "Inertia": {
+      "name": "Inertia",
+      "category": "Department:Conn",
+      "requirements": "Conn 3+",
+      "page_reference": "p. 158",
+      "description": "When you use the Impulse minor action, you may spend 1 Momentum to move one additional zone so long as you used the Impulse minor action or Warp major action in your previous turn."
+    },
+    "Insightful Guidance": {
+      "name": "Insightful Guidance",
+      "category": "Department:Medicine",
+      "requirements": "Command 2+ and Medicine 3+",
+      "page_reference": "p. 165",
+      "description": "Whenever you Assist a character in a social conflict, using your knowledge of psychology or emotional states, that character is considered to have a beneficial trait (Psychological Profile) in addition to the normal benefits of your Assist."
+    },
+    "Intense Scrutiny": {
+      "name": "Intense Scrutiny",
+      "category": "Department:Science",
+      "requirements": "Engineering 3+ or Science 3+",
+      "page_reference": "p. 163",
+      "description": "Whenever you succeed at a task using Reason or Control as part of an extended task, you ignore any Resistance on that extended task."
+    },
+    "Interrogation": {
+      "name": "Interrogation",
+      "category": "Department:Security",
+      "requirements": "Security 3+",
+      "page_reference": "p. 162",
+      "description": "When you succeed at a task to coerce someone to reveal information in a social conflict, you may ask one question for free, as per the Obtain Information Momentum spend."
+    },
+    "Joined": {
+      "name": "Joined",
+      "category": "Species:Trill",
+      "requirements": "Trill, or gamemaster's permission",
+      "page_reference": "p. 154",
+      "description": "You gain an additional character trait with the name of your symbiont. Furthermore, up to twice per adventure, you may declare that a past Host had experience or expertise in a particular field: you gain an additional focus for the rest of the adventure."
+    },
+    "Jury-Rig": {
+      "name": "Jury-Rig",
+      "category": "Department:Engineering",
+      "requirements": "Engineering 4+",
+      "page_reference": "p. 159",
+      "description": "Whenever you attempt an Engineering task to perform repairs, you may reduce the Difficulty by 2 (minimum 0). However, repairs are temporary and last only a single scene (+1 scene per Momentum spent, Repeatable) before failing again, and increase future repair Difficulty by 1."
+    },
+    "Killer's Instinct": {
+      "name": "Killer's Instinct",
+      "category": "Species:Klingon",
+      "requirements": "Klingon, or gamemaster's permission",
+      "page_reference": "p. 153",
+      "description": "When you make a Deadly Attack, reduce the amount you add to Threat to 0. In addition, when an enemy attempts to make a Deadly Attack against you, you may add 1 Threat to increase the Difficulty of their Attack by 1."
+    },
+    "Kolinahr": {
+      "name": "Kolinahr",
+      "category": "Species:Vulcan",
+      "requirements": "Vulcan, or gamemaster's permission",
+      "page_reference": "p. 154",
+      "description": "When you ignore emotions using your Mental Discipline Species Ability, you may avoid emotional traits by taking 1 Stress instead of 2, and you no longer increase the potency of emotional traits when Fatigued."
+    },
+    "Lab Rat": {
+      "name": "Lab Rat",
+      "category": "Department:Science",
+      "requirements": "Science 3+ and Engineering 3+",
+      "page_reference": "p. 163",
+      "description": "When attempting an extended task while using a laboratory, increase your Impact by 1."
+    },
+    "Lead Investigator": {
+      "name": "Lead Investigator",
+      "category": "Department:Security",
+      "requirements": "Security 3+ or Conn 3+",
+      "page_reference": "p. 162",
+      "description": "Whenever you attempt a task to retrieve or analyze evidence of a crime, you may re-roll 1d20. When you spend one or more Momentum to Obtain Information about a crime scene or evidence, you may ask one additional question."
+    },
+    "Learn from Failure": {
+      "name": "Learn from Failure",
+      "category": "Department:Science",
+      "requirements": "Science 4+",
+      "page_reference": "p. 163",
+      "description": "When you fail at a Science task, you may add 3 Threat to create a trait representing knowledge or insights gained from the failure (reduced by 1 Threat for each success scored on the failed task)."
+    },
+    "Maintenance Specialist": {
+      "name": "Maintenance Specialist",
+      "category": "Department:Engineering",
+      "requirements": "Engineering 3+",
+      "page_reference": "p. 160",
+      "description": "You may ignore the first complication rolled on any Engineering task. Further, when you create any equipment trait, any character who uses that piece of equipment in a task may ignore the first complication rolled."
+    },
+    "Martial Artist": {
+      "name": "Martial Artist",
+      "category": "Department:Security",
+      "requirements": "Security 4+",
+      "page_reference": "p. 162",
+      "description": "Your Unarmed Strike Attack may be used to inflict Deadly Injuries as well as Stun Injuries."
+    },
+    "Mean Right Hook": {
+      "name": "Mean Right Hook",
+      "category": "Department:Security",
+      "requirements": "Security 4+",
+      "page_reference": "p. 162",
+      "description": "Your Unarmed Strike Attack gains the Intense quality."
+    },
+    "Mental Repository": {
+      "name": "Mental Repository",
+      "category": "Department:Science",
+      "requirements": "Science 3+ and Reason 10+",
+      "page_reference": "p. 163",
+      "description": "You may treat Obtain Information as if it were an Immediate Momentum spend, but the answers to these questions can only come from information you would already know and remember."
+    },
+    "Methodical Planning": {
+      "name": "Methodical Planning",
+      "category": "General",
+      "requirements": "Reason 9+",
+      "page_reference": "p. 150",
+      "description": "When an ally attempts a task which benefits from a trait you created which represents your plan or strategy, then you may Assist that ally's task even if you are not present. In combat, this assistance does not require you to use your task to Assist that ally."
+    },
+    "Meticulous": {
+      "name": "Meticulous",
+      "category": "Department:Engineering",
+      "requirements": "Engineering 3+ and Control 10+",
+      "page_reference": "p. 160",
+      "description": "During a timed challenge or extended task, before rolling, you may take one die and treat it as if it had already rolled a 1, but if you do, the task will take one additional interval."
+    },
+    "Mind Meld": {
+      "name": "Mind Meld",
+      "category": "Species:Vulcan",
+      "requirements": "Vulcan, or gamemaster's permission",
+      "page_reference": "p. 154",
+      "description": "Allows melding of minds through physical contact via a task (normally Control + Science, Difficulty 1+, opposed if unwilling). If successful, you link minds, sharing thoughts and memories; Momentum may be spent for deeper exchanges."
+    },
+    "Miracle Worker": {
+      "name": "Miracle Worker",
+      "category": "Department:Engineering",
+      "requirements": "Engineering 5",
+      "page_reference": "p. 160",
+      "description": "Whenever you succeed at an Engineering task to overcome an extended task, you may increase your Impact by 1 by spending 1 Momentum instead of 2."
+    },
+    "Modular Laboratories": {
+      "name": "Modular Laboratories",
+      "category": "Starship Talent",
+      "requirements": "None",
+      "page_reference": "p. 224",
+      "description": "At the start of an adventure, the crew may configure the ship's multi-purpose compartments to create a beneficial laboratory trait for a specific scientific or technical field."
+    },
+    "More Power!": {
+      "name": "More Power!",
+      "category": "Department:Engineering",
+      "requirements": "Engineering 3+",
+      "page_reference": "p. 160",
+      "description": "Whenever you use the Reroute Power major action, you may spend 2 Momentum to give Reserve Power to two systems, rather than one."
+    },
+    "Multi-Discipline": {
+      "name": "Multi-Discipline",
+      "category": "Department:Command",
+      "requirements": "Command 3+, not the commanding officer",
+      "page_reference": "p. 157",
+      "description": "You may select one additional Role Benefit, which may not be Commanding Officer."
+    },
+    "Multi-tasking": {
+      "name": "Multi-tasking",
+      "category": "Department:Conn",
+      "requirements": "Conn 3+",
+      "page_reference": "p. 158",
+      "description": "When you attempt the Override major action while at a bridge station that includes one or both helm or navigator positions, you may use your Conn department instead of the department usually required for that task."
+    },
+    "Nerve Pinch": {
+      "name": "Nerve Pinch",
+      "category": "Species:Vulcan",
+      "requirements": "Vulcan, or gamemaster's permission",
+      "page_reference": "p. 154",
+      "description": "Counts as a Melee Attack which inflicts Stun Injuries with a Severity of 3 and the Intense quality. You may use Science or Medicine instead of Security when attempting a Nerve Pinch Attack."
+    },
+    "Neural Interface": {
+      "name": "Neural Interface",
+      "category": "Augment & Cybernetic",
+      "requirements": "Cyborg trait",
+      "page_reference": "p. 155",
+      "description": "Initiating or breaking the link between your mind and a computer system takes a minor action; while connected, you may re-roll one d20 on any task using that computer. However, if the computer or ship is damaged, you immediately suffer a Deadly 4 Injury with the Piercing quality."
+    },
+    "Never Place Friendship Above Profit": {
+      "name": "Never Place Friendship Above Profit",
+      "category": "Species:Ferengi",
+      "requirements": "Ferengi, or gamemaster's permission",
+      "page_reference": "p. 152",
+      "description": "When you assist someone else (including using the Direct action), and one or more complications occur, you may add 1 Threat to avoid suffering any ill-effect from that complication (other characters involved are affected normally)."
+    },
+    "No Hesitation": {
+      "name": "No Hesitation",
+      "category": "General",
+      "requirements": "Daring 9+",
+      "page_reference": "p. 150",
+      "description": "At the start of any round in an action scene, you may add 1 Threat to take the first turn, regardless of who would otherwise have acted first."
+    },
+    "No Pain, No Gain": {
+      "name": "No Pain, No Gain",
+      "category": "General",
+      "requirements": "Daring 11+",
+      "page_reference": "p. 150",
+      "description": "When you fail a task (but not an opposed task) which used your Daring, you may always choose to Succeed at Cost."
+    },
+    "Open Book": {
+      "name": "Open Book",
+      "category": "Species:Betazoid",
+      "requirements": "Betazoid, or gamemaster's permission",
+      "page_reference": "p. 151",
+      "description": "When a character enters a scene, you may spend 1 Momentum (Immediate) to immediately ask the gamemaster one question about that character's current emotions or surface thoughts. You cannot do this for characters immune to telepathy."
+    },
+    "Orb Experience": {
+      "name": "Orb Experience",
+      "category": "Species:Bajoran",
+      "requirements": "Bajoran, or gamemaster's permission",
+      "page_reference": "p. 151",
+      "description": "You have one additional value, which represents some prophecy or insight into the future gained from your vision. Furthermore, once per session, when that value is used, you gain twice the normal benefit (2 benefits when spending Determination, or 2 Determination when gaining it)."
+    },
+    "Pack Tactics": {
+      "name": "Pack Tactics",
+      "category": "Department:Security",
+      "requirements": "Security 4+",
+      "page_reference": "p. 162",
+      "description": "Whenever you Assist another character during combat, the character you assisted gains 1 bonus Momentum if they succeed."
+    },
+    "Parent Figure": {
+      "name": "Parent Figure",
+      "category": "Species:Denobulan",
+      "requirements": "Denobulan, or gamemaster's permission",
+      "page_reference": "p. 152",
+      "description": "When attempting or assisting a task, and two or more other characters are involved in the task, the first complication generated on the task—either by the character attempting the task, or one of the assistants—may be ignored."
+    },
+    "Past the Redline": {
+      "name": "Past the Redline",
+      "category": "Department:Engineering",
+      "requirements": "Engineering 4+ and Daring 9+",
+      "page_reference": "p. 160",
+      "description": "When you use advanced technology, including attempting a task assisted by the ship, you may choose to increase the complication range by 1, 2, or 3. If you succeed, gain bonus Momentum equal to the complication range increase (cannot be saved)."
+    },
+    "Pathfinder": {
+      "name": "Pathfinder",
+      "category": "Department:Conn",
+      "requirements": "Conn 4+",
+      "page_reference": "p. 158",
+      "description": "Whenever you attempt a task to plot a course through unknown territory, reduce the Difficulty of the task by 1, 2, or 3, to a minimum of 1. For each point by which you reduce the Difficulty, increase the complication range of that task."
+    },
+    "Percussive Maintenance": {
+      "name": "Percussive Maintenance",
+      "category": "Department:Engineering",
+      "requirements": "Engineering 4+",
+      "page_reference": "p. 160",
+      "description": "When you attempt a Control + Engineering task, you may add 1 Threat to use your Daring instead of your Control. If you do this, and the task succeeds, you may reduce the time taken by 1 interval without spending Momentum."
+    },
+    "Personal Effects": {
+      "name": "Personal Effects",
+      "category": "General",
+      "requirements": "Main character",
+      "page_reference": "p. 150",
+      "description": "You possess some significant and uncommon item or device which is not standard issue, but which is nevertheless useful for missions. You may select this talent multiple times, gaining a different item each time."
+    },
+    "Pheromones": {
+      "name": "Pheromones",
+      "category": "Species:Orion",
+      "requirements": "Orion female, or gamemaster's permission",
+      "page_reference": "p. 153",
+      "description": "When dealing with males of a species affected by these pheromones, you gain 2 bonus Momentum on all tasks to persuade or command them. However, female members of affected species often suffer headaches, increasing the complication range of tasks to interact with them by 1. Vulcans are unaffected; Denobulans become drowsy."
+    },
+    "Piercing Salvo": {
+      "name": "Piercing Salvo",
+      "category": "Department:Security",
+      "requirements": "Security 4+",
+      "page_reference": "p. 162",
+      "description": "When you make a Torpedo Attack, you may spend 2 Momentum (Immediate) to add the Piercing quality."
+    },
+    "Plan of Action": {
+      "name": "Plan of Action",
+      "category": "Department:Command",
+      "requirements": "Command 4+",
+      "page_reference": "p. 157",
+      "description": "Whenever an ally succeeds at a task that was made possible, or had a reduced Difficulty, because of a trait you created representing a plan, strategy, or course of action, they generate 2 bonus Momentum (cannot be saved)."
+    },
+    "Point Defense System": {
+      "name": "Point Defense System",
+      "category": "Starship Talent",
+      "requirements": "None",
+      "page_reference": "p. 224",
+      "description": "Independent micro-emitters intercept incoming ordnance, increasing the Difficulty of Torpedo attacks against the ship or reducing their damage."
+    },
+    "Positive Reinforcement": {
+      "name": "Positive Reinforcement",
+      "category": "Department:Medicine",
+      "requirements": "Ship's Counselor role, Medicine 3+, and Presence 9+",
+      "page_reference": "p. 165",
+      "description": "Once per mission, attempt a Presence + Medicine task (Difficulty 3) while providing emotional/mental treatment. Success creates the Boosted Confidence trait for the mission, allowing that character to re-roll their dice pool once (as if spending Determination)."
+    },
+    "Practice Makes Perfect": {
+      "name": "Practice Makes Perfect",
+      "category": "Department:Medicine",
+      "requirements": "Medicine 3+ and Reason 8+",
+      "page_reference": "p. 165",
+      "description": "After you have succeeded in a Medicine task, the Difficulty of any other Medicine tasks attempted that scene to treat or heal the same kind of Injury, poison, disease, or ailment is reduced by 1."
+    },
+    "Precautions": {
+      "name": "Precautions",
+      "category": "Department:Command",
+      "requirements": "Command 4+",
+      "page_reference": "p. 157",
+      "description": "Once per scene, when an ally suffers an Injury or the ship suffers a Breach, prevent that Injury or Breach; describe what precaution you took to prevent the issue."
+    },
+    "Precise Evasion": {
+      "name": "Precise Evasion",
+      "category": "Department:Conn",
+      "requirements": "Conn 4+",
+      "page_reference": "p. 158",
+      "description": "Whenever you use the Evasive Action major action, the ship does not suffer the increased Difficulty for Attacks normally caused by Evasive Action."
+    },
+    "Precision Maneuvering": {
+      "name": "Precision Maneuvering",
+      "category": "Department:Conn",
+      "requirements": "Conn 4+",
+      "page_reference": "p. 158",
+      "description": "Whenever you attempt a task that requires precise or careful maneuvering, or where there is a risk of colliding with another object, you may re-roll 1d20."
+    },
+    "Precision Targeting": {
+      "name": "Precision Targeting",
+      "category": "Department:Security",
+      "requirements": "Security 3+ and Conn 3+",
+      "page_reference": "p. 162",
+      "description": "When you make an Attack with starship weapons that targets a specific ship system, you may re-roll a d20."
+    },
+    "Procedural Compliance": {
+      "name": "Procedural Compliance",
+      "category": "Department:Engineering",
+      "requirements": "Engineering 3+ and Conn 2+",
+      "page_reference": "p. 160",
+      "description": "When you attempt an Engineering task, you may remove one d20 from your dice pool before rolling. If you do so, you gain one automatic success on your task."
+    },
+    "Proud and Honorable": {
+      "name": "Proud and Honorable",
+      "category": "Species:Andorian",
+      "requirements": "Andorian, or gamemaster's permission",
+      "page_reference": "p. 151",
+      "description": "Whenever you attempt a task to resist being coerced into breaking a promise, betraying your allies, or otherwise acting dishonorably, you may add Threat equal to the task's Difficulty to immediately succeed at the task."
+    },
+    "Psychoanalyst": {
+      "name": "Psychoanalyst",
+      "category": "Department:Medicine",
+      "requirements": "Medicine 3+ and a psychology-related focus",
+      "page_reference": "p. 165",
+      "description": "When you use Medicine during a social conflict, you may increase the complication range by 1, 2, or 3; for each step increased, ask a single question as if spending Momentum on Obtain Information."
+    },
+    "Psychokinesis": {
+      "name": "Psychokinesis",
+      "category": "Esoteric",
+      "requirements": "Gamemaster's discretion",
+      "page_reference": "p. 156",
+      "description": "Exert psychic force upon an object within Close range equivalent to your physical force. Spend 1 Momentum (Immediate, Repeatable) for extra person's worth of force, or 1–2 Momentum to reach Medium/Long range. Add 1 Threat to make a Control + Security (Diff 2) Ranged Attack inflicting a Stun or Deadly Injury (Severity 3)."
+    },
+    "Push the Limits": {
+      "name": "Push the Limits",
+      "category": "Department:Conn",
+      "requirements": "Conn 4+",
+      "page_reference": "p. 158",
+      "description": "When you attempt a Conn task that has increased in Difficulty due to environmental conditions or damage to the engines, you may add 1 Threat to ignore the difficulty increase."
+    },
+    "Quantum Torpedoes": {
+      "name": "Quantum Torpedoes",
+      "category": "Starship Talent",
+      "requirements": "2371 or later",
+      "page_reference": "p. 224",
+      "description": "The vessel is equipped with quantum torpedoes in addition to any other torpedo launchers it carries."
+    },
+    "Quick Study": {
+      "name": "Quick Study",
+      "category": "Department:Medicine",
+      "requirements": "Science 3+ or Medicine 3+",
+      "page_reference": "p. 165",
+      "description": "When attempting a task involving an unfamiliar practice, technique, or medical procedure, or treating an unfamiliar species, ignore any Difficulty or complication range increase stemming from your unfamiliarity."
+    },
+    "Quick Survey": {
+      "name": "Quick Survey",
+      "category": "General",
+      "requirements": "Insight 9+",
+      "page_reference": "p. 150",
+      "description": "At the start of a scene, you may immediately ask one question, as if you had spent 1 Momentum on the Obtain Information Momentum Spend. The answer can only provide information that you could obtain with your own senses."
+    },
+    "Quick to Action": {
+      "name": "Quick to Action",
+      "category": "Department:Security",
+      "requirements": "Security 3+",
+      "page_reference": "p. 162",
+      "description": "During the first round of any combat, you and your allies may ignore the normal cost to Keep the Initiative."
+    },
+    "Rapid Analysis": {
+      "name": "Rapid Analysis",
+      "category": "Department:Science",
+      "requirements": "Science 3+ and Daring 9+",
+      "page_reference": "p. 163",
+      "description": "When you succeed at a Science task, the cost of the Reduce Time Momentum option is reduced to 1."
+    },
+    "Rapid Hypothesis": {
+      "name": "Rapid Hypothesis",
+      "category": "Department:Science",
+      "requirements": "Science 5",
+      "page_reference": "p. 163",
+      "description": "Once per scene, when you ask two or more questions using Obtain Information, you may immediately create a trait representing your theoretical understanding of the subject of those questions."
+    },
+    "Rapid-Fire Torpedo Launcher": {
+      "name": "Rapid-Fire Torpedo Launcher",
+      "category": "Starship Talent",
+      "requirements": "2370 or later",
+      "page_reference": "p. 225",
+      "description": "Whenever the crew fires a torpedo salvo, they may re-roll a single d20 on the attack roll and increase the attack's damage by 1."
+    },
+    "Reassuring": {
+      "name": "Reassuring",
+      "category": "General",
+      "requirements": "Presence 9+",
+      "page_reference": "p. 150",
+      "description": "When you succeed at a task using your Presence, you may spend 1 Momentum (Repeatable) to allow one ally who can see and hear you to recover 1 Stress (max 3 Stress recovered per ally from one use)."
+    },
+    "Reduced Sensor Silhouette": {
+      "name": "Reduced Sensor Silhouette",
+      "category": "Starship Talent",
+      "requirements": "None",
+      "page_reference": "p. 225",
+      "description": "Through hull geometry and EM baffling, tasks to detect or lock onto this vessel at Long range or through sensor interference increase in Difficulty by 1."
+    },
+    "Redundant Systems (X)": {
+      "name": "Redundant Systems (X)",
+      "category": "Starship Talent",
+      "requirements": "None",
+      "page_reference": "p. 225",
+      "description": "Choose a specific ship system when selecting this talent. Once per scene, when that system suffers a Breach, you may activate backup redundancies to ignore the effects of that Breach until the end of the scene."
+    },
+    "Regimented Mind": {
+      "name": "Regimented Mind",
+      "category": "Species:Cardassian",
+      "requirements": "Cardassian, or gamemaster's permission",
+      "page_reference": "p. 152",
+      "description": "When you spend Momentum to Obtain Information, you may reduce the Difficulty of one task later in the same scene by 1, so long as that task relates to the information gained."
+    },
+    "Repair Team Leader": {
+      "name": "Repair Team Leader",
+      "category": "Department:Engineering",
+      "requirements": "Engineering 3+ and Command 2+",
+      "page_reference": "p. 161",
+      "description": "If you succeed at the Damage Control major action (p. 303) you may spend 2 Momentum (Repeatable) to repair one additional Breach."
+    },
+    "Resolute": {
+      "name": "Resolute",
+      "category": "Species:Human",
+      "requirements": "Human, or gamemaster's permission",
+      "page_reference": "p. 152",
+      "description": "Your Maximum Stress increases by an amount equal to your Command rating."
+    },
+    "Right Tool for the Right Job": {
+      "name": "Right Tool for the Right Job",
+      "category": "Department:Engineering",
+      "requirements": "Engineering 3+",
+      "page_reference": "p. 161",
+      "description": "Whenever you acquire an engineering tool with an Opportunity Cost, the equipment trait of that tool gains +1 Potency. If the tool is used in an extended task, whoever is using that tool increases their Impact by 1."
+    },
+    "Rugged Design": {
+      "name": "Rugged Design",
+      "category": "Starship Talent",
+      "requirements": "None",
+      "page_reference": "p. 225",
+      "description": "Built with durable frontier construction and accessible critical conduits; when attempting a task to repair the ship, the first d20 purchased is free."
+    },
+    "Saboteur": {
+      "name": "Saboteur",
+      "category": "Department:Engineering",
+      "requirements": "Engineering 3+",
+      "page_reference": "p. 161",
+      "description": "When you make an Attack against a structure, machine, or stationary vehicle while in personal combat, you may use your Engineering instead of your Security to resolve the Attack."
+    },
+    "Second Wind": {
+      "name": "Second Wind",
+      "category": "General",
+      "requirements": "None",
+      "page_reference": "p. 150",
+      "description": "You may spend Determination at the start of your turn to remove the Defeated state, and to recover up to half of your maximum Stress. The normal requirements for spending a point of Determination still apply."
+    },
+    "Secondary Reactors": {
+      "name": "Secondary Reactors",
+      "category": "Starship Talent",
+      "requirements": "None",
+      "page_reference": "p. 225",
+      "description": "Additional fusion and impulse reactors allow the ship to begin each scene with bonus Reserve Power."
+    },
+    "Self-Reliant": {
+      "name": "Self-Reliant",
+      "category": "General",
+      "requirements": "Control 11+",
+      "page_reference": "p. 150",
+      "description": "Whenever you succeed at a task where you did not purchase additional dice by spending Momentum or adding to Threat, you generate bonus Momentum equal to the task's Difficulty. Bonus Momentum cannot be saved."
+    },
+    "Sensory Replacement": {
+      "name": "Sensory Replacement",
+      "category": "Augment & Cybernetic",
+      "requirements": "Cyborg trait",
+      "page_reference": "p. 155",
+      "description": "You gain the Artificial Sense trait. Further, when you attempt a task to locate something hidden or concealed, or to detect details not normally perceptible to that sense, you may re-roll a single d20."
+    },
+    "Sophisticated Astrometrics Facilities": {
+      "name": "Sophisticated Astrometrics Facilities",
+      "category": "Starship Talent",
+      "requirements": "None",
+      "page_reference": "p. 225",
+      "description": "Advanced stellar cartography and sensor mapping labs reduce the Difficulty or time required for astrometrics, course plotting, and spatial phenomenon analysis."
+    },
+    "Spacewalk": {
+      "name": "Spacewalk",
+      "category": "Department:Conn",
+      "requirements": "Conn 3+",
+      "page_reference": "p. 159",
+      "description": "Whenever the Difficulty of a task would be increased due to low- or zero-gravity, ignore that Difficulty increase. If a task that was normally possible would be made impossible because of low- or zero-gravity, you may attempt the task at +1 Difficulty instead."
+    },
+    "Spirit of Discovery": {
+      "name": "Spirit of Discovery",
+      "category": "Species:Human",
+      "requirements": "Human, or gamemaster's permission",
+      "page_reference": "p. 152",
+      "description": "You have an additional option you may pick when you spend Determination: you may immediately add 3 Momentum to the group pool."
+    },
+    "Starship Expert": {
+      "name": "Starship Expert",
+      "category": "Department:Conn",
+      "requirements": "Conn 3+",
+      "page_reference": "p. 159",
+      "description": "Whenever you take a Conn task to identify a type of starship, or to try to understand an unknown form of starship, you gain 1 bonus Momentum, which may only be used on Obtain Information or toward Create Trait (representing a weakness in the ship)."
+    },
+    "Steady Hands": {
+      "name": "Steady Hands",
+      "category": "Department:Security",
+      "requirements": "Security 3+ and Control 9+",
+      "page_reference": "p. 162",
+      "description": "When you take the Aim minor action (p. 288) before a Ranged Attack, you add 1 to the Attack's Severity, in addition to the other effects of aiming."
+    },
+    "Stimulant Shot": {
+      "name": "Stimulant Shot",
+      "category": "Department:Medicine",
+      "requirements": "Medicine 3+",
+      "page_reference": "p. 165",
+      "description": "When you perform the First Aid task to revive a Defeated ally, you may add 1 Threat to let that ally recover Stress equal to your Medicine rating (once per adventure per character)."
+    },
+    "Strafing Run": {
+      "name": "Strafing Run",
+      "category": "Department:Conn",
+      "requirements": "Conn 3+",
+      "page_reference": "p. 159",
+      "description": "Whenever you take the Attack Pattern task and then Keep the Initiative, the cost to Keep the Initiative is reduced to 0. If the character taking the next turn makes an Attack, they may re-roll one d20."
+    },
+    "Strong Pagh": {
+      "name": "Strong Pagh",
+      "category": "Species:Bajoran",
+      "requirements": "Bajoran, or gamemaster's permission",
+      "page_reference": "p. 151",
+      "description": "Whenever you attempt a task to resist being coerced or threatened, you may take Stress equal to the Difficulty of the task to automatically succeed."
+    },
+    "Student of War": {
+      "name": "Student of War",
+      "category": "Department:Science",
+      "requirements": "Science 4+ and Security 3+",
+      "page_reference": "p. 163",
+      "description": "When you Assist a character making an Attack or taking the Guard action in combat, they may re-roll one d20."
+    },
+    "Studious": {
+      "name": "Studious",
+      "category": "General",
+      "requirements": "None",
+      "page_reference": "p. 150",
+      "description": "Whenever you spend 1 or more Momentum to Obtain Information, you may ask one additional question (in total, not per Momentum spent on Obtain Information)."
+    },
+    "Supervisor": {
+      "name": "Supervisor",
+      "category": "Department:Command",
+      "requirements": "Main character",
+      "page_reference": "p. 157",
+      "description": "The ship's Crew Support increases by 1. This increase is cumulative if multiple main characters select it."
+    },
+    "Surgery Savant": {
+      "name": "Surgery Savant",
+      "category": "Department:Medicine",
+      "requirements": "Medicine 4+",
+      "page_reference": "p. 165",
+      "description": "When attempting a Medicine task during an extended task relating to surgery, your Impact is increased by 1."
+    },
+    "Tachyon Detection Grid": {
+      "name": "Tachyon Detection Grid",
+      "category": "Starship Talent",
+      "requirements": "None",
+      "page_reference": "p. 225",
+      "description": "Allows the vessel to project a tachyon detection web to detect and target cloaked vessels within Close range."
+    },
+    "Teacher": {
+      "name": "Teacher",
+      "category": "Department:Command",
+      "requirements": "Command 3+",
+      "page_reference": "p. 157",
+      "description": "When you create a trait for an ally that represents your guidance or advice, that ally may re-roll one d20 on a single task they attempt which benefits from that trait."
+    },
+    "Technical Expertise": {
+      "name": "Technical Expertise",
+      "category": "General",
+      "requirements": "None",
+      "page_reference": "p. 150",
+      "description": "Whenever you attempt a task assisted by the ship's Computers or Sensors, you may re-roll one d20 in your pool, or you may allow the ship to re-roll its d20."
+    },
+    "Telepathic Projection": {
+      "name": "Telepathic Projection",
+      "category": "Esoteric",
+      "requirements": "Telepathy",
+      "page_reference": "p. 156",
+      "description": "Send thoughts into the minds of other creatures even if not telepathic. Offensively, requires a Presence + Security task (Difficulty 2, +1 per range category beyond Close); success inflicts a Stun or Deadly Injury with Severity 3 and the Piercing effect."
+    },
+    "Telepathy": {
+      "name": "Telepathy",
+      "category": "Esoteric",
+      "requirements": "Gamemaster's discretion (or Species Ability)",
+      "page_reference": "p. 156",
+      "description": "You can sense the surface thoughts and emotions of most living beings nearby, and can communicate telepathically with other empaths and telepaths, as well as those with whom you are extremely familiar."
+    },
+    "Testing a Theory": {
+      "name": "Testing a Theory",
+      "category": "Department:Science",
+      "requirements": "Science 2+",
+      "page_reference": "p. 163",
+      "description": "When you attempt a task using Engineering or Science, the first bonus d20 you purchase is free, so long as you succeeded at a previous task covering the same scientific or technological field earlier in the same adventure. If you created a trait representing a hypothesis, you may also re-roll 1d20 on tasks related to that hypothesis."
+    },
+    "That Wasn't Me": {
+      "name": "That Wasn't Me",
+      "category": "Species:Orion",
+      "requirements": "Orion, or gamemaster's permission",
+      "page_reference": "p. 153",
+      "description": "When another character attempts a task to determine if they can trust you, you may spend 2 Momentum if you are sincere, or add 2 Threat if you're attempting to deceive them; the character does not need to make a task roll and you convince them you are trustworthy."
+    },
+    "The Ends Justify the Means": {
+      "name": "The Ends Justify the Means",
+      "category": "Species:Cardassian",
+      "requirements": "Cardassian, or gamemaster's permission",
+      "page_reference": "p. 152",
+      "description": "When you spend Determination because of a Directive, you may select two of the benefits for spending Determination, rather than one."
+    },
+    "The Ushaan": {
+      "name": "The Ushaan",
+      "category": "Species:Andorian",
+      "requirements": "Andorian, or gamemaster's permission",
+      "page_reference": "p. 151",
+      "description": "When you make a Melee Attack, or are targeted by a Melee Attack, and buy one or more d20s by adding to Threat, you may re-roll any number of dice in your dice pool for the task. Further, you own an Ushaan-tor (counts as a standard-issue blade, p. 242)."
+    },
+    "Theory into Practice": {
+      "name": "Theory into Practice",
+      "category": "Department:Science",
+      "requirements": "Science 3+ and Testing a Theory talent",
+      "page_reference": "p. 164",
+      "description": "When you succeed at a task using Engineering or Science where you gain the additional d20 from Testing a Theory, or which benefits from a hypothesis trait you've made, you generate 2 bonus Momentum (cannot be saved)."
+    },
+    "Thread the Needle": {
+      "name": "Thread the Needle",
+      "category": "Department:Conn",
+      "requirements": "Conn 4+",
+      "page_reference": "p. 159",
+      "description": "When you perform the Impulse minor action or Warp major action when piloting a starship, enemy Attacks from ships with a greater Scale than yours increase in Difficulty by +1 (+2 if their Scale is double or more your ship's Scale)."
+    },
+    "Tough": {
+      "name": "Tough",
+      "category": "General",
+      "requirements": "None",
+      "page_reference": "p. 150",
+      "description": "Your maximum Stress is increased by 2."
+    },
+    "Transport Inhibitors": {
+      "name": "Transport Inhibitors",
+      "category": "Starship Talent",
+      "requirements": "None",
+      "page_reference": "p. 225",
+      "description": "Integrated hull inhibitors block unauthorized beaming aboard or off the ship even when shields are down."
+    },
+    "Transporter Chief": {
+      "name": "Transporter Chief",
+      "category": "Department:Engineering",
+      "requirements": "Engineering 3+",
+      "page_reference": "p. 161",
+      "description": "When you attempt a task to use, repair, or modify a transporter, you may add 2 Threat to reduce the Difficulty of the task by 2, to a minimum of 0."
+    },
+    "Triage": {
+      "name": "Triage",
+      "category": "Department:Medicine",
+      "requirements": "Medicine 3+",
+      "page_reference": "p. 165",
+      "description": "When you attempt a task to identify specific Injuries or illnesses, or to determine the severity of a patient's condition, you may spend 1 Momentum (Repeatable) to diagnose one additional patient."
+    },
+    "Untapped Potential": {
+      "name": "Untapped Potential",
+      "category": "Experience",
+      "requirements": "Novice (only available during character creation)",
+      "page_reference": "p. 127",
+      "description": "Select one of your attributes when you receive this talent. You may not have or increase any attribute to above 11, or any department to above 4 while you have this talent. Whenever you succeed at a task for which you bought one or more additional dice (by any means), roll a d20 after the roll. If you roll equal to or less than the chosen attribute, gain 1 bonus Momentum; if you roll higher, add 1 Threat instead. While you possess this talent, you cannot gain any higher rank than Lieutenant (junior grade), or a higher enlisted rate than Petty Officer."
+    },
+    "Versatile Tractor Beam": {
+      "name": "Versatile Tractor Beam",
+      "category": "Starship Talent",
+      "requirements": "None",
+      "page_reference": "p. 225",
+      "description": "Exotic particle emitters integrated into the tractor beam allow the operator to drain a trapped vessel's Shields or Reserve Power."
+    },
+    "Veteran": {
+      "name": "Veteran",
+      "category": "Experience",
+      "requirements": "Veteran (during character creation, or at gamemaster's discretion)",
+      "page_reference": "p. 128",
+      "description": "Whenever you spend Determination, roll a d20. If you roll equal to or less than your Control rating, you immediately regain that point of Determination. If you are Starfleet or military, you hold a rank of at least lieutenant commander, or an enlisted rate of at least chief petty officer."
+    },
+    "Visit Every Star": {
+      "name": "Visit Every Star",
+      "category": "Department:Conn",
+      "requirements": "Conn 3+ and Science 2+",
+      "page_reference": "p. 159",
+      "description": "You gain an additional focus (must relate to Astronavigation, Stellar Cartography, or similar space science). Further, when you succeed at a navigation-related task, you gain 1 bonus Momentum (cannot be saved)."
+    },
+    "Voice of Authority": {
+      "name": "Voice of Authority",
+      "category": "General",
+      "requirements": "Presence 11+",
+      "page_reference": "p. 150",
+      "description": "When you Assist someone, and use your Presence to do so, you may add 2 Threat to treat your assistance die as if it had rolled a 1 instead of rolling it."
+    },
+    "Walking Encyclopedia": {
+      "name": "Walking Encyclopedia",
+      "category": "Department:Science",
+      "requirements": "Science 2+ and Reason 9+",
+      "page_reference": "p. 164",
+      "description": "Once per session, when you attempt a task, you may spend 2 Momentum (Immediate) to gain an additional focus for the remainder of the session; however, any task using that focus increases its complication range by 1."
+    },
+    "Warrior's Spirit": {
+      "name": "Warrior's Spirit",
+      "category": "Species:Klingon",
+      "requirements": "Klingon, or gamemaster's permission",
+      "page_reference": "p. 153",
+      "description": "When you make a Melee Attack, or are targeted by a Melee Attack, and you buy one or more d20s by adding Threat, you may re-roll the dice pool for your task roll. Further, you own either a mek'leth (blade) or a bat'leth (heavy blade), which counts as standard issue for you."
+    },
+    "Wary": {
+      "name": "Wary",
+      "category": "Species:Romulan",
+      "requirements": "Romulan, or gamemaster's permission",
+      "page_reference": "p. 154",
+      "description": "When you attempt a task to detect an enemy or hazard, you may re-roll one d20."
+    },
+    "Well-Informed": {
+      "name": "Well-Informed",
+      "category": "General",
+      "requirements": "None",
+      "page_reference": "p. 150",
+      "description": "At the start of a scene, you may add 1 Threat to ask the gamemaster two questions about the situation or location, as if you had spent Momentum on the Obtain Information spend."
+    },
+    "Zero-G Combat": {
+      "name": "Zero-G Combat",
+      "category": "Department:Conn",
+      "requirements": "Conn 3+ and Security 3+",
+      "page_reference": "p. 159",
+      "description": "In combat, when you make an Attack while in a zero-gravity or micro-gravity environment, you may use the higher of your Conn or Security departments for the task, and ignore any difficulty increases caused by lack of gravity. Enemies lacking similar training increase the Difficulty of Attacks against you by 1."
+    }
+  },
+  "upbringings": {
+    "AgricultureOrRural": {
+      "name": "Agriculture or Rural",
+      "requirements": "None (Lifepath Step 3: Roll 1–3)",
+      "page_reference": "p. 118",
+      "attributes_accepted": "+2 Fitness, +1 Control",
+      "attributes_rebelled": "+2 Reason, +1 Presence",
+      "departments": "+1 Conn, Security, or Medicine",
+      "focus_suggestions": [
+        "Animal Handling",
+        "Athletics",
+        "Emergency Medicine",
+        "Endurance",
+        "Ground Vehicles",
+        "Infectious Diseases",
+        "Navigation",
+        "Toxicology",
+        "Survival Training"
+      ],
+      "description": "The character grew up surrounded more by nature than by people. Accepted: +2 Fitness, +1 Control. Rebelled: +2 Reason, +1 Presence. Department: +1 Conn, Security, or Medicine, plus 1 focus and 1 talent."
+    },
+    "ArtisticAndCreative": {
+      "name": "Artistic and Creative",
+      "requirements": "None (Lifepath Step 3: Roll 4–6)",
+      "page_reference": "p. 118",
+      "attributes_accepted": "+2 Presence, +1 Insight",
+      "attributes_rebelled": "+2 Fitness, +1 Daring",
+      "departments": "+1 Command, Engineering, or Science",
+      "focus_suggestions": [
+        "Botany",
+        "Cultural Studies",
+        "Holoprogramming",
+        "Linguistics",
+        "Music",
+        "Observation",
+        "Persuasion",
+        "Psychology"
+      ],
+      "description": "The character's life was filled with arts and creativity of all kinds. Accepted: +2 Presence, +1 Insight. Rebelled: +2 Fitness, +1 Daring. Department: +1 Command, Engineering, or Science, plus 1 focus and 1 talent."
+    },
+    "BusinessOrTrade": {
+      "name": "Business or Trade",
+      "requirements": "None (Lifepath Step 3: Roll 7–9)",
+      "page_reference": "p. 118",
+      "attributes_accepted": "+2 Presence, +1 Daring",
+      "attributes_rebelled": "+2 Insight, +1 Reason",
+      "departments": "+1 Command, Engineering, or Science",
+      "focus_suggestions": [
+        "Finances",
+        "Geology",
+        "Linguistics",
+        "Manufacturing",
+        "Metallurgy",
+        "Negotiation",
+        "Survey"
+      ],
+      "description": "The character's family had connections in trade, commerce, or freight. Accepted: +2 Presence, +1 Daring. Rebelled: +2 Insight, +1 Reason. Department: +1 Command, Engineering, or Science, plus 1 focus and 1 talent."
+    },
+    "DiplomacyAndPolitics": {
+      "name": "Diplomacy and Politics",
+      "requirements": "None (Lifepath Step 3: Roll 10–12)",
+      "page_reference": "pp. 118–119",
+      "attributes_accepted": "+2 Presence, +1 Control",
+      "attributes_rebelled": "+2 Reason, +1 Fitness",
+      "departments": "+1 Command, Conn, or Security",
+      "focus_suggestions": [
+        "Composure",
+        "Debate",
+        "Diplomacy",
+        "Espionage",
+        "Interrogation",
+        "Law",
+        "Philosophy",
+        "Starfleet Protocol"
+      ],
+      "description": "The character was exposed to political thought and diplomacy from a young age. Accepted: +2 Presence, +1 Control. Rebelled: +2 Reason, +1 Fitness. Department: +1 Command, Conn, or Security, plus 1 focus and 1 talent."
+    },
+    "ScienceAndTechnology": {
+      "name": "Science and Technology",
+      "requirements": "None (Lifepath Step 3: Roll 13–15)",
+      "page_reference": "p. 119",
+      "attributes_accepted": "+2 Control, +1 Reason",
+      "attributes_rebelled": "+2 Insight, +1 Daring",
+      "departments": "+1 Conn, Engineering, Science, or Medicine",
+      "focus_suggestions": [
+        "Astrophysics",
+        "Astronavigation",
+        "Computers",
+        "Cybernetics",
+        "Power Systems",
+        "Genetics",
+        "Physics",
+        "Subspace Communications",
+        "Surgery",
+        "Quantum Mechanics",
+        "Warp Field Dynamics",
+        "Xenobiology"
+      ],
+      "description": "The character's home was filled with the potential of science and cutting-edge technology. Accepted: +2 Control, +1 Reason. Rebelled: +2 Insight, +1 Daring. Department: +1 Conn, Engineering, Science, or Medicine, plus 1 focus and 1 talent."
+    },
+    "StarfleetOrMilitary": {
+      "name": "Starfleet or Military",
+      "requirements": "None (Lifepath Step 3: Roll 16–18)",
+      "page_reference": "p. 119",
+      "attributes_accepted": "+2 Control, +1 Fitness",
+      "attributes_rebelled": "+2 Daring, +1 Insight",
+      "departments": "+1 to any one department",
+      "focus_suggestions": [
+        "Astronavigation",
+        "Composure",
+        "Extra-Vehicular Activity",
+        "Hand-to-Hand Combat",
+        "Hand Phasers",
+        "Small Craft",
+        "Starfleet Protocol",
+        "Starship Recognition",
+        "History"
+      ],
+      "description": "The character's family has a strong tradition of Starfleet or military service. Accepted: +2 Control, +1 Fitness. Rebelled: +2 Daring, +1 Insight. Department: +1 to any one department, plus 1 focus and 1 talent."
+    }
+  },
+  "weapon_qualities": {
+    "Accurate": {
+      "name": "Accurate",
+      "scope": "Personal",
+      "page_reference": "p. 241",
+      "description": "If you perform the Aim minor action before attacking, you may re-roll up to two d20s in your dice pool rather than only one."
+    },
+    "Area": {
+      "name": "Area",
+      "scope": "Personal & Starship",
+      "page_reference": "p. 226, 241",
+      "description": "When you hit, you may hit additional targets in the same zone by spending 1 Momentum per target (Repeatable). May Succeed at Cost."
+    },
+    "Calibration": {
+      "name": "Calibration",
+      "scope": "Starship",
+      "page_reference": "p. 226",
+      "description": "Starship weapon quality. The attacker may re-roll a d20 on the attack roll, or spend Momentum to optimize the targeting solution."
+    },
+    "Charge": {
+      "name": "Charge",
+      "scope": "Personal",
+      "page_reference": "p. 241",
+      "description": "If you take the Prepare minor action before attacking, you may add Area (severity -1), Intense, or Piercing to the attack."
+    },
+    "Cumbersome": {
+      "name": "Cumbersome",
+      "scope": "Personal",
+      "page_reference": "p. 241",
+      "description": "You cannot attack with this weapon unless you take the Prepare minor action on the same turn."
+    },
+    "Dampening": {
+      "name": "Dampening",
+      "scope": "Starship",
+      "page_reference": "p. 227",
+      "description": "Starship weapon quality. The attack drains the target ship's Reserve Power, disabling power routing and causing widespread system disruption."
+    },
+    "Debilitating": {
+      "name": "Debilitating",
+      "scope": "Personal",
+      "page_reference": "p. 241",
+      "description": "The Difficulty of tasks to treat or heal injuries caused by this weapon is increased by 1."
+    },
+    "Grenade": {
+      "name": "Grenade",
+      "scope": "Personal",
+      "page_reference": "p. 241",
+      "description": "Can attack a target at up to Medium range. The character carries enough charges/grenades for three separate attacks."
+    },
+    "HiddenX": {
+      "name": "Hidden X",
+      "scope": "Personal & Starship",
+      "page_reference": "p. 227, 242",
+      "description": "Can be concealed with a minor action. Detecting it requires an Insight or Reason + Security task with a Difficulty of X."
+    },
+    "HighYield": {
+      "name": "High-Yield",
+      "scope": "Starship",
+      "page_reference": "p. 226",
+      "description": "Starship weapon quality. Heavy ordnance that inflicts critical breaches and devastating catastrophic damage upon hull impact."
+    },
+    "Inaccurate": {
+      "name": "Inaccurate",
+      "scope": "Personal",
+      "page_reference": "p. 242",
+      "description": "The weapon is clumsy and imprecise; you do not benefit from the Aim minor action when attacking with it."
+    },
+    "Intense": {
+      "name": "Intense",
+      "scope": "Personal & Starship",
+      "page_reference": "p. 227, 242",
+      "description": "In personal combat, you may increase the attack's severity by spending 1 Momentum (rather than 2) (Repeatable). In starship combat, increases the cost to avoid breaches or reduce damage."
+    },
+    "NonLethal": {
+      "name": "Non-lethal",
+      "scope": "Personal",
+      "page_reference": "p. 241",
+      "description": "Inflicts Stun injuries designed to subdue or incapacitate a target without causing lasting physical trauma."
+    },
+    "Piercing": {
+      "name": "Piercing",
+      "scope": "Personal & Starship",
+      "page_reference": "p. 227, 242",
+      "description": "In personal combat, ignores the target's Protection rating. In starship combat, bypasses target Starship Resistance rating."
+    },
+    "Spread": {
+      "name": "Spread",
+      "scope": "Starship",
+      "page_reference": "p. 227",
+      "description": "Starship weapon quality. Attacks with this weapon reduce the difficulty of targeting secondary craft or distinct subsystems in the same zone."
+    },
+    "VersatileX": {
+      "name": "Versatile X",
+      "scope": "Personal & Starship",
+      "page_reference": "p. 227, 242",
+      "description": "Adaptable weapon systems offering flexible tactical modes or extra damage options rated by X."
+    }
+  }
 };
