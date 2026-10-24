@@ -3074,50 +3074,6 @@
       color: #000;
     }
 
-    .dice-bar {
-      display: flex;
-      gap: var(--gutter);
-      height: var(--touch);
-    }
-
-    .dice-bar .dice-btn {
-      flex: 1;
-      border: none;
-      border-radius: 0;
-      background: var(--c-primary);
-      color: #000;
-      font-family: inherit;
-      font-size: 1rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0 10px;
-    }
-
-    .dice-bar .dice-btn:first-child {
-      border-radius: 999px 0 0 999px;
-    }
-
-    .dice-bar .dice-btn:last-child {
-      border-radius: 0 999px 999px 0;
-    }
-
-    .dice-bar .dice-btn:nth-child(2) {
-      background: var(--c-secondary);
-    }
-
-    .dice-bar .dice-btn:nth-child(3) {
-      background: var(--c-tertiary);
-    }
-
-    .dice-bar .dice-btn:nth-child(4) {
-      background: var(--c-accent);
-    }
-
     /* ==========================================================================
        SCENE ACTION CARDS & REFERENCE GRID
        ========================================================================== */
@@ -3444,63 +3400,6 @@
       color: var(--text-main);
     }
 
-    .dice-result-tray {
-      background: #000;
-      border: none;
-      border-top: 6px solid var(--c-accent);
-      border-radius: 0;
-      padding: 8px 4px;
-      min-height: 22px;
-      font-family: 'Antonio', sans-serif;
-      font-size: 1rem;
-    }
-
-    .dice-pips {
-      margin-bottom: 6px;
-    }
-
-    .dice-result-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 8px;
-    }
-
-    .dice-reset {
-      background: var(--c-secondary);
-      padding: 0 18px 0 14px;
-    }
-
-    .die-pip {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 40px;
-      height: 40px;
-      border-radius: 0;
-      font-size: 1.2rem;
-      font-weight: 700;
-      margin-right: 4px;
-      background: var(--c-secondary);
-      color: #000;
-      border: none;
-    }
-
-    .die-pip.crit {
-      background: var(--c-primary);
-      color: #000;
-    }
-
-    .die-pip.hit {
-      background: var(--c-ok);
-      color: #000;
-    }
-
-    .die-pip.comp {
-      background: var(--c-alert);
-      color: #fff;
-    }
-
     /* ==========================================================================
        TOUCH LAYER: no tap delay, no sticky hover, visible press feedback
        ========================================================================== */
@@ -3680,7 +3579,7 @@
       </button>
       <button class="lcars-rail-btn" id="nav-sheet" onclick="switchScene('sheet')">
         <span class="code">05-3309</span>
-        PERSONNEL SUMMARY
+        Personnel Summary
       </button>
       <button class="lcars-rail-btn" id="nav-logs" onclick="switchScene('logs')">
         <span class="code">06-9045</span>
@@ -3691,10 +3590,10 @@
         Data Management
       </button>
       <button class="lcars-rail-btn" id="nav-reference" onclick="switchScene('reference')">
-        <span class="code">09-REF</span>
+        <span class="code">08-REF</span>
         Reference
       </button>
-      <div class="lcars-rail-spacer" aria-hidden="true">10-0451</div>
+      <div class="lcars-rail-spacer" aria-hidden="true">09-0451</div>
     </aside>
 
     <!-- ========================================================================
@@ -5288,49 +5187,6 @@
       renderTopHeaderAndStats();
     }
 
-    function rollDicePool(numDice) {
-      const attrVal = getEffAttr(state.selectedAttr);
-      const deptVal = getEffDept(state.selectedDept);
-      const tn = attrVal + deptVal;
-      const hasFocus = state.comboFocus !== false;
-      const critMax = hasFocus ? deptVal : 1;
-
-      let successes = 0;
-      let complications = 0;
-      let pipsHtml = "";
-
-      for (let i = 0; i < numDice; i++) {
-        const r = Math.floor(Math.random() * 20) + 1;
-        let cls = "";
-        if (r <= critMax) {
-          successes += 2;
-          cls = "crit";
-        } else if (r <= tn) {
-          successes += 1;
-          cls = "hit";
-        }
-        if (r >= state.complicationRange) {
-          complications += 1;
-          cls = "comp";
-        }
-        pipsHtml += `<span class="die-pip ${cls}">${r}</span>`;
-      }
-
-      const tray = document.getElementById("dice-tray");
-      if (!tray) return;
-      tray.innerHTML = `
-    <div class="dice-pips">${pipsHtml}</div>
-    <div class="dice-result-row">
-      <span class="dice-result-text"><strong>Successes: ${successes}</strong>${complications > 0 ? ` <span style="color:var(--c-alert);">&middot; Complications: ${complications}</span>` : ""}</span>
-      <button type="button" class="pill-btn lcars-cap-r dice-reset" onclick="clearDiceTray()" data-tip="Clear the rolled dice.">Reset Roll</button>
-    </div>
-  `;
-    }
-
-    function clearDiceTray() {
-      document.getElementById("dice-tray").innerHTML = "";
-    }
-
     /* ============================================================================
        4. SCENE VIEW RENDERERS (GROUND, SPACE, SOCIAL, SCIENCE, FULL SHEET, LOGS)
        ============================================================================ */
@@ -5391,8 +5247,8 @@
         <select class="lcars-select" style="background-color:var(--c-secondary);" onchange="updateSceneCard('${sceneKey}', ${idx}, 'dept', this.value)">
           ${DEPT_KEYS.map(d => `<option value="${d}" ${d === card.dept ? "selected" : ""}>${d.toUpperCase()}</option>`).join("")}
         </select>
-        <button type="button" class="pill-btn" data-tip="Send to TN console"
-                onclick="loadCardIntoCombiner('${card.attr}','${card.dept}')">Roll</button>
+        <button type="button" class="pill-btn" data-tip="Load Attribute + Department into the TN console"
+                onclick="loadCardIntoCombiner('${card.attr}','${card.dept}')">Set TN</button>
       </div>
 
       <div class="tn-badge-group">
@@ -6170,13 +6026,6 @@
                 <span class="lbl">Comp</span>
               </div>
             </div>
-            <div class="dice-bar" data-tip="Roll digitally against the current TN.">
-              <button type="button" class="dice-btn" onclick="rollDicePool(2)">2d20</button>
-              <button type="button" class="dice-btn" onclick="rollDicePool(3)">3d20</button>
-              <button type="button" class="dice-btn" onclick="rollDicePool(4)">4d20</button>
-              <button type="button" class="dice-btn" onclick="rollDicePool(5)">5d20</button>
-            </div>
-            <div class="dice-result-tray" id="dice-tray"></div>
           </div>
         </div>
       </section>
