@@ -150,6 +150,273 @@
       --text-dim: #9ea5ba;
     }
 
+    /* ==========================================================================
+       POSITIONAL COLOR PATTERN ENGINE (--pat-*)
+       Decouples WHERE colors appear from the hex palette itself.
+       Default (:root / tng) uses the classic 1701-D alternating rhythm.
+       Each era overrides specific positional slots to match on-screen consoles.
+       ========================================================================== */
+    :root,
+    [data-shape="tng"] {
+      /* Frame Elbows & T-Junction Elbows */
+      --pat-elbow-top:     var(--c-primary);
+      --pat-elbow-bot:     var(--c-tertiary);
+      --pat-junc-top:      var(--c-tertiary);
+      --pat-junc-bot:      var(--c-tertiary);
+
+      /* Crossbar Divider Top Rule (Row 1) */
+      --pat-div1-lead:     var(--c-accent);
+      --pat-div1-pip:      var(--c-secondary);
+      --pat-div1-main:     var(--c-tertiary);
+      --pat-div1-cap:      var(--c-secondary);
+
+      /* Crossbar Divider Bottom Rule (Row 2) */
+      --pat-div2-lead:     var(--c-accent);
+      --pat-div2-pip:      var(--c-secondary);
+      --pat-div2-main:     var(--c-primary);
+      --pat-div2-cap:      var(--c-primary);
+
+      /* Header Attribute & Department Stat Pills */
+      --pat-hdr-attr-lbl:  var(--c-secondary);
+      --pat-hdr-attr-tail: var(--c-tertiary);
+      --pat-hdr-dept-lbl:  var(--c-primary);
+      --pat-hdr-dept-tail: var(--c-tertiary);
+
+      /* Left Navigation Rail Buttons (1–8) & Spacer */
+      --pat-rail-1:        var(--c-secondary);
+      --pat-rail-2:        var(--c-primary);
+      --pat-rail-3:        var(--c-accent);
+      --pat-rail-4:        var(--c-tertiary);
+      --pat-rail-5:        var(--c-secondary);
+      --pat-rail-6:        var(--c-accent);
+      --pat-rail-7:        var(--c-muted);
+      --pat-rail-8:        var(--c-secondary);
+      --pat-rail-spacer:   var(--c-tertiary);
+
+      /* Workspace Panel Brackets (Panel 1, Panel 2, Panel 3) */
+      --pat-panel-1-main:  var(--c-secondary);
+      --pat-panel-1-cap:   var(--c-primary);
+      --pat-panel-2-main:  var(--c-tertiary);
+      --pat-panel-2-cap:   var(--c-accent);
+
+      /* Bottom Footer Bar Segments */
+      --pat-foot-1:        var(--c-tertiary);
+      --pat-foot-2:        var(--c-secondary);
+      --pat-foot-3:        var(--c-accent);
+      --pat-foot-end:      var(--c-primary);
+    }
+
+    /* --------------------------------------------------------------------------
+       1. LOWER DECKS (CERRITOS PADD) PATTERN OVERRIDE
+       Matches the Lower Decks PADD reference: Teal top-left ACCESS block,
+       matching twin junction elbows, and paired 2-by-2 rail button grouping.
+       -------------------------------------------------------------------------- */
+    [data-shape="lower-decks"],
+    [data-theme="lower-decks"] {
+      --pat-elbow-top:     var(--c-accent);     /* Teal top-left ACCESS block */
+      --pat-elbow-bot:     var(--c-secondary);
+      --pat-junc-top:      var(--c-tertiary);
+      --pat-junc-bot:      var(--c-tertiary);
+
+      --pat-div1-lead:     var(--c-accent);
+      --pat-div1-pip:      var(--c-secondary);
+      --pat-div1-main:     var(--c-accent);     /* Top bar matches ACCESS teal */
+      --pat-div1-cap:      var(--c-secondary);
+
+      --pat-div2-lead:     var(--c-primary);
+      --pat-div2-pip:      var(--c-secondary);
+      --pat-div2-main:     var(--c-primary);    /* Bottom bar Cerritos orange */
+      --pat-div2-cap:      var(--c-secondary);
+
+      --pat-hdr-attr-lbl:  var(--c-secondary);
+      --pat-hdr-attr-tail: var(--c-accent);
+      --pat-hdr-dept-lbl:  var(--c-primary);
+      --pat-hdr-dept-tail: var(--c-tertiary);
+
+      --pat-rail-1:        var(--c-accent);     /* Highlighted 1st button (03 1025 01) */
+      --pat-rail-2:        var(--c-primary);
+      --pat-rail-3:        var(--c-primary);
+      --pat-rail-4:        var(--c-secondary);
+      --pat-rail-5:        var(--c-secondary);
+      --pat-rail-6:        var(--c-tertiary);
+      --pat-rail-7:        var(--c-tertiary);
+      --pat-rail-8:        var(--c-muted);
+      --pat-rail-spacer:   var(--c-tertiary);
+
+      --pat-foot-1:        var(--c-accent);
+      --pat-foot-2:        var(--c-tertiary);
+      --pat-foot-3:        var(--c-secondary);
+      --pat-foot-end:      var(--c-primary);
+    }
+
+    /* --------------------------------------------------------------------------
+       2. VOYAGER (INTREPID-CLASS) PATTERN OVERRIDE
+       Continuous steel-blue/teal structural spine down the left frame, reserving
+       copper-gold (--c-accent) and astrometrics lilac (--c-tertiary) for accents.
+       -------------------------------------------------------------------------- */
+    [data-shape="voyager"],
+    [data-theme="voyager"] {
+      --pat-elbow-top:     var(--c-primary);
+      --pat-junc-top:      var(--c-primary);    /* Continuous steel blue upper spine */
+      --pat-junc-bot:      var(--c-secondary);  /* Transitions to delta teal lower spine */
+      --pat-elbow-bot:     var(--c-secondary);
+
+      --pat-div1-lead:     var(--c-primary);
+      --pat-div1-pip:      var(--c-accent);
+      --pat-div1-main:     var(--c-primary);
+      --pat-div1-cap:      var(--c-tertiary);
+
+      --pat-div2-lead:     var(--c-secondary);
+      --pat-div2-pip:      var(--c-accent);
+      --pat-div2-main:     var(--c-secondary);
+      --pat-div2-cap:      var(--c-accent);
+
+      --pat-hdr-attr-lbl:  var(--c-primary);
+      --pat-hdr-attr-tail: var(--c-secondary);
+      --pat-hdr-dept-lbl:  var(--c-tertiary);
+      --pat-hdr-dept-tail: var(--c-accent);
+
+      --pat-rail-1:        var(--c-secondary);
+      --pat-rail-2:        var(--c-secondary);
+      --pat-rail-3:        var(--c-tertiary);
+      --pat-rail-4:        var(--c-primary);
+      --pat-rail-5:        var(--c-primary);
+      --pat-rail-6:        var(--c-accent);
+      --pat-rail-7:        var(--c-secondary);
+      --pat-rail-8:        var(--c-tertiary);
+      --pat-rail-spacer:   var(--c-secondary);
+
+      --pat-panel-1-main:  var(--c-primary);
+      --pat-panel-1-cap:   var(--c-accent);
+      --pat-panel-2-main:  var(--c-secondary);
+      --pat-panel-2-cap:   var(--c-tertiary);
+    }
+
+    /* --------------------------------------------------------------------------
+       3. NEMESIS (SOVEREIGN-CLASS) PATTERN OVERRIDE
+       High-contrast tactical ice-blue and deep cerulean frame with warm gold
+       (--c-accent) keycaps on the junction leads and department headers.
+       -------------------------------------------------------------------------- */
+    [data-shape="nemesis"],
+    [data-theme="nemesis-blue"] {
+      --pat-elbow-top:     var(--c-secondary);
+      --pat-junc-top:      var(--c-primary);
+      --pat-junc-bot:      var(--c-secondary);
+      --pat-elbow-bot:     var(--c-secondary);
+
+      --pat-div1-lead:     var(--c-accent);     /* Gold contrast lead */
+      --pat-div1-pip:      var(--c-tertiary);
+      --pat-div1-main:     var(--c-primary);
+      --pat-div1-cap:      var(--c-accent);
+
+      --pat-div2-lead:     var(--c-tertiary);
+      --pat-div2-pip:      var(--c-accent);
+      --pat-div2-main:     var(--c-secondary);
+      --pat-div2-cap:      var(--c-tertiary);
+
+      --pat-hdr-attr-lbl:  var(--c-secondary);
+      --pat-hdr-attr-tail: var(--c-tertiary);
+      --pat-hdr-dept-lbl:  var(--c-primary);
+      --pat-hdr-dept-tail: var(--c-accent);     /* Gold tactical tail on departments */
+
+      --pat-rail-1:        var(--c-primary);
+      --pat-rail-2:        var(--c-secondary);
+      --pat-rail-3:        var(--c-tertiary);
+      --pat-rail-4:        var(--c-primary);
+      --pat-rail-5:        var(--c-accent);     /* Personnel Summary highlighted in gold */
+      --pat-rail-6:        var(--c-secondary);
+      --pat-rail-7:        var(--c-tertiary);
+      --pat-rail-8:        var(--c-secondary);
+      --pat-rail-spacer:   var(--c-secondary);
+    }
+
+    /* --------------------------------------------------------------------------
+       4. TMP / EXCELSIOR ERA PATTERN OVERRIDE
+       23rd-century functional color-coding: Monster Maroon command corner,
+       anodized slate-cyan structural frame, and division-grouped rail blocks.
+       -------------------------------------------------------------------------- */
+    [data-shape="tmp-era"],
+    [data-theme="tmp-era"] {
+      --pat-elbow-top:     var(--c-accent);     /* Monster Maroon top-left command block */
+      --pat-junc-top:      var(--c-secondary);
+      --pat-junc-bot:      var(--c-tertiary);
+      --pat-elbow-bot:     var(--c-muted);      /* Anodized steel bottom anchor */
+
+      --pat-div1-lead:     var(--c-primary);
+      --pat-div1-pip:      var(--c-muted);
+      --pat-div1-main:     var(--c-secondary);
+      --pat-div1-cap:      var(--c-primary);
+
+      --pat-div2-lead:     var(--c-primary);
+      --pat-div2-pip:      var(--c-muted);
+      --pat-div2-main:     var(--c-tertiary);
+      --pat-div2-cap:      var(--c-accent);
+
+      --pat-hdr-attr-lbl:  var(--c-secondary);
+      --pat-hdr-attr-tail: var(--c-muted);
+      --pat-hdr-dept-lbl:  var(--c-primary);
+      --pat-hdr-dept-tail: var(--c-accent);
+
+      /* Grouped by functional shipboard division */
+      --pat-rail-1:        var(--c-accent);     /* Ground Combat (Tactical Maroon) */
+      --pat-rail-2:        var(--c-accent);     /* Space Combat (Tactical Maroon) */
+      --pat-rail-3:        var(--c-secondary);  /* Social (Slate Cyan) */
+      --pat-rail-4:        var(--c-secondary);  /* Science (Slate Cyan) */
+      --pat-rail-5:        var(--c-primary);    /* Personnel (Ochre Amber) */
+      --pat-rail-6:        var(--c-primary);    /* Logs (Ochre Amber) */
+      --pat-rail-7:        var(--c-muted);      /* Sync (Anodized Steel) */
+      --pat-rail-8:        var(--c-muted);      /* Reference (Anodized Steel) */
+      --pat-rail-spacer:   var(--c-tertiary);
+
+      --pat-panel-1-main:  var(--c-secondary);
+      --pat-panel-1-cap:   var(--c-accent);
+      --pat-panel-2-main:  var(--c-tertiary);
+      --pat-panel-2-cap:   var(--c-primary);
+
+      --pat-foot-1:        var(--c-tertiary);
+      --pat-foot-2:        var(--c-muted);
+      --pat-foot-3:        var(--c-accent);
+      --pat-foot-end:      var(--c-primary);
+    }
+
+    /* --------------------------------------------------------------------------
+       5. PICARD 25C (STARGAZER / TITAN-A) PATTERN OVERRIDE
+       Stealth gunmetal structural chassis (--c-secondary / --c-tertiary) with
+       surgical orange-red (--c-primary) and coral (--c-accent) tactical leads.
+       -------------------------------------------------------------------------- */
+    [data-shape="picard-v2"],
+    [data-theme="picard-v2"] {
+      --pat-elbow-top:     var(--c-tertiary);   /* Gunmetal corner instead of loud orange */
+      --pat-junc-top:      var(--c-secondary);
+      --pat-junc-bot:      var(--c-tertiary);
+      --pat-elbow-bot:     var(--c-tertiary);
+
+      --pat-div1-lead:     var(--c-primary);    /* Hot orange-red lead into gunmetal bar */
+      --pat-div1-pip:      var(--c-accent);
+      --pat-div1-main:     var(--c-secondary);
+      --pat-div1-cap:      var(--c-primary);
+
+      --pat-div2-lead:     var(--c-accent);
+      --pat-div2-pip:      var(--c-primary);
+      --pat-div2-main:     var(--c-tertiary);
+      --pat-div2-cap:      var(--c-accent);
+
+      --pat-hdr-attr-lbl:  var(--c-tertiary);
+      --pat-hdr-attr-tail: var(--c-primary);
+      --pat-hdr-dept-lbl:  var(--c-secondary);
+      --pat-hdr-dept-tail: var(--c-accent);
+
+      --pat-panel-1-main:  var(--c-secondary);
+      --pat-panel-1-cap:   var(--c-primary);
+      --pat-panel-2-main:  var(--c-tertiary);
+      --pat-panel-2-cap:   var(--c-accent);
+
+      --pat-foot-1:        var(--c-tertiary);
+      --pat-foot-2:        var(--c-secondary);
+      --pat-foot-3:        var(--c-primary);
+      --pat-foot-end:      var(--c-accent);
+    }
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -402,6 +669,7 @@
 
     .frame-elbow-top {
       grid-area: elbowtop;
+      --elbow-c: var(--pat-elbow-top);
       min-height: var(--top-bar);
       font-family: inherit;
       font-size: 0.95rem;
@@ -434,7 +702,7 @@
 
     .frame-elbow-bot {
       grid-area: elbowbot;
-      --elbow-c: var(--c-tertiary);
+      --elbow-c: var(--pat-elbow-bot);
       font-size: 0.8rem;
     }
 
@@ -992,6 +1260,7 @@
     }
 
     .junction-elbow.top {
+      --j-color: var(--pat-junc-top);
       height: var(--j-top-h);
       border-bottom-left-radius: var(--j-curve-r);
       align-items: flex-start;
@@ -1022,6 +1291,7 @@
     }
 
     .junction-elbow.bottom {
+      --j-color: var(--pat-junc-bot);
       height: var(--j-bot-h);
       border-top-left-radius: var(--j-curve-r);
       align-items: flex-end;
@@ -1077,18 +1347,23 @@
       overflow: hidden;
     }
 
-    .lcars-header-divider .d-seg-lead { flex: 0.45; background: var(--c-accent); }
-    .lcars-header-divider .d-seg-pip  { flex: 0.12; background: var(--c-secondary); }
+    .lcars-header-divider .d-seg-lead { flex: 0.45; }
+    .lcars-header-divider .d-seg-pip  { flex: 0.12; }
     .lcars-header-divider .d-seg-main { flex: 1.40; }
     .lcars-header-divider .d-seg-cap  {
       flex: 0.18;
       border-radius: var(--j-cap-radius);
     }
 
-    .lcars-header-divider .top-rule .d-seg-main { background: var(--c-tertiary); }
-    .lcars-header-divider .top-rule .d-seg-cap  { background: var(--c-secondary); }
-    .lcars-header-divider .bot-rule .d-seg-main { background: var(--c-primary); }
-    .lcars-header-divider .bot-rule .d-seg-cap  { background: var(--c-primary); }
+    .lcars-header-divider .top-rule .d-seg-lead { background: var(--pat-div1-lead); }
+    .lcars-header-divider .top-rule .d-seg-pip  { background: var(--pat-div1-pip); }
+    .lcars-header-divider .top-rule .d-seg-main { background: var(--pat-div1-main); }
+    .lcars-header-divider .top-rule .d-seg-cap  { background: var(--pat-div1-cap); }
+
+    .lcars-header-divider .bot-rule .d-seg-lead { background: var(--pat-div2-lead); }
+    .lcars-header-divider .bot-rule .d-seg-pip  { background: var(--pat-div2-pip); }
+    .lcars-header-divider .bot-rule .d-seg-main { background: var(--pat-div2-main); }
+    .lcars-header-divider .bot-rule .d-seg-cap  { background: var(--pat-div2-cap); }
 
     /* Dormant Block 1: Lower Decks "Spoon / Keyhole" Notch Cutouts */
     .ld-cutout {
@@ -1185,10 +1460,10 @@
       align-items: center;
       justify-content: flex-end;
       min-width: 0;
-      padding: 0 6px 0 12px;
-      background: var(--c-secondary);
+      padding: 0 4px 0 8px;
+      background: var(--pat-hdr-attr-lbl);
       border-radius: 999px 0 0 999px;
-      font-size: 0.68rem;
+      font-size: 0.62rem;
       font-weight: 700;
       letter-spacing: 0.03em;
       text-transform: uppercase;
@@ -1197,62 +1472,43 @@
       text-overflow: ellipsis;
     }
 
-    .hdr-stat .lbl {
-      font-size: 0.62rem;
-      padding-left: 8px;
-      padding-right: 4px;
-    }
-
     .hdr-stat .num {
-      flex-basis: 21px;
-      font-size: 1.1rem;
-    }
-
-    .hdr-stat .nub {
-      flex-basis: 6px;
-    }
-
-    .hdr-stat .gap {
-      flex-basis: 3px;
-    }
-
-    .hdr-stat .tail {
-      flex-basis: 12px;
-    }
-
-    .hdr-stat .num {
-      flex: 0 0 24px;
+      flex: 0 0 21px;
       display: flex;
       align-items: center;
       justify-content: center;
       background: #000;
       color: var(--c-accent);
       font-family: 'Antonio', sans-serif;
-      font-size: 1.25rem;
+      font-size: 1.1rem;
       font-weight: 700;
       line-height: 1;
     }
 
     .hdr-stat .nub {
-      flex: 0 0 8px;
-      background: var(--c-secondary);
+      flex: 0 0 6px;
+      background: var(--pat-hdr-attr-lbl);
       border-radius: 0;
     }
 
     .hdr-stat .gap {
-      flex: 0 0 4px;
+      flex: 0 0 3px;
       background: #000;
     }
 
     .hdr-stat .tail {
-      flex: 0 0 16px;
-      background: var(--c-tertiary);
+      flex: 0 0 12px;
+      background: var(--pat-hdr-attr-tail);
       border-radius: 0 999px 999px 0;
     }
 
     .hdr-stat.dept .lbl,
     .hdr-stat.dept .nub {
-      background: var(--c-primary);
+      background: var(--pat-hdr-dept-lbl);
+    }
+
+    .hdr-stat.dept .tail {
+      background: var(--pat-hdr-dept-tail);
     }
 
     .hdr-stat.selected .lbl {
@@ -1477,7 +1733,7 @@
 
     .lcars-footer-bar .seg {
       flex: 1;
-      background: var(--c-tertiary);
+      background: var(--pat-foot-1);
     }
 
     .lcars-footer-bar .seg.w3 {
@@ -1485,15 +1741,15 @@
     }
 
     .lcars-footer-bar .seg.c1 {
-      background: var(--c-primary);
+      background: var(--pat-foot-end);
     }
 
     .lcars-footer-bar .seg.c2 {
-      background: var(--c-secondary);
+      background: var(--pat-foot-2);
     }
 
     .lcars-footer-bar .seg.c4 {
-      background: var(--c-accent);
+      background: var(--pat-foot-3);
     }
 
     .lcars-footer-bar .seg.end {
@@ -1556,33 +1812,14 @@
       opacity: 0.75;
     }
 
-    .lcars-rail-btn:nth-child(1) {
-      background: var(--c-secondary);
-    }
-
-    .lcars-rail-btn:nth-child(2) {
-      background: var(--c-primary);
-    }
-
-    .lcars-rail-btn:nth-child(3) {
-      background: var(--c-accent);
-    }
-
-    .lcars-rail-btn:nth-child(4) {
-      background: var(--c-tertiary);
-    }
-
-    .lcars-rail-btn:nth-child(5) {
-      background: var(--c-secondary);
-    }
-
-    .lcars-rail-btn:nth-child(6) {
-      background: var(--c-accent);
-    }
-
-    .lcars-rail-btn:nth-child(7) {
-      background: var(--c-muted);
-    }
+    .lcars-rail-btn:nth-child(1) { background: var(--pat-rail-1); }
+    .lcars-rail-btn:nth-child(2) { background: var(--pat-rail-2); }
+    .lcars-rail-btn:nth-child(3) { background: var(--pat-rail-3); }
+    .lcars-rail-btn:nth-child(4) { background: var(--pat-rail-4); }
+    .lcars-rail-btn:nth-child(5) { background: var(--pat-rail-5); }
+    .lcars-rail-btn:nth-child(6) { background: var(--pat-rail-6); }
+    .lcars-rail-btn:nth-child(7) { background: var(--pat-rail-7); }
+    .lcars-rail-btn:nth-child(8) { background: var(--pat-rail-8); }
 
     /* Active scene: bright block plus a notch stub on the content edge */
     .lcars-rail-btn.active {
@@ -1598,7 +1835,7 @@
     .lcars-rail-spacer {
       flex: 1 1 24px;
       min-height: 24px;
-      background: var(--c-tertiary);
+      background: var(--pat-rail-spacer);
       padding: 0 12px 6px;
       color: #000;
       font-weight: 700;
@@ -1763,15 +2000,15 @@
 
     .lcars-panel[data-tone="2"],
     #scene-container>.lcars-panel {
-      --tone: var(--c-secondary);
-      --tone-2: var(--c-primary);
+      --tone: var(--pat-panel-1-main);
+      --tone-2: var(--pat-panel-1-cap);
     }
 
     .lcars-panel[data-tone="3"],
     .scene-layout>.lcars-panel:nth-child(2),
     .scene-layout>div:nth-child(2)>.lcars-panel {
-      --tone: var(--c-tertiary);
-      --tone-2: var(--c-accent);
+      --tone: var(--pat-panel-2-main);
+      --tone-2: var(--pat-panel-2-cap);
     }
 
     .lcars-panel[data-tone="4"] {
