@@ -36,18 +36,17 @@
     }
 
     [data-theme="nemesis-blue"] {
-      --c-primary: #5599ff;
-      /* Nemesis Ice Blue */
-      --c-secondary: #2266cc;
-      /* Deep Cerulean */
-      --c-tertiary: #66ccff;
-      /* Tactical Cyan */
-      --c-accent: #ffaa44;
-      /* Gold Contrast */
-      --c-alert: #cc3344;
-      /* Crimson */
-      --c-ok: #44ccaa;
-      --c-muted: #99ccff;
+      --bg: #000000;
+      --panel-bg: #000000;
+      --c-primary: #1d85b8;     /* Sovereign Cerulean / Cyan (25835 284 / Lower Elbow) */
+      --c-secondary: #1b4698;   /* Deep Cobalt Navy (Upper Elbow / VECTOR / DELTA V) */
+      --c-tertiary: #36424d;    /* Dark Slate Charcoal (36872-352 / End Blocks) */
+      --c-accent: #a67c46;      /* Muted Ochre / Tan (78356-664 / Divider Pips) */
+      --c-alert: #9e3b24;       /* Terracotta Rust (AUXILIARY SYS / 10-00 Pills) */
+      --c-ok: #9ab4c7;          /* Pale Ice Blue-Grey (TRAJECTORY / Telemetry) */
+      --c-muted: #52759c;       /* Mid Steel Blue */
+      --text-main: #d8e6f2;     /* Cool CRT Ice-White */
+      --text-dim: #52759c;
     }
 
     [data-theme="lower-decks"] {
@@ -106,6 +105,17 @@
       --c-secondary: #4a5060 !important;   /* Darkened gunmetal under red klaxon */
       --c-tertiary: #8a1c1c !important;
       --c-accent: #ff5533 !important;
+    }
+
+    body[data-shape="nemesis"][data-alert="red"] {
+      --c-primary: #8c1d22 !important;     /* Sovereign Tactical Crimson */
+      --c-secondary: #521217 !important;   /* Deep Dark Burgundy */
+      --c-tertiary: #262e36 !important;    /* Darkened Slate Grey */
+      --c-accent: #8cb4c2 !important;      /* Pale Ice-Cyan Highlight Blocks */
+      --c-alert: #cc2229 !important;       /* Active Alert Red */
+      --c-ok: #d0dce5 !important;          /* Cool White Readout */
+      --c-muted: #6e282d !important;
+      --text-dim: #8cb4c2 !important;
     }
 
     @keyframes lcars-red-alert-pulse {
@@ -294,40 +304,57 @@
 
     /* --------------------------------------------------------------------------
        3. NEMESIS (SOVEREIGN-CLASS) PATTERN OVERRIDE
-       High-contrast tactical ice-blue and deep cerulean frame with warm gold
-       (--c-accent) keycaps on the junction leads and department headers.
+       Screen-accurate to Enterprise-E bridge consoles (INTERNAL SYS SCAN 015 &
+       ROMULAN NEUTRAL ZONE): Deep Cobalt upper elbow, Cerulean lower elbow,
+       short Ochre/Tan junction pips, and Charcoal/Ice/Tan/Rust rail rhythm.
        -------------------------------------------------------------------------- */
     [data-shape="nemesis"],
     [data-theme="nemesis-blue"] {
-      --pat-elbow-top:     var(--c-secondary);
-      --pat-junc-top:      var(--c-primary);
-      --pat-junc-bot:      var(--c-secondary);
-      --pat-elbow-bot:     var(--c-secondary);
+      --pat-elbow-top:     var(--c-secondary);  /* Deep Cobalt top-left block */
+      --pat-junc-top:      var(--c-secondary);  /* Deep Cobalt upper elbow + long arm */
+      --pat-junc-bot:      var(--c-primary);    /* Cerulean Cyan lower elbow + long arm */
+      --pat-elbow-bot:     var(--c-primary);    /* Cerulean bottom anchor (34867-861) */
 
-      --pat-div1-lead:     var(--c-accent);     /* Gold contrast lead */
-      --pat-div1-pip:      var(--c-tertiary);
-      --pat-div1-main:     var(--c-primary);
-      --pat-div1-cap:      var(--c-accent);
+      /* Top Divider Rule: [Tan Square Pip] [Cerulean Bar] [Muted Bar] [Charcoal End Block] */
+      --pat-div1-lead:     var(--c-accent);     /* Short Ochre/Tan block after elbow */
+      --pat-div1-pip:      var(--c-primary);    /* Cerulean segment */
+      --pat-div1-main:     var(--c-secondary);  /* Deep Cobalt main bar */
+      --pat-div1-cap:      var(--c-tertiary);   /* Squared-off Dark Slate end block */
 
-      --pat-div2-lead:     var(--c-tertiary);
-      --pat-div2-pip:      var(--c-accent);
-      --pat-div2-main:     var(--c-secondary);
-      --pat-div2-cap:      var(--c-tertiary);
+      /* Bottom Divider Rule: [Tan Square Pip] [Cobalt Bar] [Cerulean Bar] [Charcoal End Block] */
+      --pat-div2-lead:     var(--c-accent);     /* Short Ochre/Tan block after elbow */
+      --pat-div2-pip:      var(--c-secondary);
+      --pat-div2-main:     var(--c-primary);    /* Cerulean main bar */
+      --pat-div2-cap:      var(--c-tertiary);   /* Squared-off Dark Slate end block */
 
+      /* Header Stat Pills */
       --pat-hdr-attr-lbl:  var(--c-secondary);
-      --pat-hdr-attr-tail: var(--c-tertiary);
+      --pat-hdr-attr-tail: var(--c-primary);
       --pat-hdr-dept-lbl:  var(--c-primary);
-      --pat-hdr-dept-tail: var(--c-accent);     /* Gold tactical tail on departments */
+      --pat-hdr-dept-tail: var(--c-accent);
 
-      --pat-rail-1:        var(--c-primary);
-      --pat-rail-2:        var(--c-secondary);
-      --pat-rail-3:        var(--c-tertiary);
-      --pat-rail-4:        var(--c-primary);
-      --pat-rail-5:        var(--c-accent);     /* Personnel Summary highlighted in gold */
-      --pat-rail-6:        var(--c-secondary);
-      --pat-rail-7:        var(--c-tertiary);
-      --pat-rail-8:        var(--c-secondary);
+      /* Left Rail: Matches Nemesis LCARS 6 & 10-02 vertical sequence */
+      --pat-rail-1:        var(--c-primary);    /* 01 Ground: Cerulean Cyan */
+      --pat-rail-2:        var(--c-ok);         /* 02 Space: Pale Ice Grey (TRAJECTORY) */
+      --pat-rail-3:        var(--c-secondary);  /* 03 Social: Deep Cobalt (VECTOR) */
+      --pat-rail-4:        var(--c-accent);     /* 04 Science: Muted Tan/Ochre (78356-664) */
+      --pat-rail-5:        var(--c-tertiary);   /* 05 Personnel: Dark Charcoal (36872-352) */
+      --pat-rail-6:        var(--c-secondary);  /* 06 Logs: Deep Cobalt (46925-579) */
+      --pat-rail-7:        var(--c-alert);      /* 07 Sync: Terracotta Rust (AUXILIARY SYS) */
+      --pat-rail-8:        var(--c-primary);    /* 09 Ref: Cerulean Cyan (34867-861) */
       --pat-rail-spacer:   var(--c-secondary);
+
+      /* Panel Brackets: Cerulean & Cobalt instead of TNG Lavender */
+      --pat-panel-1-main:  var(--c-primary);
+      --pat-panel-1-cap:   var(--c-accent);
+      --pat-panel-2-main:  var(--c-secondary);
+      --pat-panel-2-cap:   var(--c-primary);
+
+      /* Bottom Footer Bar */
+      --pat-foot-1:        var(--c-secondary);
+      --pat-foot-2:        var(--c-accent);
+      --pat-foot-3:        var(--c-alert);
+      --pat-foot-end:      var(--c-primary);
     }
 
     /* --------------------------------------------------------------------------
@@ -911,23 +938,27 @@
     }
 
     /* =========================================================================
-       NEMESIS (SOVEREIGN-CLASS / 2379) SHAPE PROFILE
-       Features: 45-degree Chamfered Tactical Bevels (clip-path) instead of round
-       pills, angled divider notches, and sharp late-TNG film tactical styling.
+       NEMESIS (SOVEREIGN-CLASS / 2379) SCREEN-ACCURATE SHAPE PROFILE
+       Derived from Enterprise-E set graphics (INTERNAL SYS SCAN 015, LONG RANGE
+       SCAN 081568, ROMULAN NEUTRAL ZONE):
+       - Long-arm swept T-junction elbows meeting a short square Ochre/Tan block
+       - Squared-off dark slate end-blocks on horizontal divider bars
+       - Flat-edged left rail blocks with thin horizontal separator ticks
+       - Bracketed scan panels + subtle deep-blue tactical grid workspace
        ========================================================================= */
     [data-shape="nemesis"] {
-      --elbow-r: 22px;
-      --tl-elbow-r: 16px;
-      --elbow-r-inner: 8px;
-      --bracket-w: 14px;
-      --bracket-r: 10px;
-      --j-arm-h: 9px;
-      --j-curve-r: 16px;
-      --j-inner-r: 8px;
-      --j-stub-ext: 20px;
-      --j-top-h: 34px;
-      --j-bot-h: 40px;
-      --j-cap-radius: 0;
+      --elbow-r: 28px;
+      --tl-elbow-r: 0px;                        /* Flat top-left block (LCARS 54835) */
+      --elbow-r-inner: 14px;
+      --bracket-w: 12px;
+      --bracket-r: 16px;
+      --j-arm-h: 9px;                           /* Crisp 9px horizontal scan bars */
+      --j-curve-r: 28px;                        /* Smooth Sovereign outer elbow curve */
+      --j-inner-r: 14px;                        /* Smooth concave inner elbow curve */
+      --j-stub-ext: clamp(70px, 14vw, 210px);   /* Long horizontal elbow arm (LCARS 6) */
+      --j-top-h: 38px;
+      --j-bot-h: 44px;
+      --j-cap-radius: 0;                        /* Squared-off right end-blocks */
       --ld-cutout-display: none;
       --tmp-ticks-display: none;
       --pic-ticks-display: none;
@@ -935,69 +966,100 @@
       --nem-bevel-display: block;
     }
 
-    /* Sovereign-class angled tactical notches in the divider bar */
+    /* Keep header attributes aligned with the panel edge while the divider elbow extends below */
+    [data-shape="nemesis"] .hdr-attrs {
+      padding-left: 18px;
+    }
+
+    /* Sovereign Crossbar Proportions:
+       [Long Elbow Arm] | [Short Square Tan Block] | [Secondary Seg] | [Long Main Bar] | [Charcoal End Block] */
+    [data-shape="nemesis"] .lcars-header-divider .d-seg-lead {
+      flex: 0 0 28px;                           /* Short Ochre/Tan block (LCARS 6 & 8) */
+    }
+    [data-shape="nemesis"] .lcars-header-divider .d-seg-pip {
+      flex: 0.35;
+    }
+    [data-shape="nemesis"] .lcars-header-divider .d-seg-main {
+      flex: 1.65;
+    }
+    [data-shape="nemesis"] .lcars-header-divider .d-seg-cap {
+      flex: 0 0 56px;
+      border-radius: 0 !important;
+    }
+
+    /* Sovereign Right-End Double Block Split inside .d-seg-main (matches LCARS 6 right edge) */
     .nem-bevel {
       display: var(--nem-bevel-display);
       position: absolute;
-      right: 12%;
+      right: 0;
       top: 0;
       bottom: 0;
-      width: 64px;
-      background: repeating-linear-gradient(
-        -60deg,
-        transparent 0 10px,
-        #000 10px 15px,
-        var(--c-accent) 15px 22px,
-        #000 22px 26px
+      width: 42px;
+      background: linear-gradient(
+        90deg,
+        #000 0 4px,
+        var(--c-tertiary) 4px 42px
       );
       pointer-events: none;
     }
 
-    /* Replace round half-pills with 45-degree Sovereign tactical chamfers */
-    [data-shape="nemesis"] .lcars-cap-l,
-    [data-shape="nemesis"] .stat-seg.end.minus,
-    [data-shape="nemesis"] .hdr-stat .lbl,
-    [data-shape="nemesis"] .hdr-read .cap,
-    [data-shape="nemesis"] .roll-card-title,
-    [data-shape="nemesis"] .tn-pill,
-    [data-shape="nemesis"] .editable-tag,
-    [data-shape="nemesis"] .id-field label,
-    [data-shape="nemesis"] .dice-bar .dice-btn:first-child,
-    [data-shape="nemesis"] .lcars-opt-btn .opt-code,
-    [data-shape="nemesis"] .lcars-shape-chip:first-child {
-      border-radius: 0 !important;
-      clip-path: polygon(10px 0, 100% 0, 100% 100%, 0 100%, 0 10px);
-    }
-
-    [data-shape="nemesis"] .lcars-cap-r,
-    [data-shape="nemesis"] .stat-seg.end.plus,
-    [data-shape="nemesis"] .hdr-stat .tail,
-    [data-shape="nemesis"] .hdr-read,
-    [data-shape="nemesis"] .roll-card-controls .pill-btn,
-    [data-shape="nemesis"] .tn-badge-group > :last-child,
-    [data-shape="nemesis"] .focus-chip,
-    [data-shape="nemesis"] .dice-bar .dice-btn:last-child,
-    [data-shape="nemesis"] .lcars-footer-bar .seg.end,
-    [data-shape="nemesis"] .lcars-opt-btn .opt-pip,
-    [data-shape="nemesis"] .lcars-shape-chip:last-child,
-    [data-shape="nemesis"] .header-endcap,
-    [data-shape="nemesis"] .lcars-header-divider .d-seg-cap {
-      border-radius: 0 !important;
-      clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%);
-    }
-
-    [data-shape="nemesis"] .pill-btn {
-      border-radius: 0 !important;
-      clip-path: polygon(8px 0, calc(100% - 8px) 0, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 0 calc(100% - 8px), 0 8px);
-    }
-
-    [data-shape="nemesis"] .lcars-panel-header {
-      border-radius: 8px 0 0 0 !important;
-      clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 0 100%);
-    }
-
+    /* Left Rail: Flat rectangular blocks with subtle dark telemetry tick on the left edge */
     [data-shape="nemesis"] .lcars-rail-btn {
-      clip-path: polygon(10px 0, 100% 0, 100% 100%, 0 100%, 0 10px);
+      border-radius: 0;
+      color: #000;
+    }
+
+    /* Darker Cobalt/Charcoal rail buttons use bright Ice-White text for crisp legibility */
+    [data-shape="nemesis"][data-theme="nemesis-blue"] .lcars-rail-btn:nth-child(3),
+    [data-shape="nemesis"][data-theme="nemesis-blue"] .lcars-rail-btn:nth-child(5),
+    [data-shape="nemesis"][data-theme="nemesis-blue"] .lcars-rail-btn:nth-child(6),
+    [data-shape="nemesis"][data-theme="nemesis-blue"] .lcars-rail-btn:nth-child(7) {
+      color: var(--text-main);
+    }
+
+    [data-shape="nemesis"] .lcars-rail-btn.active {
+      background:
+        linear-gradient(90deg,
+          transparent 0 calc(100% - 16px),
+          #000 calc(100% - 16px) calc(100% - 12px),
+          var(--c-accent) calc(100% - 12px)),
+        var(--text-main) !important;
+      color: #000 !important;
+      padding-right: 24px;
+    }
+
+    /* Sovereign Panel Headers & Scan Brackets (matches INTERNAL SYS SCAN 015 C-brackets) */
+    [data-shape="nemesis"] .lcars-panel-header {
+      border-radius: 16px 0 0 0;
+      background: linear-gradient(90deg,
+        var(--tone) 0 calc(100% - 88px),
+        #000 calc(100% - 88px) calc(100% - 84px),
+        var(--c-accent) calc(100% - 84px) calc(100% - 56px),
+        #000 calc(100% - 56px) calc(100% - 52px),
+        var(--c-tertiary) calc(100% - 52px));
+    }
+
+    [data-shape="nemesis"] .header-endcap {
+      border-radius: 0;
+    }
+
+    /* Subtle Enterprise-E Astrometrics / Tactical Blue Grid in the main workspace (LCARS 10-00 & 10-02) */
+    [data-shape="nemesis"] .main-workspace {
+      background-image:
+        linear-gradient(rgba(29, 133, 184, 0.07) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(29, 133, 184, 0.07) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+
+    body[data-shape="nemesis"][data-alert="red"] .main-workspace {
+      background-image:
+        linear-gradient(rgba(140, 29, 34, 0.09) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(140, 29, 34, 0.09) 1px, transparent 1px);
+    }
+
+    /* Footer bar ends with a squared-off Sovereign block instead of a round pill */
+    [data-shape="nemesis"] .lcars-footer-bar .seg.end {
+      border-radius: 0;
     }
 
     /* =========================================================================
@@ -3720,6 +3782,7 @@
     let tableConnections = []; // If hosting, track all connected players
     let isTableHost = false;
     let tableSyncRoomId = "";
+    let tableSyncStatusText = "Status: Offline (Independent play)";
 
     function initTablePeer(role, roomId) {
       if (tablePeer) {
@@ -3807,6 +3870,7 @@
       if (payload.starship) {
         state.starship = payload.starship;
         ensureStarship2e();
+        state.character.shipName = `${state.starship.name}${state.starship.registry ? " (" + state.starship.registry + ")" : ""}`;
       }
       if (Array.isArray(payload.fleetHangar)) state.fleetHangar = payload.fleetHangar;
       if (payload.sceneTraits) state.sceneTraits = payload.sceneTraits;
@@ -3828,6 +3892,7 @@
     }
 
     function updateTableSyncStatus(msg) {
+      tableSyncStatusText = msg;
       const el = document.getElementById("table-sync-status");
       if (el) el.textContent = msg;
     }
@@ -4388,7 +4453,7 @@
         const nameEl = document.getElementById(`ship-weapon-name-${index}`);
         if (nameEl) nameEl.removeAttribute("data-tip");
       }
-      saveLocalState();
+      triggerTableSync();
     }
 
     function autoMatchGroundItem(index, itemName) {
@@ -4467,10 +4532,21 @@
       const catalogName = field.dataset.dictionary;
       const index = Number(field.dataset.dictionaryIndex);
       field.textContent = entry.name;
+      let isShipField = false;
 
-      if (catalogName === "talents" && Number.isInteger(index) && state.character.talents[index]) {
-        state.character.talents[index].name = entry.name;
-        state.character.talents[index].desc = entry.description;
+      if (catalogName === "talents" && Number.isInteger(index)) {
+        if (field.dataset.dictionaryDescription && field.dataset.dictionaryDescription.startsWith("ship-talent-desc-") && state.starship && state.starship.talents && state.starship.talents[index]) {
+          state.starship.talents[index].name = entry.name;
+          state.starship.talents[index].desc = entry.description;
+          const descEl = document.getElementById(field.dataset.dictionaryDescription);
+          if (descEl) descEl.textContent = entry.description;
+          triggerTableSync();
+          closeDictionaryAutocomplete();
+          return;
+        } else if (state.character && state.character.talents && state.character.talents[index]) {
+          state.character.talents[index].name = entry.name;
+          state.character.talents[index].desc = entry.description;
+        }
       } else if (catalogName === "equipment" && Number.isInteger(index)) {
         state.character.equipment[index] = entry.name;
         const eqTip = getEquipmentTooltip(entry.name);
@@ -4480,6 +4556,7 @@
         autoMatchGroundItem(index, entry.name);
       } else if (catalogName === "starship_weapons" && Number.isInteger(index) && state.starship && state.starship.weapons && state.starship.weapons[index]) {
         autoMatchStarshipWeapon(index, entry.name);
+        isShipField = true;
       } else if (catalogName === "weapon_qualities") {
         if (field.id && field.id.startsWith("ground-weapon-qualities-")) {
           const i = parseInt(field.id.replace("ground-weapon-qualities-", ""), 10);
@@ -4490,11 +4567,21 @@
           const i = parseInt(field.id.replace("ship-weapon-qualities-", ""), 10);
           if (state.starship.weapons && state.starship.weapons[i]) {
             state.starship.weapons[i].qualities = entry.name;
+            isShipField = true;
           }
         }
         const qTip = getWeaponQualitiesTooltip(entry.name);
         if (qTip) field.setAttribute("data-tip", qTip);
         else field.removeAttribute("data-tip");
+      } else if (catalogName === "spaceframes") {
+        state.starship.spaceframe = entry.name;
+        isShipField = true;
+      } else if (catalogName === "mission_profiles") {
+        state.starship.missionProfile = entry.name;
+        isShipField = true;
+      } else if (catalogName === "service_records") {
+        state.starship.serviceRecord = entry.name;
+        isShipField = true;
       } else if (field.dataset.dictionaryStateField) {
         state.character[field.dataset.dictionaryStateField] = entry.name;
       }
@@ -4505,7 +4592,8 @@
         if (descriptionField) descriptionField.textContent = entry.description;
       }
 
-      saveLocalState();
+      if (isShipField) triggerTableSync();
+      else saveLocalState();
       closeDictionaryAutocomplete();
     }
 
@@ -5566,13 +5654,13 @@
         <div class="lcars-panel-header"><span class="lcars-panel-title">Table Sync &middot; Room Code</span></div>
         <p style="color:var(--text-dim); margin:0 0 10px; font-size:0.85rem;">Enter a shared room code (e.g. <code>ARTEMIS-1</code>) to sync Momentum, Threat, Ship Stats, and Extended Tasks live with your party.</p>
         <div style="display:flex; gap:8px; margin-bottom:8px;">
-          <input class="lcars-input" id="table-room-input" placeholder="Room Code (e.g. ARTEMIS-1)" style="text-transform:uppercase;" />
+          <input class="lcars-input" id="table-room-input" value="${escapeHtml(tableSyncRoomId)}" oninput="tableSyncRoomId=this.value.toUpperCase()" placeholder="Room Code (e.g. ARTEMIS-1)" style="text-transform:uppercase;" />
         </div>
         <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:10px;">
           <button class="pill-btn" type="button" onclick="const code=document.getElementById('table-room-input').value; if(code) initTablePeer('host', code);">Host Room</button>
           <button class="pill-btn secondary" type="button" onclick="const code=document.getElementById('table-room-input').value; if(code) initTablePeer('join', code);">Join Room</button>
         </div>
-        <div id="table-sync-status" class="reference-meta" style="color:var(--c-ok);">Status: Offline (Independent play)</div>
+        <div id="table-sync-status" class="reference-meta" style="color:var(--c-ok);">${escapeHtml(tableSyncStatusText)}</div>
       </section>
       <div class="settings-grid">
       <section class="lcars-panel">
@@ -5717,50 +5805,50 @@
         container.innerHTML = `
       <div class="lcars-panel">
         <div class="lcars-panel-header">
-          <span class="lcars-panel-title">Starship &middot; <span contenteditable="true" onblur="state.starship.name=this.innerText.trim();saveShipToHangar(state.starship,false);saveLocalState()">${escapeHtml(state.starship.name)}</span> <span contenteditable="true" onblur="state.starship.registry=this.innerText.trim();saveShipToHangar(state.starship,false);saveLocalState()">${escapeHtml(state.starship.registry)}</span></span>
+          <span class="lcars-panel-title">Starship &middot; <span contenteditable="true" onblur="state.starship.name=this.innerText.trim();saveShipToHangar(state.starship,true)">${escapeHtml(state.starship.name)}</span> <span contenteditable="true" onblur="state.starship.registry=this.innerText.trim();saveShipToHangar(state.starship,true)">${escapeHtml(state.starship.registry)}</span></span>
         </div>
 
         <div class="identity-grid" style="margin-bottom:12px;">
           <div class="id-field" style="grid-column:auto; min-height:44px;" data-tip="Spaceframe class.">
             <label>Frame</label>
-            <div class="val" style="font-size:1.05rem; color:var(--text-main);" contenteditable="true" data-dictionary="spaceframes" onblur="state.starship.spaceframe=this.innerText.trim();saveLocalState()">${escapeHtml(state.starship.spaceframe || "Excelsior Class")}</div>
+            <div class="val" style="font-size:1.05rem; color:var(--text-main);" contenteditable="true" data-dictionary="spaceframes" onblur="state.starship.spaceframe=this.innerText.trim();triggerTableSync()">${escapeHtml(state.starship.spaceframe || "Excelsior Class")}</div>
           </div>
           <div class="id-field" data-tip="Starship Mission Profile.">
             <label>Profile</label>
-            <div class="val" contenteditable="true" data-dictionary="mission_profiles" onblur="state.starship.missionProfile=this.innerText.trim();saveLocalState()">${escapeHtml(state.starship.missionProfile || "Multirole Explorer")}</div>
+            <div class="val" contenteditable="true" data-dictionary="mission_profiles" onblur="state.starship.missionProfile=this.innerText.trim();triggerTableSync()">${escapeHtml(state.starship.missionProfile || "Multirole Explorer")}</div>
           </div>
           <div class="id-field" data-tip="Service Record.">
             <label>Record</label>
-            <div class="val" contenteditable="true" data-dictionary="service_records" onblur="state.starship.serviceRecord=this.innerText.trim();saveLocalState()">${escapeHtml(state.starship.serviceRecord || "Standard Commission")}</div>
+            <div class="val" contenteditable="true" data-dictionary="service_records" onblur="state.starship.serviceRecord=this.innerText.trim();triggerTableSync()">${escapeHtml(state.starship.serviceRecord || "Standard Commission")}</div>
           </div>
         </div>
 
         <div class="ship-readouts">
           <div class="lcars-stub-row t3" data-tip="Ship Scale.">
             <span class="stub"></span>
-            <input type="number" class="num" value="${state.starship.scale}" onchange="state.starship.scale=Number(this.value)||0;saveLocalState();renderScene()" />
+            <input type="number" class="num" value="${state.starship.scale}" onchange="state.starship.scale=Number(this.value)||0;triggerTableSync();renderScene()" />
             <span class="lbl">Scale</span>
           </div>
           <div class="lcars-stub-row t2" data-tip="2e Ship Resistance.">
             <span class="stub"></span>
-            <input type="number" class="num" value="${state.starship.resistance}" onchange="state.starship.resistance=Number(this.value)||0;saveLocalState()" />
+            <input type="number" class="num" value="${state.starship.resistance}" onchange="state.starship.resistance=Number(this.value)||0;triggerTableSync()" />
             <span class="lbl">Resist</span>
           </div>
           <div class="lcars-stub-row" data-tip="Shields current / max.">
             <span class="stub"></span>
             <span class="num">
-              <input type="number" value="${state.starship.shieldsCurrent}" onchange="state.starship.shieldsCurrent=Number(this.value)||0;saveLocalState()" />/<input type="number" value="${state.starship.shieldsMax}" onchange="state.starship.shieldsMax=Number(this.value)||0;saveLocalState()" />
+              <input type="number" value="${state.starship.shieldsCurrent}" onchange="state.starship.shieldsCurrent=Number(this.value)||0;triggerTableSync()" />/<input type="number" value="${state.starship.shieldsMax}" onchange="state.starship.shieldsMax=Number(this.value)||0;triggerTableSync()" />
             </span>
             <span class="lbl">Shields</span>
           </div>
           <div class="lcars-stub-row ${state.starship.reservePower ? 't4' : 'alert'}" data-tip="STA 2e Reserve Power (click button to toggle Charged / Expended, or pick system routed to).">
             <span class="stub"></span>
             <button type="button" class="pill-btn ${state.starship.reservePower ? 'ok' : 'alert'}" style="border-radius:0; flex:1; min-height:0; height:100%; font-size:0.86rem;"
-                    onclick="state.starship.reservePower=!state.starship.reservePower;saveLocalState();renderScene()">
+                    onclick="state.starship.reservePower=!state.starship.reservePower;triggerTableSync();renderScene()">
               ${state.starship.reservePower ? "ONLINE" : "SPENT"}
             </button>
             <select class="lcars-select" style="width:94px; min-height:0; height:100%; font-size:0.72rem; padding:0 20px 0 6px;"
-                    onchange="state.starship.reservePowerSystem=this.value;saveLocalState()" data-tip="System receiving Rerouted Reserve Power">
+                    onchange="state.starship.reservePowerSystem=this.value;triggerTableSync()" data-tip="System receiving Rerouted Reserve Power">
               <option value="" ${!state.starship.reservePowerSystem ? "selected" : ""}>UNROUTED</option>
               ${SHIP_SYS_KEYS.map(sys => `<option value="${sys}" ${state.starship.reservePowerSystem === sys ? "selected" : ""}>&rarr; ${sys.toUpperCase()}</option>`).join("")}
             </select>
@@ -5769,7 +5857,7 @@
           <div class="lcars-stub-row t5" data-tip="Crew Support current / max.">
             <span class="stub"></span>
             <span class="num">
-              <input type="number" value="${state.starship.crewSupportCurrent}" onchange="state.starship.crewSupportCurrent=Number(this.value)||0;saveLocalState()" />/<input type="number" value="${state.starship.crewSupportMax}" onchange="state.starship.crewSupportMax=Number(this.value)||0;saveLocalState()" />
+              <input type="number" value="${state.starship.crewSupportCurrent}" onchange="state.starship.crewSupportCurrent=Number(this.value)||0;triggerTableSync()" />/<input type="number" value="${state.starship.crewSupportMax}" onchange="state.starship.crewSupportMax=Number(this.value)||0;triggerTableSync()" />
             </span>
             <span class="lbl">Crew Sup</span>
           </div>
@@ -5790,7 +5878,7 @@
                   <button type="button" class="stat-seg end minus" onclick="stepShipSystem('${s}',-1)">-</button>
                   <span class="stat-seg label">${s}</span>
                   <input type="number" class="stat-seg value" value="${rating}"
-                         onchange="state.starship.systems['${s}']=Number(this.value)||0;saveLocalState();renderScene()" />
+                         onchange="state.starship.systems['${s}']=Number(this.value)||0;triggerTableSync();renderScene()" />
                   <span class="stat-seg cap breach" role="button" data-hold="breach:${s}"
                         onclick="event.stopPropagation();stepShipBreach('${s}',1)"
                         oncontextmenu="event.preventDefault();event.stopPropagation();if(window.lcarsLastPointer!=='touch')stepShipBreach('${s}',-1)">${breaches}</span>
@@ -5808,7 +5896,7 @@
                   <button type="button" class="stat-seg end minus" onclick="stepShipDept('${d}',-1)">-</button>
                   <span class="stat-seg label">${d}</span>
                   <input type="number" class="stat-seg value" value="${state.starship.departments[d]}"
-                         onchange="state.starship.departments['${d}']=Number(this.value)||0;saveLocalState();renderScene()" />
+                         onchange="state.starship.departments['${d}']=Number(this.value)||0;triggerTableSync();renderScene()" />
                   <span class="stat-seg cap" aria-hidden="true"></span>
                   <button type="button" class="stat-seg end plus" onclick="stepShipDept('${d}',1)">+</button>
                 </div>
@@ -5835,9 +5923,9 @@
                   return `
                   <tr>
                     <td contenteditable="true" id="ship-weapon-name-${i}" data-dictionary="starship_weapons" data-dictionary-index="${i}" ${nameTip ? `data-tip="${escapeHtml(nameTip)}"` : ""} onblur="autoMatchStarshipWeapon(${i}, this.innerText.trim())">${escapeHtml(w.name)}</td>
-                    <td contenteditable="true" id="ship-weapon-damage-${i}" onblur="state.starship.weapons[${i}].damage=this.innerText.trim();saveLocalState()">${escapeHtml(w.damage)}</td>
-                    <td contenteditable="true" id="ship-weapon-qualities-${i}" data-dictionary="weapon_qualities" ${qualTip ? `data-tip="${escapeHtml(qualTip)}"` : ""} onblur="state.starship.weapons[${i}].qualities=this.innerText.trim();const qTip=getWeaponQualitiesTooltip(this.innerText.trim());if(qTip)this.setAttribute('data-tip',qTip);else this.removeAttribute('data-tip');saveLocalState()">${escapeHtml(w.qualities)}</td>
-                    <td><button class="del-x" onclick="state.starship.weapons.splice(${i},1);saveLocalState();renderScene()">&times;</button></td>
+                    <td contenteditable="true" id="ship-weapon-damage-${i}" onblur="state.starship.weapons[${i}].damage=this.innerText.trim();triggerTableSync()">${escapeHtml(w.damage)}</td>
+                    <td contenteditable="true" id="ship-weapon-qualities-${i}" data-dictionary="weapon_qualities" ${qualTip ? `data-tip="${escapeHtml(qualTip)}"` : ""} onblur="state.starship.weapons[${i}].qualities=this.innerText.trim();const qTip=getWeaponQualitiesTooltip(this.innerText.trim());if(qTip)this.setAttribute('data-tip',qTip);else this.removeAttribute('data-tip');triggerTableSync()">${escapeHtml(w.qualities)}</td>
+                    <td><button class="del-x" onclick="state.starship.weapons.splice(${i},1);triggerTableSync();renderScene()">&times;</button></td>
                   </tr>
                 `;}).join("")}
               </tbody>
@@ -5850,8 +5938,8 @@
             <div class="tag-list">
               ${state.starship.traits.map((tr, i) => `
                 <span class="editable-tag">
-                  <span contenteditable="true" onblur="state.starship.traits[${i}]=this.innerText.trim();saveLocalState()">${escapeHtml(tr)}</span>
-                  <button class="del-x" onclick="state.starship.traits.splice(${i},1);saveLocalState();renderScene()">×</button>
+                  <span contenteditable="true" onblur="state.starship.traits[${i}]=this.innerText.trim();triggerTableSync()">${escapeHtml(tr)}</span>
+                  <button class="del-x" onclick="state.starship.traits.splice(${i},1);triggerTableSync();renderScene()">×</button>
                 </span>
               `).join("")}
             </div>
@@ -5865,12 +5953,12 @@
             ${state.starship.talents.map((t, i) => `
               <div style="background:#000; padding:8px 4px; margin-bottom:8px; border-bottom:3px solid var(--c-tertiary);">
                 <div style="display:flex; justify-content:space-between; align-items:center;">
-                  <strong contenteditable="true" data-dictionary="talents" data-dictionary-description="ship-talent-desc-${i}" style="color:var(--c-tertiary); font-size:1rem;"
-                          onblur="state.starship.talents[${i}].name=this.innerText.trim();saveLocalState()">${escapeHtml(t.name)}</strong>
-                  <button class="del-x" onclick="state.starship.talents.splice(${i},1);saveLocalState();renderScene()">×</button>
+                  <strong contenteditable="true" data-dictionary="talents" data-dictionary-index="${i}" data-dictionary-description="ship-talent-desc-${i}" style="color:var(--c-tertiary); font-size:1rem;"
+                          onblur="state.starship.talents[${i}].name=this.innerText.trim();triggerTableSync()">${escapeHtml(t.name)}</strong>
+                  <button class="del-x" onclick="state.starship.talents.splice(${i},1);triggerTableSync();renderScene()">×</button>
                 </div>
                 <div contenteditable="true" id="ship-talent-desc-${i}" style="font-size:0.86rem; color:var(--text-main);"
-                     onblur="state.starship.talents[${i}].desc=this.innerText.trim();saveLocalState()">${escapeHtml(t.desc)}</div>
+                     onblur="state.starship.talents[${i}].desc=this.innerText.trim();triggerTableSync()">${escapeHtml(t.desc)}</div>
               </div>
             `).join("")}
           </div>
@@ -5983,14 +6071,14 @@
               <div style="background:#000; padding:10px 4px; border-radius:0; margin-bottom:8px; border-bottom:3px solid var(--c-ok);">
                 <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
                   <strong contenteditable="true" style="font-size:1.05rem; color:var(--c-ok);"
-                          onblur="state.extendedTasks[${idx}].name=this.innerText;saveLocalState()">${t.name}</strong>
-                  <button class="del-x" onclick="state.extendedTasks.splice(${idx},1);saveLocalState();renderScene()">×</button>
+                          onblur="state.extendedTasks[${idx}].name=this.innerText;triggerTableSync()">${t.name}</strong>
+                  <button class="del-x" onclick="state.extendedTasks.splice(${idx},1);triggerTableSync();renderScene()">×</button>
                 </div>
                 <div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center; font-size:0.85rem;">
-                  <span>Work: <input type="number" class="looseleaf-num" value="${t.workCurrent}" onchange="state.extendedTasks[${idx}].workCurrent=Number(this.value);saveLocalState()" /> / <input type="number" class="looseleaf-num" value="${t.workMax}" onchange="state.extendedTasks[${idx}].workMax=Number(this.value);saveLocalState()" /></span>
-                  <span>Magnitude: <input type="number" class="looseleaf-num" value="${t.magnitude}" onchange="state.extendedTasks[${idx}].magnitude=Number(this.value);saveLocalState()" /></span>
-                  <span>Resistance: <input type="number" class="looseleaf-num" value="${t.resistance}" onchange="state.extendedTasks[${idx}].resistance=Number(this.value);saveLocalState()" /></span>
-                  <span>Breakthroughs: <input type="number" class="looseleaf-num" value="${t.breakthroughs}" onchange="state.extendedTasks[${idx}].breakthroughs=Number(this.value);saveLocalState()" /></span>
+                  <span>Work: <input type="number" class="looseleaf-num" value="${t.workCurrent}" onchange="state.extendedTasks[${idx}].workCurrent=Number(this.value);triggerTableSync()" /> / <input type="number" class="looseleaf-num" value="${t.workMax}" onchange="state.extendedTasks[${idx}].workMax=Number(this.value);triggerTableSync()" /></span>
+                  <span>Magnitude: <input type="number" class="looseleaf-num" value="${t.magnitude}" onchange="state.extendedTasks[${idx}].magnitude=Number(this.value);triggerTableSync()" /></span>
+                  <span>Resistance: <input type="number" class="looseleaf-num" value="${t.resistance}" onchange="state.extendedTasks[${idx}].resistance=Number(this.value);triggerTableSync()" /></span>
+                  <span>Breakthroughs: <input type="number" class="looseleaf-num" value="${t.breakthroughs}" onchange="state.extendedTasks[${idx}].breakthroughs=Number(this.value);triggerTableSync()" /></span>
                 </div>
               </div>
             `).join("")}
@@ -6545,13 +6633,15 @@
 
     function stepPool(poolKey, delta) {
       state.pools[poolKey] = (Number(state.pools[poolKey]) || 0) + delta;
-      saveLocalState();
+      if (poolKey === "momentum" || poolKey === "threat") triggerTableSync();
+      else saveLocalState();
       renderTopHeaderAndStats();
     }
 
     function setPool(poolKey, val) {
       state.pools[poolKey] = Number(val) || 0;
-      saveLocalState();
+      if (poolKey === "momentum" || poolKey === "threat") triggerTableSync();
+      else saveLocalState();
     }
 
     function updateBaseStat(group, key, val) {
@@ -6571,19 +6661,19 @@
 
     function stepShipSystem(key, delta) {
       state.starship.systems[key] = Math.max(0, (Number(state.starship.systems[key]) || 0) + delta);
-      saveLocalState();
+      triggerTableSync();
       renderScene();
     }
 
     function stepShipBreach(key, delta) {
       state.starship.breaches[key] = Math.max(0, (Number(state.starship.breaches[key]) || 0) + delta);
-      saveLocalState();
+      triggerTableSync();
       renderScene();
     }
 
     function stepShipDept(key, delta) {
       state.starship.departments[key] = Math.max(0, (Number(state.starship.departments[key]) || 0) + delta);
-      saveLocalState();
+      triggerTableSync();
       renderScene();
     }
 
@@ -6725,21 +6815,21 @@
         damage: `${state.starship.scale + wpnBonus} (Scale ${state.starship.scale} + Wpn Bonus ${wpnBonus})`,
         qualities: "Medium Range, Area or Spread, Versatile 2"
       });
-      saveLocalState();
+      triggerTableSync();
       renderScene();
     }
 
     function addShipTrait() {
       ensureStarship2e();
       state.starship.traits.push("New Ship Trait");
-      saveLocalState();
+      triggerTableSync();
       renderScene();
     }
 
     function addShipTalent() {
       ensureStarship2e();
       state.starship.talents.push({ name: "New Ship Talent", desc: "Click to enter starship talent rules." });
-      saveLocalState();
+      triggerTableSync();
       renderScene();
     }
 
@@ -6773,7 +6863,7 @@
 
     function removeShipFromHangar(idx) {
       state.fleetHangar.splice(idx, 1);
-      saveLocalState();
+      triggerTableSync();
       renderScene();
     }
 
@@ -6894,24 +6984,24 @@
 
     function addExtendedTask() {
       state.extendedTasks.push({ name: "New Extended Task", workCurrent: 0, workMax: 10, magnitude: 3, resistance: 1, breakthroughs: 0 });
-      saveLocalState();
+      triggerTableSync();
       renderScene();
     }
 
     function addSceneTrait() {
       state.sceneTraits.push("New Scene Trait");
-      saveLocalState();
+      triggerTableSync();
       renderScene();
     }
 
     function editSceneTrait(idx, val) {
       state.sceneTraits[idx] = val.trim();
-      saveLocalState();
+      triggerTableSync();
     }
 
     function removeSceneTrait(idx) {
       state.sceneTraits.splice(idx, 1);
-      saveLocalState();
+      triggerTableSync();
       renderScene();
     }
 
