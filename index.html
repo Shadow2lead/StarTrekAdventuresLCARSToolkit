@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Antonio:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Antonio:wght@400;600;700&family=JetBrains+Mono:wght@400;600&family=Michroma&display=swap"
     rel="stylesheet">
   <style>
     /* ==========================================================================
@@ -38,43 +38,46 @@
     [data-theme="nemesis-blue"] {
       --bg: #000000;
       --panel-bg: #000000;
-      --c-primary: #1d85b8;     /* Sovereign Cerulean / Cyan (25835 284 / Lower Elbow) */
-      --c-secondary: #1b4698;   /* Deep Cobalt Navy (Upper Elbow / VECTOR / DELTA V) */
-      --c-tertiary: #36424d;    /* Dark Slate Charcoal (36872-352 / End Blocks) */
-      --c-accent: #a67c46;      /* Muted Ochre / Tan (78356-664 / Divider Pips) */
-      --c-alert: #9e3b24;       /* Terracotta Rust (AUXILIARY SYS / 10-00 Pills) */
-      --c-ok: #9ab4c7;          /* Pale Ice Blue-Grey (TRAJECTORY / Telemetry) */
-      --c-muted: #52759c;       /* Mid Steel Blue */
-      --text-main: #d8e6f2;     /* Cool CRT Ice-White */
-      --text-dim: #52759c;
+      --c-primary: #3c9ee6;     /* Sovereign Sky Cerulean (25835-284 / lower elbow / back-panel arcs) */
+      --c-secondary: #3358d4;   /* Royal Cobalt (TARGETING ARRAY / VECTOR / DELTA V / PRIMARY SYS) */
+      --c-tertiary: #67747f;    /* Slate Charcoal (36872-352 / squared end blocks) */
+      --c-accent: #c9a46f;      /* Sand / Tan (78356-664 / short divider pips) */
+      --c-alert: #b65a3a;       /* Rust Terracotta (AUXILIARY SYS / 10-00 pills) */
+      --c-ok: #c3d6e4;          /* Pale Ice (TRAJECTORY / SENSOR MODE) */
+      --c-muted: #7fa6d6;       /* Sensor-Mode Steel Blue */
+      --text-main: #dde9f5;     /* Cool CRT Ice-White */
+      --text-dim: #7fa6d6;
     }
 
+    /* Lower Decks (Cerritos) palette — sampled from the animated bridge/briefing
+       displays (ENGINEERING, LUNAR DEMOLITION, shuttle front panel): flat orange,
+       amber and butterscotch cel-shaded blocks on a deep navy-indigo screen. */
     [data-theme="lower-decks"] {
-      --c-primary: #ff8833;
-      /* Cerritos Orange */
-      --c-secondary: #ffcc66;
-      /* Butterscotch */
-      --c-tertiary: #cc6699;
-      /* Magenta Plum */
-      --c-accent: #55bbaa;
-      /* Medical Teal */
-      --c-alert: #ee3333;
-      --c-ok: #66cc88;
-      --c-muted: #ffcc99;
+      --bg: #0d0f24;            /* Cerritos screen navy */
+      --panel-bg: #0d0f24;
+      --c-primary: #f2782a;     /* Cerritos Orange (elbows / main bars) */
+      --c-secondary: #f5ae35;   /* Amber Butterscotch (rail blocks / pills) */
+      --c-tertiary: #dc5524;    /* Burnt Red-Orange (deep rail blocks / pill tips) */
+      --c-accent: #ece18e;      /* Pale Lime-Yellow (pips / thin rules / titles) */
+      --c-alert: #ff3b30;
+      --c-ok: #8fd47a;
+      --c-muted: #f7cf82;       /* Light Butterscotch */
+      --text-main: #f4ecc9;     /* Cream title yellow (ENGINEERING / LUNAR DEMOLITION) */
+      --text-dim: #f5ae35;
     }
 
+    /* Voyager (Intrepid) palette — sampled from HYDROTRANSFER SIMULATION 1105,
+       transporter room controls and the bridge rear/tactical consoles */
     [data-theme="voyager"] {
-      --c-primary: #6699cc;
-      /* Intrepid Steel Blue */
-      --c-secondary: #66aaaa;
-      /* Delta Teal */
-      --c-tertiary: #aa88cc;
-      /* Astrometrics Lilac */
-      --c-accent: #dd9955;
-      /* Copper Gold */
-      --c-alert: #cc4444;
-      --c-ok: #77bb99;
-      --c-muted: #99cccc;
+      --c-primary: #8ea6f2;     /* Periwinkle Cornflower (upper elbow / console keys) */
+      --c-secondary: #d99a8b;   /* Dusty Rose / Salmon (lower elbow / rail blocks) */
+      --c-tertiary: #c39ad0;    /* Lilac Mauve (top rail block / short bar segments) */
+      --c-accent: #e9b04f;      /* Butterscotch Gold (rail blocks / square pips) */
+      --c-alert: #f0602a;       /* Transporter Orange square keys */
+      --c-ok: #a4cff2;          /* Pale Sky Blue (status pills) */
+      --c-muted: #bcc1c9;       /* Intrepid Silver-Grey (large console blocks) */
+      --text-main: #f1ece4;
+      --text-dim: #e9b04f;
     }
 
     /* ==========================================================================
@@ -92,11 +95,17 @@
     }
 
     /* Era-specific Red Alert nuances */
+    /* Excelsior "ALERT / CONDITION RED": orange-red bars striped with white,
+       cyan-blue CRT outlines kept, red-orange readout numerals */
     body[data-shape="tmp-era"][data-alert="red"] {
-      --c-primary: #e61919 !important;
-      --c-secondary: #d9d9d9 !important;   /* TMP Red Alert flashing white/silver */
-      --c-tertiary: #7a8a99 !important;
-      --c-accent: #ff9900 !important;
+      --c-primary: #4a8cff !important;     /* Frame outlines stay CRT blue */
+      --c-secondary: #ff4a26 !important;   /* Condition Red bars */
+      --c-tertiary: #f0f0f0 !important;    /* White stripe keys */
+      --c-accent: #ff8a3a !important;
+      --c-ok: #ffd7cc !important;
+      --c-muted: #c2391c !important;
+      --text-main: #ffe4dc !important;
+      --text-dim: #ff6a45 !important;
     }
 
     body[data-shape="picard-v2"][data-alert="red"] {
@@ -107,15 +116,18 @@
       --c-accent: #ff5533 !important;
     }
 
+    /* Nemesis tactical red alert: crimson blocks + pale blush/cream keys, sand pips,
+       burnt-umber end blocks (SHORT-RANGE SCAN 1028 / tactical red alert stills) */
     body[data-shape="nemesis"][data-alert="red"] {
-      --c-primary: #8c1d22 !important;     /* Sovereign Tactical Crimson */
-      --c-secondary: #521217 !important;   /* Deep Dark Burgundy */
-      --c-tertiary: #262e36 !important;    /* Darkened Slate Grey */
-      --c-accent: #8cb4c2 !important;      /* Pale Ice-Cyan Highlight Blocks */
-      --c-alert: #cc2229 !important;       /* Active Alert Red */
-      --c-ok: #d0dce5 !important;          /* Cool White Readout */
-      --c-muted: #6e282d !important;
-      --text-dim: #8cb4c2 !important;
+      --c-primary: #d0303a !important;     /* Sovereign Tactical Crimson */
+      --c-secondary: #b0464c !important;   /* Burgundy Rose (bright enough for black labels) */
+      --c-tertiary: #5a2a1e !important;    /* Burnt Umber end blocks */
+      --c-accent: #d98a3d !important;      /* Alert Amber pips */
+      --c-alert: #ff3b3b !important;       /* Active Alert Red */
+      --c-ok: #ecd9d3 !important;          /* Pale Blush / Cream keys */
+      --c-muted: #c99a96 !important;       /* Dusty Rose */
+      --text-main: #f4e4df !important;
+      --text-dim: #e8a49a !important;
     }
 
     @keyframes lcars-red-alert-pulse {
@@ -136,19 +148,24 @@
       box-shadow: 0 0 10px rgba(255, 30, 30, 0.7);
     }
 
+    /* USS Excelsior bridge (ST VI / VOY "Flashback"): electric-blue outlined CRT
+       frames, phosphor-green and cyan key blocks, lime/yellow markers and green
+       monospace readouts ("SUBSYSTEM STATUS 0587.4"). */
     [data-theme="tmp-era"] {
-      --c-primary: #e69538;     /* Warm Amber / Ochre */
-      --c-secondary: #5c9ead;   /* Cool Slate Cyan */
-      --c-tertiary: #4a7c8c;    /* Deep Telemetry Teal */
-      --c-accent: #d9534f;      /* Monster Maroon / Alert Coral */
-      --c-alert: #ff2a2a;       /* Klaxon Red */
-      --c-ok: #7cc576;          /* CRT Phosphor Green */
-      --c-muted: #9db4c0;       /* Anodized Steel */
+      --c-primary: #2f6dff;     /* Electric Blue frame outlines */
+      --c-secondary: #45d06c;   /* Phosphor Green key blocks */
+      --c-tertiary: #5bb8ef;    /* CRT Cyan key blocks */
+      --c-accent: #c9df4a;      /* Lime-Yellow markers (helm triangles) */
+      --c-alert: #ff4a26;       /* Condition Red orange-red */
+      --c-ok: #8fe8a0;          /* Pale Phosphor Green */
+      --c-muted: #2f9e58;       /* Deep Phosphor Green */
+      --text-main: #cdf5d4;     /* Green-white CRT text */
+      --text-dim: #45d06c;
     }
 
     [data-theme="picard-v2"] {
-      --bg: #050608;            /* Deep 25c OLED Obsidian */
-      --panel-bg: #0a0c10;      /* Smoked glass panel backing */
+      --bg: #12151b;            /* Smoked gunmetal console glass (wells & gaps match it) */
+      --panel-bg: #12151b;
       --c-primary: #e7442a;     /* Picard Orange-Red (Primary / Active) */
       --c-secondary: #6d748c;   /* Gunmetal Slate Grey */
       --c-tertiary: #52596e;    /* Medium-Dark Structural Grey */
@@ -217,89 +234,106 @@
     }
 
     /* --------------------------------------------------------------------------
-       1. LOWER DECKS (CERRITOS PADD) PATTERN OVERRIDE
-       Matches the Lower Decks PADD reference: Teal top-left ACCESS block,
-       matching twin junction elbows, and paired 2-by-2 rail button grouping.
+       1. LOWER DECKS (CERRITOS) PATTERN OVERRIDE
+       LUNAR DEMOLITION briefing display: burnt-orange top block (01-6134),
+       orange elbows with paired thick+thin bars, butterscotch/amber stacked rail
+       blocks (02-4687 / 03-0301 / 04-0606) and pale-yellow pips and rules.
        -------------------------------------------------------------------------- */
     [data-shape="lower-decks"],
     [data-theme="lower-decks"] {
-      --pat-elbow-top:     var(--c-accent);     /* Teal top-left ACCESS block */
-      --pat-elbow-bot:     var(--c-secondary);
-      --pat-junc-top:      var(--c-tertiary);
-      --pat-junc-bot:      var(--c-tertiary);
+      --pat-elbow-top:     var(--c-primary);    /* Orange top-left block (01-6134) */
+      --pat-elbow-bot:     var(--c-secondary);  /* Butterscotch base block (04-0606) */
+      --pat-junc-top:      var(--c-tertiary);   /* Burnt red-orange upper elbow */
+      --pat-junc-bot:      var(--c-primary);    /* Cerritos orange lower elbow */
 
-      --pat-div1-lead:     var(--c-accent);
-      --pat-div1-pip:      var(--c-secondary);
-      --pat-div1-main:     var(--c-accent);     /* Top bar matches ACCESS teal */
-      --pat-div1-cap:      var(--c-secondary);
-
-      --pat-div2-lead:     var(--c-primary);
-      --pat-div2-pip:      var(--c-secondary);
-      --pat-div2-main:     var(--c-primary);    /* Bottom bar Cerritos orange */
-      --pat-div2-cap:      var(--c-secondary);
-
-      --pat-hdr-attr-lbl:  var(--c-secondary);
-      --pat-hdr-attr-tail: var(--c-accent);
-      --pat-hdr-dept-lbl:  var(--c-primary);
-      --pat-hdr-dept-tail: var(--c-tertiary);
-
-      --pat-rail-1:        var(--c-accent);     /* Highlighted 1st button (03 1025 01) */
-      --pat-rail-2:        var(--c-primary);
-      --pat-rail-3:        var(--c-primary);
-      --pat-rail-4:        var(--c-secondary);
-      --pat-rail-5:        var(--c-secondary);
-      --pat-rail-6:        var(--c-tertiary);
-      --pat-rail-7:        var(--c-tertiary);
-      --pat-rail-8:        var(--c-muted);
-      --pat-rail-spacer:   var(--c-tertiary);
-
-      --pat-foot-1:        var(--c-accent);
-      --pat-foot-2:        var(--c-tertiary);
-      --pat-foot-3:        var(--c-secondary);
-      --pat-foot-end:      var(--c-primary);
-    }
-
-    /* --------------------------------------------------------------------------
-       2. VOYAGER (INTREPID-CLASS) PATTERN OVERRIDE
-       Continuous steel-blue/teal structural spine down the left frame, reserving
-       copper-gold (--c-accent) and astrometrics lilac (--c-tertiary) for accents.
-       -------------------------------------------------------------------------- */
-    [data-shape="voyager"],
-    [data-theme="voyager"] {
-      --pat-elbow-top:     var(--c-primary);
-      --pat-junc-top:      var(--c-primary);    /* Continuous steel blue upper spine */
-      --pat-junc-bot:      var(--c-secondary);  /* Transitions to delta teal lower spine */
-      --pat-elbow-bot:     var(--c-secondary);
-
-      --pat-div1-lead:     var(--c-primary);
+      /* Top rule: [amber] [pale-yellow] [orange long] [pale-yellow cap] */
+      --pat-div1-lead:     var(--c-secondary);
       --pat-div1-pip:      var(--c-accent);
       --pat-div1-main:     var(--c-primary);
-      --pat-div1-cap:      var(--c-tertiary);
+      --pat-div1-cap:      var(--c-accent);
 
+      /* Bottom rule: [amber] [pale-yellow] [amber long] [orange cap] */
       --pat-div2-lead:     var(--c-secondary);
       --pat-div2-pip:      var(--c-accent);
       --pat-div2-main:     var(--c-secondary);
-      --pat-div2-cap:      var(--c-accent);
+      --pat-div2-cap:      var(--c-primary);
 
-      --pat-hdr-attr-lbl:  var(--c-primary);
-      --pat-hdr-attr-tail: var(--c-secondary);
-      --pat-hdr-dept-lbl:  var(--c-tertiary);
+      --pat-hdr-attr-lbl:  var(--c-secondary);
+      --pat-hdr-attr-tail: var(--c-tertiary);
+      --pat-hdr-dept-lbl:  var(--c-primary);
       --pat-hdr-dept-tail: var(--c-accent);
 
-      --pat-rail-1:        var(--c-secondary);
-      --pat-rail-2:        var(--c-secondary);
-      --pat-rail-3:        var(--c-tertiary);
+      --pat-rail-1:        var(--c-tertiary);   /* 02-4687 burnt orange */
+      --pat-rail-2:        var(--c-primary);    /* 03-0301 orange */
+      --pat-rail-3:        var(--c-secondary);  /* 04-0606 amber */
       --pat-rail-4:        var(--c-primary);
-      --pat-rail-5:        var(--c-primary);
-      --pat-rail-6:        var(--c-accent);
-      --pat-rail-7:        var(--c-secondary);
-      --pat-rail-8:        var(--c-tertiary);
+      --pat-rail-5:        var(--c-muted);
+      --pat-rail-6:        var(--c-secondary);
+      --pat-rail-7:        var(--c-tertiary);
+      --pat-rail-8:        var(--c-accent);
       --pat-rail-spacer:   var(--c-secondary);
 
       --pat-panel-1-main:  var(--c-primary);
       --pat-panel-1-cap:   var(--c-accent);
       --pat-panel-2-main:  var(--c-secondary);
       --pat-panel-2-cap:   var(--c-tertiary);
+
+      --pat-foot-1:        var(--c-primary);
+      --pat-foot-2:        var(--c-accent);
+      --pat-foot-3:        var(--c-secondary);
+      --pat-foot-end:      var(--c-tertiary);
+    }
+
+    /* --------------------------------------------------------------------------
+       2. VOYAGER (INTREPID-CLASS) PATTERN OVERRIDE
+       HYDROTRANSFER SIMULATION 1105: lilac cap block over a periwinkle upper
+       elbow, dusty-rose lower elbow, gold rail blocks at the base, and divider
+       rules broken by a short gold square pip + lilac/rose short segment.
+       -------------------------------------------------------------------------- */
+    [data-shape="voyager"],
+    [data-theme="voyager"] {
+      --pat-elbow-top:     var(--c-tertiary);   /* Lilac cap block (top-left) */
+      --pat-junc-top:      var(--c-primary);    /* Periwinkle upper elbow */
+      --pat-junc-bot:      var(--c-secondary);  /* Dusty rose lower elbow */
+      --pat-elbow-bot:     var(--c-accent);     /* Gold base block */
+
+      /* Top rule: [gold pip] [lilac short] [periwinkle long] [rose cap] */
+      --pat-div1-lead:     var(--c-accent);
+      --pat-div1-pip:      var(--c-tertiary);
+      --pat-div1-main:     var(--c-primary);
+      --pat-div1-cap:      var(--c-secondary);
+
+      /* Bottom rule: [gold pip] [rose short] [rose long] [gold cap] */
+      --pat-div2-lead:     var(--c-accent);
+      --pat-div2-pip:      var(--c-tertiary);
+      --pat-div2-main:     var(--c-secondary);
+      --pat-div2-cap:      var(--c-accent);
+
+      --pat-hdr-attr-lbl:  var(--c-primary);
+      --pat-hdr-attr-tail: var(--c-tertiary);
+      --pat-hdr-dept-lbl:  var(--c-accent);
+      --pat-hdr-dept-tail: var(--c-secondary);
+
+      /* Rail descends lilac -> periwinkle -> rose -> gold, like the 1105 sidebar */
+      --pat-rail-1:        var(--c-primary);
+      --pat-rail-2:        var(--c-tertiary);
+      --pat-rail-3:        var(--c-secondary);
+      --pat-rail-4:        var(--c-secondary);
+      --pat-rail-5:        var(--c-muted);
+      --pat-rail-6:        var(--c-accent);
+      --pat-rail-7:        var(--c-ok);
+      --pat-rail-8:        var(--c-accent);
+      --pat-rail-spacer:   var(--c-accent);
+
+      --pat-panel-1-main:  var(--c-primary);
+      --pat-panel-1-cap:   var(--c-accent);
+      --pat-panel-2-main:  var(--c-secondary);
+      --pat-panel-2-cap:   var(--c-tertiary);
+
+      --pat-foot-1:        var(--c-secondary);
+      --pat-foot-2:        var(--c-tertiary);
+      --pat-foot-3:        var(--c-accent);
+      --pat-foot-end:      var(--c-primary);
     }
 
     /* --------------------------------------------------------------------------
@@ -315,17 +349,18 @@
       --pat-junc-bot:      var(--c-primary);    /* Cerulean Cyan lower elbow + long arm */
       --pat-elbow-bot:     var(--c-primary);    /* Cerulean bottom anchor (34867-861) */
 
-      /* Top Divider Rule: [Tan Square Pip] [Cerulean Bar] [Muted Bar] [Charcoal End Block] */
-      --pat-div1-lead:     var(--c-accent);     /* Short Ochre/Tan block after elbow */
+      /* Top Divider Rule: [Tan Square Pip] [Cerulean Bar] [Royal Cobalt Bar] [Charcoal End Block] */
+      --pat-div1-lead:     var(--c-accent);     /* Short Sand/Tan block after elbow */
       --pat-div1-pip:      var(--c-primary);    /* Cerulean segment */
-      --pat-div1-main:     var(--c-secondary);  /* Deep Cobalt main bar */
-      --pat-div1-cap:      var(--c-tertiary);   /* Squared-off Dark Slate end block */
+      --pat-div1-main:     var(--c-secondary);  /* Royal Cobalt main bar */
+      --pat-div1-cap:      var(--c-tertiary);   /* Squared-off Slate end block */
 
-      /* Bottom Divider Rule: [Tan Square Pip] [Cobalt Bar] [Cerulean Bar] [Charcoal End Block] */
-      --pat-div2-lead:     var(--c-accent);     /* Short Ochre/Tan block after elbow */
-      --pat-div2-pip:      var(--c-secondary);
+      /* Bottom Divider Rule: [Tan Square Pip] [Pale Ice Bar] [Cerulean Bar] [Charcoal End Block]
+         (INTERNAL SYS SCAN 015: pale bar sits between the tan pip and the long cerulean run) */
+      --pat-div2-lead:     var(--c-accent);     /* Short Sand/Tan block after elbow */
+      --pat-div2-pip:      var(--c-ok);         /* Pale Ice segment */
       --pat-div2-main:     var(--c-primary);    /* Cerulean main bar */
-      --pat-div2-cap:      var(--c-tertiary);   /* Squared-off Dark Slate end block */
+      --pat-div2-cap:      var(--c-tertiary);   /* Squared-off Slate end block */
 
       /* Header Stat Pills */
       --pat-hdr-attr-lbl:  var(--c-secondary);
@@ -333,16 +368,16 @@
       --pat-hdr-dept-lbl:  var(--c-primary);
       --pat-hdr-dept-tail: var(--c-accent);
 
-      /* Left Rail: Matches Nemesis LCARS 6 & 10-02 vertical sequence */
-      --pat-rail-1:        var(--c-primary);    /* 01 Ground: Cerulean Cyan */
-      --pat-rail-2:        var(--c-ok);         /* 02 Space: Pale Ice Grey (TRAJECTORY) */
-      --pat-rail-3:        var(--c-secondary);  /* 03 Social: Deep Cobalt (VECTOR) */
-      --pat-rail-4:        var(--c-accent);     /* 04 Science: Muted Tan/Ochre (78356-664) */
-      --pat-rail-5:        var(--c-tertiary);   /* 05 Personnel: Dark Charcoal (36872-352) */
-      --pat-rail-6:        var(--c-secondary);  /* 06 Logs: Deep Cobalt (46925-579) */
-      --pat-rail-7:        var(--c-alert);      /* 07 Sync: Terracotta Rust (AUXILIARY SYS) */
-      --pat-rail-8:        var(--c-primary);    /* 09 Ref: Cerulean Cyan (34867-861) */
-      --pat-rail-spacer:   var(--c-secondary);
+      /* Left Rail: ROMULAN NEUTRAL ZONE rail (10-02) blended with SYS SCAN 015 (LCARS 6) */
+      --pat-rail-1:        var(--c-secondary);  /* 01 Ground: Royal Cobalt (TARGETING ARRAY) */
+      --pat-rail-2:        var(--c-ok);         /* 02 Space: Pale Ice (TRAJECTORY) */
+      --pat-rail-3:        var(--c-primary);    /* 03 Social: Sky Cerulean (25835-284) */
+      --pat-rail-4:        var(--c-secondary);  /* 04 Science: Royal Cobalt (DELTA V) */
+      --pat-rail-5:        var(--c-muted);      /* 05 Personnel: Steel Blue (SENSOR MODE) */
+      --pat-rail-6:        var(--c-accent);     /* 06 Logs: Sand/Tan (78356-664) */
+      --pat-rail-7:        var(--c-alert);      /* 07 Sync: Rust (AUXILIARY SYS) */
+      --pat-rail-8:        var(--c-tertiary);   /* 08 Ref: Slate (36872-352) */
+      --pat-rail-spacer:   var(--c-primary);    /* Sky Cerulean base block (34867-861) */
 
       /* Panel Brackets: Cerulean & Cobalt instead of TNG Lavender */
       --pat-panel-1-main:  var(--c-primary);
@@ -359,51 +394,51 @@
 
     /* --------------------------------------------------------------------------
        4. TMP / EXCELSIOR ERA PATTERN OVERRIDE
-       23rd-century functional color-coding: Monster Maroon command corner,
-       anodized slate-cyan structural frame, and division-grouped rail blocks.
+       USS Excelsior bridge consoles: electric-blue CRT frame structure, with
+       phosphor-green and cyan key blocks grouped by division and lime markers.
        -------------------------------------------------------------------------- */
     [data-shape="tmp-era"],
     [data-theme="tmp-era"] {
-      --pat-elbow-top:     var(--c-accent);     /* Monster Maroon top-left command block */
-      --pat-junc-top:      var(--c-secondary);
-      --pat-junc-bot:      var(--c-tertiary);
-      --pat-elbow-bot:     var(--c-muted);      /* Anodized steel bottom anchor */
+      --pat-elbow-top:     var(--c-primary);    /* Blue CRT frame corner */
+      --pat-junc-top:      var(--c-primary);
+      --pat-junc-bot:      var(--c-primary);
+      --pat-elbow-bot:     var(--c-primary);
 
-      --pat-div1-lead:     var(--c-primary);
-      --pat-div1-pip:      var(--c-muted);
-      --pat-div1-main:     var(--c-secondary);
-      --pat-div1-cap:      var(--c-primary);
+      --pat-div1-lead:     var(--c-secondary);  /* Green key tab */
+      --pat-div1-pip:      var(--c-accent);     /* Lime marker */
+      --pat-div1-main:     var(--c-primary);    /* Blue frame rule */
+      --pat-div1-cap:      var(--c-tertiary);
 
-      --pat-div2-lead:     var(--c-primary);
-      --pat-div2-pip:      var(--c-muted);
-      --pat-div2-main:     var(--c-tertiary);
-      --pat-div2-cap:      var(--c-accent);
+      --pat-div2-lead:     var(--c-tertiary);   /* Cyan key tab */
+      --pat-div2-pip:      var(--c-secondary);
+      --pat-div2-main:     var(--c-primary);
+      --pat-div2-cap:      var(--c-secondary);
 
       --pat-hdr-attr-lbl:  var(--c-secondary);
       --pat-hdr-attr-tail: var(--c-muted);
-      --pat-hdr-dept-lbl:  var(--c-primary);
-      --pat-hdr-dept-tail: var(--c-accent);
+      --pat-hdr-dept-lbl:  var(--c-tertiary);
+      --pat-hdr-dept-tail: var(--c-primary);
 
-      /* Grouped by functional shipboard division */
-      --pat-rail-1:        var(--c-accent);     /* Ground Combat (Tactical Maroon) */
-      --pat-rail-2:        var(--c-accent);     /* Space Combat (Tactical Maroon) */
-      --pat-rail-3:        var(--c-secondary);  /* Social (Slate Cyan) */
-      --pat-rail-4:        var(--c-secondary);  /* Science (Slate Cyan) */
-      --pat-rail-5:        var(--c-primary);    /* Personnel (Ochre Amber) */
-      --pat-rail-6:        var(--c-primary);    /* Logs (Ochre Amber) */
-      --pat-rail-7:        var(--c-muted);      /* Sync (Anodized Steel) */
-      --pat-rail-8:        var(--c-muted);      /* Reference (Anodized Steel) */
-      --pat-rail-spacer:   var(--c-tertiary);
+      /* Grouped by functional shipboard division, like the helm key banks */
+      --pat-rail-1:        var(--c-secondary);  /* Ground Combat (Green) */
+      --pat-rail-2:        var(--c-secondary);  /* Space Combat (Green) */
+      --pat-rail-3:        var(--c-tertiary);   /* Social (Cyan) */
+      --pat-rail-4:        var(--c-tertiary);   /* Science (Cyan) */
+      --pat-rail-5:        var(--c-ok);         /* Personnel (Pale Green) */
+      --pat-rail-6:        var(--c-ok);         /* Logs (Pale Green) */
+      --pat-rail-7:        var(--c-accent);     /* Sync (Lime) */
+      --pat-rail-8:        var(--c-muted);      /* Reference (Deep Green) */
+      --pat-rail-spacer:   var(--c-primary);
 
-      --pat-panel-1-main:  var(--c-secondary);
-      --pat-panel-1-cap:   var(--c-accent);
-      --pat-panel-2-main:  var(--c-tertiary);
-      --pat-panel-2-cap:   var(--c-primary);
+      --pat-panel-1-main:  var(--c-primary);    /* All CRT frames outline in blue */
+      --pat-panel-1-cap:   var(--c-secondary);
+      --pat-panel-2-main:  var(--c-primary);
+      --pat-panel-2-cap:   var(--c-tertiary);
 
-      --pat-foot-1:        var(--c-tertiary);
-      --pat-foot-2:        var(--c-muted);
+      --pat-foot-1:        var(--c-primary);
+      --pat-foot-2:        var(--c-secondary);
       --pat-foot-3:        var(--c-accent);
-      --pat-foot-end:      var(--c-primary);
+      --pat-foot-end:      var(--c-tertiary);
     }
 
     /* --------------------------------------------------------------------------
@@ -561,7 +596,7 @@
       justify-content: flex-end;
       gap: 2px;
       padding: 0 8px;
-      background: #000;
+      background: var(--bg);
       color: var(--tone);
       border: none;
       font-family: 'Antonio', sans-serif;
@@ -580,7 +615,7 @@
     .lcars-stub-row .num input {
       width: 46px;
       height: 100%;
-      background: #000;
+      background: var(--bg);
       color: var(--tone);
       border: none;
       font-family: 'Antonio', sans-serif;
@@ -721,7 +756,7 @@
       background:
         linear-gradient(90deg,
           transparent 0 calc(100% - 16px),
-          #000 calc(100% - 16px) calc(100% - 12px),
+          var(--bg) calc(100% - 16px) calc(100% - 12px),
           var(--c-primary) calc(100% - 12px)),
         var(--text-main);
       padding-right: 24px;
@@ -820,9 +855,9 @@
       --nem-bevel-display: none;
     }
 
-    /* LOWER DECKS GEOMETRY: Squared ACCESS top block, thicker bars, spoon cutouts */
+    /* LOWER DECKS GEOMETRY: Soft-rounded top block, thicker bars, spoon cutouts */
     [data-shape="lower-decks"] {
-      --tl-elbow-r: 4px;
+      --tl-elbow-r: 22px;
       --bracket-w: 18px;
       --bracket-r: 28px;
       --j-arm-h: 11px;
@@ -839,20 +874,27 @@
       --nem-bevel-display: none;
     }
 
-    /* TMP / EXCELSIOR ERA GEOMETRY: Boxed angular corners, technical telemetry ticks */
+    /* Cel-shaded thin companion line under each panel header (LUNAR DEMOLITION
+       paired bars: a thick amber bar riding over a thin pale-yellow rule) */
+    [data-shape="lower-decks"] .lcars-panel-header {
+      box-shadow: 0 6px 0 -2px var(--bg), 0 8px 0 -2px var(--c-accent);
+    }
+
+    /* TMP / EXCELSIOR ERA GEOMETRY: Rounded-rectangle CRT frames, thin blue frame
+       rules with telemetry ticks, rounded-key corners */
     [data-shape="tmp-era"] {
-      --elbow-r: 6px;
-      --tl-elbow-r: 4px;
-      --elbow-r-inner: 0px;
-      --bracket-w: 10px;
-      --bracket-r: 4px;
-      --j-arm-h: 10px;
-      --j-curve-r: 6px;
-      --j-inner-r: 0px;
-      --j-stub-ext: 12px;
-      --j-top-h: 34px;
-      --j-bot-h: 40px;
-      --j-cap-radius: 2px;
+      --elbow-r: 16px;
+      --tl-elbow-r: 16px;
+      --elbow-r-inner: 8px;
+      --bracket-w: 3px;
+      --bracket-r: 12px;
+      --j-arm-h: 5px;
+      --j-curve-r: 14px;
+      --j-inner-r: 8px;
+      --j-stub-ext: 14px;
+      --j-top-h: 32px;
+      --j-bot-h: 38px;
+      --j-cap-radius: 3px;
       --ld-cutout-display: none;
       --tmp-ticks-display: block;
       --pic-ticks-display: none;
@@ -894,36 +936,35 @@
       bottom: 0;
       width: 54px;
       background: linear-gradient(90deg,
-        #000 0 4px,
+        var(--bg) 0 4px,
         var(--c-accent) 4px 18px,
-        #000 18px 22px,
-        var(--c-secondary) 22px 50px,
-        #000 50px 54px);
+        var(--bg) 18px 22px,
+        var(--c-tertiary) 22px 50px,
+        var(--bg) 50px 54px);
       pointer-events: none;
     }
 
-    /* Intrepid-style stepped rail buttons with right-side telemetry pip */
+    /* Intrepid rail blocks: square blocks with a slim right-side telemetry pip.
+       Inset shadows draw [4px black gap][6px pip] while keeping each slot's
+       --pat-rail-N fill from the positional pattern engine. */
     [data-shape="voyager"] .lcars-rail-btn {
-      border-radius: 10px 0 0 10px;
-      background:
-        linear-gradient(90deg,
-          var(--c-secondary) 0 calc(100% - 10px),
-          #000 calc(100% - 10px) calc(100% - 6px),
-          var(--c-accent) calc(100% - 6px));
-      padding-right: 16px;
+      border-radius: 0;
+      box-shadow: inset -6px 0 0 var(--c-alert), inset -10px 0 0 var(--bg);
+      padding-right: 18px;
     }
     [data-shape="voyager"] .lcars-rail-btn:nth-child(even) {
-      background:
-        linear-gradient(90deg,
-          var(--c-primary) 0 calc(100% - 10px),
-          #000 calc(100% - 10px) calc(100% - 6px),
-          var(--c-tertiary) calc(100% - 6px));
+      box-shadow: inset -6px 0 0 var(--c-accent), inset -10px 0 0 var(--bg);
+    }
+    [data-shape="voyager"] .lcars-rail-btn:nth-child(6),
+    [data-shape="voyager"] .lcars-rail-btn:nth-child(8) {
+      box-shadow: inset -6px 0 0 var(--c-primary), inset -10px 0 0 var(--bg);
     }
     [data-shape="voyager"] .lcars-rail-btn.active {
+      box-shadow: none;
       background:
         linear-gradient(90deg,
           var(--text-main) 0 calc(100% - 16px),
-          #000 calc(100% - 16px) calc(100% - 12px),
+          var(--bg) calc(100% - 16px) calc(100% - 12px),
           var(--c-accent) calc(100% - 12px));
       padding-right: 24px;
     }
@@ -934,7 +975,7 @@
     }
     [data-shape="voyager"] .lcars-panel::after {
       border-bottom-width: 8px;
-      box-shadow: inset 0 -3px 0 #000, inset 0 -5px 0 var(--c-secondary);
+      box-shadow: inset 0 -3px 0 var(--bg), inset 0 -5px 0 var(--c-secondary);
     }
 
     /* =========================================================================
@@ -997,7 +1038,7 @@
       width: 42px;
       background: linear-gradient(
         90deg,
-        #000 0 4px,
+        var(--bg) 0 4px,
         var(--c-tertiary) 4px 42px
       );
       pointer-events: none;
@@ -1009,11 +1050,11 @@
       color: #000;
     }
 
-    /* Darker Cobalt/Charcoal rail buttons use bright Ice-White text for crisp legibility */
-    [data-shape="nemesis"][data-theme="nemesis-blue"] .lcars-rail-btn:nth-child(3),
-    [data-shape="nemesis"][data-theme="nemesis-blue"] .lcars-rail-btn:nth-child(5),
-    [data-shape="nemesis"][data-theme="nemesis-blue"] .lcars-rail-btn:nth-child(6),
-    [data-shape="nemesis"][data-theme="nemesis-blue"] .lcars-rail-btn:nth-child(7) {
+    /* Royal Cobalt / Slate / Rust rail buttons use bright Ice-White text for crisp legibility */
+    [data-shape="nemesis"][data-theme="nemesis-blue"] .lcars-rail-btn:nth-child(1),
+    [data-shape="nemesis"][data-theme="nemesis-blue"] .lcars-rail-btn:nth-child(4),
+    [data-shape="nemesis"][data-theme="nemesis-blue"] .lcars-rail-btn:nth-child(7),
+    [data-shape="nemesis"][data-theme="nemesis-blue"] .lcars-rail-btn:nth-child(8) {
       color: var(--text-main);
     }
 
@@ -1021,7 +1062,7 @@
       background:
         linear-gradient(90deg,
           transparent 0 calc(100% - 16px),
-          #000 calc(100% - 16px) calc(100% - 12px),
+          var(--bg) calc(100% - 16px) calc(100% - 12px),
           var(--c-accent) calc(100% - 12px)),
         var(--text-main) !important;
       color: #000 !important;
@@ -1033,9 +1074,9 @@
       border-radius: 16px 0 0 0;
       background: linear-gradient(90deg,
         var(--tone) 0 calc(100% - 88px),
-        #000 calc(100% - 88px) calc(100% - 84px),
+        var(--bg) calc(100% - 88px) calc(100% - 84px),
         var(--c-accent) calc(100% - 84px) calc(100% - 56px),
-        #000 calc(100% - 56px) calc(100% - 52px),
+        var(--bg) calc(100% - 56px) calc(100% - 52px),
         var(--c-tertiary) calc(100% - 52px));
     }
 
@@ -1046,15 +1087,21 @@
     /* Subtle Enterprise-E Astrometrics / Tactical Blue Grid in the main workspace (LCARS 10-00 & 10-02) */
     [data-shape="nemesis"] .main-workspace {
       background-image:
-        linear-gradient(rgba(29, 133, 184, 0.07) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(29, 133, 184, 0.07) 1px, transparent 1px);
+        linear-gradient(rgba(51, 88, 212, 0.11) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(51, 88, 212, 0.11) 1px, transparent 1px);
       background-size: 40px 40px;
     }
 
     body[data-shape="nemesis"][data-alert="red"] .main-workspace {
       background-image:
-        linear-gradient(rgba(140, 29, 34, 0.09) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(140, 29, 34, 0.09) 1px, transparent 1px);
+        linear-gradient(rgba(184, 38, 44, 0.10) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(184, 38, 44, 0.10) 1px, transparent 1px);
+    }
+
+    /* Sovereign scan-title treatment: panel titles read like "INTERNAL SYS SCAN 015" */
+    [data-shape="nemesis"] .lcars-panel-title {
+      letter-spacing: 0.04em;
+      font-size: 1.18rem;
     }
 
     /* Footer bar ends with a squared-off Sovereign block instead of a round pill */
@@ -1099,15 +1146,7 @@
 
     /* Inner parallel hairline along the vertical bracket leg */
     [data-shape="picard-v2"] .lcars-panel::before {
-      box-shadow: 3px 0 0 #000, 5px 0 0 var(--c-tertiary);
-    }
-
-    /* Double-track inner pin-stripe on left junction elbows */
-    [data-shape="picard-v2"] .junction-elbow.top::after {
-      box-shadow: -2px 2px 0 #000, -4px 4px 0 var(--c-primary);
-    }
-    [data-shape="picard-v2"] .junction-elbow.bottom::after {
-      box-shadow: -2px -2px 0 #000, -4px -4px 0 var(--c-primary);
+      box-shadow: 3px 0 0 var(--bg), 5px 0 0 var(--c-tertiary);
     }
 
     /* Picard S2/S3 Stargazer Header & Title Blocks */
@@ -1117,9 +1156,9 @@
       border-radius: 4px 4px 4px 0 !important;
       background: linear-gradient(90deg,
         var(--tone) 0 calc(100% - 76px),
-        #000 calc(100% - 76px) calc(100% - 72px),
+        var(--bg) calc(100% - 76px) calc(100% - 72px),
         var(--c-primary) calc(100% - 72px) calc(100% - 64px),
-        #000 calc(100% - 64px) calc(100% - 60px),
+        var(--bg) calc(100% - 64px) calc(100% - 60px),
         var(--tone-2) calc(100% - 60px));
     }
 
@@ -1141,7 +1180,7 @@
       background:
         linear-gradient(90deg,
           var(--c-primary) 0 6px,
-          #000 6px 10px,
+          var(--bg) 6px 10px,
           var(--c-tertiary) 10px 100%);
       color: var(--text-main);
       border-radius: 0 4px 4px 0;
@@ -1151,7 +1190,7 @@
       background:
         linear-gradient(90deg,
           var(--c-accent) 0 6px,
-          #000 6px 10px,
+          var(--bg) 6px 10px,
           var(--c-secondary) 10px 100%);
       color: #000;
     }
@@ -1160,9 +1199,9 @@
       background:
         linear-gradient(90deg,
           var(--text-main) 0 6px,
-          #000 6px 10px,
+          var(--bg) 6px 10px,
           var(--c-primary) 10px calc(100% - 16px),
-          #000 calc(100% - 16px) calc(100% - 12px),
+          var(--bg) calc(100% - 16px) calc(100% - 12px),
           var(--text-main) calc(100% - 12px));
       color: #000;
     }
@@ -1224,7 +1263,7 @@
 
     /* Outlined / hollow gunmetal control pills (unselected state) */
     [data-shape="picard-v2"] .stat-pill:not(.selected) {
-      background: #090b10;
+      background: var(--bg);
       box-shadow: inset 0 0 0 1px var(--c-secondary);
       border-radius: 4px;
     }
@@ -1283,9 +1322,9 @@
       background: repeating-linear-gradient(
         90deg,
         var(--c-primary) 0 2px,
-        #000 2px 5px,
+        var(--bg) 2px 5px,
         var(--c-accent) 5px 6px,
-        #000 6px 10px
+        var(--bg) 6px 10px
       );
       pointer-events: none;
     }
@@ -1395,6 +1434,34 @@
       min-width: 0;
     }
 
+    /* Hug the crossbar: the junction elbows reach up into the Options row and down
+       into the rail row (both trimmed to make room), so the divider row is only
+       as tall as the two bars and the header/workspace sit one gutter away. */
+    @media (min-width: 761px) {
+      .frame-elbow-top {
+        min-height: calc(var(--top-bar) - (var(--j-top-h) - var(--j-arm-h)));
+        margin-bottom: calc(var(--j-top-h) - var(--j-arm-h));
+      }
+
+      .lcars-divider-junction {
+        margin-top: calc(-1 * (var(--j-top-h) - var(--j-arm-h)));
+        margin-bottom: calc(-1 * (var(--j-bot-h) - var(--j-arm-h)));
+      }
+
+      .lcars-header-divider {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+
+      .lcars-header-bar {
+        flex: 1 1 auto;
+      }
+
+      .lcars-sidebar {
+        margin-top: calc(var(--j-bot-h) - var(--j-arm-h));
+      }
+    }
+
     .lcars-header-divider .rule {
       position: relative;
       display: flex;
@@ -1434,7 +1501,7 @@
       left: 18%;
       right: 0;
       height: 55%;
-      background: #000;
+      background: var(--bg, #000);
       pointer-events: none;
     }
     .top-rule .ld-cutout { bottom: 0; }
@@ -1446,7 +1513,7 @@
       left: -8px;
       width: 12px;
       height: 8px;
-      background: #000;
+      background: var(--bg, #000);
       border-radius: 999px;
     }
     .top-rule .ld-cutout::before { bottom: 0; }
@@ -1460,12 +1527,12 @@
       background: repeating-linear-gradient(
         90deg,
         transparent 0 14px,
-        #000 14px 18px
+        var(--bg) 14px 18px
       );
       pointer-events: none;
     }
 
-    /* TMP Era Broader Component Shape Overrides (Boxed / Chamfered) */
+    /* TMP Era Broader Component Shape Overrides (Excelsior rounded console keys) */
     [data-shape="tmp-era"] .lcars-cap-l,
     [data-shape="tmp-era"] .lcars-cap-r,
     [data-shape="tmp-era"] .pill-btn,
@@ -1486,8 +1553,10 @@
     [data-shape="tmp-era"] .lcars-footer-bar .seg.end,
     [data-shape="tmp-era"] .lcars-stub-row .stub,
     [data-shape="tmp-era"] .lcars-opt-btn,
-    [data-shape="tmp-era"] .lcars-shape-chip {
-      border-radius: 2px !important;
+    [data-shape="tmp-era"] .lcars-shape-chip,
+    [data-shape="tmp-era"] .lcars-rail-btn,
+    [data-shape="tmp-era"] .lcars-rail-spacer {
+      border-radius: 6px !important;
     }
 
     [data-shape="tmp-era"] .lcars-panel-header::after {
@@ -1500,6 +1569,65 @@
     [data-shape="tmp-era"] .lcars-header-data {
       font-family: 'JetBrains Mono', monospace;
       letter-spacing: 0.04em;
+    }
+
+    /* Excelsior CRT frames: panels become thin blue rounded-rectangle outlines
+       (no LCARS C-bracket) with an outlined title strip, as on the bridge
+       "SUBSYSTEM STATUS" monitors and helm panels. */
+    [data-shape="tmp-era"] .lcars-panel {
+      border: 2px solid var(--tone);
+      border-radius: 12px;
+      padding: 0 12px 14px;
+      box-shadow: inset 0 0 22px color-mix(in srgb, var(--tone) 14%, transparent);
+    }
+
+    [data-shape="tmp-era"] .lcars-panel::before,
+    [data-shape="tmp-era"] .lcars-panel::after {
+      display: none;
+    }
+
+    [data-shape="tmp-era"] .lcars-panel-header,
+    [data-shape="tmp-era"] .lcars-panel-header:has(> .header-endcap) {
+      margin: 0 -12px 14px;
+      padding: 0 0 0 14px;
+      min-height: 42px;
+      background: transparent;
+      border-bottom: 2px solid var(--tone);
+      border-radius: 10px 10px 0 0 !important;
+    }
+
+    /* Rail filler reads as an empty outlined CRT bay rather than a solid slab */
+    [data-shape="tmp-era"] .lcars-rail-spacer {
+      background: transparent;
+      border: 2px solid var(--pat-rail-spacer);
+      color: var(--pat-rail-spacer);
+    }
+
+    [data-shape="tmp-era"] .lcars-panel-title {
+      color: var(--c-secondary);
+      font-family: 'Michroma', 'Antonio', sans-serif;
+      font-size: 0.9rem;
+      letter-spacing: 0.1em;
+      padding-right: 12px;
+    }
+
+    [data-shape="tmp-era"] .header-endcap {
+      align-self: center;
+      min-height: 30px;
+      margin: 0 8px 0 4px;
+      box-shadow: none;
+    }
+
+    /* Faint CRT scanlines across the workspace */
+    [data-shape="tmp-era"] .main-workspace {
+      background-image: repeating-linear-gradient(0deg,
+        rgba(47, 109, 255, 0.05) 0 1px,
+        transparent 1px 3px);
+    }
+
+    [data-shape="tmp-era"] .frame-elbow-top .opt-title,
+    [data-shape="tmp-era"] .lcars-rail-btn {
+      letter-spacing: 0.08em;
     }
 
     .hdr-stat {
@@ -1539,7 +1667,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background: #000;
+      background: var(--bg);
       color: var(--c-accent);
       font-family: 'Antonio', sans-serif;
       font-size: 1.1rem;
@@ -1555,7 +1683,7 @@
 
     .hdr-stat .gap {
       flex: 0 0 3px;
-      background: #000;
+      background: var(--bg);
     }
 
     .hdr-stat .tail {
@@ -1628,7 +1756,7 @@
       display: flex;
       align-items: stretch;
       min-width: 0;
-      background: #000;
+      background: var(--bg);
       border-radius: 0 999px 999px 0;
       overflow: hidden;
     }
@@ -1888,7 +2016,7 @@
       background:
         linear-gradient(90deg,
           transparent 0 calc(100% - 16px),
-          #000 calc(100% - 16px) calc(100% - 12px),
+          var(--bg) calc(100% - 16px) calc(100% - 12px),
           var(--c-primary) calc(100% - 12px)),
         var(--text-main);
       padding-right: 24px;
@@ -1922,7 +2050,7 @@
       overscroll-behavior: contain;
       -webkit-overflow-scrolling: touch;
       scrollbar-width: thin;
-      scrollbar-color: var(--c-secondary) #000;
+      scrollbar-color: var(--c-secondary) var(--bg);
       padding: 6px 8px 16px 16px;
     }
 
@@ -2025,7 +2153,7 @@
       --tone: var(--c-primary);
       --tone-2: var(--c-secondary);
       position: relative;
-      background: #000;
+      background: var(--bg);
       border: none;
       border-radius: 0;
       padding: 0 0 22px calc(var(--bracket-w) + 12px);
@@ -2089,7 +2217,7 @@
       padding: 2px 78px 2px 30px;
       background: linear-gradient(90deg,
           var(--tone) 0 calc(100% - 64px),
-          #000 calc(100% - 64px) calc(100% - 60px),
+          var(--bg) calc(100% - 64px) calc(100% - 60px),
           var(--tone-2) calc(100% - 60px));
       border: none;
       border-radius: var(--bracket-r) 24px 24px 0;
@@ -2144,7 +2272,7 @@
       border-radius: 0 24px 24px 0;
       background: var(--tone-2);
       color: #000;
-      box-shadow: -4px 0 0 #000;
+      box-shadow: -4px 0 0 var(--bg);
       font-family: inherit;
       font-size: 0.82rem;
       font-weight: 700;
@@ -2158,7 +2286,7 @@
     }
 
     .lcars-panel-header .pill-btn.ghost {
-      background: #000;
+      background: var(--bg);
       color: var(--tone);
     }
 
@@ -2208,7 +2336,7 @@
     }
 
     .pill-btn.ghost {
-      background: #000;
+      background: var(--bg);
       color: var(--c-primary);
       border: none;
     }
@@ -2235,7 +2363,7 @@
       max-height: 13rem;
       overflow-y: auto;
       min-width: 13rem;
-      background: #000;
+      background: var(--bg);
       border: 2px solid var(--c-secondary);
       box-shadow: 4px 4px 0 var(--c-primary);
     }
@@ -2250,7 +2378,7 @@
       border: 0;
       border-bottom: 1px solid #303030;
       padding: 6px 9px;
-      background: #000;
+      background: var(--bg);
       color: var(--text-main);
       font: inherit;
       font-size: 0.84rem;
@@ -2273,7 +2401,7 @@
 
     .theme-card,
     .reference-entry {
-      background: #000;
+      background: var(--bg);
       border-left: 8px solid var(--c-secondary);
       padding: 10px 12px;
     }
@@ -2435,7 +2563,7 @@
     }
 
     input.looseleaf-num {
-      background: #000;
+      background: var(--bg);
       color: var(--c-accent);
       border: none;
       border-radius: 0;
@@ -2498,7 +2626,7 @@
       gap: var(--gutter);
       min-height: 44px;
       min-width: 0;
-      background: #000;
+      background: var(--bg);
       border: none;
       padding: 0;
     }
@@ -2578,7 +2706,7 @@
     }
 
     .portrait-card {
-      background: #000;
+      background: var(--bg);
       border: 2px solid var(--c-secondary);
       border-radius: 0 var(--bracket-r) 0 var(--bracket-r);
       display: flex;
@@ -2614,7 +2742,7 @@
     .portrait-actions {
       display: flex;
       gap: 2px;
-      background: #000;
+      background: var(--bg);
       border-top: 2px solid var(--c-secondary);
     }
 
@@ -2752,7 +2880,7 @@
     input.stat-seg.value {
       flex: 0 0 46px;
       width: 46px;
-      background: #000;
+      background: var(--bg);
       color: var(--c-accent);
       font-family: 'Antonio', sans-serif;
       font-size: 1.85rem;
@@ -2816,7 +2944,7 @@
       display: flex;
       align-items: center;
       gap: 2px;
-      background: #000;
+      background: var(--bg);
       padding: 0 2px;
       height: 100%;
     }
@@ -2977,7 +3105,7 @@
     }
 
     .hangar-card {
-      background: #000;
+      background: var(--bg);
       border-left: 10px solid var(--c-tertiary);
       padding: 8px 10px;
       display: flex;
@@ -3050,7 +3178,7 @@
       min-width: 88px;
       min-height: 44px;
       padding: 0 14px;
-      background: #000;
+      background: var(--bg);
       color: var(--c-ok);
       border: 4px solid var(--c-ok);
       border-radius: 0 999px 999px 0;
@@ -3109,7 +3237,7 @@
 
     .roll-card {
       position: relative;
-      background: #000;
+      background: var(--bg);
       border: none;
       border-radius: 0;
       padding: 0 0 14px;
@@ -3128,9 +3256,9 @@
       height: 6px;
       background: linear-gradient(90deg,
           var(--c-secondary) 0 62%,
-          #000 62% calc(62% + 4px),
+          var(--bg) 62% calc(62% + 4px),
           var(--c-tertiary) calc(62% + 4px) 84%,
-          #000 84% calc(84% + 4px),
+          var(--bg) 84% calc(84% + 4px),
           var(--c-accent) calc(84% + 4px));
     }
 
@@ -3251,7 +3379,7 @@
       align-items: center;
       justify-content: space-between;
       gap: 8px;
-      background: #000;
+      background: var(--bg);
       padding: 6px 4px 6px 12px;
       border: none;
       border-left: 12px solid var(--c-secondary);
@@ -3354,14 +3482,14 @@
     }
 
     .ref-table td+td {
-      border-left: var(--gutter) solid #000;
+      border-left: var(--gutter) solid var(--bg);
     }
 
     textarea.lcars-textarea,
     input.lcars-input,
     select.lcars-select {
       width: 100%;
-      background: #000;
+      background: var(--bg);
       color: var(--text-main);
       border: none;
       border-left: 10px solid var(--c-primary);
@@ -3396,7 +3524,7 @@
     }
 
     select.lcars-select option {
-      background: #000;
+      background: var(--bg);
       color: var(--text-main);
     }
 
@@ -5619,7 +5747,7 @@
           </table>
           <div style="margin-top:10px; font-size:0.9rem;">
             <strong style="color:var(--c-alert);">Active Injuries / Scars / Conditions:</strong>
-            <div contenteditable="true" style="margin-top:4px; padding:6px; background:#000;"
+            <div contenteditable="true" style="margin-top:4px; padding:6px; background:var(--bg);"
                  onblur="state.character.injuriesAndScars=this.innerText;saveLocalState()">${state.character.injuriesAndScars}</div>
           </div>
         </div>
@@ -5807,7 +5935,7 @@
               <button type="button" class="header-endcap" onclick="addShipTalent()">Add</button>
             </div>
             ${state.starship.talents.map((t, i) => `
-              <div style="background:#000; padding:8px 4px; margin-bottom:8px; border-bottom:3px solid var(--c-tertiary);">
+              <div style="background:var(--bg); padding:8px 4px; margin-bottom:8px; border-bottom:3px solid var(--c-tertiary);">
                 <div style="display:flex; justify-content:space-between; align-items:center;">
                   <strong contenteditable="true" data-dictionary="talents" data-dictionary-index="${i}" data-dictionary-description="ship-talent-desc-${i}" style="color:var(--c-tertiary); font-size:1rem;"
                           onblur="state.starship.talents[${i}].name=this.innerText.trim();triggerTableSync()">${escapeHtml(t.name)}</strong>
@@ -5924,7 +6052,7 @@
               <button type="button" class="header-endcap" onclick="addExtendedTask()" data-tip="Add an extended task track.">Add</button>
             </div>
             ${state.extendedTasks.map((t, idx) => `
-              <div style="background:#000; padding:10px 4px; border-radius:0; margin-bottom:8px; border-bottom:3px solid var(--c-ok);">
+              <div style="background:var(--bg); padding:10px 4px; border-radius:0; margin-bottom:8px; border-bottom:3px solid var(--c-ok);">
                 <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
                   <strong contenteditable="true" style="font-size:1.05rem; color:var(--c-ok);"
                           onblur="state.extendedTasks[${idx}].name=this.innerText;triggerTableSync()">${t.name}</strong>
@@ -6068,7 +6196,7 @@
             <button type="button" class="header-endcap" onclick="addTalent()" data-tip="Add a talent.">Add</button>
           </div>
           ${state.character.talents.map((t, i) => `
-            <div style="background:#000; padding:8px 4px; border-radius:0; margin-bottom:8px; border-bottom:3px solid var(--c-primary);">
+            <div style="background:var(--bg); padding:8px 4px; border-radius:0; margin-bottom:8px; border-bottom:3px solid var(--c-primary);">
               <div style="display:flex; justify-content:space-between;">
                 <strong contenteditable="true" data-dictionary="talents" data-dictionary-index="${i}" data-dictionary-description="talent-description-${i}" style="color:var(--c-primary); font-size:1.02rem;"
                         onblur="updateCharacterTalent(${i}, 'name', this.innerText)">${t.name}</strong>
@@ -6156,7 +6284,7 @@
           </div>
           <div style="max-height:520px; overflow-y:auto;">
             ${state.logs.map((l, i) => `
-              <div style="background:#000; padding:10px 4px; border-radius:0; margin-bottom:10px; border-bottom:3px solid var(--c-primary);">
+              <div style="background:var(--bg); padding:10px 4px; border-radius:0; margin-bottom:10px; border-bottom:3px solid var(--c-primary);">
                 <div style="display:flex; justify-content:space-between; align-items:center;">
                   <strong style="color:var(--c-primary); font-size:1.05rem;">
                     SD <span contenteditable="true" onblur="state.logs[${i}].stardate=this.innerText.replace(/^SD\\s*/i, '').trim();saveLocalState();renderTopHeaderAndStats()">${l.stardate}</span> •
