@@ -1507,12 +1507,17 @@
     .lcars-header-divider .bot-rule .d-seg-cap  { background: var(--pat-div2-cap); }
 
     /* Dormant Block 1: Lower Decks "Spoon / Keyhole" Notch Cutouts */
+    /* The two notches plus the gutter between the rules read as one dark band, so
+       they share a single rounded endcap: one semicircle centred in the gutter,
+       with each rule drawing its own half (the rule segments clip overflow). */
     .ld-cutout {
+      --ld-cut-h: calc(var(--j-arm-h) * 0.55);
+      --ld-cap-r: calc(var(--ld-cut-h) + var(--gutter) / 2);
       display: var(--ld-cutout-display);
       position: absolute;
       left: 18%;
       right: 0;
-      height: 55%;
+      height: var(--ld-cut-h);
       background: var(--bg, #000);
       pointer-events: none;
     }
@@ -1522,14 +1527,19 @@
     .ld-cutout::before {
       content: "";
       position: absolute;
-      left: -8px;
-      width: 12px;
-      height: 8px;
-      background: var(--bg, #000);
-      border-radius: 999px;
+      top: 0;
+      left: calc(-1 * var(--ld-cap-r));
+      width: var(--ld-cap-r);
+      height: 100%;
     }
-    .top-rule .ld-cutout::before { bottom: 0; }
-    .bot-rule .ld-cutout::before { top: 0; }
+    .top-rule .ld-cutout::before {
+      background: radial-gradient(circle at 100% calc(100% + var(--gutter) / 2),
+        var(--bg, #000) calc(var(--ld-cap-r) - 0.5px), transparent var(--ld-cap-r));
+    }
+    .bot-rule .ld-cutout::before {
+      background: radial-gradient(circle at 100% calc(var(--gutter) / -2),
+        var(--bg, #000) calc(var(--ld-cap-r) - 0.5px), transparent var(--ld-cap-r));
+    }
 
     /* Dormant Block 2: TMP Era Segmented Telemetry Ticks */
     .tmp-ticks {
