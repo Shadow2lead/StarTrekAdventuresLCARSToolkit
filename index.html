@@ -468,6 +468,18 @@
       --pat-hdr-dept-lbl:  var(--c-secondary);
       --pat-hdr-dept-tail: var(--c-accent);
 
+      /* Rail: gunmetal alternation (otherwise these inherit Classic colours
+         resolved on :root, e.g. a periwinkle spacer block) */
+      --pat-rail-1:        var(--c-tertiary);
+      --pat-rail-2:        var(--c-secondary);
+      --pat-rail-3:        var(--c-tertiary);
+      --pat-rail-4:        var(--c-secondary);
+      --pat-rail-5:        var(--c-tertiary);
+      --pat-rail-6:        var(--c-secondary);
+      --pat-rail-7:        var(--c-tertiary);
+      --pat-rail-8:        var(--c-secondary);
+      --pat-rail-spacer:   var(--c-tertiary);
+
       --pat-panel-1-main:  var(--c-secondary);
       --pat-panel-1-cap:   var(--c-primary);
       --pat-panel-2-main:  var(--c-tertiary);
@@ -1606,7 +1618,9 @@
     [data-shape="tmp-era"] .lcars-panel-title {
       color: var(--c-secondary);
       font-family: 'Michroma', 'Antonio', sans-serif;
-      font-size: 0.9rem;
+      font-size: clamp(0.72rem, 1.5cqi, 0.9rem);
+      flex: 1 1 0;
+      min-width: 0;
       letter-spacing: 0.1em;
       padding-right: 12px;
     }
@@ -2010,6 +2024,8 @@
     .lcars-rail-btn:nth-child(6) { background: var(--pat-rail-6); }
     .lcars-rail-btn:nth-child(7) { background: var(--pat-rail-7); }
     .lcars-rail-btn:nth-child(8) { background: var(--pat-rail-8); }
+    /* Personnel Record shares the Personnel Summary colour until it replaces it */
+    .lcars-rail-btn:nth-child(9) { background: var(--pat-rail-9, var(--pat-rail-5)); }
 
     /* Active scene: bright block plus a notch stub on the content edge */
     .lcars-rail-btn.active {
@@ -3373,6 +3389,321 @@
       margin-top: 4px;
     }
 
+    /* ==========================================================================
+       PERSONNEL RECORD
+       Keyboard fields read as free text on the screen (no button chrome), like
+       on-screen Starfleet records; only touch-stepped numbers use LCARS pills.
+       ========================================================================== */
+    .rec-masthead {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 4px 16px;
+      padding: 0 4px 2px;
+    }
+
+    .rec-masthead-org {
+      color: var(--text-dim);
+      font-size: 0.74rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .rec-masthead-title {
+      margin-left: auto;
+      color: var(--c-primary);
+      font-size: clamp(1.4rem, 3.4cqi, 2.2rem);
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      line-height: 1;
+      text-align: right;
+    }
+
+    .rec-serial {
+      color: var(--text-main);
+      outline: none;
+      border-bottom: 2px solid transparent;
+    }
+
+    .rec-serial:focus {
+      border-bottom-color: var(--c-primary);
+    }
+
+    .rec-identity {
+      display: grid;
+      grid-template-columns: 190px minmax(0, 1fr);
+      gap: 18px;
+      align-items: start;
+    }
+
+    @container workspace (max-width: 620px) {
+      .rec-identity {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    /* The portrait frame itself is the image picker */
+    .rec-portrait-pick {
+      display: flex;
+      flex-direction: column;
+      height: 236px;
+      cursor: pointer;
+    }
+
+    .rec-portrait-pick img {
+      height: 100%;
+    }
+
+    .rec-portrait:has(.portrait-actions) .rec-portrait-pick {
+      height: 212px;
+    }
+
+    .rec-portrait-pick:hover .portrait-placeholder,
+    .rec-portrait-pick:focus-within .portrait-placeholder {
+      color: var(--c-secondary);
+    }
+
+    .rec-fields {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 4px 22px;
+      align-content: start;
+    }
+
+    .rec-row {
+      display: grid;
+      grid-template-columns: 8em minmax(0, 1fr);
+      align-items: baseline;
+      gap: 10px;
+      min-width: 0;
+    }
+
+    .rec-row.wide {
+      grid-column: 1 / -1;
+    }
+
+    .rec-fields-sub,
+    .rec-fields > .rec-history {
+      grid-column: 1 / -1;
+    }
+
+    .rec-fields-sub {
+      margin-top: 10px;
+    }
+
+    /* Service history values run longer, so they get two wider columns */
+    .rec-history {
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    }
+
+    .rec-lbl {
+      color: var(--text-dim);
+      font-size: 0.74rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    /* Free text field: bare text on the screen, a hairline appears only on hover/focus */
+    .rec-val {
+      min-height: 32px;
+      padding: 4px 4px 3px;
+      color: var(--text-main);
+      font-size: 1.02rem;
+      line-height: 1.35;
+      letter-spacing: 0.04em;
+      border-bottom: 1px solid color-mix(in srgb, var(--text-dim) 30%, transparent);
+      outline: none;
+      overflow-wrap: anywhere;
+      cursor: text;
+    }
+
+    .rec-val:hover {
+      border-bottom-color: color-mix(in srgb, var(--c-secondary) 70%, transparent);
+    }
+
+    .rec-val:focus {
+      border-bottom-color: var(--c-primary);
+      background: color-mix(in srgb, var(--c-primary) 9%, transparent);
+    }
+
+    .rec-val:empty::before {
+      content: attr(data-placeholder);
+      color: color-mix(in srgb, var(--text-dim) 60%, transparent);
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+    }
+
+    .rec-val.big {
+      color: var(--c-primary);
+      font-size: 1.7rem;
+      font-weight: 700;
+      line-height: 1.1;
+      text-transform: uppercase;
+    }
+
+    .rec-val.rec-para {
+      font-size: 0.92rem;
+      line-height: 1.45;
+      white-space: pre-wrap;
+    }
+
+    .rec-sub {
+      margin: 14px 0 4px;
+      color: var(--c-primary);
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .rec-sub:first-of-type {
+      margin-top: 2px;
+    }
+
+    .rec-empty {
+      color: var(--text-dim);
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    /* Inline free-text lists (focuses, equipment): items separated by a dot */
+    .rec-list {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 4px 6px;
+    }
+
+    .rec-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 2px;
+    }
+
+    /* Trailing dot so a wrapped line never starts with a separator */
+    .rec-item::after {
+      content: "\00b7";
+      color: var(--c-secondary);
+      margin-left: 2px;
+      font-weight: 700;
+    }
+
+    .rec-item:has(+ .rec-add)::after {
+      content: none;
+    }
+
+    .rec-val.inline {
+      min-height: 30px;
+      color: var(--c-tertiary);
+      border-bottom-color: transparent;
+    }
+
+    .rec-x {
+      width: 28px;
+      height: 28px;
+      flex: 0 0 auto;
+      border: none;
+      background: transparent;
+      color: var(--text-dim);
+      font-size: 1.1rem;
+      line-height: 1;
+      cursor: pointer;
+      opacity: 0.45;
+    }
+
+    .rec-x:hover,
+    .rec-x:focus-visible {
+      color: var(--c-alert);
+      opacity: 1;
+    }
+
+    .rec-add {
+      min-height: 30px;
+      padding: 0 6px;
+      border: none;
+      background: transparent;
+      color: var(--c-secondary);
+      font-family: inherit;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+
+    .rec-add:hover {
+      color: var(--text-main);
+    }
+
+    .rec-value {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 4px 10px;
+      margin-bottom: 6px;
+    }
+
+    .rec-value > .rec-val {
+      flex: 1 1 240px;
+    }
+
+    .rec-value.challenged > .rec-val {
+      color: var(--c-alert);
+      text-decoration: line-through;
+    }
+
+    .rec-value-actions {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .rec-value-actions .pill-btn {
+      min-height: 32px;
+      padding: 2px 10px;
+      font-size: 0.72rem;
+    }
+
+    .rec-talent {
+      margin-bottom: 10px;
+    }
+
+    .rec-talent-head {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .rec-talent-name {
+      flex: 1;
+      color: var(--c-secondary);
+      font-weight: 700;
+      text-transform: uppercase;
+      border-bottom-color: transparent;
+    }
+
+    .stats-matrix > .rec-condition {
+      grid-column: 1 / -1;
+    }
+
+    @container workspace (min-width: 1360px) {
+      .stats-matrix > .rec-condition {
+        grid-column: auto;
+      }
+    }
+
+    .rec-condition-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 6px;
+    }
+
     /* Values & Trait Chips */
     .value-row {
       display: flex;
@@ -3721,7 +4052,11 @@
         <span class="code">08-REF</span>
         Reference
       </button>
-      <div class="lcars-rail-spacer" aria-hidden="true">09-0451</div>
+      <button class="lcars-rail-btn" id="nav-record" onclick="switchScene('record')">
+        <span class="code">09-SP47</span>
+        Personnel Record
+      </button>
+      <div class="lcars-rail-spacer" aria-hidden="true">10-0451</div>
     </aside>
 
     <!-- ========================================================================
@@ -4033,7 +4368,8 @@
           { name: "Unarmed Strike", damage: "Severity 2 (Stun)", qualities: "None" }
         ],
         equipment: ["Starfleet Uniform", "Communicator", "Tricorder", "Engineering Kit"],
-        injuriesAndScars: "None (Click to jot down temporary injuries, radiation, or Scars)"
+        injuriesAndScars: "None (Click to jot down temporary injuries, radiation, or Scars)",
+        ...defaultPersonnelRecordFields()
       },
 
       fleetHangar: structuredClone(window.STA_FLEET_HANGAR || []),
@@ -4700,7 +5036,7 @@
             parts.push(idx === 0 ? label : `mixed ${label}`);
           });
           const primary = lookupEntry("species", speciesField.primary);
-          if (primary && primary.trait) parts.push(primary.trait);
+          if (primary && primary.trait && primary.trait !== primary.name) parts.push(primary.trait);
         } else if (speciesField.name) {
           parts.push(speciesField.name);
         }
@@ -5035,6 +5371,57 @@
       return ship;
     }
 
+    /* Personnel File details from a decoded sta.bcholmes.org character: origin, career
+       and service history land in the Personnel Record fields. */
+    function applyDecodedPersonnelRecord(raw, hydrated) {
+      const c = state.character;
+      ensurePersonnelRecordFields();
+
+      if (raw.pronouns) c.pronouns = String(raw.pronouns).trim();
+      if (hydrated.roleLabel) c.characterRole = hydrated.roleLabel;
+      const assignment = raw.jobAssignment || raw.assignment;
+      if (assignment) c.assignment = String(assignment).trim();
+      if (raw.reputation != null && Number.isFinite(Number(raw.reputation))) c.reputation = Number(raw.reputation);
+
+      if (hydrated.environmentLabel) c.environment = hydrated.environmentLabel;
+      if (hydrated.upbringingLabel) {
+        const stance = raw.upbringing && typeof raw.upbringing.accepted === "boolean"
+          ? (raw.upbringing.accepted ? " (Accepted)" : " (Rebelled)")
+          : "";
+        c.upbringing = hydrated.upbringingLabel + stance;
+      }
+
+      // Career path is the Academy track (e.g. "Operations" -> StarfleetOfficerOperations)
+      const track = raw.training && raw.training.track;
+      if (track) {
+        const entry = lookupEntry("careers", `StarfleetOfficer${track}`) || lookupEntry("careers", track);
+        c.careerPath = entry ? entry.name : String(track);
+      }
+      // Career length (Young / Experienced / Veteran) is the sheet's Experience box
+      if (hydrated.careerLabel) c.experience = hydrated.careerLabel;
+
+      if (Array.isArray(raw.careerEvents)) {
+        const events = Object.values(staDict().career_events || {});
+        const labels = raw.careerEvents.map((evt) => {
+          if (!evt) return "";
+          const id = typeof evt === "object" ? evt.id : evt;
+          const entry = events.find((e) => e.d20 === Number(id)) || lookupEntry("career_events", id);
+          return entry ? entry.name : (id != null ? `Career Event ${id}` : "");
+        });
+        if (labels[0]) c.careerEvent1 = labels[0];
+        if (labels[1]) c.careerEvent2 = labels[1];
+      }
+
+      const pastimes = raw.pastime || raw.pastimes;
+      if (Array.isArray(pastimes)) c.pastimes = pastimes.filter(Boolean).join(", ");
+      else if (typeof pastimes === "string") c.pastimes = pastimes;
+
+      const speciesKey = raw.species && typeof raw.species === "object" ? raw.species.primary : raw.species;
+      const speciesEntry = typeof speciesKey === "string" ? lookupEntry("species", speciesKey) : null;
+      const ability = speciesEntry && speciesEntry.species_ability;
+      if (ability && ability.name) c.speciesAbility = ability.description ? `${ability.name}: ${ability.description}` : ability.name;
+    }
+
     function applyDecodedStaPayload(raw) {
       if (!raw || typeof raw !== "object") return;
 
@@ -5056,8 +5443,10 @@
 
       if (hydrated.name) state.character.name = hydrated.name;
 
+      // Role and assignment now have their own Personnel Record fields, so Rank stays just the rank
       const rankRoleParts = [hydrated.rankLabel, hydrated.roleLabel, raw.jobAssignment || raw.assignment].filter(Boolean);
-      if (rankRoleParts.length) state.character.rankRole = rankRoleParts.join(" • ");
+      if (hydrated.rankLabel) state.character.rankRole = hydrated.rankLabel;
+      else if (rankRoleParts.length) state.character.rankRole = rankRoleParts.join(" • ");
 
       if (hydrated.speciesLabel) state.character.species = hydrated.speciesLabel;
 
@@ -5134,17 +5523,7 @@
         });
       }
 
-      // Surface career / environment / upbringing into species line extras when useful
-      const metaBits = [hydrated.careerLabel, hydrated.environmentLabel, hydrated.upbringingLabel].filter(Boolean);
-      if (metaBits.length && state.character.species && !state.character.species.includes(metaBits[0])) {
-        // Keep species line for species; stash meta on rankRole if empty slots remain
-        if (!hydrated.careerLabel && metaBits.length) {
-          /* no-op */
-        }
-      }
-      if (hydrated.careerLabel && !String(state.character.rankRole).includes(hydrated.careerLabel)) {
-        state.character.rankRole = [state.character.rankRole, hydrated.careerLabel].filter(Boolean).join(" • ");
-      }
+      applyDecodedPersonnelRecord(raw, hydrated);
 
       state.pools.stressMax = state.character.attributes.fitness + state.character.departments.security;
 
@@ -5423,6 +5802,228 @@
         </div>
       `).join("")}
   `;
+    }
+
+    /* ============================================================================
+       PERSONNEL RECORD: keyboard fields are free text on black ("record you read");
+       touch-stepped numbers keep the LCARS button format.
+       ============================================================================ */
+    function recField(label, field, opts = {}) {
+      const dictAttrs = opts.dictionary
+        ? ` data-dictionary="${opts.dictionary}" data-dictionary-state-field="${field}"`
+        : "";
+      return `
+        <div class="rec-row${opts.wide ? " wide" : ""}">
+          <span class="rec-lbl">${label}</span>
+          <div class="rec-val${opts.big ? " big" : ""}" contenteditable="true" spellcheck="false"
+               data-placeholder="${escapeHtml(opts.placeholder || "Not recorded")}"${dictAttrs}
+               onblur="updateMeta('${field}', this.innerText)">${escapeHtml(state.character[field])}</div>
+        </div>`;
+    }
+
+    function recNumber(label, field, tip) {
+      return `
+        <div class="stat-pill rec-num" data-tip="${escapeHtml(tip)}">
+          <button type="button" class="stat-seg end minus" onclick="stepRecordNumber('${field}', -1)">-</button>
+          <span class="stat-seg label">${label}</span>
+          <input type="number" class="stat-seg value" value="${Number(state.character[field]) || 0}"
+                 onchange="setRecordNumber('${field}', this.value)" />
+          <span class="stat-seg cap" aria-hidden="true"></span>
+          <button type="button" class="stat-seg end plus" onclick="stepRecordNumber('${field}', 1)">+</button>
+        </div>`;
+    }
+
+    function recTextList(items, opts) {
+      return `
+        <div class="rec-list">
+          ${items.map((item, i) => `
+            <span class="rec-item">
+              <span class="rec-val inline" contenteditable="true" spellcheck="false"${opts.dictionary ? ` data-dictionary="${opts.dictionary}" data-dictionary-index="${i}"` : ""}
+                    onblur="${opts.onEdit}(${i}, this.innerText)">${escapeHtml(item)}</span>
+              <button type="button" class="rec-x" onclick="${opts.onRemove}(${i})" aria-label="Remove ${escapeHtml(item)}">&times;</button>
+            </span>`).join("")}
+          <button type="button" class="rec-add" onclick="${opts.onAdd}()">+ ${opts.addLabel}</button>
+        </div>`;
+    }
+
+    function renderPersonnelRecordPage() {
+      const c = state.character;
+      const hasImg = !!(c.portrait && c.portrait.trim());
+
+      const values = c.values.map((v, i) => `
+        <div class="rec-value ${v.status === "challenged" ? "challenged" : ""}">
+          <div class="rec-val" contenteditable="true" onblur="editValueText(${i}, this.innerText)">${escapeHtml(v.text)}</div>
+          <div class="rec-value-actions">
+            <button class="pill-btn ok" onclick="invokeValue(${i})" data-tip="Spend 1 Determination and log the Value.">Invoke</button>
+            <button class="pill-btn alert" onclick="challengeValue(${i})" data-tip="Challenge: cross out, gain 1 Determination, and log it.">Challenge</button>
+            <button class="pill-btn ghost" onclick="toggleValueState(${i})">${v.status === "challenged" ? "Restore" : "Cross out"}</button>
+            <button class="rec-x" onclick="removeValue(${i})" aria-label="Remove value">&times;</button>
+          </div>
+        </div>`).join("");
+
+      const talents = c.talents.map((t, i) => `
+        <div class="rec-talent">
+          <div class="rec-talent-head">
+            <span class="rec-val rec-talent-name" contenteditable="true" spellcheck="false"
+                  data-dictionary="talents" data-dictionary-index="${i}" data-dictionary-description="rec-talent-desc-${i}"
+                  onblur="updateCharacterTalent(${i}, 'name', this.innerText)">${escapeHtml(t.name)}</span>
+            <button type="button" class="rec-x" onclick="removeTalent(${i})" aria-label="Remove talent">&times;</button>
+          </div>
+          <div class="rec-val rec-para" contenteditable="true" id="rec-talent-desc-${i}"
+               onblur="updateCharacterTalent(${i}, 'desc', this.innerText)">${escapeHtml(t.desc)}</div>
+        </div>`).join("");
+
+      return `
+      <div class="rec-masthead">
+        <span class="rec-masthead-org">Starfleet Command &middot; Personnel Division &middot; LCARS 47-118</span>
+        <span class="rec-masthead-title">Service Record
+          <span class="rec-serial" contenteditable="true" spellcheck="false" data-tip="Starfleet service number. Tap to edit."
+                onblur="updateMeta('serviceNumber', this.innerText)">${escapeHtml(c.serviceNumber)}</span>
+        </span>
+      </div>
+
+      <section class="lcars-panel rec-panel">
+        <div class="lcars-panel-header">
+          <span class="lcars-panel-title">Personnel File</span>
+        </div>
+        <div class="rec-identity">
+          <div class="portrait-card rec-portrait">
+            <label class="rec-portrait-pick" data-tip="Tap to choose a portrait image (PNG, JPG, WEBP).">
+              ${hasImg
+                ? `<img src="${escapeHtml(c.portrait)}" alt="Character portrait" />`
+                : `<span class="portrait-placeholder">No portrait selected</span>`}
+              <input type="file" accept="image/*" hidden onchange="uploadCharacterImage(event)" />
+            </label>
+            ${hasImg ? `
+            <div class="portrait-actions">
+              <button type="button" class="p-btn alt" onclick="exportCharacterImage()">Export</button>
+              <button type="button" class="p-btn del" onclick="clearCharacterImage()" aria-label="Remove portrait">&times;</button>
+            </div>` : ""}
+          </div>
+          <div class="rec-fields">
+            ${recField("Name", "name", { big: true, wide: true, placeholder: "Name" })}
+            ${recField("Rank", "rankRole", { dictionary: "ranks" })}
+            ${recField("Pronouns", "pronouns", { placeholder: "they/them" })}
+            ${recField("Species", "species", { dictionary: "species" })}
+            ${recField("Character role", "characterRole", { dictionary: "roles" })}
+            ${recField("Assignment", "assignment", { placeholder: "Department or posting" })}
+            ${recField("Vessel", "shipName")}
+            <div class="rec-sub rec-fields-sub">Service history</div>
+            <div class="rec-fields rec-history">
+            ${recField("Environment", "environment", { dictionary: "environments" })}
+            ${recField("Upbringing", "upbringing", { dictionary: "upbringings" })}
+            ${recField("Career path", "careerPath", { dictionary: "careers" })}
+            ${recField("Experience", "experience", { dictionary: "careers", placeholder: "Young, Experienced, or Veteran" })}
+            ${recField("Career event 1", "careerEvent1", { dictionary: "career_events" })}
+            ${recField("Career event 2", "careerEvent2", { dictionary: "career_events" })}
+            ${recField("Pastimes", "pastimes", { placeholder: "3D chess, Klingon opera" })}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="lcars-panel rec-panel">
+        <div class="lcars-panel-header">
+          <span class="lcars-panel-title" data-tip="Tap to select for the TN. &plusmn; applies a scene temp; typing sets the effective score.">Attributes &middot; Departments</span>
+          <button type="button" class="header-endcap" onclick="clearTempMods()" data-tip="Clear all scene temp mods on attributes and departments.">Reset</button>
+        </div>
+        <div class="stats-matrix">
+          <div>
+            <div class="stat-col-label">Attributes</div>
+            <div class="stat-grid" id="attributes-grid"></div>
+          </div>
+          <div>
+            <div class="stat-col-label dept">Departments</div>
+            <div class="stat-grid" id="departments-grid"></div>
+          </div>
+          <div class="rec-condition">
+            <div class="stat-col-label">Standing &middot; Protection</div>
+            <div class="rec-condition-grid">
+              ${recNumber("Reputation", "reputation", "Reputation (starts at 10).")}
+              ${recNumber("Protection", "protection", "Protection from armor or talents; reduces damage taken.")}
+            </div>
+          </div>
+        </div>
+      </section>
+
+        <section class="lcars-panel rec-panel">
+          <div class="lcars-panel-header">
+            <span class="lcars-panel-title">Psychological Profile</span>
+            <button type="button" class="header-endcap" onclick="addValue()" data-tip="Add a value.">Add</button>
+          </div>
+          <div class="rec-sub">Values</div>
+          ${values || `<div class="rec-empty">No values on file.</div>`}
+          <div class="rec-sub">Focuses</div>
+          ${recTextList(c.focuses, { onEdit: "editFocus", onRemove: "removeFocus", onAdd: "addFocus", addLabel: "Focus" })}
+        </section>
+
+      <div class="scene-layout">
+        <section class="lcars-panel rec-panel">
+          <div class="lcars-panel-header">
+            <span class="lcars-panel-title">Abilities &middot; Talents</span>
+            <button type="button" class="header-endcap" onclick="addTalent()" data-tip="Add a talent.">Add</button>
+          </div>
+          <div class="rec-sub">Species ability</div>
+          <div class="rec-val rec-para" contenteditable="true" data-placeholder="Not recorded"
+               onblur="updateMeta('speciesAbility', this.innerText)">${escapeHtml(c.speciesAbility)}</div>
+          <div class="rec-sub">Talents</div>
+          ${talents || `<div class="rec-empty">No talents on file.</div>`}
+        </section>
+
+        <section class="lcars-panel rec-panel">
+          <div class="lcars-panel-header">
+            <span class="lcars-panel-title">Special Rules &middot; Equipment</span>
+          </div>
+          <div class="rec-sub">Special rules</div>
+          <div class="rec-val rec-para" contenteditable="true" data-placeholder="None recorded"
+               onblur="updateMeta('specialRules', this.innerText)">${escapeHtml(c.specialRules)}</div>
+          <div class="rec-sub">Other equipment</div>
+          ${recTextList(c.equipment, { dictionary: "equipment", onEdit: "editEquipment", onRemove: "removeEquipment", onAdd: "addEquipment", addLabel: "Equipment" })}
+        </section>
+      </div>
+    `;
+    }
+
+    function stepRecordNumber(field, delta) {
+      state.character[field] = Math.max(0, (Number(state.character[field]) || 0) + delta);
+      saveLocalState();
+      renderScene();
+    }
+
+    function setRecordNumber(field, val) {
+      const n = Number(val);
+      state.character[field] = Number.isFinite(n) ? Math.max(0, n) : 0;
+      saveLocalState();
+      renderScene();
+    }
+
+    function editFocus(idx, text) {
+      state.character.focuses[idx] = text.trim();
+      saveLocalState();
+      renderHeaderFocuses();
+    }
+
+    function removeFocus(idx) {
+      state.character.focuses.splice(idx, 1);
+      saveLocalState();
+      renderScene();
+    }
+
+    function editEquipment(idx, text) {
+      state.character.equipment[idx] = text.trim();
+      saveLocalState();
+    }
+
+    function removeEquipment(idx) {
+      state.character.equipment.splice(idx, 1);
+      saveLocalState();
+      renderScene();
+    }
+
+    function removeTalent(idx) {
+      state.character.talents.splice(idx, 1);
+      saveLocalState();
+      renderScene();
     }
 
     function renderScratchpadAndTraits() {
@@ -6215,6 +6816,17 @@
       }
 
       // --------------------------------------------------------------------------
+      // SCENE 5B: PERSONNEL RECORD (STA 2e PERSONNEL FILE, RECORD-STYLE FREE TEXT)
+      // --------------------------------------------------------------------------
+      if (state.activeScene === "record") {
+        ensurePersonnelRecordFields();
+        container.innerHTML = renderPersonnelRecordPage();
+        renderTopHeaderAndStats();
+        bindDictionaryAutocomplete(container);
+        return;
+      }
+
+      // --------------------------------------------------------------------------
       // SCENE 6: PERSONAL LOGS & MILESTONE / ARC TRACKER
       // --------------------------------------------------------------------------
       if (state.activeScene === "logs") {
@@ -6452,7 +7064,50 @@
         state.settings.redAlert = true;
       }
       if (state.character && typeof state.character.portrait !== "string") state.character.portrait = "";
+      ensurePersonnelRecordFields();
       ensureStarship2e();
+    }
+
+    /* STA 2e Personnel File fields that the Personnel Record page edits
+       (kept separate from rankRole / shipName, which Personnel Summary shares). */
+    function generateServiceNumber() {
+      const block = () => String(Math.floor(Math.random() * 900) + 100);
+      return `SP-${block()}-${block()}`;
+    }
+
+    function defaultPersonnelRecordFields() {
+      return {
+        serviceNumber: generateServiceNumber(),
+        pronouns: "",
+        assignment: "",
+        characterRole: "",
+        reputation: 10,
+        protection: 0,
+        environment: "",
+        upbringing: "",
+        careerPath: "",
+        experience: "",
+        careerEvent1: "",
+        careerEvent2: "",
+        pastimes: "",
+        speciesAbility: "",
+        specialRules: ""
+      };
+    }
+
+    function ensurePersonnelRecordFields() {
+      const c = state.character;
+      if (!c) return;
+      const defaults = defaultPersonnelRecordFields();
+      Object.keys(defaults).forEach((key) => {
+        if (typeof defaults[key] === "number") {
+          const n = Number(c[key]);
+          c[key] = (c[key] === "" || c[key] == null || !Number.isFinite(n)) ? defaults[key] : n;
+        } else if (typeof c[key] !== "string") {
+          c[key] = defaults[key];
+        }
+      });
+      if (!c.serviceNumber.trim()) c.serviceNumber = defaults.serviceNumber;
     }
 
     function customThemeById(themeId) {
