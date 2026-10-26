@@ -951,21 +951,6 @@
       --tl-elbow-r: 6px;
     }
 
-    /* Cel-shaded thin companion line under each panel header (LUNAR DEMOLITION
-       paired bars: a thick amber bar riding over a thin pale-yellow rule) */
-    /* Starts after the bracket leg and its concave corner so the frame stays one
-       continuous shape (a full-width shadow used to cut across the leg). */
-    [data-shape="lower-decks"] .lcars-panel-header::before {
-      content: "";
-      position: absolute;
-      top: calc(100% + 4px);
-      left: calc(var(--bracket-w) + var(--bracket-inner-r) + 4px);
-      right: 2px;
-      height: 2px;
-      background: var(--c-accent);
-      pointer-events: none;
-    }
-
     /* TMP / EXCELSIOR ERA GEOMETRY: Rounded-rectangle CRT frames, thin blue frame
        rules with telemetry ticks, rounded-key corners */
     [data-shape="tmp-era"] {
