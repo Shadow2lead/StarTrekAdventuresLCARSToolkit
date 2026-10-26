@@ -2455,9 +2455,13 @@
       cursor: text;
     }
 
+    /* Editing cue: a dark primary-tinted well with light text and an underline.
+       (A solid primary block with black text hid any field that sets its own
+       text colour, and read as black-on-dark on darker themes.) */
     [contenteditable="true"]:focus {
-      background: var(--c-primary);
-      color: #000;
+      background: color-mix(in srgb, var(--c-primary) 22%, var(--bg));
+      color: var(--text-main);
+      box-shadow: inset 0 -2px 0 var(--c-primary);
     }
 
     /* Suggestions for editable fields backed by the STA reference dictionary. */
@@ -2786,10 +2790,6 @@
       color: var(--c-primary);
       letter-spacing: 0.06em;
       text-transform: uppercase;
-    }
-
-    .identity-grid .id-field:first-child .val:focus {
-      color: #000;
     }
 
     .identity-with-portrait {
@@ -3171,14 +3171,58 @@
       -webkit-user-select: none;
     }
 
-    #ship-systems-grid .stat-seg.end {
-      flex-basis: 38px;
-      width: 38px;
+    /* Compact ship pills so the Space Combat page fits more on one screen */
+    #ship-systems-grid .stat-pill,
+    #ship-departments-grid .stat-pill {
+      height: 34px;
+      min-height: 34px;
     }
 
-    #ship-systems-grid .stat-seg.value {
-      flex-basis: 38px;
-      width: 38px;
+    #ship-systems-grid,
+    #ship-departments-grid {
+      gap: 4px 6px;
+    }
+
+    #ship-systems-grid .stat-seg.end,
+    #ship-departments-grid .stat-seg.end {
+      flex-basis: 34px;
+      width: 34px;
+      font-size: 1.1rem;
+    }
+
+    #ship-systems-grid .stat-seg.value,
+    #ship-departments-grid .stat-seg.value {
+      flex-basis: 34px;
+      width: 34px;
+      font-size: 1.45rem;
+    }
+
+    #ship-systems-grid .stat-seg.cap.breach {
+      flex-basis: 28px;
+      width: 28px;
+    }
+
+    /* Shields / Crew Support track pills match the readout row height */
+    .stat-pill.ship-track {
+      height: 48px;
+      min-height: 48px;
+    }
+
+    .stat-pill.ship-track .stat-seg.end {
+      flex-basis: 34px;
+      width: 34px;
+    }
+
+    .stat-pill.ship-track .stat-seg.label {
+      min-width: 3.6em;
+      font-size: 0.74rem;
+      letter-spacing: 0.02em;
+    }
+
+    .stat-pill.ship-track .stat-seg.value-pair input.stat-seg.value {
+      flex-basis: 30px;
+      width: 30px;
+      font-size: 1.55rem;
     }
 
     #ship-systems-grid .stat-seg.label {
@@ -3205,7 +3249,7 @@
 
     @container workspace (min-width: 980px) {
       .ship-readouts {
-        grid-template-columns: 0.75fr 0.75fr 1.15fr 1.25fr 1.1fr;
+        grid-template-columns: 0.6fr 0.6fr 1.35fr 1.1fr 1.35fr;
       }
     }
 
@@ -3516,8 +3560,12 @@
       border-bottom: 2px solid transparent;
     }
 
+    /* Record fields stay text-on-screen while typing (override the global
+       contenteditable focus block, whose black text vanished on dark screens) */
     .rec-serial:focus {
       border-bottom-color: var(--c-primary);
+      background: transparent;
+      color: var(--text-main);
     }
 
     .rec-identity {
@@ -3573,18 +3621,100 @@
       grid-column: 1 / -1;
     }
 
-    .rec-fields-sub,
-    .rec-fields > .rec-history {
-      grid-column: 1 / -1;
+    /* Personnel File (portrait, identity, history) beside Attributes & Departments */
+    .rec-split {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 16px;
+      align-items: start;
     }
 
-    .rec-fields-sub {
-      margin-top: 10px;
+    @container workspace (min-width: 980px) {
+      .rec-split {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      /* Half-width panels: labels sit above their values so fields can flow into
+         as many columns as fit (minimums sized to the longest typical values) */
+      .rec-split .rec-identity .rec-fields {
+        grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+        gap: 6px 16px;
+      }
+
+      .rec-split .rec-history {
+        grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
+        gap: 6px 16px;
+      }
+
+      .rec-split .rec-row {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 0;
+      }
+
+      .rec-split .rec-lbl {
+        text-align: left;
+        font-size: 0.68rem;
+      }
+
+      .rec-split .stats-matrix {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      /* Attributes and departments three across, with slimmer pill segments */
+      .rec-split #attributes-grid,
+      .rec-split #departments-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 4px;
+      }
+
+      .rec-split #attributes-grid .stat-pill,
+      .rec-split #departments-grid .stat-pill {
+        gap: 2px;
+        height: 40px;
+        min-height: 40px;
+      }
+
+      .rec-split #attributes-grid .stat-seg.end,
+      .rec-split #departments-grid .stat-seg.end {
+        flex-basis: 28px;
+        width: 28px;
+        font-size: 1.1rem;
+      }
+
+      .rec-split #attributes-grid .stat-seg.value,
+      .rec-split #departments-grid .stat-seg.value {
+        flex-basis: 32px;
+        width: 32px;
+        font-size: 1.5rem;
+      }
+
+      .rec-split #attributes-grid .stat-seg.cap,
+      .rec-split #departments-grid .stat-seg.cap {
+        flex-basis: 6px;
+        width: 6px;
+      }
+
+      .rec-split #attributes-grid .stat-seg.label,
+      .rec-split #departments-grid .stat-seg.label {
+        padding: 0 4px;
+        font-size: 0.68rem;
+        letter-spacing: 0.02em;
+      }
+
+      .rec-split .stats-matrix > .rec-condition {
+        grid-column: auto;
+      }
     }
 
-    /* Service history values run longer, so they get two wider columns */
+    .rec-stack {
+      display: grid;
+      gap: 16px;
+      align-items: start;
+    }
+
+    /* Origin and career rows run under the portrait at full panel width */
     .rec-history {
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      margin-top: 6px;
     }
 
     .rec-lbl {
@@ -3617,6 +3747,11 @@
     .rec-val:focus {
       border-bottom-color: var(--c-primary);
       background: color-mix(in srgb, var(--c-primary) 9%, transparent);
+      color: var(--text-main);
+    }
+
+    .rec-val.big:focus {
+      color: var(--c-primary);
     }
 
     .rec-val:empty::before {
@@ -3691,6 +3826,10 @@
       min-height: 30px;
       color: var(--c-tertiary);
       border-bottom-color: transparent;
+    }
+
+    .rec-val.inline:focus {
+      color: var(--text-main);
     }
 
     .rec-x {
@@ -5894,6 +6033,60 @@
   `;
     }
 
+    /* Space Combat keeps reference-only sections folded so the live controls fit
+       one screen; folds start closed on every load and are not synced. */
+    const spaceFoldsOpen = { details: false, reference: false };
+
+    /* Toggle buttons live in the Starship header (no extra row when closed) */
+    function spaceFoldToggle(key, label, tip) {
+      const open = spaceFoldsOpen[key];
+      return `
+            <button type="button" class="pill-btn ${open ? "" : "ghost"}" style="padding:3px 10px; font-size:0.78rem;"
+                    onclick="toggleSpaceFold('${key}')" aria-expanded="${open}" data-tip="${tip}">${label} ${open ? "&#9652;" : "&#9662;"}</button>`;
+    }
+
+    /* Header of an opened section, with a Close end cap */
+    function spaceFoldBar(key, title) {
+      return `
+        <div class="lcars-panel-header">
+          <span class="lcars-panel-title">${title}</span>
+          <button type="button" class="header-endcap" onclick="toggleSpaceFold('${key}')" aria-expanded="true">Close</button>
+        </div>`;
+    }
+
+    function toggleSpaceFold(key) {
+      spaceFoldsOpen[key] = !spaceFoldsOpen[key];
+      renderScene();
+    }
+
+    /* Current / max ship track (Shields, Crew Support) with -/+ ends for quick
+       adjustment mid-combat; typing still sets either number directly. */
+    function shipTrackPill(label, curKey, maxKey, tip) {
+      const ship = state.starship;
+      return `
+          <div class="stat-pill ship-track" data-tip="${tip}">
+            <button type="button" class="stat-seg end minus" onclick="stepShipTrack('${curKey}','${maxKey}',-1)" aria-label="Decrease ${label}">-</button>
+            <span class="stat-seg label">${label}</span>
+            <span class="stat-seg value-pair">
+              <input type="number" class="stat-seg value" value="${ship[curKey]}"
+                     onchange="state.starship['${curKey}']=Number(this.value)||0;triggerTableSync()" />
+              <span class="slash">/</span>
+              <input type="number" class="stat-seg value" value="${ship[maxKey]}"
+                     onchange="state.starship['${maxKey}']=Number(this.value)||0;triggerTableSync();renderScene()" />
+            </span>
+            <span class="stat-seg cap" aria-hidden="true"></span>
+            <button type="button" class="stat-seg end plus" onclick="stepShipTrack('${curKey}','${maxKey}',1)" aria-label="Increase ${label}">+</button>
+          </div>`;
+    }
+
+    function stepShipTrack(curKey, maxKey, delta) {
+      const ship = state.starship;
+      const max = Number(ship[maxKey]) || 0;
+      ship[curKey] = Math.min(max, Math.max(0, (Number(ship[curKey]) || 0) + delta));
+      triggerTableSync();
+      renderScene();
+    }
+
     /* ============================================================================
        PERSONNEL RECORD: keyboard fields are free text on black ("record you read");
        touch-stepped numbers keep the LCARS button format.
@@ -5972,104 +6165,108 @@
         </span>
       </div>
 
-      <section class="lcars-panel rec-panel">
-        <div class="lcars-panel-header">
-          <span class="lcars-panel-title">Personnel File</span>
-        </div>
-        <div class="rec-identity">
-          <div class="portrait-card rec-portrait">
-            <label class="rec-portrait-pick" data-tip="Tap to choose a portrait image (PNG, JPG, WEBP).">
-              ${hasImg
-                ? `<img src="${escapeHtml(c.portrait)}" alt="Character portrait" />`
-                : `<span class="portrait-placeholder">No portrait selected</span>`}
-              <input type="file" accept="image/*" hidden onchange="uploadCharacterImage(event)" />
-            </label>
-            ${hasImg ? `
-            <div class="portrait-actions">
-              <button type="button" class="p-btn alt" onclick="exportCharacterImage()">Export</button>
-              <button type="button" class="p-btn del" onclick="clearCharacterImage()" aria-label="Remove portrait">&times;</button>
-            </div>` : ""}
-          </div>
-          <div class="rec-fields">
-            ${recField("Name", "name", { big: true, wide: true, placeholder: "Name" })}
-            ${recField("Rank", "rankRole", { dictionary: "ranks" })}
-            ${recField("Pronouns", "pronouns", { placeholder: "they/them" })}
-            ${recField("Species", "species", { dictionary: "species" })}
-            ${recField("Character role", "characterRole", { dictionary: "roles" })}
-            ${recField("Assignment", "assignment", { placeholder: "Department or posting" })}
-            ${recField("Vessel", "shipName")}
-            <div class="rec-sub rec-fields-sub">Service history</div>
+      <!-- Two independent columns: each section sits directly under the one above it -->
+      <div class="rec-split">
+        <div class="rec-stack">
+          <section class="lcars-panel rec-panel">
+            <div class="lcars-panel-header">
+              <span class="lcars-panel-title">Personnel File</span>
+            </div>
+            <div class="rec-identity">
+              <div class="portrait-card rec-portrait">
+                <label class="rec-portrait-pick" data-tip="Tap to choose a portrait image (PNG, JPG, WEBP).">
+                  ${hasImg
+                    ? `<img src="${escapeHtml(c.portrait)}" alt="Character portrait" />`
+                    : `<span class="portrait-placeholder">No portrait selected</span>`}
+                  <input type="file" accept="image/*" hidden onchange="uploadCharacterImage(event)" />
+                </label>
+                ${hasImg ? `
+                <div class="portrait-actions">
+                  <button type="button" class="p-btn alt" onclick="exportCharacterImage()">Export</button>
+                  <button type="button" class="p-btn del" onclick="clearCharacterImage()" aria-label="Remove portrait">&times;</button>
+                </div>` : ""}
+              </div>
+              <div class="rec-fields">
+                ${recField("Name", "name", { big: true, wide: true, placeholder: "Name" })}
+                ${recField("Rank", "rankRole", { dictionary: "ranks" })}
+                ${recField("Pronouns", "pronouns", { placeholder: "they/them" })}
+                ${recField("Species", "species", { dictionary: "species" })}
+                ${recField("Character role", "characterRole", { dictionary: "roles" })}
+                ${recField("Assignment", "assignment", { placeholder: "Posting" })}
+                ${recField("Vessel", "shipName")}
+              </div>
+            </div>
             <div class="rec-fields rec-history">
-            ${recField("Environment", "environment", { dictionary: "environments" })}
-            ${recField("Upbringing", "upbringing", { dictionary: "upbringings" })}
-            ${recField("Career path", "careerPath", { dictionary: "careers" })}
-            ${recField("Experience", "experience", { dictionary: "careers", placeholder: "Young, Experienced, or Veteran" })}
-            ${recField("Career event 1", "careerEvent1", { dictionary: "career_events" })}
-            ${recField("Career event 2", "careerEvent2", { dictionary: "career_events" })}
-            ${recField("Pastimes", "pastimes", { placeholder: "3D chess, Klingon opera" })}
+                ${recField("Environment", "environment", { dictionary: "environments" })}
+                ${recField("Upbringing", "upbringing", { dictionary: "upbringings" })}
+                ${recField("Career path", "careerPath", { dictionary: "careers" })}
+                ${recField("Experience", "experience", { dictionary: "careers", placeholder: "Young, Experienced, or Veteran" })}
+                ${recField("Career event 1", "careerEvent1", { dictionary: "career_events" })}
+                ${recField("Career event 2", "careerEvent2", { dictionary: "career_events" })}
+                ${recField("Pastimes", "pastimes", { placeholder: "3D chess, Klingon opera" })}
             </div>
-          </div>
-        </div>
-      </section>
+          </section>
 
-      <section class="lcars-panel rec-panel">
-        <div class="lcars-panel-header">
-          <span class="lcars-panel-title" data-tip="Tap to select for the TN. &plusmn; applies a scene temp; typing sets the effective score.">Attributes &middot; Departments</span>
-          <button type="button" class="header-endcap" onclick="clearTempMods()" data-tip="Clear all scene temp mods on attributes and departments.">Reset</button>
-        </div>
-        <div class="stats-matrix">
-          <div>
-            <div class="stat-col-label">Attributes</div>
-            <div class="stat-grid" id="attributes-grid"></div>
-          </div>
-          <div>
-            <div class="stat-col-label dept">Departments</div>
-            <div class="stat-grid" id="departments-grid"></div>
-          </div>
-          <div class="rec-condition">
-            <div class="stat-col-label">Standing &middot; Protection</div>
-            <div class="rec-condition-grid">
-              ${recNumber("Reputation", "reputation", "Reputation (starts at 10).")}
-              ${recNumber("Protection", "protection", "Protection from armor or talents; reduces damage taken.")}
+          <section class="lcars-panel rec-panel">
+            <div class="lcars-panel-header">
+              <span class="lcars-panel-title" data-tip="Tap to select for the TN. &plusmn; applies a scene temp; typing sets the effective score.">Attributes &middot; Departments</span>
+              <button type="button" class="header-endcap" onclick="clearTempMods()" data-tip="Clear all scene temp mods on attributes and departments.">Reset</button>
             </div>
-          </div>
+            <div class="stats-matrix">
+              <div>
+                <div class="stat-col-label">Attributes</div>
+                <div class="stat-grid" id="attributes-grid"></div>
+              </div>
+              <div>
+                <div class="stat-col-label dept">Departments</div>
+                <div class="stat-grid" id="departments-grid"></div>
+              </div>
+              <div class="rec-condition">
+                <div class="stat-col-label">Standing &middot; Protection</div>
+                <div class="rec-condition-grid">
+                  ${recNumber("Reputation", "reputation", "Reputation (starts at 10).")}
+                  ${recNumber("Protection", "protection", "Protection from armor or talents; reduces damage taken.")}
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="lcars-panel rec-panel">
+            <div class="lcars-panel-header">
+              <span class="lcars-panel-title">Special Rules &middot; Equipment</span>
+            </div>
+            <div class="rec-sub">Special rules</div>
+            <div class="rec-val rec-para" contenteditable="true" data-placeholder="None recorded"
+                 onblur="updateMeta('specialRules', this.innerText)">${escapeHtml(c.specialRules)}</div>
+            <div class="rec-sub">Other equipment</div>
+            ${recTextList(c.equipment, { dictionary: "equipment", onEdit: "editEquipment", onRemove: "removeEquipment", onAdd: "addEquipment", addLabel: "Equipment" })}
+          </section>
         </div>
-      </section>
 
-        <section class="lcars-panel rec-panel">
-          <div class="lcars-panel-header">
-            <span class="lcars-panel-title">Psychological Profile</span>
-            <button type="button" class="header-endcap" onclick="addValue()" data-tip="Add a value.">Add</button>
-          </div>
-          <div class="rec-sub">Values</div>
-          ${values || `<div class="rec-empty">No values on file.</div>`}
-          <div class="rec-sub">Focuses</div>
-          ${recTextList(c.focuses, { onEdit: "editFocus", onRemove: "removeFocus", onAdd: "addFocus", addLabel: "Focus" })}
-        </section>
+        <div class="rec-stack">
+          <section class="lcars-panel rec-panel" data-tone="3">
+            <div class="lcars-panel-header">
+              <span class="lcars-panel-title">Abilities &middot; Talents</span>
+              <button type="button" class="header-endcap" onclick="addTalent()" data-tip="Add a talent.">Add</button>
+            </div>
+            <div class="rec-sub">Species ability</div>
+            <div class="rec-val rec-para" contenteditable="true" data-placeholder="Not recorded"
+                 onblur="updateMeta('speciesAbility', this.innerText)">${escapeHtml(c.speciesAbility)}</div>
+            <div class="rec-sub">Talents</div>
+            ${talents || `<div class="rec-empty">No talents on file.</div>`}
+          </section>
 
-      <div class="scene-layout">
-        <section class="lcars-panel rec-panel">
-          <div class="lcars-panel-header">
-            <span class="lcars-panel-title">Abilities &middot; Talents</span>
-            <button type="button" class="header-endcap" onclick="addTalent()" data-tip="Add a talent.">Add</button>
-          </div>
-          <div class="rec-sub">Species ability</div>
-          <div class="rec-val rec-para" contenteditable="true" data-placeholder="Not recorded"
-               onblur="updateMeta('speciesAbility', this.innerText)">${escapeHtml(c.speciesAbility)}</div>
-          <div class="rec-sub">Talents</div>
-          ${talents || `<div class="rec-empty">No talents on file.</div>`}
-        </section>
-
-        <section class="lcars-panel rec-panel">
-          <div class="lcars-panel-header">
-            <span class="lcars-panel-title">Special Rules &middot; Equipment</span>
-          </div>
-          <div class="rec-sub">Special rules</div>
-          <div class="rec-val rec-para" contenteditable="true" data-placeholder="None recorded"
-               onblur="updateMeta('specialRules', this.innerText)">${escapeHtml(c.specialRules)}</div>
-          <div class="rec-sub">Other equipment</div>
-          ${recTextList(c.equipment, { dictionary: "equipment", onEdit: "editEquipment", onRemove: "removeEquipment", onAdd: "addEquipment", addLabel: "Equipment" })}
-        </section>
+          <section class="lcars-panel rec-panel" data-tone="3">
+            <div class="lcars-panel-header">
+              <span class="lcars-panel-title">Psychological Profile</span>
+              <button type="button" class="header-endcap" onclick="addValue()" data-tip="Add a value.">Add</button>
+            </div>
+            <div class="rec-sub">Values</div>
+            ${values || `<div class="rec-empty">No values on file.</div>`}
+            <div class="rec-sub">Focuses</div>
+            ${recTextList(c.focuses, { onEdit: "editFocus", onRemove: "removeFocus", onAdd: "addFocus", addLabel: "Focus" })}
+          </section>
+        </div>
       </div>
     `;
     }
@@ -6116,7 +6313,7 @@
       renderScene();
     }
 
-    function renderScratchpadAndTraits() {
+    function renderScratchpadAndTraits(rows = 9) {
       return `
     <div class="lcars-panel" style="margin-top:12px;">
       <div class="lcars-panel-header">
@@ -6132,7 +6329,7 @@
           </span>
         `).join("")}
       </div>
-      <textarea class="lcars-textarea" rows="9" oninput="state.scratchpad = this.value; saveLocalState();" placeholder="Jot down live session notes, quotes, and action beats—this automatically feeds your next Personal Log...">${escapeHtml(state.scratchpad)}</textarea>
+      <textarea class="lcars-textarea" rows="${rows}" oninput="state.scratchpad = this.value; saveLocalState();" placeholder="Jot down live session notes, quotes, and action beats—this automatically feeds your next Personal Log...">${escapeHtml(state.scratchpad)}</textarea>
     </div>
   `;
     }
@@ -6481,20 +6678,9 @@
       <div class="lcars-panel">
         <div class="lcars-panel-header">
           <span class="lcars-panel-title">Starship &middot; <span contenteditable="true" onblur="state.starship.name=this.innerText.trim();saveShipToHangar(state.starship,true)">${escapeHtml(state.starship.name)}</span> <span contenteditable="true" onblur="state.starship.registry=this.innerText.trim();saveShipToHangar(state.starship,true)">${escapeHtml(state.starship.registry)}</span></span>
-        </div>
-
-        <div class="identity-grid" style="margin-bottom:12px;">
-          <div class="id-field" style="grid-column:auto; min-height:44px;" data-tip="Spaceframe class.">
-            <label>Frame</label>
-            <div class="val" style="font-size:1.05rem; color:var(--text-main);" contenteditable="true" data-dictionary="spaceframes" onblur="state.starship.spaceframe=this.innerText.trim();triggerTableSync()">${escapeHtml(state.starship.spaceframe || "Excelsior Class")}</div>
-          </div>
-          <div class="id-field" data-tip="Starship Mission Profile.">
-            <label>Profile</label>
-            <div class="val" contenteditable="true" data-dictionary="mission_profiles" onblur="state.starship.missionProfile=this.innerText.trim();triggerTableSync()">${escapeHtml(state.starship.missionProfile || "Multirole Explorer")}</div>
-          </div>
-          <div class="id-field" data-tip="Service Record.">
-            <label>Record</label>
-            <div class="val" contenteditable="true" data-dictionary="service_records" onblur="state.starship.serviceRecord=this.innerText.trim();triggerTableSync()">${escapeHtml(state.starship.serviceRecord || "Standard Commission")}</div>
+          <div style="display:flex; gap:4px; flex-wrap:wrap;">
+            ${spaceFoldToggle("details", "Ship Details", "Frame, profile, weapons, traits and talents.")}
+            ${spaceFoldToggle("reference", "Quick Ref", "2e starship actions and Reserve Power.")}
           </div>
         </div>
 
@@ -6509,13 +6695,7 @@
             <input type="number" class="num" value="${state.starship.resistance}" onchange="state.starship.resistance=Number(this.value)||0;triggerTableSync()" />
             <span class="lbl">Resist</span>
           </div>
-          <div class="lcars-stub-row" data-tip="Shields current / max.">
-            <span class="stub"></span>
-            <span class="num">
-              <input type="number" value="${state.starship.shieldsCurrent}" onchange="state.starship.shieldsCurrent=Number(this.value)||0;triggerTableSync()" />/<input type="number" value="${state.starship.shieldsMax}" onchange="state.starship.shieldsMax=Number(this.value)||0;triggerTableSync()" />
-            </span>
-            <span class="lbl">Shields</span>
-          </div>
+          ${shipTrackPill("Shields", "shieldsCurrent", "shieldsMax", "Shields current / max. &plusmn; adjusts current.")}
           <div class="lcars-stub-row ${state.starship.reservePower ? 't4' : 'alert'}" data-tip="STA 2e Reserve Power (click button to toggle Charged / Expended, or pick system routed to).">
             <span class="stub"></span>
             <button type="button" class="pill-btn ${state.starship.reservePower ? 'ok' : 'alert'}" style="border-radius:0; flex:1; min-height:0; height:100%; font-size:0.86rem;"
@@ -6529,13 +6709,7 @@
             </select>
             <span class="lbl">Res Pwr</span>
           </div>
-          <div class="lcars-stub-row t5" data-tip="Crew Support current / max.">
-            <span class="stub"></span>
-            <span class="num">
-              <input type="number" value="${state.starship.crewSupportCurrent}" onchange="state.starship.crewSupportCurrent=Number(this.value)||0;triggerTableSync()" />/<input type="number" value="${state.starship.crewSupportMax}" onchange="state.starship.crewSupportMax=Number(this.value)||0;triggerTableSync()" />
-            </span>
-            <span class="lbl">Crew Sup</span>
-          </div>
+          ${shipTrackPill("Crew Sup", "crewSupportCurrent", "crewSupportMax", "Crew Support current / max. &plusmn; adjusts current.")}
         </div>
 
         <!-- Ship Systems & Breaches + Ship Departments -->
@@ -6577,6 +6751,49 @@
                 </div>
               `).join("")}
             </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="scene-layout">
+        <div class="lcars-panel">
+          <div class="lcars-panel-header">
+            <span class="lcars-panel-title">02 &middot; Bridge Stations</span>
+            <div style="display:flex; gap:4px; flex-wrap:wrap;">
+              ${["all", "command", "conn", "tactical", "engineering", "science"].map(st => `
+                <button class="pill-btn ${state.activeBridgeStation === st ? '' : 'ghost'}"
+                        style="padding:3px 10px; font-size:0.78rem;"
+                        onclick="state.activeBridgeStation='${st}';renderScene()">${st.toUpperCase()}</button>
+              `).join("")}
+            </div>
+            <button type="button" class="header-endcap" onclick="addSceneCard('space')" data-tip="Add a bridge station card.">Add</button>
+          </div>
+
+          <div class="roll-cards-grid">
+            ${filteredCards.map(item => renderRollCardHtml(item.card, 'space', item.idx, true)).join("")}
+          </div>
+        </div>
+
+        <div>
+          ${renderScratchpadAndTraits(4)}
+        </div>
+      </div>
+
+      ${spaceFoldsOpen.details ? `
+      <div class="lcars-panel">
+        ${spaceFoldBar("details", "Ship Details &middot; Weapons &middot; Traits &middot; Talents")}
+        <div class="identity-grid" style="margin-bottom:12px;">
+          <div class="id-field" style="grid-column:auto; min-height:44px;" data-tip="Spaceframe class.">
+            <label>Frame</label>
+            <div class="val" style="font-size:1.05rem; color:var(--text-main);" contenteditable="true" data-dictionary="spaceframes" onblur="state.starship.spaceframe=this.innerText.trim();triggerTableSync()">${escapeHtml(state.starship.spaceframe || "Excelsior Class")}</div>
+          </div>
+          <div class="id-field" data-tip="Starship Mission Profile.">
+            <label>Profile</label>
+            <div class="val" contenteditable="true" data-dictionary="mission_profiles" onblur="state.starship.missionProfile=this.innerText.trim();triggerTableSync()">${escapeHtml(state.starship.missionProfile || "Multirole Explorer")}</div>
+          </div>
+          <div class="id-field" data-tip="Service Record.">
+            <label>Record</label>
+            <div class="val" contenteditable="true" data-dictionary="service_records" onblur="state.starship.serviceRecord=this.innerText.trim();triggerTableSync()">${escapeHtml(state.starship.serviceRecord || "Standard Commission")}</div>
           </div>
         </div>
 
@@ -6638,32 +6855,11 @@
             `).join("")}
           </div>
         </div>
-      </div>
+      </div>` : ""}
 
-      <div class="scene-layout">
-        <div class="lcars-panel">
-          <div class="lcars-panel-header">
-            <span class="lcars-panel-title">02 &middot; Bridge Stations</span>
-            <div style="display:flex; gap:4px; flex-wrap:wrap;">
-              ${["all", "command", "conn", "tactical", "engineering", "science"].map(st => `
-                <button class="pill-btn ${state.activeBridgeStation === st ? '' : 'ghost'}"
-                        style="padding:3px 10px; font-size:0.78rem;"
-                        onclick="state.activeBridgeStation='${st}';renderScene()">${st.toUpperCase()}</button>
-              `).join("")}
-            </div>
-            <button type="button" class="header-endcap" onclick="addSceneCard('space')" data-tip="Add a bridge station card.">Add</button>
-          </div>
-
-          <div class="roll-cards-grid">
-            ${filteredCards.map(item => renderRollCardHtml(item.card, 'space', item.idx, true)).join("")}
-          </div>
-        </div>
-
-        <div>
-          <div class="lcars-panel">
-            <div class="lcars-panel-header">
-              <span class="lcars-panel-title">2e Starship Quick Reference</span>
-            </div>
+      ${spaceFoldsOpen.reference ? `
+      <div class="lcars-panel">
+        ${spaceFoldBar("reference", "2e Starship Quick Reference")}
             <table class="ref-table">
               <thead><tr><th>Station</th><th>STA 2e Actions &amp; Reserve Power</th></tr></thead>
               <tbody>
@@ -6673,10 +6869,7 @@
                 <tr><td><strong>Science</strong></td><td><strong>Sensor Sweep</strong> (Diff 1) • <strong>Scan for Weakness</strong> (Diff 2, creates trait or pierces Resistance)</td></tr>
               </tbody>
             </table>
-          </div>
-          ${renderScratchpadAndTraits()}
-        </div>
-      </div>
+      </div>` : ""}
     `;
         bindDictionaryAutocomplete(container);
         return;
