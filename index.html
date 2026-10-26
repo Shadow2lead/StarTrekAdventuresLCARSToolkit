@@ -66,6 +66,24 @@
       --text-dim: #f5ae35;
     }
 
+    /* Lower Decks PADD palette — the handheld tablets (Janeway logs / ACCESS,
+       PERSONAL LOG, psych and unknown-type PADDs): pale and royal blues with slate
+       rail blocks on a black screen, a pale-cyan highlight key, cyan readout dashes,
+       a gold name tag and red status text. */
+    [data-theme="lower-decks-padd"] {
+      --bg: #03050b;            /* PADD screen black, faint blue cast */
+      --panel-bg: #03050b;
+      --c-primary: #7d9cf0;     /* Periwinkle blue (1542 3647 block / long bars) */
+      --c-secondary: #4f7ee0;   /* Royal blue (bar runs / lower rail) */
+      --c-tertiary: #5d74b8;    /* Slate blue rail blocks (02 9745 33 / 04 9734 56) */
+      --c-accent: #9ff0ee;      /* Pale cyan highlight key (03 1025 01) */
+      --c-alert: #f0413c;       /* STATUS: DECEASED red */
+      --c-ok: #6fd6cf;          /* Cyan readout dashes */
+      --c-muted: #a9c3f6;       /* Pale blue ACCESS block */
+      --text-main: #d4e3ff;     /* Pale blue title text (CPT KATHRYN JANEWAY LOGS) */
+      --text-dim: #8fb0f0;
+    }
+
     /* Voyager (Intrepid) palette — sampled from HYDROTRANSFER SIMULATION 1105,
        transporter room controls and the bridge rear/tactical consoles */
     [data-theme="voyager"] {
@@ -282,6 +300,53 @@
       --pat-foot-2:        var(--c-accent);
       --pat-foot-3:        var(--c-secondary);
       --pat-foot-end:      var(--c-tertiary);
+    }
+
+    /* --------------------------------------------------------------------------
+       1B. LOWER DECKS PADD PATTERN OVERRIDE (same Cerritos shape, blue tablet)
+       Janeway-logs PADD: pale ACCESS block over a periwinkle swept elbow, slate
+       rail blocks with one pale-cyan highlighted key, light blue/cyan bar runs.
+       -------------------------------------------------------------------------- */
+    [data-theme="lower-decks-padd"] {
+      --pat-elbow-top:     var(--c-muted);      /* Pale blue ACCESS block */
+      --pat-elbow-bot:     var(--c-tertiary);
+      --pat-junc-top:      var(--c-primary);    /* Periwinkle 1542 3647 elbow */
+      --pat-junc-bot:      var(--c-secondary);
+
+      --pat-div1-lead:     var(--c-muted);
+      --pat-div1-pip:      var(--c-accent);
+      --pat-div1-main:     var(--c-primary);
+      --pat-div1-cap:      var(--c-secondary);
+
+      --pat-div2-lead:     var(--c-secondary);
+      --pat-div2-pip:      var(--c-accent);
+      --pat-div2-main:     var(--c-secondary);
+      --pat-div2-cap:      var(--c-primary);
+
+      --pat-hdr-attr-lbl:  var(--c-primary);
+      --pat-hdr-attr-tail: var(--c-tertiary);
+      --pat-hdr-dept-lbl:  var(--c-muted);
+      --pat-hdr-dept-tail: var(--c-secondary);
+
+      --pat-rail-1:        var(--c-primary);    /* 02 9745 33 */
+      --pat-rail-2:        var(--c-accent);     /* 03 1025 01 highlight key */
+      --pat-rail-3:        var(--c-tertiary);   /* 04 9734 56 */
+      --pat-rail-4:        var(--c-secondary);
+      --pat-rail-5:        var(--c-muted);
+      --pat-rail-6:        var(--c-tertiary);
+      --pat-rail-7:        var(--c-secondary);
+      --pat-rail-8:        var(--c-ok);
+      --pat-rail-spacer:   var(--c-tertiary);
+
+      --pat-panel-1-main:  var(--c-primary);
+      --pat-panel-1-cap:   var(--c-accent);
+      --pat-panel-2-main:  var(--c-secondary);
+      --pat-panel-2-cap:   var(--c-muted);
+
+      --pat-foot-1:        var(--c-secondary);
+      --pat-foot-2:        var(--c-accent);
+      --pat-foot-3:        var(--c-muted);
+      --pat-foot-end:      var(--c-primary);
     }
 
     /* --------------------------------------------------------------------------
@@ -884,6 +949,11 @@
       --pic-ticks-display: none;
       --voy-node-display: none;
       --nem-bevel-display: none;
+    }
+
+    /* PADD variant: the ACCESS block has a near-square top-left corner */
+    [data-theme="lower-decks-padd"] {
+      --tl-elbow-r: 6px;
     }
 
     /* Cel-shaded thin companion line under each panel header (LUNAR DEMOLITION
@@ -4298,6 +4368,7 @@
       { id: "voyager", code: "02-VOY", name: "Voyager (Intrepid)", shape: "voyager" },
       { id: "nemesis-blue", code: "03-NEM", name: "Nemesis (Sovereign)", shape: "nemesis" },
       { id: "lower-decks", code: "04-LDS", name: "Lower Decks", shape: "lower-decks" },
+      { id: "lower-decks-padd", code: "04-LDP", name: "Lower Decks PADD", shape: "lower-decks" },
       { id: "tmp-era", code: "05-TMP", name: "TMP / Excelsior", shape: "tmp-era" },
       { id: "picard-v2", code: "06-PIC", name: "Picard 25c (Grey/Red)", shape: "picard-v2" }
     ];
