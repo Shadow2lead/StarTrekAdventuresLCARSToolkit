@@ -245,7 +245,6 @@
       --pat-panel-2-cap:   var(--c-accent);
 
       /* Bottom Footer Bar Segments */
-      --pat-foot-1:        var(--c-tertiary);
       --pat-foot-2:        var(--c-secondary);
       --pat-foot-3:        var(--c-accent);
       --pat-foot-end:      var(--c-primary);
@@ -296,7 +295,6 @@
       --pat-panel-2-main:  var(--c-secondary);
       --pat-panel-2-cap:   var(--c-tertiary);
 
-      --pat-foot-1:        var(--c-primary);
       --pat-foot-2:        var(--c-accent);
       --pat-foot-3:        var(--c-secondary);
       --pat-foot-end:      var(--c-tertiary);
@@ -343,7 +341,6 @@
       --pat-panel-2-main:  var(--c-secondary);
       --pat-panel-2-cap:   var(--c-muted);
 
-      --pat-foot-1:        var(--c-secondary);
       --pat-foot-2:        var(--c-accent);
       --pat-foot-3:        var(--c-muted);
       --pat-foot-end:      var(--c-primary);
@@ -395,7 +392,6 @@
       --pat-panel-2-main:  var(--c-secondary);
       --pat-panel-2-cap:   var(--c-tertiary);
 
-      --pat-foot-1:        var(--c-secondary);
       --pat-foot-2:        var(--c-tertiary);
       --pat-foot-3:        var(--c-accent);
       --pat-foot-end:      var(--c-primary);
@@ -451,7 +447,6 @@
       --pat-panel-2-cap:   var(--c-primary);
 
       /* Bottom Footer Bar */
-      --pat-foot-1:        var(--c-secondary);
       --pat-foot-2:        var(--c-accent);
       --pat-foot-3:        var(--c-alert);
       --pat-foot-end:      var(--c-primary);
@@ -500,7 +495,6 @@
       --pat-panel-2-main:  var(--c-primary);
       --pat-panel-2-cap:   var(--c-tertiary);
 
-      --pat-foot-1:        var(--c-primary);
       --pat-foot-2:        var(--c-secondary);
       --pat-foot-3:        var(--c-accent);
       --pat-foot-end:      var(--c-tertiary);
@@ -550,7 +544,6 @@
       --pat-panel-2-main:  var(--c-tertiary);
       --pat-panel-2-cap:   var(--c-accent);
 
-      --pat-foot-1:        var(--c-tertiary);
       --pat-foot-2:        var(--c-secondary);
       --pat-foot-3:        var(--c-primary);
       --pat-foot-end:      var(--c-accent);
@@ -578,6 +571,8 @@
       --elbow-r-inner: clamp(18px, 2vw, 28px);
       --bracket-w: 14px;
       --bracket-r: 24px;
+      --bracket-inner-r: 12px;   /* Concave radius inside every bracket corner */
+      --bracket-foot-h: 6px;     /* Thickness of the bracket's bottom arm */
     }
 
     /* Half-pill end caps: one rounded end, one flat end */
@@ -958,8 +953,17 @@
 
     /* Cel-shaded thin companion line under each panel header (LUNAR DEMOLITION
        paired bars: a thick amber bar riding over a thin pale-yellow rule) */
-    [data-shape="lower-decks"] .lcars-panel-header {
-      box-shadow: 0 6px 0 -2px var(--bg), 0 8px 0 -2px var(--c-accent);
+    /* Starts after the bracket leg and its concave corner so the frame stays one
+       continuous shape (a full-width shadow used to cut across the leg). */
+    [data-shape="lower-decks"] .lcars-panel-header::before {
+      content: "";
+      position: absolute;
+      top: calc(100% + 4px);
+      left: calc(var(--bracket-w) + var(--bracket-inner-r) + 4px);
+      right: 2px;
+      height: 2px;
+      background: var(--c-accent);
+      pointer-events: none;
     }
 
     /* TMP / EXCELSIOR ERA GEOMETRY: Rounded-rectangle CRT frames, thin blue frame
@@ -1056,7 +1060,7 @@
       border-radius: 18px 999px 999px 0;
     }
     [data-shape="voyager"] .lcars-panel::after {
-      border-bottom-width: 8px;
+      --bracket-foot-h: 8px;
       box-shadow: inset 0 -3px 0 var(--bg), inset 0 -5px 0 var(--c-secondary);
     }
 
@@ -1206,6 +1210,7 @@
       --elbow-r-inner: 14px;
       --bracket-w: 10px;
       --bracket-r: 6px;
+      --bracket-inner-r: 4px;   /* Crisp 25c bends */
       --j-arm-h: 5px;           /* Ultra-thin 25c horizontal divider bars */
       --j-curve-r: 22px;
       --j-inner-r: 10px;
@@ -2015,9 +2020,11 @@
       height: var(--bot-bar);
     }
 
+    /* The first segment is the bottom elbow's horizontal arm, so it always takes
+       the elbow colour; a different colour splits the swept corner into two shapes. */
     .lcars-footer-bar .seg {
       flex: 1;
-      background: var(--pat-foot-1);
+      background: var(--pat-elbow-bot);
     }
 
     .lcars-footer-bar .seg.w3 {
@@ -2255,11 +2262,13 @@
       padding: 0 0 22px calc(var(--bracket-w) + 12px);
     }
 
+    /* Leg starts below the header's rounded outer corner so its square top never
+       pokes out past that curve */
     .lcars-panel::before {
       content: "";
       position: absolute;
       left: 0;
-      top: 20px;
+      top: var(--bracket-r);
       bottom: 39px;
       width: var(--bracket-w);
       background: var(--tone);
@@ -2273,8 +2282,12 @@
       width: min(45%, 320px);
       height: 40px;
       border-left: var(--bracket-w) solid var(--tone);
-      border-bottom: 6px solid var(--tone);
-      border-bottom-left-radius: var(--bracket-r);
+      border-bottom: var(--bracket-foot-h) solid var(--tone);
+      /* Outer radius = inner radius + each bar's thickness, so the inside of the
+         bend is a true circle of --bracket-inner-r that flows into both bars */
+      border-bottom-left-radius:
+        calc(var(--bracket-inner-r) + var(--bracket-w))
+        calc(var(--bracket-inner-r) + var(--bracket-foot-h));
       pointer-events: none;
     }
 
@@ -2325,10 +2338,10 @@
       position: absolute;
       left: var(--bracket-w);
       top: 100%;
-      width: 12px;
-      height: 12px;
+      width: var(--bracket-inner-r);
+      height: var(--bracket-inner-r);
       background: radial-gradient(circle at 100% 100%,
-          transparent 11.5px, var(--tone) 12px);
+          transparent calc(var(--bracket-inner-r) - 0.5px), var(--tone) var(--bracket-inner-r));
       pointer-events: none;
     }
 
