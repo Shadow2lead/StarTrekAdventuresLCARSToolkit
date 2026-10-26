@@ -2317,6 +2317,17 @@
       border-radius: var(--bracket-r) 24px 24px 0;
     }
 
+    /* Free-standing pill header (not the top arm of a bracket frame) */
+    .lcars-panel-header.standalone,
+    .lcars-panel-header.standalone:has(> .header-endcap) {
+      margin-left: 0;
+      border-radius: 999px;
+    }
+
+    .lcars-panel-header.standalone::after {
+      display: none;
+    }
+
     /* Concave inner corner where the header arm meets the bracket leg */
     .lcars-panel-header::after {
       content: "";
@@ -6572,7 +6583,7 @@
         <!-- 2e Starship Weapons, Traits, & Talents -->
         <div class="scene-layout" style="margin-top:16px;">
           <div>
-            <div class="lcars-panel-header" style="margin-left:0; border-radius:999px;">
+            <div class="lcars-panel-header standalone">
               <span class="lcars-panel-title">Starship Weapons (2e Wpn Bonus: +${wpnBonus})</span>
               <button type="button" class="header-endcap" onclick="addShipWeapon()">Add</button>
             </div>
@@ -6595,7 +6606,7 @@
               </tbody>
             </table>
 
-            <div class="lcars-panel-header" style="margin-top:12px; margin-left:0; border-radius:999px;">
+            <div class="lcars-panel-header standalone" style="margin-top:12px;">
               <span class="lcars-panel-title">Starship Traits</span>
               <button type="button" class="header-endcap" onclick="addShipTrait()">Add</button>
             </div>
@@ -6610,7 +6621,7 @@
           </div>
 
           <div>
-            <div class="lcars-panel-header" style="margin-left:0; border-radius:999px;">
+            <div class="lcars-panel-header standalone">
               <span class="lcars-panel-title">Starship Talents &amp; Special Rules</span>
               <button type="button" class="header-endcap" onclick="addShipTalent()">Add</button>
             </div>
