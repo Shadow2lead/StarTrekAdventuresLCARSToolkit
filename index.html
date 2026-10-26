@@ -1142,10 +1142,11 @@
 
     /* Sovereign Panel Headers & Scan Brackets (matches INTERNAL SYS SCAN 015 C-brackets) */
     [data-shape="nemesis"] .lcars-panel-header {
+      --hdr-cap-w: 88px;
       border-radius: 16px 0 0 0;
       background: linear-gradient(90deg,
-        var(--tone) 0 calc(100% - 88px),
-        var(--bg) calc(100% - 88px) calc(100% - 84px),
+        var(--tone) 0 calc(100% - var(--hdr-cap-w)),
+        var(--bg) calc(100% - var(--hdr-cap-w)) calc(100% - 84px),
         var(--c-accent) calc(100% - 84px) calc(100% - 56px),
         var(--bg) calc(100% - 56px) calc(100% - 52px),
         var(--c-tertiary) calc(100% - 52px));
@@ -1224,11 +1225,12 @@
     /* Picard S2/S3 Stargazer Header & Title Blocks */
     [data-shape="picard-v2"] .lcars-panel-header,
     [data-shape="picard-v2"] .lcars-panel-header:has(> .header-endcap) {
+      --hdr-cap-w: 76px;
       min-height: 38px;
       border-radius: 4px 4px 4px 0 !important;
       background: linear-gradient(90deg,
-        var(--tone) 0 calc(100% - 76px),
-        var(--bg) calc(100% - 76px) calc(100% - 72px),
+        var(--tone) 0 calc(100% - var(--hdr-cap-w)),
+        var(--bg) calc(100% - var(--hdr-cap-w)) calc(100% - 72px),
         var(--c-primary) calc(100% - 72px) calc(100% - 64px),
         var(--bg) calc(100% - 64px) calc(100% - 60px),
         var(--tone-2) calc(100% - 60px));
@@ -2308,11 +2310,14 @@
       gap: 6px;
       min-height: var(--touch);
       margin: 0 0 14px calc(-1 * (var(--bracket-w) + 12px));
-      padding: 2px 78px 2px 30px;
+      /* --hdr-cap-w = width of the decorative end block(s) on the right; the
+         right-aligned title always clears it, whatever a theme draws there */
+      --hdr-cap-w: 64px;
+      padding: 2px calc(var(--hdr-cap-w) + 14px) 2px 30px;
       background: linear-gradient(90deg,
-          var(--tone) 0 calc(100% - 64px),
-          var(--bg) calc(100% - 64px) calc(100% - 60px),
-          var(--tone-2) calc(100% - 60px));
+          var(--tone) 0 calc(100% - var(--hdr-cap-w)),
+          var(--bg) calc(100% - var(--hdr-cap-w)) calc(100% - var(--hdr-cap-w) + 4px),
+          var(--tone-2) calc(100% - var(--hdr-cap-w) + 4px));
       border: none;
       border-radius: var(--bracket-r) 24px 24px 0;
     }
